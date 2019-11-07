@@ -1,0 +1,54 @@
+Success (3):
+datatype 3129 {urn:com:appian:types}Kevin_Data "{urn:com:appian:types}Kevin_Data"
+dataStore 5654 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34187 "Kevin_DataStore"
+application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 "Kevin_ADM_Application"
+
+Trace:
+2019-11-07 15:51:11.277 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Begin transport.
+2019-11-07 15:51:11.277 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Retrieving object data.
+2019-11-07 15:51:11.289 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 App associated objects: [datatype=[{urn:com:appian:types}Kevin_Data],dataStore=[_a-0000e380-d75f-8000-d31d-59ef9059ef90_34187]]
+2019-11-07 15:51:11.291 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Invalid associated objects: []
+2019-11-07 15:51:11.291 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Adding valid associated objects to be exported: GlobalBindingMap[datatype={{urn:com:appian:types}Kevin_Data=3129},dataStore={_a-0000e380-d75f-8000-d31d-59ef9059ef90_34187=5654}]
+2019-11-07 15:51:11.291 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Setting uuids of object references.
+2019-11-07 15:51:11.291 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Processing reference: Application.forum
+2019-11-07 15:51:11.292 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Processing reference: Application.parent
+2019-11-07 15:51:11.302 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Processing reference: com.appiancorp.suiteapi.content.ContentRoleMap@1fd96135[
+  ContentRole[name=readers,inherit=false,allowForAll=false]
+  ContentRole[name=authors,inherit=false,allowForAll=false]
+  ContentRole[name=administrators,inherit=false,allowForAll=false]
+  ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+  ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+  ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+  securityVector=1:SEC_PUBLIC=true,SEC_CREATOR_ADMIN=false,SEC_INH_ADMIN=false,SEC_INH_EDITOR=false,SEC_INH_VIEWER=false,SEC_ALL_ADMIN=false,SEC_ALL_EDITOR=false,SEC_ALL_VIEWER=false
+]
+2019-11-07 15:51:11.302 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Processing reference: ContentRole[name=readers,inherit=false,allowForAll=false]
+2019-11-07 15:51:11.302 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Processing reference: ContentRole[name=authors,inherit=false,allowForAll=false]
+2019-11-07 15:51:11.302 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Processing reference: ContentRole[name=administrators,inherit=false,allowForAll=false]
+2019-11-07 15:51:11.302 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Processing reference: ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+2019-11-07 15:51:11.302 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Processing reference: ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+2019-11-07 15:51:11.302 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Processing reference: ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+2019-11-07 15:51:11.302 DEBUG datatype 3129 {urn:com:appian:types}Kevin_Data Begin transport.
+2019-11-07 15:51:11.302 DEBUG datatype 3129 {urn:com:appian:types}Kevin_Data Retrieving object data.
+2019-11-07 15:51:11.508 DEBUG datatype 3129 {urn:com:appian:types}Kevin_Data Setting uuids of object references.
+2019-11-07 15:51:11.512 DEBUG datatype 3129 {urn:com:appian:types}Kevin_Data Completing produce.
+2019-11-07 15:51:11.512 DEBUG datatype 3129 {urn:com:appian:types}Kevin_Data Exporting binary resources.
+2019-11-07 15:51:11.512 DEBUG datatype 3129 {urn:com:appian:types}Kevin_Data Serializing object to XML.
+2019-11-07 15:51:11.516 DEBUG datatype 3129 {urn:com:appian:types}Kevin_Data Object transported.
+2019-11-07 15:51:11.523 DEBUG dataStore 5654 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34187 Begin transport.
+2019-11-07 15:51:11.523 DEBUG dataStore 5654 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34187 Retrieving object data.
+2019-11-07 15:51:11.543 DEBUG dataStore 5654 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34187 Setting uuids of object references.
+2019-11-07 15:51:11.543 DEBUG dataStore 5654 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34187 Processing reference: datatypeRef[id=3129]
+2019-11-07 15:51:11.545 DEBUG dataStore 5654 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34187 Processing reference: ContentRole[name=administrators,inherit=false,allowForAll=false]
+2019-11-07 15:51:11.545 DEBUG dataStore 5654 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34187 Processing reference: ContentRole[name=authors,inherit=false,allowForAll=true]
+2019-11-07 15:51:11.545 DEBUG dataStore 5654 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34187 Processing reference: ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+2019-11-07 15:51:11.545 DEBUG dataStore 5654 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34187 Processing reference: ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+2019-11-07 15:51:11.545 DEBUG dataStore 5654 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34187 Processing reference: ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+2019-11-07 15:51:11.545 DEBUG dataStore 5654 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34187 Processing reference: ContentRole[name=readers,inherit=false,allowForAll=true]
+2019-11-07 15:51:11.545 DEBUG dataStore 5654 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34187 Completing produce.
+2019-11-07 15:51:11.545 DEBUG dataStore 5654 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34187 Exporting binary resources.
+2019-11-07 15:51:11.545 DEBUG dataStore 5654 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34187 Serializing object to XML.
+2019-11-07 15:51:11.558 DEBUG dataStore 5654 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34187 Object transported.
+2019-11-07 15:51:11.558 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Completing produce.
+2019-11-07 15:51:11.558 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Exporting binary resources.
+2019-11-07 15:51:11.558 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Serializing object to XML.
+2019-11-07 15:51:11.6 DEBUG application 5646 _a-0000e380-d75f-8000-d31d-59ef9059ef90_34175 Object transported.
