@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e362-df5e-8000-9ba2-011c48011c48_43312</versionUuid>
+    <rule>
+        <name>WHY_returnHTMLFromAnExpression</name>
+        <uuid>_a-0000e362-deee-8000-9ba2-011c48011c48_63860</uuid>
+        <description></description>
+        <parentUuid>_a-0000e362-deee-8000-9ba2-011c48011c48_63855</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>with(
+  local!data : #"_a-0000e362-deee-8000-9ba2-011c48011c48_63866",
+  local!appianData : #"SYSTEM_SYSRULES_fromJson"(local!data),
+  local!urgentCount : 0,
+  local!standardCases :  0,
+  local!messages : 0,
+  local!totalCount : 0,
+  local!random:rand(),
+  /*v1.4 [SR]*/
+  /*Removed the General last update - Instead modified to be specific if its for case / message / recon*/
+  local!lastUpdate : char(34)&amp;tostring(reject(fn!isnull,local!appianData.autorefresh.lastUpdate))&amp;char(34),
+  local!SMlastMessUpdate : char(34)&amp;tostring(reject(fn!isnull,index(local!appianData.autorefresh,"SMLastMessUpdate",{null})))&amp;char(34),
+  local!SMlastCaseUpdate : char(34)&amp;tostring(reject(fn!isnull,index(local!appianData.autorefresh,"SMLastCaseUpdate",{null})))&amp;char(34),
+  local!lastReconUpdate : char(34)&amp;tostring(reject(fn!isnull,index(local!appianData.autorefresh,"lastReconUpdate",{null})))&amp;char(34),
+  local!loggedInUser : user(loggedInUser(),"lastName")&amp;" "&amp;user(loggedInUser(),"firstName"),
+  {
+    "&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src="&amp;char(34)&amp;"https://code.jquery.com/jquery-2.2.4.min.js"&amp;char(34)&amp;"&gt;&lt;/script&gt;
+&lt;link rel="&amp;char(34)&amp;"stylesheet"&amp;char(34)&amp;"
+href="&amp;char(34)&amp;"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"&amp;char(34)&amp;"
+integrity="&amp;char(34)&amp;"sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"&amp;char(34)&amp;"
+crossorigin="&amp;char(34)&amp;"anonymous"&amp;char(34)&amp;"&gt;
+
+&lt;script
+src="&amp;char(34)&amp;"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"&amp;char(34)&amp;"&gt;&lt;/script&gt;
+&lt;title&gt;DMO CASES -URGENT&lt;/title&gt;
+
+&lt;script&gt;
+var newWindow = null;
+function launchHomepage() {
+/*if ((newWindow == null) || (newWindow.closed)){*/
+/*window.open(*/
+/*'https://dev193.appiancloud.com/suite/tempo',*/
+/*'com_MyDomain_myWindowForThisPurpose',*/
+/*'fullscreen=yes,toolbar=yes,location=yes,status=yes,menubar=yes, resizable=yes,status=1');*/
+/*}*/
+window.open(
+'https://dev193.appiancloud.com/suite/tempo',
+'com_MyDomain_myWindowForThisPurpose',
+'fullscreen=yes,toolbar=yes,location=yes,status=yes,menubar=yes, resizable=yes,status=1');
+}
+
+
+function onLoad() {
+launchHomepage();
+}
+
+
+function start() {
+/*onLoad();*/
+}
+&lt;/script&gt;
+&lt;meta http-equiv="&amp;char(34)&amp;"refresh"&amp;char(34)&amp;" content="&amp;char(34)&amp;"10"&amp;char(34)&amp;"&gt;
+&lt;/head&gt;
+
+&lt;body onload='start()'&gt;
+&lt;button onclick='launchHomepage()'&gt;Launch Window&lt;/button&gt;
+&lt;div id="&amp;char(34)&amp;"pageRefresh"&amp;char(34)&amp;"&gt;
+&lt;p&gt;This a test. Window should opened.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"
+  }
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e362-deee-8000-9ba2-011c48011c48_63885"/>
+        <historyInfo versionUuid="_a-0000e362-df5e-8000-9ba2-011c48011c48_43312"/>
+    </history>
+</contentHaul>

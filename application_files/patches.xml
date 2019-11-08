@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applicationPatches>
+    <applicationPatch>
+        <applicationUuid>_a-0000e362-deee-8000-9ba2-011c48011c48_63850</applicationUuid>
+        <patchContents>
+            <item>
+                <type>content</type>
+                <uuids>
+                    <uuid>_a-0000e362-deee-8000-9ba2-011c48011c48_63855</uuid>
+                    <uuid>_a-0000e362-deee-8000-9ba2-011c48011c48_63860</uuid>
+                    <uuid>_a-0000e362-deee-8000-9ba2-011c48011c48_63866</uuid>
+                </uuids>
+            </item>
+            <item>
+                <type>webApi</type>
+                <uuids>
+                    <uuid>e3b6593f-8335-444e-b3d8-b427eb6082a4</uuid>
+                </uuids>
+            </item>
+        </patchContents>
+    </applicationPatch>
+</applicationPatches>

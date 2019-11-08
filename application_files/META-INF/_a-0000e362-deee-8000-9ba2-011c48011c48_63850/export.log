@@ -1,0 +1,90 @@
+Success (4):
+content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 "WHY even create these rules"
+content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 "WHY_HARDCODE_JSON"
+content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 "WHY_returnHTMLFromAnExpression"
+webApi 8 e3b6593f-8335-444e-b3d8-b427eb6082a4 "WHY_useJSToDisplayASite"
+
+Trace:
+2019-10-28 16:35:52.692 DEBUG content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 Begin transport.
+2019-10-28 16:35:52.692 DEBUG content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 Retrieving object data.
+2019-10-28 16:35:52.704 DEBUG content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 Setting uuids of object references.
+2019-10-28 16:35:52.704 DEBUG content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 Processing reference: RulesFolder.forum
+2019-10-28 16:35:52.704 DEBUG content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 Processing reference: RulesFolder.parent
+2019-10-28 16:35:52.709 DEBUG content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 Processing reference: com.appiancorp.suiteapi.content.ContentRoleMap@87df5c9[
+  ContentRole[name=readers,inherit=false,allowForAll=false]
+  ContentRole[name=authors,inherit=false,allowForAll=false]
+  ContentRole[name=administrators,inherit=false,allowForAll=false]
+  ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+  ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+  ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+  securityVector=1:SEC_PUBLIC=true,SEC_CREATOR_ADMIN=false,SEC_INH_ADMIN=false,SEC_INH_EDITOR=false,SEC_INH_VIEWER=false,SEC_ALL_ADMIN=false,SEC_ALL_EDITOR=false,SEC_ALL_VIEWER=false
+]
+2019-10-28 16:35:52.709 DEBUG content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 Processing reference: ContentRole[name=readers,inherit=false,allowForAll=false]
+2019-10-28 16:35:52.709 DEBUG content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 Processing reference: ContentRole[name=authors,inherit=false,allowForAll=false]
+2019-10-28 16:35:52.709 DEBUG content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 Processing reference: ContentRole[name=administrators,inherit=false,allowForAll=false]
+2019-10-28 16:35:52.709 DEBUG content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 Processing reference: ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+2019-10-28 16:35:52.709 DEBUG content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 Processing reference: ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+2019-10-28 16:35:52.709 DEBUG content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 Processing reference: ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+2019-10-28 16:35:52.709 DEBUG content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 Completing produce.
+2019-10-28 16:35:52.709 DEBUG content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 Exporting binary resources.
+2019-10-28 16:35:52.709 DEBUG content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 Serializing object to XML.
+2019-10-28 16:35:52.718 DEBUG content 7766 _a-0000e362-deee-8000-9ba2-011c48011c48_63855 Object transported.
+2019-10-28 16:35:52.718 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Begin transport.
+2019-10-28 16:35:52.718 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Retrieving object data.
+2019-10-28 16:35:52.729 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Setting uuids of object references.
+2019-10-28 16:35:52.729 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Processing reference: [Content:id=7767,versionId=-1,name=WHY_HARDCODE_JSON,type=32,subtype=0,uuid=_a-0000e362-deee-8000-9ba2-011c48011c48_63866,parent=7766]
+2019-10-28 16:35:52.729 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Processing reference: Constant.forum
+2019-10-28 16:35:52.729 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Processing reference: Constant.parent
+2019-10-28 16:35:52.734 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Processing reference: com.appiancorp.suiteapi.content.ContentRoleMap@274042d6[
+  ContentRole[name=readers,inherit=true,allowForAll=false]
+  ContentRole[name=authors,inherit=true,allowForAll=false]
+  ContentRole[name=administrators,inherit=true,allowForAll=false]
+  ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+  ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+  ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+  securityVector=15:SEC_PUBLIC=true,SEC_CREATOR_ADMIN=false,SEC_INH_ADMIN=true,SEC_INH_EDITOR=true,SEC_INH_VIEWER=true,SEC_ALL_ADMIN=false,SEC_ALL_EDITOR=false,SEC_ALL_VIEWER=false
+]
+2019-10-28 16:35:52.734 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Processing reference: ContentRole[name=readers,inherit=true,allowForAll=false]
+2019-10-28 16:35:52.734 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Processing reference: ContentRole[name=authors,inherit=true,allowForAll=false]
+2019-10-28 16:35:52.734 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Processing reference: ContentRole[name=administrators,inherit=true,allowForAll=false]
+2019-10-28 16:35:52.734 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Processing reference: ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+2019-10-28 16:35:52.734 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Processing reference: ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+2019-10-28 16:35:52.734 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Processing reference: ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+2019-10-28 16:35:52.734 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Completing produce.
+2019-10-28 16:35:52.734 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Exporting binary resources.
+2019-10-28 16:35:52.734 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Serializing object to XML.
+2019-10-28 16:35:52.749 DEBUG content 7767 _a-0000e362-deee-8000-9ba2-011c48011c48_63866 Object transported.
+2019-10-28 16:35:52.749 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Begin transport.
+2019-10-28 16:35:52.749 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Retrieving object data.
+2019-10-28 16:35:52.762 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Setting uuids of object references.
+2019-10-28 16:35:52.762 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Processing reference: [Content:id=7768,versionId=-1,name=WHY_returnHTMLFromAnExpression,type=32,subtype=1,uuid=_a-0000e362-deee-8000-9ba2-011c48011c48_63860,parent=7766]
+2019-10-28 16:35:52.767 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Processing reference: FreeformRule.forum
+2019-10-28 16:35:52.768 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Processing reference: FreeformRule.parent
+2019-10-28 16:35:52.771 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Processing reference: com.appiancorp.suiteapi.content.ContentRoleMap@3ce9e371[
+  ContentRole[name=readers,inherit=true,allowForAll=false]
+  ContentRole[name=authors,inherit=true,allowForAll=false]
+  ContentRole[name=administrators,inherit=true,allowForAll=false]
+  ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+  ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+  ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+  securityVector=15:SEC_PUBLIC=true,SEC_CREATOR_ADMIN=false,SEC_INH_ADMIN=true,SEC_INH_EDITOR=true,SEC_INH_VIEWER=true,SEC_ALL_ADMIN=false,SEC_ALL_EDITOR=false,SEC_ALL_VIEWER=false
+]
+2019-10-28 16:35:52.771 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Processing reference: ContentRole[name=readers,inherit=true,allowForAll=false]
+2019-10-28 16:35:52.771 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Processing reference: ContentRole[name=authors,inherit=true,allowForAll=false]
+2019-10-28 16:35:52.771 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Processing reference: ContentRole[name=administrators,inherit=true,allowForAll=false]
+2019-10-28 16:35:52.771 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Processing reference: ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+2019-10-28 16:35:52.772 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Processing reference: ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+2019-10-28 16:35:52.772 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Processing reference: ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+2019-10-28 16:35:52.772 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Completing produce.
+2019-10-28 16:35:52.772 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Exporting binary resources.
+2019-10-28 16:35:52.772 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Serializing object to XML.
+2019-10-28 16:35:52.784 DEBUG content 7785 _a-0000e362-deee-8000-9ba2-011c48011c48_63860 Object transported.
+2019-10-28 16:35:52.787 DEBUG webApi 8 e3b6593f-8335-444e-b3d8-b427eb6082a4 Begin transport.
+2019-10-28 16:35:52.787 DEBUG webApi 8 e3b6593f-8335-444e-b3d8-b427eb6082a4 Retrieving object data.
+2019-10-28 16:35:52.811 DEBUG webApi 8 e3b6593f-8335-444e-b3d8-b427eb6082a4 Setting uuids of object references.
+2019-10-28 16:35:52.811 DEBUG webApi 8 e3b6593f-8335-444e-b3d8-b427eb6082a4 Processing reference: WebApi.expression
+2019-10-28 16:35:52.819 DEBUG webApi 8 e3b6593f-8335-444e-b3d8-b427eb6082a4 Processing reference: WebApi.receiveDocumentsFolder
+2019-10-28 16:35:52.82 DEBUG webApi 8 e3b6593f-8335-444e-b3d8-b427eb6082a4 Completing produce.
+2019-10-28 16:35:52.82 DEBUG webApi 8 e3b6593f-8335-444e-b3d8-b427eb6082a4 Exporting binary resources.
+2019-10-28 16:35:52.82 DEBUG webApi 8 e3b6593f-8335-444e-b3d8-b427eb6082a4 Serializing object to XML.
+2019-10-28 16:35:52.841 DEBUG webApi 8 e3b6593f-8335-444e-b3d8-b427eb6082a4 Object transported.
