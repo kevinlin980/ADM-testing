@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <applicationHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>_a-0000e37e-8f8b-8000-8c15-88ef9088ef90_12462</versionUuid>
+    <versionUuid>10ae3a7d-84b0-481c-b137-f72039c49017</versionUuid>
     <application>
         <name>All Object Full Diffs</name>
         <uuid>_a-0000e25a-4a85-8000-3a5b-01ef9001ef90_23541</uuid>
@@ -91,7 +91,11 @@
                 </item>
                 <item>
                     <type>portlet</type>
-                    <uuids/>
+                    <uuids>
+                        <uuid>_d-0000dd41-8b56-8000-79da-013616013616_37</uuid>
+                        <uuid>_d-0000dd41-8b56-8000-79da-013616013616_39</uuid>
+                        <uuid>_d-0000dd41-8b56-8000-79da-013616013616_38</uuid>
+                    </uuids>
                 </item>
                 <item>
                     <type>page</type>
@@ -303,5 +307,6 @@
         <historyInfo versionUuid="_a-0000e351-d13b-8000-cdf6-01ef9001ef90_13475"/>
         <historyInfo versionUuid="_a-0000e37e-8f8b-8000-8c15-88ef9088ef90_12439"/>
         <historyInfo versionUuid="_a-0000e37e-8f8b-8000-8c15-88ef9088ef90_12462"/>
+        <historyInfo versionUuid="10ae3a7d-84b0-481c-b137-f72039c49017"/>
     </history>
-</applicationHaul><!--updated on 2019-11-08T11:28:55.289-->
+</applicationHaul><!--updated on 2019-11-08T11:29:05.309-->
