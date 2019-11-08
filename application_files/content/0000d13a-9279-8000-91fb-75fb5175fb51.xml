@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e381-6390-8000-5e70-cfef90cfef90_26980</versionUuid>
+    <constant>
+        <name>Sales</name>
+        <uuid>0000d13a-9279-8000-91fb-75fb5175fb51</uuid>
+        <description>These are the Sales users</description>
+        <parentUuid>0000d13a-92ae-8000-91fb-75fb5175fb51</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <typedValue>
+            <type>
+                <name>Text?list</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+            <value>
+                <el>andrew.sherrer</el>
+                <el>annita.kessell</el>
+                <el>april.rawlings</el>
+                <el>baek.dowok</el>
+                <el>bill.seyal</el>
+                <el>carl.gallaway</el>
+                <el>chris.hoard</el>
+                <el>clyde.nehring</el>
+                <el>darren.zollner</el>
+                <el>david.snide</el>
+                <el>fernando.sanchez</el>
+                <el>gerald.colman</el>
+                <el>hiram.senich</el>
+                <el>jerry.bowling</el>
+                <el>jonathan.piersen</el>
+                <el>joshua.weiland</el>
+                <el>jung.yong</el>
+                <el>katie.rowland</el>
+                <el>leonard.magill</el>
+                <el>leonard.rhoades</el>
+                <el>leo.leos</el>
+                <el>linda.flick</el>
+                <el>manu.surendra</el>
+                <el>max.baine</el>
+                <el>michael.dawson</el>
+                <el>nelson.kellman</el>
+                <el>patrick.dandrea</el>
+                <el>patrick.troy</el>
+                <el>phil.schafer</el>
+                <el>sankar.rohan</el>
+                <el>sergey.vasily</el>
+                <el>sudhir.sanjay</el>
+                <el>tyler.vella</el>
+                <el>vicki.bluhm</el>
+                <el>vincent.rojo</el>
+            </value>
+        </typedValue>
+        <isEnvironmentSpecific>false</isEnvironmentSpecific>
+    </constant>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e381-6390-8000-5e70-cfef90cfef90_26980"/>
+    </history>
+</contentHaul>

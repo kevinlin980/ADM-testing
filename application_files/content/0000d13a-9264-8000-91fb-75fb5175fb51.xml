@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e381-6390-8000-5e70-cfef90cfef90_26938</versionUuid>
+    <constant>
+        <name>Marketing</name>
+        <uuid>0000d13a-9264-8000-91fb-75fb5175fb51</uuid>
+        <description>These are the Marketing users</description>
+        <parentUuid>0000d13a-92ae-8000-91fb-75fb5175fb51</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <typedValue>
+            <type>
+                <name>Text?list</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+            <value>
+                <el>abdul.youssefi</el>
+                <el>christian.perl</el>
+                <el>edward.bly</el>
+                <el>jin.kazama</el>
+                <el>kristin.minor</el>
+                <el>loria.goyal</el>
+                <el>maria.cortes</el>
+                <el>matthew.linck</el>
+                <el>nicholas.diego</el>
+                <el>oscar.brune</el>
+                <el>timothy.mcgregor</el>
+            </value>
+        </typedValue>
+        <isEnvironmentSpecific>false</isEnvironmentSpecific>
+    </constant>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e381-6390-8000-5e70-cfef90cfef90_26938"/>
+    </history>
+</contentHaul>
