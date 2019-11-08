@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e351-d13b-8000-cdf6-01ef9001ef90_13189</versionUuid>
+    <decision>
+        <name>AOFD_Decision</name>
+        <uuid>60eef1ee-ec0b-4151-b066-190de4e75d83</uuid>
+        <description>Decision table for the AOFD application</description>
+        <parentUuid>_a-0000e25a-4a85-8000-3a5b-01ef9001ef90_24193</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>fn!override_exception_appian_internal(fn!with(local!decisiondefinition: a!decisiondesigner_cache(uuid: "60eef1ee-ec0b-4151-b066-190de4e75d83",versionKey: "04be08bb-7e15-46fc-8c11-409c34797c5b",value: #"SYSTEM_SYSRULES_dd_dd"('hitPolicy': #"SYSTEM_SYSRULES_dd_dhp"("UNIQUE"), 'inputs': {#"SYSTEM_SYSRULES_dd_di"('name': "input10", 'type': 'type!{http://www.appian.com/ae/types/2009}Text', 'id': 1, 'restrictionType': #"SYSTEM_SYSRULES_dd_dirt"("NONE")), #"SYSTEM_SYSRULES_dd_di"('name': "input20", 'type': 'type!{http://www.appian.com/ae/types/2009}Text', 'id': 2, 'restrictionType': #"SYSTEM_SYSRULES_dd_dirt"("NONE")), #"SYSTEM_SYSRULES_dd_di"('name': "input30", 'type': 'type!{http://www.appian.com/ae/types/2009}Integer', 'id': 3, 'restrictionType': #"SYSTEM_SYSRULES_dd_dirt"("NONE"))}, 'outputs': {#"SYSTEM_SYSRULES_dd_do"('id': 1, 'name': "output", 'type': 'type!{http://www.appian.com/ae/types/2009}Text', 'restrictionType': #"SYSTEM_SYSRULES_dd_dort"("NONE"), 'returnListType': false), #"SYSTEM_SYSRULES_dd_do"('id': 2, 'name': "output20", 'type': 'type!{http://www.appian.com/ae/types/2009}Date', 'restrictionType': #"SYSTEM_SYSRULES_dd_dort"("NONE"), 'returnListType': true)}, 'rules': {#"SYSTEM_SYSRULES_dd_dr"('id': 1, 'inputs': {#"SYSTEM_SYSRULES_dd_dri"('id': 1, 'decisionInputId': 1, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("EQUALS"), 'value1': "optionD")), #"SYSTEM_SYSRULES_dd_dri"('id': 2, 'decisionInputId': 2, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("ANY"))), #"SYSTEM_SYSRULES_dd_dri"('id': 11, 'decisionInputId': 3, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("EQUALS"), 'value1': 10))}, 'outputs': {#"SYSTEM_SYSRULES_dd_dro"('id': 1, 'decisionOutputId': 1, 'value': "Answer1A"), #"SYSTEM_SYSRULES_dd_dro"('id': 6, 'decisionOutputId': 2, 'value': fn!date(2019, 10, 30))}), #"SYSTEM_SYSRULES_dd_dr"('id': 2, 'inputs': {#"SYSTEM_SYSRULES_dd_dri"('id': 3, 'decisionInputId': 1, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("NOT"), 'value1': "optionC")), #"SYSTEM_SYSRULES_dd_dri"('id': 4, 'decisionInputId': 2, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("NOT"), 'value1': "input20")), #"SYSTEM_SYSRULES_dd_dri"('id': 12, 'decisionInputId': 3, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("BETWEEN_EXCLUSIVE"), 'value1': 20, 'value2': 50))}, 'outputs': {#"SYSTEM_SYSRULES_dd_dro"('id': 2, 'decisionOutputId': 1, 'value': "Answer2A"), #"SYSTEM_SYSRULES_dd_dro"('id': 7, 'decisionOutputId': 2, 'value': fn!date(2019, 7, 1))}), #"SYSTEM_SYSRULES_dd_dr"('id': 3, 'inputs': {#"SYSTEM_SYSRULES_dd_dri"('id': 5, 'decisionInputId': 1, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("IS_NULL"))), #"SYSTEM_SYSRULES_dd_dri"('id': 6, 'decisionInputId': 2, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("IS_NULL"))), #"SYSTEM_SYSRULES_dd_dri"('id': 13, 'decisionInputId': 3, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("LESS_THAN_EQUALS"), 'value1': 30))}, 'outputs': {#"SYSTEM_SYSRULES_dd_dro"('id': 3, 'decisionOutputId': 1, 'value': "Answer3A"), #"SYSTEM_SYSRULES_dd_dro"('id': 8, 'decisionOutputId': 2, 'value': fn!date(2020, 2, 21))}), #"SYSTEM_SYSRULES_dd_dr"('id': 4, 'inputs': {#"SYSTEM_SYSRULES_dd_dri"('id': 7, 'decisionInputId': 1, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("NOT_NULL"))), #"SYSTEM_SYSRULES_dd_dri"('id': 8, 'decisionInputId': 2, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("NOT"), 'value1': "input40")), #"SYSTEM_SYSRULES_dd_dri"('id': 14, 'decisionInputId': 3, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("BETWEEN_INCLUSIVE"), 'value1': 40, 'value2': 45))}, 'outputs': {#"SYSTEM_SYSRULES_dd_dro"('id': 4, 'decisionOutputId': 1, 'value': "Answer4A"), #"SYSTEM_SYSRULES_dd_dro"('id': 9, 'decisionOutputId': 2, 'value': fn!date(2020, 4, 23))}), #"SYSTEM_SYSRULES_dd_dr"('id': 5, 'inputs': {#"SYSTEM_SYSRULES_dd_dri"('id': 9, 'decisionInputId': 1, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("ANY"))), #"SYSTEM_SYSRULES_dd_dri"('id': 10, 'decisionInputId': 2, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("EQUALS"), 'value1': "input50")), #"SYSTEM_SYSRULES_dd_dri"('id': 15, 'decisionInputId': 3, 'operator': #"SYSTEM_SYSRULES_dd_dop"('operator': #"SYSTEM_SYSRULES_dd_dopt"("LESS_THAN"), 'value1': 50))}, 'outputs': {#"SYSTEM_SYSRULES_dd_dro"('id': 5, 'decisionOutputId': 1, 'value': "Answer5A"), #"SYSTEM_SYSRULES_dd_dro"('id': 10, 'decisionOutputId': 2, 'value': fn!date(2018, 9, 24))})}, 'isUnique': false, 'defaultOutputs': {#"SYSTEM_SYSRULES_dd_dro"('id': 1, 'decisionOutputId': 1, 'value': "Answer6A"), #"SYSTEM_SYSRULES_dd_dro"('id': 2, 'decisionOutputId': 2, 'value': fn!date(2021, 5, 7))})),#"SYSTEM_SYSRULES_dd_exr"(decisionDefinition:local!decisiondefinition,executionInputs:{#"SYSTEM_SYSRULES_dd_dei"(decisionInputId:1,value:'ri!input10'),#"SYSTEM_SYSRULES_dd_dei"(decisionInputId:2,value:'ri!input20'),#"SYSTEM_SYSRULES_dd_dei"(decisionInputId:3,value:'ri!input30')})))</definition>
+        <namedTypedValue>
+            <name>input10</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>input20</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>input30</name>
+            <type>
+                <name>int</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+        <outputMetadataList>
+            <outputMetadata>
+                <outputId>1</outputId>
+                <nameRef>output</nameRef>
+                <typeName>{http://www.appian.com/ae/types/2009}Text</typeName>
+            </outputMetadata>
+            <outputMetadata>
+                <outputId>2</outputId>
+                <nameRef>output20</nameRef>
+                <typeName>{http://www.appian.com/ae/types/2009}Date?list</typeName>
+            </outputMetadata>
+        </outputMetadataList>
+        <hitPolicy>UNIQUE</hitPolicy>
+    </decision>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e351-d13b-8000-cdf6-01ef9001ef90_13145"/>
+        <historyInfo versionUuid="_a-0000e351-d13b-8000-cdf6-01ef9001ef90_13189"/>
+    </history>
+</contentHaul>

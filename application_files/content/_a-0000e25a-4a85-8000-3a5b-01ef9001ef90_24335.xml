@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e351-d13b-8000-cdf6-01ef9001ef90_13049</versionUuid>
+    <rule>
+        <name>AOFD_Interface1</name>
+        <uuid>_a-0000e25a-4a85-8000-3a5b-01ef9001ef90_24335</uuid>
+        <description>This has rule inputs that reference a CDT, making it ineligible for report references</description>
+        <parentUuid>_a-0000e25a-4a85-8000-3a5b-01ef9001ef90_24193</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load(
+  /* This variable would normally be retrieved with a rule like rule!getAccountExecs(). */
+  local!LolWhatAmIDoingHere: #"_a-0000e25a-4a85-8000-3a5b-01ef9001ef90_24198",
+  local!accountExecs: todatasubset(
+    {
+      /* The display names would normally be calculated later, based on the usernames.  *
+       * Since these usernames are fake, we're providing display names directly.        */
+      {id: 1,  username: "karen.phillips",   displayName: "Karen Phillips",   conversion: round(rand() * 10, 1)},
+      {id: 2,  username: "suzanne.fletcher", displayName: "Suzanne Fletcher", conversion: round(rand() * 10, 1)},
+      {id: 3,  username: "thomas.reed",      displayName: "Thomas Reed",      conversion: round(rand() * 10, 1)},
+      {id: 4,  username: "vincent.buchanan", displayName: "Vincent Buchanan", conversion: round(rand() * 10, 1)},
+      {id: 5,  username: "oscar.kim",        displayName: "Oscar Kim",        conversion: round(rand() * 10, 1)},
+      {id: 6,  username: "simone.ferguson",  displayName: "Simone Ferguson",  conversion: round(rand() * 10, 1)},
+      {id: 7,  username: "james.smith",      displayName: "James Smith",      conversion: round(rand() * 10, 1)},
+      {id: 8,  username: "carolyn.wall",     displayName: "Carolyn Wall",     conversion: round(rand() * 10, 1)},
+      {id: 9,  username: "franklin.stewart", displayName: "Franklin Stewart", conversion: round(rand() * 10, 1)},
+      {id: 10, username: "dillon.booth",     displayName: "Dillon Booth",     conversion: round(rand() * 10, 1)},
+      {id: 11, username: "josh.moreno",      displayName: "Josh Moreno",      conversion: round(rand() * 10, 1)},
+      {id: 12, username: "conor.hale",       displayName: "Conor Hale",       conversion: round(rand() * 10, 1)},
+      {id: 13, username: "elliana.white",    displayName: "Elliana White",    conversion: round(rand() * 10, 1)},
+      {id: 14, username: "greg.oliver",      displayName: "Greg Oliver",      conversion: round(rand() * 10, 1)}
+    },
+    #"SYSTEM_SYSRULES_pagingInfo"(
+      startIndex: 1,
+      batchSize: -1,
+      sort: #"SYSTEM_SYSRULES_sortInfo"(field: "conversion", ascending: false)
+    )
+  ).data,
+  /* This variable would normally be retrieved with a rule like rule!getOpportunities(). Here, a random set of opportunities is generated. */
+  local!opportunities: #"SYSTEM_SYSRULES_forEach"(
+    items: enumerate(100) + 1,
+    expression: {
+      id: fv!item,
+      accountExecId: tointeger(round(rand() * 14, 0)),
+      stage: round(rand() * 7, 0),
+      amount: (round(rand(), 1) * 250000) + 300000
+    }
+  ),
+  local!oppsTarget: 75,
+  local!conversionTarget: 5,
+  local!dealSizeTarget: 425,
+  local!pipelineTarget: 50,
+  local!selectedAccountExec: {},
+  {
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_cardLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_richTextDisplayField"(
+                  labelPosition: "COLLAPSED",
+                  value: {
+                    #"SYSTEM_SYSRULES_richTextItem_v1"(text: {"TOTAL ACTIVE OPPS"}, color: "SECONDARY", style: "STRONG")
+                  }
+                ),
+                #"SYSTEM_SYSRULES_sideBySideLayout"(
+                  items: {
+                    #"SYSTEM_SYSRULES_sideBySideItem"(
+                      item: #"SYSTEM_SYSRULES_richTextDisplayField"(
+                        labelPosition: "COLLAPSED",
+                        value: {
+                          #"SYSTEM_SYSRULES_richTextItem_v1"(text: {count(local!opportunities)}, size: "LARGE"),
+                          " ",
+                          #"SYSTEM_SYSRULES_richTextIcon"(icon: "handshake-o", size: "LARGE")
+                        }
+                      )
+                    ),
+                    #"SYSTEM_SYSRULES_sideBySideItem"(
+                      item: #"SYSTEM_SYSRULES_richTextDisplayField"(
+                        labelPosition: "COLLAPSED",
+                        value: {
+                          #"SYSTEM_SYSRULES_richTextIcon"(icon: "bullseye", color: "SECONDARY"),
+                          " ",
+                          #"SYSTEM_SYSRULES_richTextItem_v1"(text: {local!oppsTarget}, color: "SECONDARY")
+                        },
+                        align: "RIGHT"
+                      ),
+                      width: "MINIMIZE"
+                    )
+                  },
+                  alignVertical: "BOTTOM"
+                )
+              },
+              style: if(length(local!opportunities) &gt;= local!oppsTarget, "SUCCESS", "ERROR"),
+              height: "AUTO"
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_cardLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_richTextDisplayField"(
+                  labelPosition: "COLLAPSED",
+                  value: {
+                    #"SYSTEM_SYSRULES_richTextItem_v1"(text: {"AVG CONVERSION RATE"}, color: "SECONDARY", style: "STRONG")
+                  }
+                ),
+                #"SYSTEM_SYSRULES_sideBySideLayout"(
+                  items: {
+                    #"SYSTEM_SYSRULES_sideBySideItem"(
+                      item: #"SYSTEM_SYSRULES_richTextDisplayField"(
+                        labelPosition: "COLLAPSED",
+                        value: {
+                          #"SYSTEM_SYSRULES_richTextItem_v1"(
+                            text: {
+                              round(sum(local!accountExecs.conversion) / length(local!accountExecs), 1),
+                              "%",
+                              " "
+                            },
+                            size: "LARGE"
+                          ),
+                          #"SYSTEM_SYSRULES_richTextIcon"(icon: "refresh", size: "LARGE")
+                        }
+                      )
+                    ),
+                    #"SYSTEM_SYSRULES_sideBySideItem"(
+                      item: #"SYSTEM_SYSRULES_richTextDisplayField"(
+                        labelPosition: "COLLAPSED",
+                        value: {
+                          #"SYSTEM_SYSRULES_richTextIcon"(icon: "bullseye", color: "SECONDARY"),
+                          " ",
+                          #"SYSTEM_SYSRULES_richTextItem_v1"(
+                            text: {
+                              local!conversionTarget,
+                              "%"
+                            },
+                            color: "SECONDARY"
+                          )
+                        },
+                        align: "RIGHT"
+                      ),
+                      width: "MINIMIZE"
+                    )
+                  },
+                  alignVertical: "BOTTOM"
+                )
+              },
+              style: if((sum(local!accountExecs.conversion) / length(local!accountExecs)) &gt;= local!conversionTarget, "SUCCESS", "ERROR"),
+              height: "AUTO"
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_cardLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_richTextDisplayField"(
+                  labelPosition: "COLLAPSED",
+                  value: {
+                    #"SYSTEM_SYSRULES_richTextItem_v1"(text: {"AVG DEAL SIZE"}, color: "SECONDARY", style: "STRONG")
+                  }
+                ),
+                #"SYSTEM_SYSRULES_sideBySideLayout"(
+                  items: {
+                    #"SYSTEM_SYSRULES_sideBySideItem"(
+                      item: #"SYSTEM_SYSRULES_richTextDisplayField"(
+                        labelPosition: "COLLAPSED",
+                        value: {
+                          #"SYSTEM_SYSRULES_richTextItem_v1"(
+                            text: {
+                              "$",
+                              round((sum(local!opportunities.amount) / length(local!opportunities)) / 1000, 0),
+                              "K",
+                              " "
+                            },
+                            size: "LARGE"
+                          ),
+                          #"SYSTEM_SYSRULES_richTextIcon"(icon: "money", size: "LARGE")
+                        }
+                      )
+                    ),
+                    #"SYSTEM_SYSRULES_sideBySideItem"(
+                      item: #"SYSTEM_SYSRULES_richTextDisplayField"(
+                        labelPosition: "COLLAPSED",
+                        value: {
+                          #"SYSTEM_SYSRULES_richTextIcon"(icon: "bullseye", color: "SECONDARY"),
+                          " ",
+                          #"SYSTEM_SYSRULES_richTextItem_v1"(text: {"$", local!dealSizeTarget, "K"}, color: "SECONDARY")
+                        },
+                        align: "RIGHT"
+                      ),
+                      width: "MINIMIZE"
+                    )
+                  },
+                  alignVertical: "BOTTOM"
+                )
+              },
+              style: if((sum(local!opportunities.amount) / length(local!opportunities)) / 1000 &gt;= local!dealSizeTarget, "SUCCESS", "ERROR"),
+              height: "AUTO"
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_cardLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_richTextDisplayField"(
+                  labelPosition: "COLLAPSED",
+                  value: {
+                    #"SYSTEM_SYSRULES_richTextItem_v1"(text: {"TOTAL PIPELINE"}, color: "SECONDARY", style: "STRONG")
+                  }
+                ),
+                #"SYSTEM_SYSRULES_sideBySideLayout"(
+                  items: {
+                    #"SYSTEM_SYSRULES_sideBySideItem"(
+                      item: #"SYSTEM_SYSRULES_richTextDisplayField"(
+                        labelPosition: "COLLAPSED",
+                        value: {
+                          #"SYSTEM_SYSRULES_richTextItem_v1"(
+                            text: {"$", round(sum(local!opportunities.amount) / 1000000, 1), "M"},
+                            size: "LARGE"
+                          ),
+                          " ",
+                          #"SYSTEM_SYSRULES_richTextIcon"(icon: "line-chart", size: "LARGE")
+                        }
+                      )
+                    ),
+                    #"SYSTEM_SYSRULES_sideBySideItem"(
+                      item: #"SYSTEM_SYSRULES_richTextDisplayField"(
+                        labelPosition: "COLLAPSED",
+                        value: {
+                          #"SYSTEM_SYSRULES_richTextIcon"(icon: "bullseye", color: "SECONDARY"),
+                          " ",
+                          #"SYSTEM_SYSRULES_richTextItem_v1"(text: {"$", local!pipelineTarget, "M"}, color: "SECONDARY")
+                        },
+                        align: "RIGHT"
+                      ),
+                      width: "MINIMIZE"
+                    )
+                  },
+                  alignVertical: "BOTTOM"
+                )
+              },
+              style: if(sum(local!opportunities.amount) / 1000000 &gt;= local!pipelineTarget, "SUCCESS", "ERROR"),
+              height: "AUTO"
+            )
+          }
+        )
+      }
+    ),
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_columnChartField"(
+              /* If we have a selected AccountExec, look for their name to display */
+              label: if(
+                length(local!selectedAccountExec) = 0,
+                "",
+                displayvalue(tointeger(local!selectedAccountExec), tointeger(local!accountExecs.id), local!accountExecs.displayName, "") &amp; ": "
+              ) &amp; "Opportunities By Pipeline Stage",
+              labelPosition: "ABOVE",
+              categories: {"Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5", "Stage 6", "Stage 7"},
+              series: #"SYSTEM_SYSRULES_chartSeries"(
+                label: "# Opportunities",
+                data: #"SYSTEM_SYSRULES_forEach"(
+                  items: enumerate(7) + 1,
+                  expression: with(
+                    local!oppsForStage: index(local!opportunities, wherecontains(fv!item, tointeger(local!opportunities.stage))),
+                    /* If we have a selected AccountExec, look for only their opportunities */
+                    if(
+                      length(local!selectedAccountExec) = 0,
+                      count(local!oppsForStage),
+                      count(where(local!selectedAccountExec = tointeger(local!oppsForStage.accountExecId)))
+                    )
+                  )
+                ),
+                color: "ACCENT"
+              ),
+              showLegend: false,
+              showTooltips: true
+            ),
+            #"SYSTEM_SYSRULES_sectionLayout_v1"(
+              label: "Section",
+              contents: {
+                #"SYSTEM_SYSRULES_sideBySideLayout"(
+                  items: {}
+                )
+              }
+            ),
+            #"SYSTEM_SYSRULES_sectionLayout_v1"(
+              label: "Section",
+              contents: {}
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_gridLayout"(
+              labelPosition: "COLLAPSED",
+              headerCells: {
+                #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Account Exec"),
+                #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: ""),
+                #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "# Opps", align: "RIGHT"),
+                #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Total Amt", align: "RIGHT"),
+                #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Conversion", align: "RIGHT")
+              },
+              columnConfigs: {
+                #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(weight: 3),
+                #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "NARROW"),
+                #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(weight: 2),
+                #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(weight: 2),
+                #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(weight: 2)
+              },
+              rows: #"SYSTEM_SYSRULES_forEach"(
+                items: local!accountExecs,
+                expression: #"SYSTEM_SYSRULES_gridRowLayout"(
+                  id: fv!item.id,
+                  contents: {
+                    #"SYSTEM_SYSRULES_textField"(value: fv!item.displayName, readOnly: true),
+                    #"SYSTEM_SYSRULES_imageField_v1"(
+                      images: {#"SYSTEM_SYSRULES_userImage"(user: fv!item.username)},
+                      size: "TINY",
+                      style: "AVATAR"
+                    ),
+                    #"SYSTEM_SYSRULES_textField"(
+                      value: count(where(fv!item.id = local!opportunities.accountExecId)),
+                      readOnly: true,
+                      align: "RIGHT"
+                    ),
+                    #"SYSTEM_SYSRULES_textField"(
+                      value: dollar(sum(local!opportunities[where(fv!item.id = local!opportunities.accountExecId)].amount), 0),
+                      readOnly: true,
+                      align: "RIGHT"
+                    ),
+                    #"SYSTEM_SYSRULES_richTextDisplayField"(
+                      value: {
+                        #"SYSTEM_SYSRULES_richTextItem_v1"(
+                          text: {fv!item.conversion, "%"},
+                          color: if(tointeger(fv!item.conversion) &gt; 7, "POSITIVE", "NEGATIVE")
+                        )
+                      },
+                      align: "RIGHT"
+                    )
+                  }
+                )
+              ),
+              selectionValue: local!selectedAccountExec,
+              selectionSaveInto: {
+                a!save(
+                  local!selectedAccountExec,
+                  if(
+                    /* If you already have a row selected, only use the latest selection */
+                    length(save!value) &gt; 1,
+                    tointeger(save!value[2]),
+                    save!value
+                  )
+                )
+              },
+              selectable: true,
+              selectionStyle: "ROW_HIGHLIGHT",
+              height: "MEDIUM",
+              spacing: "DENSE",
+              borderStyle: "LIGHT",
+              rowHeader: 1
+            ),
+            #"SYSTEM_SYSRULES_boxLayout"(
+              label: "Box",
+              contents: {
+                #"SYSTEM_SYSRULES_dateField"(
+                  label: "Date",
+                  labelPosition: "ABOVE",
+                  saveInto: {},
+                  validations: {}
+                )
+              },
+              style: "STANDARD",
+              marginBelow: "STANDARD"
+            )
+          }
+        )
+      }
+    )
+  }
+)</definition>
+        <namedTypedValue>
+            <name>ArrayEncrypted</name>
+            <type>
+                <name>EncryptedText?list</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>AOFD_CDT3</name>
+            <type>
+                <name>AOFD_CDT3</name>
+                <namespace>urn:com:appian:types</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <typedValue>
+        <type>
+            <name>RuleTestConfig?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:name/>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="a:Expression">{}</a:value>
+                    <a:nameRef>ArrayEncrypted</a:nameRef>
+                    <a:id>1</a:id>
+                </a:ruleInputTestConfigs>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="a:Expression">{}</a:value>
+                    <a:nameRef>AOFD_CDT3</a:nameRef>
+                    <a:id>2</a:id>
+                </a:ruleInputTestConfigs>
+                <a:assertions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            </el>
+        </value>
+    </typedValue>
+    <history>
+        <historyInfo versionUuid="_a-0000e25a-4a85-8000-3a5b-01ef9001ef90_24434"/>
+        <historyInfo versionUuid="_a-0000e345-a1d8-8000-9e50-01ef9001ef90_12590"/>
+        <historyInfo versionUuid="_a-0000e351-d13b-8000-cdf6-01ef9001ef90_13049"/>
+    </history>
+</contentHaul>

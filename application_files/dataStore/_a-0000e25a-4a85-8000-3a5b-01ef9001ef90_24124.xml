@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataStoreHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e351-d13b-8000-cdf6-01ef9001ef90_13116</versionUuid>
+    <dataStore>
+        <uuid>_a-0000e25a-4a85-8000-3a5b-01ef9001ef90_24124</uuid>
+        <name>AOFD Data Store</name>
+        <description>This Data Store for AOFD contains 2 entities, 1 for each of the AOFD_CDT objects</description>
+        <dataSourceKey>jdbc/AppianAnywhere</dataSourceKey>
+        <adaptingExplicitSqlNames>false</adaptingExplicitSqlNames>
+        <autoUpdateSchema>false</autoUpdateSchema>
+        <entities>
+            <entity>
+                <uuid>903431c7-3c8f-4853-834d-785f3c4a7173</uuid>
+                <name>AOFD Entity 1</name>
+                <type>{urn:com:appian:types}AOFD_CDT1</type>
+            </entity>
+            <entity>
+                <uuid>416ed272-6792-47cc-8e3b-42c159d8db09</uuid>
+                <name>AOFD Entity 2</name>
+                <type>{urn:com:appian:types}AOFD_CDT2</type>
+            </entity>
+        </entities>
+    </dataStore>
+    <isPublished>false</isPublished>
+    <roleMap>
+        <role inherit="false" allowForAll="false" name="administrators">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_DESIGNERS</groupUuid>
+            </groups>
+        </role>
+        <role inherit="false" allowForAll="true" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e25a-4a85-8000-3a5b-01ef9001ef90_24408"/>
+        <historyInfo versionUuid="_a-0000e323-a338-8000-97c0-01ef9001ef90_11919"/>
+        <historyInfo versionUuid="_a-0000e345-a1d8-8000-9e50-01ef9001ef90_12567"/>
+        <historyInfo versionUuid="_a-0000e351-d13b-8000-cdf6-01ef9001ef90_13116"/>
+    </history>
+</dataStoreHaul>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webApiHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>dc6cb933-ec94-4ca2-bc25-4e5c4bbe5f6a</versionUuid>
+    <webApi a:uuid="c165e50f-1d2f-44e7-a3fa-9ca69f0e7fbb" name="AOFD Web API 1">
+        <a:description>This is the description for AOFD Web API 1!</a:description>
+        <a:expression>#"SYSTEM_SYSRULES_httpResponse_v1"(
+  /*
+  * The 'statusCode' parameter is a number that represents the HTTP status code
+  * of the response. If no status code is specified, a default of '200' is used,
+  * meaning that the request was successful.
+  */
+  statusCode: "IT'S OVER 9,000",
+
+  /*
+  * The 'headers' parameter is a list of HTTP headers to include on the response.
+  * HTTP headers should be built with 'a!httpHeader()'.
+  */
+  headers: {},
+
+  /*
+  * The 'body' parameter is the text that will be included in the HTTP response's
+  * body.
+  */
+  body: "Hello World"
+)
+/*comment*/
+</a:expression>
+        <a:urlAlias>GnNgiQ</a:urlAlias>
+        <a:httpMethod>POST</a:httpMethod>
+        <a:system>false</a:system>
+        <a:requestBodyType>BINARY</a:requestBodyType>
+        <a:receiveDocumentsFolderUuid>_a-0000e25a-4a85-8000-3a5b-01ef9001ef90_24159</a:receiveDocumentsFolderUuid>
+    </webApi>
+    <roleMap>
+        <role name="web_api_administrator">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_DESIGNERS</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <typedValue>
+        <type>
+            <name>WebApiRequest?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:path>https://google.com</a:path>
+                <a:queryParameters>
+                    <a:name>username</a:name>
+                    <a:value>saritha.pothuraju</a:value>
+                </a:queryParameters>
+                <a:queryParameters>
+                    <a:name>username</a:name>
+                    <a:value>kevin.lin</a:value>
+                </a:queryParameters>
+                <a:headers>
+                    <a:name>value</a:name>
+                    <a:value>testing</a:value>
+                </a:headers>
+                <a:headers>
+                    <a:name>hello</a:name>
+                    <a:value>world</a:value>
+                </a:headers>
+                <a:body/>
+            </el>
+        </value>
+    </typedValue>
+    <history>
+        <historyInfo versionUuid="66babbe4-2b61-4627-9cf7-624adb150b71"/>
+        <historyInfo versionUuid="8d7af30f-ae2f-4d07-a7d7-4728e736a83e"/>
+        <historyInfo versionUuid="561393cc-bb73-47af-955d-881d756f1647"/>
+        <historyInfo versionUuid="1089e815-f368-4dc1-8f54-1488bf07fc4c"/>
+        <historyInfo versionUuid="dc6cb933-ec94-4ca2-bc25-4e5c4bbe5f6a"/>
+    </history>
+</webApiHaul>

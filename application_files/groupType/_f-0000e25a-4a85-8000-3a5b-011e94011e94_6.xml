@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<groupTypeHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_f-0000e323-a338-8000-97c0-011e94011e94_11</versionUuid>
+    <groupType>
+        <name>AOFD Group Type 1</name>
+        <uuid>_f-0000e25a-4a85-8000-3a5b-011e94011e94_6</uuid>
+        <description>This is the description for AOFD Group Type 1!update</description>
+        <attributes/>
+    </groupType>
+    <history>
+        <historyInfo versionUuid="_f-0000e25a-4a85-8000-3a5b-011e94011e94_7"/>
+        <historyInfo versionUuid="_f-0000e323-a338-8000-97c0-011e94011e94_11"/>
+    </history>
+</groupTypeHaul>

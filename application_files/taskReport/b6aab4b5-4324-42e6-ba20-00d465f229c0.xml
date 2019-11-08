@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taskReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>4d88a23e-07cd-4d06-8b89-b86418ef8eb7</versionUuid>
+    <taskReport a:uuid="b6aab4b5-4324-42e6-ba20-00d465f229c0" name="AOFD Task Report 1">
+        <a:description>This Report was created from AOFD_Interface2 no need updated</a:description>
+        <a:uiExpr>#"_a-0000e25a-4a85-8000-3a5b-01ef9001ef90_24369"()</a:uiExpr>
+        <a:urlStub>strI-g</a:urlStub>
+    </taskReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_DESIGNERS</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="7d6c0085-42c2-43bb-b4c3-1fbd0de862c1"/>
+        <historyInfo versionUuid="32000fac-3efa-465c-80cb-c9347d703894"/>
+        <historyInfo versionUuid="4d88a23e-07cd-4d06-8b89-b86418ef8eb7"/>
+    </history>
+</taskReportHaul>

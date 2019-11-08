@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e351-d13b-8000-cdf6-01ef9001ef90_13113</versionUuid>
+    <document>
+        <name>AOFD icon Document 1</name>
+        <uuid>_a-0000e25a-4a85-8000-3a5b-01ef9001ef90_24170</uuid>
+        <description>This is the description for AOFD icon Document 1!
+updated!</description>
+        <parentUuid>_a-0000e25a-4a85-8000-3a5b-01ef9001ef90_24159</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+    </document>
+    <file>file.ico</file>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e25a-4a85-8000-3a5b-01ef9001ef90_24439"/>
+        <historyInfo versionUuid="_a-0000e345-a1d8-8000-9e50-01ef9001ef90_12571"/>
+        <historyInfo versionUuid="_a-0000e351-d13b-8000-cdf6-01ef9001ef90_13113"/>
+    </history>
+</contentHaul>

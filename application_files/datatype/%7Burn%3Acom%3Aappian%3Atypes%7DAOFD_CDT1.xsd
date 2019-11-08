@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="urn:com:appian:types"
+  xmlns:tns="urn:com:appian:types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="AOFD_CDT1">
+    <xsd:annotation>
+      <xsd:appinfo source="http://www.appian.com/ae/types/2009">
+        <ns2:Metadata xmlns:ns2="http://www.appian.com/ae/types/2009">
+          <ns2:Flags>HIDDEN</ns2:Flags>
+          <ns2:versionUuid>0000e358-5154-8000-cfa8-014d98014d98</ns2:versionUuid>
+          <ns2:history>
+            <ns2:historyInfo versionUuid="0000e25a-6d37-8000-3a5b-014d98014d98"/>
+            <ns2:historyInfo versionUuid="0000e350-3668-8000-9fa9-014d98014d98"/>
+            <ns2:historyInfo versionUuid="0000e358-5154-8000-cfa8-014d98014d98"/>
+          </ns2:history>
+        </ns2:Metadata>
+      </xsd:appinfo>
+      <xsd:documentation><![CDATA[This CDT should have all fields and fields of fields populated somewhere, but does not include any references to other CDTs]]></xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="testing1" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(length=255) @Id @GeneratedValue</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="test2"
+        nillable="true" type="xsd:int"/>
+      <xsd:element name="test3" nillable="true" type="xsd:boolean"/>
+      <xsd:element name="test4" nillable="true" type="xsd:date"/>
+      <xsd:element name="test5" nillable="true" type="xsd:dateTime"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

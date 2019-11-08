@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoFeedHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>31b7fd08-e79a-4e51-8feb-6966b5672b92</versionUuid>
+    <tempoFeed>
+        <uuid>e013e819-c136-4e11-8ec8-6f6b3a305798</uuid>
+        <name>AOFD Feed 2</name>
+        <description>Show in Catalog is FALSE updated</description>
+        <showInCatalog>false</showInCatalog>
+        <systemFeed>false</systemFeed>
+    </tempoFeed>
+    <roleMap>
+        <role name="administrator">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_DESIGNERS</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="0e2480e8-b2a7-41f1-bd00-df91d14334d8"/>
+        <historyInfo versionUuid="00808192-8ae7-4e67-9afc-9962abef9ffd"/>
+        <historyInfo versionUuid="c67308ef-ae80-4928-b07f-4d6f90e950f1"/>
+        <historyInfo versionUuid="31b7fd08-e79a-4e51-8feb-6966b5672b92"/>
+    </history>
+</tempoFeedHaul>

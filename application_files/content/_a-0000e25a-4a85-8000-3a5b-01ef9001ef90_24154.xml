@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e323-a338-8000-97c0-01ef9001ef90_11934</versionUuid>
+    <communityKnowledgeCenter>
+        <name>AOFD KC 1</name>
+        <uuid>_a-0000e25a-4a85-8000-3a5b-01ef9001ef90_24154</uuid>
+        <description>This is the description for AOFD KC 1! update</description>
+        <parentUuid>_a-0000dff5-7e3f-8000-763d-01ef9001ef90_37203</parentUuid>
+        <visibility>
+            <advertise>true</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <expirationDays>0</expirationDays>
+    </communityKnowledgeCenter>
+    <roleMap public="true">
+        <role inherit="false" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e25a-4a85-8000-3a5b-01ef9001ef90_24441"/>
+        <historyInfo versionUuid="_a-0000e323-a338-8000-97c0-01ef9001ef90_11934"/>
+        <historyInfo versionUuid="_a-0000e345-a1d8-8000-9e50-01ef9001ef90_12519"/>
+    </history>
+</contentHaul>

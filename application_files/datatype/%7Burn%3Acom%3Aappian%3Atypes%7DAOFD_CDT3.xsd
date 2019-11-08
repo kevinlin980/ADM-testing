@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="urn:com:appian:types"
+  xmlns:_20091="http://www.appian.com/ae/types/2009"
+  xmlns:tns="urn:com:appian:types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="%7Burn%3Acom%3Aappian%3Atypes%7DAOFD_CDT1.xsd"/>
+  <xsd:import namespace="http://www.appian.com/ae/types/2009" schemaLocation="%7Bhttp%3A%2F%2Fwww.appian.com%2Fae%2Ftypes%2F2009%7DEncryptedText.xsd"/>
+  <xsd:complexType name="AOFD_CDT3">
+    <xsd:annotation>
+      <xsd:appinfo source="http://www.appian.com/ae/types/2009">
+        <ns2:Metadata xmlns:ns2="http://www.appian.com/ae/types/2009">
+          <ns2:versionUuid>0000e358-5195-8000-cfab-014d98014d98</ns2:versionUuid>
+          <ns2:history>
+            <ns2:historyInfo versionUuid="0000e25a-6e2f-8000-3a5b-014d98014d98"/>
+            <ns2:historyInfo versionUuid="0000e350-3740-8000-9fb0-014d98014d98"/>
+            <ns2:historyInfo versionUuid="0000e358-5195-8000-cfab-014d98014d98"/>
+          </ns2:history>
+        </ns2:Metadata>
+      </xsd:appinfo>
+      <xsd:documentation><![CDATA[This CDT should have all fields and fields of fields populated somewhere, but does not include any references to other CDTs]]></xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ID" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Id @GeneratedValue</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0"
+        name="ReferenceArray1" type="tns:AOFD_CDT1">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@JoinColumn(name="ThisIsTheColumnName") @OneToMany(cascade=CascadeType.ALL, indexed=false)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="NoLength1" nillable="true" type="xsd:string"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0"
+        name="NonSimpleType" nillable="true" type="_20091:EncryptedText">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(length=500)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
