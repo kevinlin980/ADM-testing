@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>_a-0000e385-c0bb-8000-bba4-ddef90ddef90_31021</versionUuid>
+    <versionUuid>_a-0000e385-c0bb-8000-bba4-ddef90ddef90_26993</versionUuid>
     <constant>
         <name>Legal</name>
         <uuid>0000d13a-924a-8000-91fb-75fb5175fb51</uuid>
@@ -29,8 +29,6 @@
                 <el>max.power</el>
                 <el>sandra.compton</el>
                 <el>sandra.steenkir</el>
-                <el/>
-                <el>test</el>
             </value>
         </typedValue>
         <isEnvironmentSpecific>false</isEnvironmentSpecific>
@@ -65,6 +63,5 @@
     </roleMap>
     <history>
         <historyInfo versionUuid="_a-0000e385-c0bb-8000-bba4-ddef90ddef90_26993"/>
-        <historyInfo versionUuid="_a-0000e385-c0bb-8000-bba4-ddef90ddef90_31021"/>
     </history>
 </contentHaul>
