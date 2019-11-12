@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <applicationHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>_a-0000e385-c0bb-8000-bba4-ddef90ddef90_30977</versionUuid>
+    <versionUuid>855bc101-b322-4ca8-a0f1-d9a392f5fa5d</versionUuid>
     <application>
         <name>User Creation</name>
         <uuid>_a-0000daef-7dec-8000-d78e-010000010000_4636</uuid>
@@ -40,6 +40,10 @@
                     <type>group</type>
                     <uuids>
                         <uuid>0001d0b7-c973-8000-c973-4e2a554e2a55</uuid>
+                        <uuid>SYSTEM_GROUP_ROLE_QUICK_APP_CREATORS</uuid>
+                        <uuid/>
+                        <uuid>SYSTEM_GROUP_ROLE_DESIGNERS</uuid>
+                        <uuid>SYSTEM_GROUP_PROCESS_MODEL_CREATORS</uuid>
                     </uuids>
                 </item>
                 <item>
@@ -262,6 +266,8 @@
                         <uuid>_a-0001daf6-194e-8000-194e-0d00000d0000_3629</uuid>
                         <uuid>_a-0001daf6-194e-8000-194e-0d00000d0000_3630</uuid>
                         <uuid>_a-0001daf6-194e-8000-194e-0d00000d0000_3631</uuid>
+                        <uuid/>
+                        <uuid>SYSTEM_FOLDER_TEMPORARY_DOCS</uuid>
                     </uuids>
                 </item>
                 <item>
@@ -272,12 +278,14 @@
                     <type>processModelFolder</type>
                     <uuids>
                         <uuid>_g-0000daef-7dee-8000-d78e-010000010000_77</uuid>
+                        <uuid/>
                     </uuids>
                 </item>
                 <item>
                     <type>processModel</type>
                     <uuids>
                         <uuid>001bdaf2-5dd5-8000-d78e-010000010000</uuid>
+                        <uuid/>
                     </uuids>
                 </item>
                 <item>
@@ -469,5 +477,6 @@
     </roleMap>
     <history>
         <historyInfo versionUuid="_a-0000e385-c0bb-8000-bba4-ddef90ddef90_30977"/>
+        <historyInfo versionUuid="855bc101-b322-4ca8-a0f1-d9a392f5fa5d"/>
     </history>
-</applicationHaul><!--updated on 2019-11-12T13:39:29.719-->
+</applicationHaul><!--updated on 2019-11-12T13:43:38.127-->
