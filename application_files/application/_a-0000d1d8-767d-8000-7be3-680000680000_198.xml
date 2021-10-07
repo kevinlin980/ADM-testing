@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<applicationHaul xmlns:a="http://www.appian.com/ae/types/2009">
+<?xml version="1.0" encoding="UTF-8"?><applicationHaul xmlns:a="http://www.appian.com/ae/types/2009">
     <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_31150</versionUuid>
     <application>
         <name>OneApp</name>
@@ -1435,4 +1434,4 @@
         <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_31150"/>
     </history>
     <postDeploymentProcessData/>
-</applicationHaul><!--updated on 2021-10-07T12:12:42.698-->
+</applicationHaul>
