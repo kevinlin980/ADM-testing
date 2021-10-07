@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoFeedHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>0e5df9fa-cb3a-4359-9e29-7a0638723ecf</versionUuid>
+    <tempoFeed>
+        <uuid>8799c65e-0a38-4779-815c-4aa604c96ea1</uuid>
+        <name>MRNcrawlerNewsPostEvent</name>
+        <description></description>
+        <showInCatalog>true</showInCatalog>
+        <systemFeed>false</systemFeed>
+    </tempoFeed>
+    <roleMap>
+        <role name="editor">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_APPLICATION_USERS</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="0e5df9fa-cb3a-4359-9e29-7a0638723ecf"/>
+    </history>
+</tempoFeedHaul>

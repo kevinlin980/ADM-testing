@@ -1,0 +1,370 @@
+fn!load(
+  local!label: "This is a Label!",
+  local!labelPosition: "NULL",
+  local!instructions: "These are Instructions",
+  local!helpTooltip: "This is a Tooltip",
+  local!choices: 4,
+  local!selectedChoice: 1,
+  local!links: true,
+  local!required: false,
+  local!disabled: false,
+  local!validations: false,
+  local!requiredMessage: "This is a Required Message",
+  local!layout: "NULL",
+  local!align: "NULL",
+  local!columns: false,
+  local!labelChoices: {
+    "Null",
+    "Above",
+    "Adjacent",
+    "Adjacent Near",
+    "Adjacent Far",
+    "Collapsed",
+    "Hidden",
+    "Invalid",
+    "None"
+  },
+  local!labelValues: {
+    "NULL",
+    "ABOVE",
+    "ADJACENT",
+    "ADJACENT_NEAR",
+    "ADJACENT_FAR",
+    "COLLAPSED",
+    "HIDDEN",
+    "INVALID",
+    "NONE"
+  },
+  a!formLayout_17r1(
+    firstColumnContents: {
+      a!sectionLayout_17r1(
+        label: "Checkbox by Index Configuration",
+        firstColumnContents: {
+          a!textField(
+            label: "Checkbox Label",
+            value: local!label,
+            saveInto: local!label
+          ),
+          a!textField(
+            label: "Checkbox Instructions",
+            value: local!instructions,
+            saveInto: local!instructions
+          ),
+          a!textField(
+            label: "Checkbox HelpTooltip",
+            value: local!helpTooltip,
+            saveInto: local!helpTooltip
+          ),
+          a!dropdownField(
+            label: "Checkbox Label Position (Adjacent Near and Far, None, and Hidden are Not Yet Implemented)",
+            instructions: "Selecting Adjacent_Near, Adjacent_Far, None or Hidden in GWT or React(before they are implemented) will crash the page",
+            choiceLabels: local!labelChoices,
+            choiceValues: local!labelValues,
+            value: local!labelPosition,
+            saveInto: local!labelPosition
+          ),
+          a!integerField(
+            label: "Checkbox Number of Choices",
+            value: local!choices,
+            saveInto: {
+              a!save(
+                target: local!choices,
+                value: save!value
+              ),
+              a!save(
+                target: local!selectedChoice,
+                value: 1
+              )
+            }
+          )
+        },
+        secondColumnContents: {
+          a!textField(
+            label: "Checkbox Required Message",
+            value: local!requiredMessage,
+            saveInto: local!requiredMessage
+          ),
+          a!radioButtonField(
+            label: "Checkbox Required",
+            choiceLabels: {
+              "Required",
+              "Not Required"
+            },
+            choiceValues: {
+              true,
+              false
+            },
+            choiceLayout: "COMPACT",
+            value: local!required,
+            saveInto: local!required
+          ),
+          a!radioButtonField(
+            label: "Checkbox Disabled",
+            choiceLabels: {
+              "Disabled",
+              "Not Disabled"
+            },
+            choiceValues: {
+              true,
+              false
+            },
+            choiceLayout: "COMPACT",
+            value: local!disabled,
+            saveInto: local!disabled
+          ),
+          a!radioButtonField(
+            label: "Multiple Columns?",
+            choiceLabels: {
+              "Yes",
+              "No"
+            },
+            choiceValues: {
+              true,
+              false
+            },
+            value: local!columns,
+            saveInto: local!columns,
+            choiceLayout: "COMPACT"
+          ),
+          a!radioButtonField(
+            label: "Checkbox Validations",
+            choiceLabels: {
+              "Validations",
+              "No Validations"
+            },
+            choiceValues: {
+              true,
+              false
+            },
+            choiceLayout: "COMPACT",
+            value: local!validations,
+            saveInto: local!validations
+          ),
+          a!radioButtonField(
+            label: "Checkbox Alignment",
+            choiceLabels: {
+              "NULL",
+              "LEFT",
+              "CENTER",
+              "RIGHT"
+            },
+            choiceValues: {
+              "NULL",
+              "LEFT",
+              "CENTER",
+              "RIGHT"
+            },
+            choiceLayout: "COMPACT",
+            value: local!align,
+            saveInto: local!align
+          ),
+          a!radioButtonField(
+            label: "Checkbox Choice Layout ",
+            choiceLabels: {
+              "NULL",
+              "COMPACT",
+              "STACKED"
+            },
+            choiceValues: {
+              "NULL",
+              "COMPACT",
+              "STACKED"
+            },
+            choiceLayout: "COMPACT",
+            value: local!layout,
+            saveInto: local!layout
+          )
+        }
+      ),
+      /* The tester begins here! */
+      a!sectionLayout_17r1(
+        label: "Checkbox by Index Tester",
+        firstColumnContents: {
+          a!checkboxFieldByIndex(
+            label: local!label,
+            labelPosition: if(
+              local!labelPosition = "NULL",
+              null,
+              local!labelPosition
+            ),
+            instructions: local!instructions,
+            helpTooltip: local!helpTooltip,
+            choiceLabels: {
+              if(
+                isnull(
+                  local!choices
+                ),
+                {
+                  "Choice 1"
+                },
+                if(
+                  local!choices < 1,
+                  {
+                    "Choice 1"
+                  },
+                  apply(
+                    append(
+                      "Choice ",
+                      _
+                    ),
+                    enumerate(
+                      local!choices
+                    ) + 1
+                  )
+                )
+              )
+            },
+            choiceValues: {
+              if(
+                isnull(
+                  local!choices
+                ),
+                {
+                  "Choice 1"
+                },
+                if(
+                  local!choices < 1,
+                  {
+                    "Choice 1"
+                  },
+                  apply(
+                    append(
+                      "Choice ",
+                      _
+                    ),
+                    enumerate(
+                      local!choices
+                    ) + 1
+                  )
+                )
+              )
+            },
+            value: local!selectedChoice,
+            saveInto: local!selectedChoice,
+            choiceLayout: if(
+              local!layout = "NULL",
+              null,
+              local!layout
+            ),
+            required: local!required,
+            disabled: local!disabled,
+            validations: if(
+              local!validations,
+              {
+                "This is a Validation Message"
+              },
+              {}
+            ),
+            requiredMessage: local!requiredMessage,
+            align: if(
+              local!align = "NULL",
+              null,
+              local!align
+            )
+          ),
+          a!textField(
+            label: "Selections from above Checkbox",
+            readOnly: true(),
+            value: local!selectedChoice
+          )
+        },
+        /* The following column is a copy of the first (plus the if statement) */
+        /* If something is changed above, please copy and paste that change below */
+        secondColumnContents: {
+          if(
+            local!columns,
+            a!checkboxFieldByIndex(
+              label: local!label,
+              labelPosition: if(
+                local!labelPosition = "NULL",
+                null,
+                local!labelPosition
+              ),
+              instructions: local!instructions,
+              helpTooltip: local!helpTooltip,
+              choiceLabels: {
+                if(
+                  isnull(
+                    local!choices
+                  ),
+                  {
+                    "Choice 1"
+                  },
+                  if(
+                    local!choices < 1,
+                    {
+                      "Choice 1"
+                    },
+                    apply(
+                      append(
+                        "Choice ",
+                        _
+                      ),
+                      enumerate(
+                        local!choices
+                      ) + 1
+                    )
+                  )
+                )
+              },
+              choiceValues: {
+                if(
+                  isnull(
+                    local!choices
+                  ),
+                  {
+                    1
+                  },
+                  if(
+                    local!choices < 1,
+                    {
+                      1
+                    },
+                    apply(
+                      append(
+                        _
+                      ),
+                      enumerate(
+                        local!choices
+                      ) + 1
+                    )
+                  )
+                )
+              },
+              value: local!selectedChoice,
+              saveInto: local!selectedChoice,
+              choiceLayout: if(
+                local!layout = "NULL",
+                null,
+                local!layout
+              ),
+              required: local!required,
+              disabled: local!disabled,
+              validations: if(
+                local!validations,
+                {
+                  "This is a Validation Message"
+                },
+                {}
+              ),
+              requiredMessage: local!requiredMessage,
+              align: if(
+                local!align = "NULL",
+                null,
+                local!align
+              )
+            ),
+            {}
+          )
+        }
+      )
+    },
+    buttons: a!buttonLayout(
+      primaryButtons: a!buttonWidgetSubmit(
+        label: "SUBMIT ME",
+        confirmMessage: "Are you sure you want to submit?",
+        style: "PRIMARY"
+      )
+    )
+  )
+)

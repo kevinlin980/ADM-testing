@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recordTypeHaul xmlns:a="http://www.appian.com/ae/types/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <versionUuid>c669e65e-bf0f-411c-a77c-c2e3f48ddfff</versionUuid>
+  <recordType a:uuid="8dcf61d3-78f3-4381-852c-f2e4023e7fd0" name="MRN Crawler Expression Backed News Feed">
+    <a:pluralName>MRN Crawler Expression Backed News Feeds</a:pluralName>
+    <a:description>An expression backed record used for testing record news in Sites for Crawler</a:description>
+    <a:urlStub>8YE5lg</a:urlStub>
+    <a:source a:uuid="{urn:com:appian:types}mrnExpressionCDT" xsi:type="a:Datatype"/>
+    <a:listViewTemplateExpr>#"SYSTEM_SYSRULES_recordGridLayoutColumns"(
+  columns: {
+    #"SYSTEM_SYSRULES_gridLayoutColumn"(
+      label: "ID",
+      width: "ICON",
+      field: "ID",
+      align: "LEFT",
+      component: #"SYSTEM_SYSRULES_recordGrid_linkField"(
+        links: {
+          #"SYSTEM_SYSRULES_recordLink"(
+            label: rp!id,
+            recordtype: rp!type,
+            identifier: rp!id
+          )
+        },
+        align: "CENTER"
+      )
+    )
+  },
+  pageSize: 50,
+  defaultSort: #"SYSTEM_SYSRULES_sortInfo"(
+    field: "URL",
+    ascending: fn!true()
+  ),
+  shadeAlternateRows: true,
+  spacing: "STANDARD",
+  borderstyle: "STANDARD"
+)</a:listViewTemplateExpr>
+    <a:detailViewCfg>
+      <a:nameExpr>="Summary"</a:nameExpr>
+      <a:uiExpr>#"_a-0000e09a-c547-8000-ac56-01ef9001ef90_26642"()</a:uiExpr>
+      <a:visibilityExpr>=true()</a:visibilityExpr>
+      <a:urlStub>summary</a:urlStub>
+      <a:recordActionLaunchType>SAME_TAB</a:recordActionLaunchType>
+    </a:detailViewCfg>
+    <a:isSystem>false</a:isSystem>
+    <a:dataSrcExpr>#"_a-0000e09a-c547-8000-ac56-01ef9001ef90_26628"()</a:dataSrcExpr>
+    <a:titleExpr>"MRN Expression " &amp; rf!ID</a:titleExpr>
+    <a:layoutType>GRID</a:layoutType>
+    <a:security>32767</a:security>
+    <a:hideLatestNews>false</a:hideLatestNews>
+    <a:isExportable>false</a:isExportable>
+    <a:listAutoRefreshInterval>0.0</a:listAutoRefreshInterval>
+    <a:enabledFeatures>0</a:enabledFeatures>
+    <a:isVisibleInRecordTypeList>true</a:isVisibleInRecordTypeList>
+    <a:recordActionLaunchType>SAME_TAB</a:recordActionLaunchType>
+  </recordType>
+  <roleMap/>
+  <history>
+    <historyInfo versionUuid="886d2cbf-049a-46dc-a538-ebd45c8a928f"/>
+    <historyInfo versionUuid="c669e65e-bf0f-411c-a77c-c2e3f48ddfff"/>
+  </history>
+  <migrationVersion>1</migrationVersion>
+</recordTypeHaul>

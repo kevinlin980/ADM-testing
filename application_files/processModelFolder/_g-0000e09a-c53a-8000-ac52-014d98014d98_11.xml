@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<processModelFolderHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_g-0000e09d-30cf-8000-fd9d-014d98014d98_434</versionUuid>
+    <processModelFolder>
+        <name>MRN_Crawler_PMF</name>
+        <uuid>_g-0000e09a-c53a-8000-ac52-014d98014d98_11</uuid>
+        <description>Process Model Folder</description>
+    </processModelFolder>
+    <roleMap>
+        <role name="ADMIN_OWNER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="EDITOR">
+            <users/>
+            <groups/>
+        </role>
+        <role name="EXPLICIT_NONMEMBER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="VIEWER">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_APPLICATION_USERS</groupUuid>
+            </groups>
+        </role>
+        <role name="MANAGER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="INITIATOR">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_g-0000e09a-c53a-8000-ac52-014d98014d98_15"/>
+        <historyInfo versionUuid="_g-0000e09d-30cf-8000-fd9d-014d98014d98_434"/>
+    </history>
+</processModelFolderHaul>
