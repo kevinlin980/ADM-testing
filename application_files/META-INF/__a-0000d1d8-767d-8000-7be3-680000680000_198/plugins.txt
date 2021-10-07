@@ -1,0 +1,12 @@
+com.appiancorp.cloud.plugins.contentfunctions
+Content Expressions
+1.0.0
+
+appian.optional.content
+Optional Content Plugin
+1.0
+
+appian.optional.rdbms
+Optional RDBMS Plugin
+1.1
+
