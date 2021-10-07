@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>_a-0000e71b-afbb-8000-69c1-01ef9001ef90_26587</versionUuid>
+    <versionUuid>_a-0000e71b-9271-8000-1ec8-01ef9001ef90_24790</versionUuid>
     <rule>
         <name>trueFalseField_example</name>
         <uuid>_a-0000d711-d7b0-8000-d332-010000010000_1231</uuid>
@@ -61,6 +61,6 @@ defaultvalue: if(rf!defaultvalue=true, true, false),
         </role>
     </roleMap>
     <history>
-        <historyInfo versionUuid="_a-0000e71b-afbb-8000-69c1-01ef9001ef90_26587"/>
+        <historyInfo versionUuid="_a-0000e71b-9271-8000-1ec8-01ef9001ef90_24790"/>
     </history>
 </contentHaul>

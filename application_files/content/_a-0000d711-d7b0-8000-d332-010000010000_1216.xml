@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>_a-0000e71b-afbb-8000-69c1-01ef9001ef90_26223</versionUuid>
+    <versionUuid>_a-0000e71b-9271-8000-1ec8-01ef9001ef90_24426</versionUuid>
     <rule>
         <name>dateTimeField_example</name>
         <uuid>_a-0000d711-d7b0-8000-d332-010000010000_1216</uuid>
@@ -61,6 +61,6 @@ defaultvalue: if(rf!defaultvalue=true, datetime(2013, 1, 14, 9, 15, 0), null()),
         </role>
     </roleMap>
     <history>
-        <historyInfo versionUuid="_a-0000e71b-afbb-8000-69c1-01ef9001ef90_26223"/>
+        <historyInfo versionUuid="_a-0000e71b-9271-8000-1ec8-01ef9001ef90_24426"/>
     </history>
 </contentHaul>

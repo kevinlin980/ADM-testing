@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <processModelHaul>
-  <versionUuid>0007e71b-b40f-8000-6adf-014d98014d98</versionUuid>
+  <versionUuid>0001e71b-94d4-8000-1f93-014d98014d98</versionUuid>
   <folderUuid>_g-0000d579-c3c1-8000-8f2a-010000010000_44</folderUuid>
   <roleMap>
     <role name="ADMIN_OWNER">
@@ -799,7 +799,6 @@
                 <expression><![CDATA[name]]></expression>
               </instances>
               <execute-in-parallel>false</execute-in-parallel>
-              <allow-mni-batching>false</allow-mni-batching>
               <parallel-merge-type>0</parallel-merge-type>
               <complexnode-merge-expression/>
             </spawning>
@@ -894,6 +893,6 @@
   </process_model_port>
   <isPublished>true</isPublished>
   <history>
-    <historyInfo versionUuid="0007e71b-b40f-8000-6adf-014d98014d98"/>
+    <historyInfo versionUuid="0001e71b-94d4-8000-1f93-014d98014d98"/>
   </history>
 </processModelHaul>

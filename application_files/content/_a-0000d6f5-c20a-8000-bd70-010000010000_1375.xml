@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>_a-0000e71b-afbb-8000-69c1-01ef9001ef90_19062</versionUuid>
+    <versionUuid>_a-0000e71b-9271-8000-1ec8-01ef9001ef90_17624</versionUuid>
     <constant>
         <name>areUiEditables</name>
         <uuid>_a-0000d6f5-c20a-8000-bd70-010000010000_1375</uuid>
@@ -51,6 +51,6 @@
         </role>
     </roleMap>
     <history>
-        <historyInfo versionUuid="_a-0000e71b-afbb-8000-69c1-01ef9001ef90_19062"/>
+        <historyInfo versionUuid="_a-0000e71b-9271-8000-1ec8-01ef9001ef90_17624"/>
     </history>
 </contentHaul>
