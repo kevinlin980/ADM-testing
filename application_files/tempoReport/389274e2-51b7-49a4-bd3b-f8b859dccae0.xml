@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>043d623d-1a32-44ce-9f8a-eada27fa5fd5</versionUuid>
+    <tempoReport a:uuid="389274e2-51b7-49a4-bd3b-f8b859dccae0" name="SitesDiscoverabilityReport">
+        <a:description></a:description>
+        <a:uiExpr>=#"_a-0000de5f-0932-8000-ff03-01ef9001ef90_3397"()</a:uiExpr>
+        <a:urlStub>ft6E8A</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_viewer">
+            <users/>
+            <groups>
+                <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+            </groups>
+        </role>
+        <role name="report_editor">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_DESIGNERS</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="043d623d-1a32-44ce-9f8a-eada27fa5fd5"/>
+    </history>
+</tempoReportHaul>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_30520</versionUuid>
+    <rule>
+        <name>SitesDiscoverabilityLandingPage</name>
+        <uuid>_a-0000de5f-0932-8000-ff03-01ef9001ef90_3397</uuid>
+        <description></description>
+        <parentUuid>_a-0000de5f-0932-8000-ff03-01ef9001ef90_3396</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_sectionLayout"(
+  label: "Sites Discoverability Landing Page",
+  firstColumnContents: {
+    #"SYSTEM_SYSRULES_imageField"(
+      images: {
+        #"SYSTEM_SYSRULES_webImage"(
+          source: "https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/3-thespaceshut.jpg"
+        )
+      }
+    )
+  }
+)</definition>
+        <metadataExpr></metadataExpr>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="false" allowForAll="true" name="readers">
+            <users/>
+            <groups>
+                <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+            </groups>
+        </role>
+        <role inherit="false" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_30520"/>
+    </history>
+</contentHaul>

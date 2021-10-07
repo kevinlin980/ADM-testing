@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siteHaul xmlns:a="http://www.appian.com/ae/types/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <versionUuid>163eb69e-e0c2-4df2-83f0-1ed7474a4d67</versionUuid>
+  <site a:uuid="22df31a5-0967-42c8-91c3-12af7e887b13" name="                        Site 3 - Leading and Trailing Spaces                                                         ">
+    <description>Visible to designer and admin group members</description>
+    <urlStub>site3</urlStub>
+    <page>
+      <staticName>                                 Page w/ Leading and Trailing Spaces                                       </staticName>
+      <description/>
+      <urlStub>page-w-leading-and-trailing-sp</urlStub>
+      <uiObject a:uuid="389274e2-51b7-49a4-bd3b-f8b859dccae0" xsi:type="a:TempoReport"/>
+      <iconId>f001</iconId>
+      <visibilityExpr>fn!true()</visibilityExpr>
+      <pageWidth>STANDARD</pageWidth>
+    </page>
+    <visibility>268435456</visibility>
+    <faviconRef a:uuid="SYSTEM_CONTENT_SITES_DEFAULT_FAVICON" xsi:type="a:CollaborationDocument"/>
+    <logoRef a:uuid="SYSTEM_CONTENT_SITES_DEFAULT_LOGO" xsi:type="a:CollaborationDocument"/>
+    <showName>true</showName>
+    <tempoLinkVisibility>EVERYONE</tempoLinkVisibility>
+    <showRecordNews>false</showRecordNews>
+    <tasksInSitesVisibility>HIDDEN</tasksInSitesVisibility>
+    <buttonShape>SQUARED</buttonShape>
+    <navigationBarStyle>STYLE1</navigationBarStyle>
+    <inputShape>SQUARED</inputShape>
+    <isSystem>false</isSystem>
+  </site>
+  <roleMap>
+    <role name="site_editor">
+      <users/>
+      <groups>
+        <groupUuid>SYSTEM_GROUP_ROLE_DESIGNERS</groupUuid>
+      </groups>
+    </role>
+  </roleMap>
+  <history>
+    <historyInfo versionUuid="163eb69e-e0c2-4df2-83f0-1ed7474a4d67"/>
+  </history>
+</siteHaul>
