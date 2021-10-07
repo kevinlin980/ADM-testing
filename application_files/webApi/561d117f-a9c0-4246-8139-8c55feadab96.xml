@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webApiHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>8b9f4c6a-f689-4328-8dfc-f0249b892139</versionUuid>
+    <webApi a:uuid="561d117f-a9c0-4246-8139-8c55feadab96" name="Scaled Process Throughput: All Processes">
+        <a:description></a:description>
+        <a:expression>with(&#xD;
+  local!pageSizeParam: tointeger(index(http!request.queryParameters, "pageSize")),&#xD;
+  local!pageSize: if(&#xD;
+    isnull(local!pageSizeParam),&#xD;
+    25,&#xD;
+    local!pageSizeParam&#xD;
+  ),&#xD;
+  local!startIndexParam: tointeger(index(http!request.queryParameters, "page")),&#xD;
+  local!startIndex: if(&#xD;
+    isnull(local!startIndexParam),&#xD;
+    1,&#xD;
+    local!startIndexParam*local!pageSize&#xD;
+  ),&#xD;
+  local!pagingInfo: #"SYSTEM_SYSRULES_pagingInfo"(startIndex: local!startIndex, batchSize: local!pageSize),&#xD;
+  &#xD;
+  local!report: a!queryProcessAnalytics(&#xD;
+    report: #"_a-0000e051-c1fa-8000-6110-01ef9001ef90_5581",&#xD;
+    query: #"SYSTEM_SYSRULES_query"(pagingInfo: local!pagingInfo)&#xD;
+  ),&#xD;
+  #"SYSTEM_SYSRULES_httpResponse"(&#xD;
+    headers: {&#xD;
+      #"SYSTEM_SYSRULES_httpHeader"(name: "content-type", value: "application/json")&#xD;
+    },&#xD;
+    body: #"SYSTEM_SYSRULES_toJson"(value: local!report)&#xD;
+  )&#xD;
+)&#xD;
+</a:expression>
+        <a:urlAlias>spt_all_processes</a:urlAlias>
+        <a:httpMethod>GET</a:httpMethod>
+        <a:system>false</a:system>
+        <a:requestBodyType>NONE</a:requestBodyType>
+    </webApi>
+    <roleMap/>
+    <typedValue>
+        <type>
+            <name>WebApiRequest?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:path/>
+                <a:body/>
+            </el>
+        </value>
+    </typedValue>
+    <history>
+        <historyInfo versionUuid="8b9f4c6a-f689-4328-8dfc-f0249b892139"/>
+    </history>
+</webApiHaul>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webApiHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>685fec89-fed1-4433-a0ab-21029feed215</versionUuid>
+    <webApi a:uuid="6692d720-09e6-4069-bf7d-983b99e3fde4" name="Get Rule Performance">
+        <a:description></a:description>
+        <a:expression>/*
+
+This web api returns data equivilent to the rule performance view in the admin console.
+
+Query Parameters:
+ - ruleName: The name of the rule you want the performance data for.  If empty, performance data for all rules will be returned.
+ - aggregationType: Valid values are "INTERVAL_MINUTE", "INTERVAL_HOUR", "INTERVAL_DAY", "INTERVAL_WEEK", and null (no aggregation)
+ 
+Result Body:
+A json-encoded datasubset where the data field is a list of dictionaries that contain the 
+fields {"min", "avg", "max", "count", and "timestamp"}. The value for the identifiers is always null.
+
+*/
+
+fn!load(
+  local!defaultPagingInfo: #"SYSTEM_SYSRULES_pagingInfo"(
+    startIndex: 1,
+    batchSize: 100,
+    sort: #"SYSTEM_SYSRULES_sortInfo"(field: "timestamp", ascending: fn!false())
+  ),
+  local!aggregationType: index(http!request.queryParameters, "aggregationType"), 
+  local!ruleFilterName: index(http!request.queryParameters, "ruleName"),
+  local!pagingInfoAgg: local!defaultPagingInfo,
+  #"SYSTEM_SYSRULES_httpResponse_v1"(
+    headers: {
+      #"SYSTEM_SYSRULES_httpHeader"(name: "Content-Type", value: "application/json")
+    },
+    body: #"SYSTEM_SYSRULES_toJson_v1"(
+      value: fn!queryrulemetrics_appian_internal(
+        #"SYSTEM_SYSRULES_query"(
+          aggregation: #"SYSTEM_SYSRULES_queryAggregation"(
+            aggregationColumns: {
+              #"SYSTEM_SYSRULES_queryAggregationColumnES"(
+                field: "timestamp",
+                isGrouping: fn!true(),
+                aggregationFunction: local!aggregationType
+              ),
+              #"SYSTEM_SYSRULES_queryAggregationColumnES"(field: "count", alias: "count", aggregationFunction: "SUM"),
+              #"SYSTEM_SYSRULES_queryAggregationColumnES"(field: "minMs", alias: "min", aggregationFunction: "MIN"),
+              #"SYSTEM_SYSRULES_queryAggregationColumnES"(field: "avgMs", alias: "avg", aggregationFunction: "AVG"),
+              #"SYSTEM_SYSRULES_queryAggregationColumnES"(field: "maxMs", alias: "max", aggregationFunction: "MAX")
+            }
+          ),
+          filter: if(isnull(local!ruleFilterName),
+            null,
+            #"SYSTEM_SYSRULES_queryFilter"(field: "name", operator: "=", value: fn!lower(local!ruleFilterName))
+          ),
+          pagingInfo: local!pagingInfoAgg
+        )
+      )
+    )
+  )
+)
+</a:expression>
+        <a:urlAlias>rule_performance</a:urlAlias>
+        <a:httpMethod>GET</a:httpMethod>
+        <a:system>false</a:system>
+        <a:requestBodyType>NONE</a:requestBodyType>
+    </webApi>
+    <roleMap/>
+    <typedValue>
+        <type>
+            <name>WebApiRequest?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:path/>
+                <a:queryParameters>
+                    <a:name>username</a:name>
+                    <a:value>matt.flanagan.s</a:value>
+                </a:queryParameters>
+                <a:body/>
+            </el>
+        </value>
+    </typedValue>
+    <history>
+        <historyInfo versionUuid="685fec89-fed1-4433-a0ab-21029feed215"/>
+    </history>
+</webApiHaul>

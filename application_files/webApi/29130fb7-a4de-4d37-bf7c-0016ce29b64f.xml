@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webApiHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>a57f3092-ccc0-4d0c-a198-dd808b2da9e1</versionUuid>
+    <webApi a:uuid="29130fb7-a4de-4d37-bf7c-0016ce29b64f" name="Get Exec Stats">
+        <a:description></a:description>
+        <a:expression>#"SYSTEM_SYSRULES_httpResponse_v1"(
+  headers: {
+    #"SYSTEM_SYSRULES_httpHeader"(name: "Content-Type", value: "application/json")
+  },
+  body: #"SYSTEM_SYSRULES_toJson_v1"(value: execstats())
+)
+</a:expression>
+        <a:urlAlias>spt_exec_stats</a:urlAlias>
+        <a:httpMethod>GET</a:httpMethod>
+        <a:system>false</a:system>
+        <a:requestBodyType>NONE</a:requestBodyType>
+    </webApi>
+    <roleMap/>
+    <typedValue>
+        <type>
+            <name>WebApiRequest?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:path/>
+                <a:queryParameters>
+                    <a:name>username</a:name>
+                    <a:value>Administrator</a:value>
+                </a:queryParameters>
+                <a:body/>
+            </el>
+        </value>
+    </typedValue>
+    <history>
+        <historyInfo versionUuid="a57f3092-ccc0-4d0c-a198-dd808b2da9e1"/>
+    </history>
+</webApiHaul>
