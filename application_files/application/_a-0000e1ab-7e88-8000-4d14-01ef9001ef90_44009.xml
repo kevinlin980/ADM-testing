@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <applicationHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>d229470a-e71a-43e4-8a92-9a1cbec848e6</versionUuid>
+    <versionUuid>f22165df-e6d1-4cc5-b0c1-059d990bdec8</versionUuid>
     <application>
         <name>RTDF</name>
         <uuid>_a-0000e1ab-7e88-8000-4d14-01ef9001ef90_44009</uuid>
@@ -62,6 +62,8 @@
                         <uuid>_a-0000debf-c989-8000-bea2-01ef9001ef90_6615</uuid>
                         <uuid>_a-0000debf-c989-8000-bea2-01ef9001ef90_6616</uuid>
                         <uuid>_a-0000debf-c989-8000-bea2-01ef9001ef90_6620</uuid>
+                        <uuid>SYSTEM_CUSTOM_BRANDING_LOGO_IMAGE</uuid>
+                        <uuid>SYSTEM_CUSTOM_BRANDING_FAVICON_IMAGE</uuid>
                     </uuids>
                 </item>
                 <item>
@@ -136,7 +138,9 @@
                 </item>
                 <item>
                     <type>adminSetting</type>
-                    <uuids/>
+                    <uuids>
+                        <uuid>conf</uuid>
+                    </uuids>
                 </item>
                 <item>
                     <type>thirdPartyCredentials</type>
@@ -316,6 +320,7 @@
         <historyInfo versionUuid="ba5d1dc3-b060-4d5a-967a-a59783eee06f"/>
         <historyInfo versionUuid="5a398392-37b2-428e-bec1-50081f33054e"/>
         <historyInfo versionUuid="d229470a-e71a-43e4-8a92-9a1cbec848e6"/>
+        <historyInfo versionUuid="f22165df-e6d1-4cc5-b0c1-059d990bdec8"/>
     </history>
     <postDeploymentProcessData/>
-</applicationHaul><!--updated on 2021-10-07T15:05:25.983-->
+</applicationHaul><!--updated on 2021-10-07T15:05:31.902-->
