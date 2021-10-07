@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>f4bdf1b4-30c9-447b-b2da-dc308bf3d23a</versionUuid>
+    <tempoReport a:uuid="2744f80d-7188-477e-9224-a1da96e0140b" name="SUI_L_ChartsReport">
+        <a:description>A report for testing latency of charts and grids</a:description>
+        <a:uiExpr>#"_a-0000debf-c989-8000-bea2-01ef9001ef90_6620"()</a:uiExpr>
+        <a:urlStub>5XXa-A</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="f4bdf1b4-30c9-447b-b2da-dc308bf3d23a"/>
+    </history>
+</tempoReportHaul>

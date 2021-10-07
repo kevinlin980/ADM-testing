@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_29639</versionUuid>
+    <rule>
+        <name>SUI_L_ChartAndGrid</name>
+        <uuid>_a-0000debf-c989-8000-bea2-01ef9001ef90_6620</uuid>
+        <description>Interface to test clickable charts and grids via latency tool</description>
+        <parentUuid>_a-0000debf-c989-8000-bea2-01ef9001ef90_6615</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  local!selectedEmployeeIds: {
+    "john.rodgers"
+  },
+  local!ascending: FALSE,
+  local!employeeData: {
+    {
+      id: "john.smith",
+      first: "John",
+      last: "Smith",
+      email: "john.smith@example.com",
+      dpt: "IT"
+    },
+    {
+      id: "michael.johnson",
+      first: "Michael",
+      last: "Johnson",
+      email: "michael.johnson@example.com",
+      dpt: "HR"
+    },
+    {
+      id: "elizabeth.ward",
+      first: "Elizabeth",
+      last: "Ward",
+      email: "elizabeth.ward@example.com",
+      dpt: "SALES"
+    },
+    {
+      id: "rachel.rater",
+      first: "Rachel",
+      last: "Rater",
+      email: "rachel.rater@example.com",
+      dpt: "MARKETING"
+    },
+    {
+      id: "jane.hill",
+      first: "Jane",
+      last: "Hill",
+      email: "jane.hill@example.com",
+      dpt: "IT"
+    },
+    {
+      id: "john.rodgers",
+      first: "John",
+      last: "Rodgers",
+      email: "john.rodgers@example.com",
+      dpt: "IT"
+    },
+    {
+      id: "alison.cowley",
+      first: "Alison",
+      last: "Cowley",
+      email: "alison.cowley@example.com",
+      dpt: "SALES"
+    },
+    {
+      id: "jupiter.munoz",
+      first: "Jupiter",
+      last: "Munoz",
+      email: "jupiter.munoz@example.com",
+      dpt: "HR"
+    },
+    {
+      id: "tim.carroll",
+      first: "Tim",
+      last: "Caroll",
+      email: "tim.caroll@example.com",
+      dpt: "SALES"
+    },
+    {
+      id: "abdul.sowayan",
+      first: "Abdul",
+      last: "Sowayan",
+      email: "abdul.sowayan@example.com",
+      dpt: "IT"
+    }
+  },
+  local!selectedPie,
+  local!pagingInfo: #"SYSTEM_SYSRULES_pagingInfo"(
+    startIndex: 1,
+    batchSize: 5
+  ),
+  local!departments: {
+    "HR",
+    "MARKETING",
+    "SALES",
+    "IT"
+  },
+  /* Set the default paging and sorting config */
+  local!gridSelection: #"SYSTEM_SYSRULES_gridSelection"(
+    pagingInfo: #"SYSTEM_SYSRULES_pagingInfo"(
+      startIndex: 1,
+      batchSize: 5,
+      sort: #"SYSTEM_SYSRULES_sortInfo"(
+        field: "last",
+        ascending: false
+      )
+    ),
+    selected: local!selectedEmployeeIds
+  ),
+  with(
+    /* `Replace the value of local!datasubset with `a!queryEntity()`, or */
+    /* `queryrecord()`, or use your own CDT array in todatasubset() */
+    local!filteredData: if(
+      isnull(
+        local!selectedPie
+      ),
+      local!employeeData,
+      index(
+        local!employeeData,
+        where(
+          search(
+            local!selectedPie,
+            local!employeeData.dpt
+          )
+        ),
+        {}
+      )
+    ),
+    local!datasubset: todatasubset(
+      arrayToPage: local!filteredData,
+      pagingConfiguration: local!gridSelection.pagingInfo
+    ),
+    #"SYSTEM_SYSRULES_dashboardLayout_v1"(
+      contents: {
+        #"SYSTEM_SYSRULES_sectionLayout_v1"(
+          contents: {
+            #"SYSTEM_SYSRULES_billboardLayout"(
+              backgroundColor: "#619ed6",
+              overlayPositionBar: "BOTTOM",
+              overlayStyle: "DARK",
+              overlayContents: {
+                #"SYSTEM_SYSRULES_columnsLayout"(
+                  columns: {
+                    #"SYSTEM_SYSRULES_columnLayout"(
+                      contents: {
+                        #"SYSTEM_SYSRULES_richTextDisplayField"(
+                          labelPosition: "COLLAPSED",
+                          value: {
+                            #"SYSTEM_SYSRULES_richTextItem"(
+                              text: "Finance Summary",
+                              style: "LARGE"
+                            )
+                          }
+                        )
+                      }
+                    ),
+                    #"SYSTEM_SYSRULES_columnLayout"(
+                      contents: {
+                        #"SYSTEM_SYSRULES_columnsLayout"(
+                          columns: {
+                            #"SYSTEM_SYSRULES_columnLayout"(
+                              contents: {
+                                #"SYSTEM_SYSRULES_richTextDisplayField"(
+                                  label: "Total Spending",
+                                  value: #"SYSTEM_SYSRULES_richTextItem"(
+                                    text: "$31,000.00",
+                                    style: "MEDIUM"
+                                  )
+                                )
+                              }
+                            ),
+                            #"SYSTEM_SYSRULES_columnLayout"(
+                              contents: {
+                                #"SYSTEM_SYSRULES_richTextDisplayField"(
+                                  label: "Remaining Budget",
+                                  value: #"SYSTEM_SYSRULES_richTextItem"(
+                                    text: #"SYSTEM_SYSRULES_richTextItem"(
+                                      text: "79%",
+                                      style: "MEDIUM"
+                                    ),
+                                    style: "POSITIVE"
+                                  )
+                                )
+                              }
+                            ),
+                            #"SYSTEM_SYSRULES_columnLayout"(
+                              contents: {
+                                #"SYSTEM_SYSRULES_richTextDisplayField"(
+                                  label: "Open Requests",
+                                  value: #"SYSTEM_SYSRULES_richTextItem"(
+                                    text: "36",
+                                    style: "MEDIUM"
+                                  )
+                                )
+                              }
+                            )
+                          },
+                          alignVertical: "TOP"
+                        )
+                      }
+                    )
+                  },
+                  alignVertical: "MIDDLE"
+                )
+              },
+              height: "SHORT"
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_sectionLayout_v1"(
+          contents: {
+            #"SYSTEM_SYSRULES_columnsLayout"(
+              columns: {
+                #"SYSTEM_SYSRULES_columnLayout"(
+                  contents: {
+                    #"SYSTEM_SYSRULES_columnChartField"(
+                      label: "Spending vs. Budget",
+                      labelPosition: "ABOVE",
+                      categories: local!departments,
+                      series: {
+                        #"SYSTEM_SYSRULES_chartSeries"(
+                          label: "Budget",
+                          data: {
+                            7000,
+                            12000,
+                            10000,
+                            10000
+                          }
+                        ),
+                        #"SYSTEM_SYSRULES_chartSeries"(
+                          label: "Spent",
+                          data: {
+                            3500,
+                            9000,
+                            10500,
+                            8000
+                          }
+                        )
+                      },
+                      xAxisTitle: "Department",
+                      yAxisTitle: "Amount ($)",
+                      stacking: "NONE",
+                      showLegend: true,
+                      showTooltips: true
+                    ),
+                    #"SYSTEM_SYSRULES_linkField"(
+                      labelPosition: "COLLAPSED",
+                      links: #"SYSTEM_SYSRULES_dynamicLink"(
+                        label: "Show as Grid",
+                        /* The saveInto parameter must be configured in order to save a value */
+                        saveInto: {}
+                      ),
+                      align: "CENTER"
+                    ),
+                    #"SYSTEM_SYSRULES_pieChartField"(
+                      label: "Spending by Department",
+                      labelPosition: "ABOVE",
+                      series: {
+                        #"SYSTEM_SYSRULES_chartSeries"(
+                          label: "HR",
+                          data: 3500,
+                          links: #"SYSTEM_SYSRULES_dynamicLink"(
+                            label: "Label",
+                            value: "HR",
+                            saveInto: local!selectedPie
+                          )
+                        ),
+                        #"SYSTEM_SYSRULES_chartSeries"(
+                          label: "Marketing",
+                          data: 9000,
+                          links: #"SYSTEM_SYSRULES_dynamicLink"(
+                            label: "Label",
+                            value: "MARKETING",
+                            saveInto: local!selectedPie
+                          )
+                        ),
+                        #"SYSTEM_SYSRULES_chartSeries"(
+                          label: "Sales",
+                          data: 10500,
+                          links: #"SYSTEM_SYSRULES_dynamicLink"(
+                            label: "Label",
+                            value: "SALES",
+                            saveInto: local!selectedPie
+                          )
+                        ),
+                        #"SYSTEM_SYSRULES_chartSeries"(
+                          label: "IT",
+                          data: 8000,
+                          links: #"SYSTEM_SYSRULES_dynamicLink"(
+                            label: "Label",
+                            value: "IT",
+                            saveInto: local!selectedPie
+                          )
+                        )
+                      },
+                      showDataLabels: true,
+                      showtooltips: true,
+                      showAsPercentage: true
+                    ),
+                    #"SYSTEM_SYSRULES_linkField"(
+                      labelPosition: "COLLAPSED",
+                      links: #"SYSTEM_SYSRULES_dynamicLink"(
+                        label: "Show as Grid",
+                        saveInto: {}
+                      ),
+                      align: "CENTER"
+                    )
+                  }
+                ),
+                #"SYSTEM_SYSRULES_columnLayout"(
+                  contents: {
+                    #"SYSTEM_SYSRULES_columnChartField"(
+                      label: "Remaining",
+                      labelPosition: "ABOVE",
+                      categories: local!departments,
+                      series: {
+                        #"SYSTEM_SYSRULES_chartSeries"(
+                          label: "Remaining",
+                          data: {
+                            3500,
+                            3000,
+                            - 500,
+                            2000
+                          }
+                        )
+                      },
+                      xAxisTitle: "Department",
+                      yAxisTitle: "Amount ($)",
+                      stacking: "NONE",
+                      showLegend: false,
+                      showTooltips: true
+                    ),
+                    #"SYSTEM_SYSRULES_linkField"(
+                      labelPosition: "COLLAPSED",
+                      links: #"SYSTEM_SYSRULES_dynamicLink"(
+                        label: "Show as Grid",
+                        saveInto: {}
+                      ),
+                      align: "CENTER"
+                    ),
+                    #"SYSTEM_SYSRULES_columnChartField"(
+                      label: "Spending by Category",
+                      labelPosition: "ABOVE",
+                      categories: local!departments,
+                      series: {
+                        #"SYSTEM_SYSRULES_chartSeries"(
+                          label: "Hardware",
+                          data: {
+                            0,
+                            2000,
+                            2000,
+                            6000
+                          }
+                        ),
+                        #"SYSTEM_SYSRULES_chartSeries"(
+                          label: "Software",
+                          data: {
+                            0,
+                            1000,
+                            500,
+                            1500
+                          }
+                        ),
+                        #"SYSTEM_SYSRULES_chartSeries"(
+                          label: "Travel",
+                          data: {
+                            0,
+                            3000,
+                            4000,
+                            0
+                          }
+                        ),
+                        #"SYSTEM_SYSRULES_chartSeries"(
+                          label: "Recruiting",
+                          data: {
+                            1000,
+                            0,
+                            0,
+                            0
+                          }
+                        ),
+                        #"SYSTEM_SYSRULES_chartSeries"(
+                          label: "Miscellaneous",
+                          data: {
+                            1500,
+                            3000,
+                            1500,
+                            500
+                          }
+                        )
+                      },
+                      xAxisTitle: "Department",
+                      yAxisTitle: "Total Purchase Requests",
+                      stacking: "NORMAL",
+                      showLegend: true,
+                      showTooltips: true
+                    ),
+                    #"SYSTEM_SYSRULES_linkField"(
+                      labelPosition: "COLLAPSED",
+                      links: #"SYSTEM_SYSRULES_dynamicLink"(
+                        label: "Show as Grid",
+                        saveInto: {}
+                      ),
+                      align: "CENTER"
+                    )
+                  }
+                )
+              }
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_sectionLayout_v1"(
+          label: "Purchase Requests",
+          contents: {
+            #"SYSTEM_SYSRULES_columnsLayout"(
+              columns: {
+                #"SYSTEM_SYSRULES_columnLayout"(
+                  contents: {
+                    #"SYSTEM_SYSRULES_textField"(
+                      labelPosition: "COLLAPSED",
+                      placeholder: "PR#",
+                      /* The saveInto parameter must be configured to save a value */
+                      saveInto: {},
+                      validations: {}
+                    )
+                  }
+                ),
+                #"SYSTEM_SYSRULES_columnLayout"(
+                  contents: {
+                    #"SYSTEM_SYSRULES_dropdownField"(
+                      labelPosition: "COLLAPSED",
+                      placeholderLabel: "All Departments",
+                      choiceLabels: local!departments,
+                      choiceValues: local!departments,
+                      /* The saveInto parameter must be configured to save a value */
+                      saveInto: local!selectedPie,
+                      value: local!selectedPie,
+                      validations: {}
+                    )
+                  }
+                ),
+                #"SYSTEM_SYSRULES_columnLayout"(
+                  contents: {
+                    #"SYSTEM_SYSRULES_dropdownField"(
+                      labelPosition: "COLLAPSED",
+                      placeholderLabel: "All Dates",
+                      choiceLabels: {
+                        "Last 7 Days",
+                        "Last 30 Days",
+                        "Last 365 Days"
+                      },
+                      choiceValues: {
+                        "Last 7 Days",
+                        "Last 30 Days",
+                        "Last 365 Days"
+                      },
+                      value: "Last 7 Days",
+                      saveInto: {},
+                      validations: {}
+                    )
+                  }
+                ),
+                #"SYSTEM_SYSRULES_columnLayout"(
+                  contents: {
+                    #"SYSTEM_SYSRULES_dropdownField"(
+                      labelPosition: "COLLAPSED",
+                      placeholderLabel: "Any Amount",
+                      choiceLabels: {
+                        "$0 - $100",
+                        "$101 - $200",
+                        "&gt; $200"
+                      },
+                      choiceValues: {
+                        "$0 - $100",
+                        "$101 - $200",
+                        "&gt; $200"
+                      },
+                      saveInto: {},
+                      validations: {}
+                    )
+                  }
+                )
+              }
+            ),
+            #"SYSTEM_SYSRULES_gridField"(
+              label: "Employees",
+              totalCount: local!datasubset.totalCount,
+              columns: {
+                #"SYSTEM_SYSRULES_gridTextColumn"(
+                  label: "First",
+                  field: "first",
+                  data: index(
+                    local!datasubset.data,
+                    "first",
+                    {}
+                  )
+                ),
+                #"SYSTEM_SYSRULES_gridTextColumn"(
+                  label: "Last",
+                  field: "last",
+                  data: index(
+                    local!datasubset.data,
+                    "last",
+                    {}
+                  )
+                ),
+                #"SYSTEM_SYSRULES_gridTextColumn"(
+                  label: "Department",
+                  field: "dpt",
+                  data: index(
+                    local!datasubset.data,
+                    "dpt",
+                    {}
+                  )
+                )
+              },
+              identifiers: index(
+                local!datasubset.data,
+                "id",
+                {}
+              ),
+              value: local!gridSelection,
+              saveInto: {
+                local!gridSelection,
+                a!save(
+                  local!selectedEmployeeIds,
+                  index(
+                    save!value,
+                    "selected",
+                    null
+                  )
+                )
+              },
+              selection: true
+            )
+          }
+        )
+      }
+    )
+  )
+)</definition>
+        <metadataExpr></metadataExpr>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="false" allowForAll="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="true" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="true" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_29639"/>
+    </history>
+</contentHaul>

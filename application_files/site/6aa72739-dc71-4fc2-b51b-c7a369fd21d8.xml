@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siteHaul xmlns:a="http://www.appian.com/ae/types/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <versionUuid>6f8ecfb3-e05b-4d3f-9836-83053de65016</versionUuid>
+  <site a:uuid="6aa72739-dc71-4fc2-b51b-c7a369fd21d8" name="SUI_L_Site">
+    <description>A site for testing latency for SUI</description>
+    <urlStub>sui-l-site</urlStub>
+    <page>
+      <staticName>Drop &amp; Rich</staticName>
+      <urlStub>drop-rich</urlStub>
+      <uiObject a:uuid="0002dec0-8aa6-8000-be6a-014d98014d98" xsi:type="a:ProcessModel"/>
+      <iconId>f004</iconId>
+      <visibilityExpr>fn!true()</visibilityExpr>
+      <pageWidth>STANDARD</pageWidth>
+    </page>
+    <page>
+      <staticName>Chart &amp; Grid</staticName>
+      <urlStub>chart-grid</urlStub>
+      <uiObject a:uuid="2744f80d-7188-477e-9224-a1da96e0140b" xsi:type="a:TempoReport"/>
+      <iconId>f005</iconId>
+      <visibilityExpr>fn!true()</visibilityExpr>
+      <pageWidth>STANDARD</pageWidth>
+    </page>
+    <visibility>805306368</visibility>
+    <faviconRef a:uuid="SYSTEM_CONTENT_SITES_DEFAULT_FAVICON" xsi:type="a:CollaborationDocument"/>
+    <logoRef a:uuid="SYSTEM_CONTENT_SITES_DEFAULT_LOGO" xsi:type="a:CollaborationDocument"/>
+    <showName>false</showName>
+    <tempoLinkVisibility>HIDDEN</tempoLinkVisibility>
+    <showRecordNews>false</showRecordNews>
+    <tasksInSitesVisibility>HIDDEN</tasksInSitesVisibility>
+    <buttonShape>SQUARED</buttonShape>
+    <navigationBarStyle>STYLE1</navigationBarStyle>
+    <inputShape>SQUARED</inputShape>
+    <isSystem>false</isSystem>
+  </site>
+  <roleMap>
+    <role name="site_editor">
+      <users/>
+      <groups>
+        <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+      </groups>
+    </role>
+  </roleMap>
+  <history>
+    <historyInfo versionUuid="6f8ecfb3-e05b-4d3f-9836-83053de65016"/>
+  </history>
+</siteHaul>
