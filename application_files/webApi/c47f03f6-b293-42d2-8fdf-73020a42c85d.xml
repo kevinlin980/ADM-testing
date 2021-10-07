@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webApiHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>e648021e-5f6b-40a1-b70d-97af67900deb</versionUuid>
+    <webApi a:uuid="c47f03f6-b293-42d2-8fdf-73020a42c85d" name="SOAP WSDL20 Service">
+        <a:description></a:description>
+        <a:expression>#"SYSTEM_SYSRULES_httpResponse_v1"(
+  headers: {
+    #"SYSTEM_SYSRULES_httpHeader"(name: "Content-Type", value: "application/xml")
+  },
+  body:
+fn!replacetokens_appian_internal(
+***
+&lt;searchResponse&gt;
+  &lt;![CDATA[{0}]]&gt;
+&lt;/searchResponse&gt;
+***,
+  http!request.body &amp; http!request.headers
+)
+)</a:expression>
+        <a:urlAlias>soapwsdl20service</a:urlAlias>
+        <a:httpMethod>POST</a:httpMethod>
+        <a:system>false</a:system>
+    </webApi>
+    <roleMap/>
+    <typedValue>
+        <type>
+            <name>WebApiRequest?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:path/>
+                <a:queryParameters>
+                    <a:name>username</a:name>
+                    <a:value>matthew.kornfield.s</a:value>
+                </a:queryParameters>
+                <a:body/>
+            </el>
+        </value>
+    </typedValue>
+    <history>
+        <historyInfo versionUuid="e648021e-5f6b-40a1-b70d-97af67900deb"/>
+    </history>
+</webApiHaul>

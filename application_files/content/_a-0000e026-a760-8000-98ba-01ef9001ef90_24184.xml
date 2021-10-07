@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24371</versionUuid>
+    <rule>
+        <name>SOAP_individualTestColumn</name>
+        <uuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24184</uuid>
+        <description>Test column for a specific webservice endpoint</description>
+        <parentUuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24079</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>fn!load(
+  local!writer: fn!bind(
+    fn!null(),
+    #"_a-0000e026-a760-8000-98ba-01ef9001ef90_24209"(_)
+  ),
+  #"SYSTEM_SYSRULES_columnLayout"(
+    contents: {
+      #"SYSTEM_SYSRULES_textField"(
+        label: ri!label &amp; " Service",
+        value: ri!wsData.service,
+        saveInto: ri!wsData.service
+      ),
+      #"SYSTEM_SYSRULES_textField"(
+        label: ri!label &amp; " Port",
+        value: ri!wsData.port,
+        saveInto: ri!wsData.port
+      ),
+      #"SYSTEM_SYSRULES_textField"(
+        label: ri!label &amp; " Operation",
+        value: ri!wsData.operation,
+        saveInto: ri!wsData.operation
+      ),
+      #"SYSTEM_SYSRULES_paragraphField"(
+        label: "InputVarExpr",
+        height:"SHORT",
+        excludeDocPane: true,
+        value: ri!wsData.inputVarExpr,
+        saveInto: a!save(ri!wsData.inputVarExpr, save!value.value)
+      ),
+      #"SYSTEM_SYSRULES_ButtonLayout"(
+        secondaryButtons: {
+          #"SYSTEM_SYSRULES_ButtonWidget"(
+            label: ri!label &amp; " WebserviceQuery",
+            saveInto: {
+              a!save(
+                ri!lastPushedLabel,
+                ri!label &amp; " WebserviceQuery"
+              ),
+              a!save(
+                ri!response,
+                #"_a-0000e026-a760-8000-98ba-01ef9001ef90_24126"(
+                  url: ri!wsData.endpoint,
+                  service: ri!wsData.service,
+                  port: ri!wsData.port,
+                  operation: ri!wsData.operation,
+                  inputVar: fn!eval(ri!wsData.inputVarExpr)
+                )
+              )
+            }
+          ),
+          #"SYSTEM_SYSRULES_ButtonWidget"(
+            label: ri!label &amp; " WebserviceWrite",
+            saveInto: {
+              a!save(
+                ri!lastPushedLabel,
+                ri!label &amp; " WebserviceWrite"
+              ),
+              a!save(
+                local!writer,
+                ri!wsData
+              )
+            }
+          ),
+          #"SYSTEM_SYSRULES_ButtonWidget"(
+            label: ri!label &amp; " DebugWsdl",
+            saveInto: {
+              a!save(
+                ri!lastPushedLabel,
+                ri!label &amp; " DebugWsdl"
+              ),
+              a!save(
+                ri!response,
+                #"6de0c850-7138-4777-ac61-6f5850d6007b"(ri!wsData.endpoint).result.body
+              )
+            }
+          )
+        }
+      )
+    }
+  )
+)</definition>
+        <namedTypedValue>
+            <name>label</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>wsData</name>
+            <type>
+                <name>Variant</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>response</name>
+            <type>
+                <name>Variant</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>lastPushedLabel</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <metadataExpr></metadataExpr>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <typedValue>
+        <type>
+            <name>RuleTestConfig?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:name/>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string"/>
+                    <a:nameRef>label</a:nameRef>
+                    <a:id/>
+                </a:ruleInputTestConfigs>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="a:Expression">{url:"test"}</a:value>
+                    <a:nameRef>wsData</a:nameRef>
+                    <a:id/>
+                </a:ruleInputTestConfigs>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string"/>
+                    <a:nameRef>response</a:nameRef>
+                    <a:id/>
+                </a:ruleInputTestConfigs>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string"/>
+                    <a:nameRef>lastPushedLabel</a:nameRef>
+                    <a:id/>
+                </a:ruleInputTestConfigs>
+                <a:assertions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            </el>
+        </value>
+    </typedValue>
+    <history>
+        <historyInfo versionUuid="_a-0000e026-a760-8000-98ba-01ef9001ef90_24199"/>
+        <historyInfo versionUuid="_a-0000e026-a760-8000-98ba-01ef9001ef90_24371"/>
+    </history>
+</contentHaul>

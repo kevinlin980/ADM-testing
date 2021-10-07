@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24313</versionUuid>
+    <outboundIntegration>
+        <name>SOAP_getWsdlContents</name>
+        <uuid>6de0c850-7138-4777-ac61-6f5850d6007b</uuid>
+        <description>Get the WSDL contents for debugging</description>
+        <parentUuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24079</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition></definition>
+        <namedTypedValue>
+            <name>webapiUrl</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <metadataExpr></metadataExpr>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+        <sharedConfigParameters>
+            <a:Dictionary xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <url xsi:type="a:Expression">ri!webapiUrl</url>
+                <isInheritedUrlOptionSelected xsi:type="xsd:boolean">false</isInheritedUrlOptionSelected>
+                <authType xsi:type="xsd:string">Basic</authType>
+                <authDetails xsi:type="a:OutboundIntegrationAuthBasic">
+                    <a:username xsi:type="a:Expression">"adam.glaser." &amp; "s"</a:username>
+                    <a:password xsi:type="a:Expression">"ineedto" &amp; "administer"</a:password>
+                    <a:isPreemptive>true</a:isPreemptive>
+                </authDetails>
+            </a:Dictionary>
+        </sharedConfigParameters>
+        <configParameters>
+            <a:Dictionary xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <contentType xsi:type="xsd:string"/>
+                <automaticallyConvert xsi:type="xsd:boolean">false</automaticallyConvert>
+                <method xsi:type="xsd:string">GET</method>
+                <headers xsi:type="a:NameValue?list"/>
+                <parameters xsi:type="a:NameValue?list"/>
+                <featureVersion xsi:type="xsd:int">1</featureVersion>
+                <body xsi:type="xsd:string"/>
+            </a:Dictionary>
+        </configParameters>
+        <isWrite>false</isWrite>
+        <integrationType>system.http</integrationType>
+        <connectedSystemUuid></connectedSystemUuid>
+        <isConnectedSystemConnectionOptionSelected>false</isConnectedSystemConnectionOptionSelected>
+        <integrationOutputs>
+            <a:Dictionary xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <outputs xsi:type="a:IntegrationOutput?list"/>
+            </a:Dictionary>
+        </integrationOutputs>
+        <isRequestResponseLoggingEnabled>false</isRequestResponseLoggingEnabled>
+    </outboundIntegration>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e026-a760-8000-98ba-01ef9001ef90_24313"/>
+    </history>
+</contentHaul>

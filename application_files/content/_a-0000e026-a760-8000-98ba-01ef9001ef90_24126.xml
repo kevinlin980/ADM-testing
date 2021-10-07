@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24167</versionUuid>
+    <rule>
+        <name>SOAP_webserviceQueryWrapper</name>
+        <uuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24126</uuid>
+        <description>Wraps webservicequery to always send authentication. Lets the user define a url and inputVar</description>
+        <parentUuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24079</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>fn!try(
+  fn!webservicequery(
+  wsconfig: #"SYSTEM_SYSRULES_wsConfig"(
+    wsdlUrl: ri!url,
+    service: ri!service,
+    port: ri!port,
+    operation: ri!operation,
+    wsdlCredentials: #"_a-0000e026-a760-8000-98ba-01ef9001ef90_24132"(),
+    endpointCredentials: #"_a-0000e026-a760-8000-98ba-01ef9001ef90_24132"()
+  ),
+  inputVar: ri!inputVar
+  ),
+  fn!LastError()
+)</definition>
+        <namedTypedValue>
+            <name>url</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>service</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>port</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>operation</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>inputVar</name>
+            <type>
+                <name>Variant</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e026-a760-8000-98ba-01ef9001ef90_24167"/>
+    </history>
+</contentHaul>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webApiHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>abfda56b-16ec-46a2-b393-7baedbc5733e</versionUuid>
+    <webApi a:uuid="0d56c3fb-1b1b-4ebc-9bd6-736bc93ed993" name="SOAP Echo WSDL">
+        <a:description></a:description>
+        <a:expression>#"SYSTEM_SYSRULES_httpResponse_v1"(
+  headers: {
+    #"SYSTEM_SYSRULES_httpHeader"(name: "Content-Type", value: "application/xml")
+  },
+  body: #"_a-0000e026-a760-8000-98ba-01ef9001ef90_24084"()
+)
+</a:expression>
+        <a:urlAlias>soapechowsdl</a:urlAlias>
+        <a:httpMethod>GET</a:httpMethod>
+        <a:system>false</a:system>
+        <a:requestBodyType>NONE</a:requestBodyType>
+    </webApi>
+    <roleMap/>
+    <typedValue>
+        <type>
+            <name>WebApiRequest?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:path/>
+                <a:queryParameters>
+                    <a:name>username</a:name>
+                    <a:value>matthew.kornfield.s</a:value>
+                </a:queryParameters>
+                <a:body/>
+            </el>
+        </value>
+    </typedValue>
+    <history>
+        <historyInfo versionUuid="abfda56b-16ec-46a2-b393-7baedbc5733e"/>
+    </history>
+</webApiHaul>

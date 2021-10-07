@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24366</versionUuid>
+    <rule>
+        <name>SOAP_mepWsdlBodyExpression</name>
+        <uuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24347</uuid>
+        <description></description>
+        <parentUuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24079</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>fn!replacetokens_appian_internal(
+***
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;wsdl:definitions targetNamespace="urn:appian:wsclient:junit"
+  xmlns:tns="urn:appian:wsclient:junit"
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"&gt;
+
+  &lt;wsdl:documentation&gt;
+    Message Exchange Patterns
+  &lt;/wsdl:documentation&gt;
+
+  &lt;wsdl:types&gt;
+    &lt;xsd:schema elementFormDefault="qualified"
+      targetNamespace="urn:appian:wsclient:junit"&gt;
+      &lt;xsd:element name="generic-element-in"&gt;
+        &lt;xsd:complexType /&gt;
+      &lt;/xsd:element&gt;
+      &lt;xsd:element name="generic-element-out"&gt;
+        &lt;xsd:complexType /&gt;
+      &lt;/xsd:element&gt;
+    &lt;/xsd:schema&gt;
+  &lt;/wsdl:types&gt;
+
+  &lt;wsdl:message name="generic-message-in"&gt;
+    &lt;wsdl:part name="parameters" element="tns:generic-element-in" /&gt;
+  &lt;/wsdl:message&gt;
+  
+  &lt;wsdl:message name="generic-message-out"&gt;
+    &lt;wsdl:part name="parameters" element="tns:generic-element-out" /&gt;
+  &lt;/wsdl:message&gt;
+
+  &lt;wsdl:portType name="message-exchange-patterns"&gt;
+    &lt;wsdl:operation name="in-only"&gt;
+      &lt;wsdl:input message="tns:generic-message-in" /&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="robust-in-only"&gt;
+      &lt;wsdl:input message="tns:generic-message-in" /&gt;
+      &lt;wsdl:fault message="tns:generic-message-out" name="fault" /&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="in-out"&gt;
+      &lt;wsdl:input message="tns:generic-message-in" /&gt;
+      &lt;wsdl:output message="tns:generic-message-out" /&gt;
+      &lt;wsdl:fault message="tns:generic-message-out" name="fault" /&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="out-only"&gt;
+      &lt;wsdl:output message="tns:generic-message-out" /&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="robust-out-only"&gt;
+      &lt;wsdl:output message="tns:generic-message-out" /&gt;
+      &lt;wsdl:fault message="tns:generic-message-in" name="fault" /&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="out-in"&gt;
+      &lt;wsdl:output message="tns:generic-message-out" /&gt;
+      &lt;wsdl:input message="tns:generic-message-in" /&gt;
+      &lt;wsdl:fault message="tns:generic-message-in" name="fault" /&gt;
+    &lt;/wsdl:operation&gt;
+  &lt;/wsdl:portType&gt;
+
+  &lt;wsdl:binding name="mep-soap11"
+    type="tns:message-exchange-patterns"&gt;
+    &lt;soap:binding transport="http://schemas.xmlsoap.org/soap/http" /&gt;
+    &lt;wsdl:operation name="in-only"&gt;
+      &lt;soap:operation soapAction="urn:appian:wsclient:junit:in-only"
+        style="document" /&gt;
+      &lt;wsdl:input&gt;
+        &lt;soap:body use="literal" /&gt;
+      &lt;/wsdl:input&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="robust-in-only"&gt;
+      &lt;soap:operation soapAction="urn:appian:wsclient:junit:robust-in-only"
+        style="document" /&gt;
+      &lt;wsdl:input&gt;
+        &lt;soap:body use="literal" /&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:fault name="fault"&gt;
+        &lt;soap:fault name="fault" use="literal" /&gt;
+      &lt;/wsdl:fault&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="in-out"&gt;
+      &lt;soap:operation soapAction="urn:appian:wsclient:junit:in-out"
+        style="document" /&gt;
+      &lt;wsdl:input&gt;
+        &lt;soap:body use="literal" /&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:output&gt;
+        &lt;soap:body use="literal" /&gt;
+      &lt;/wsdl:output&gt;
+      &lt;wsdl:fault name="fault"&gt;
+        &lt;soap12:fault name="fault" use="literal" /&gt;
+      &lt;/wsdl:fault&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="out-only"&gt;
+      &lt;soap:operation soapAction="urn:appian:wsclient:junit:out-only"
+        style="document" /&gt;
+      &lt;wsdl:output&gt;
+        &lt;soap:body use="literal" /&gt;
+      &lt;/wsdl:output&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="robust-out-only"&gt;
+      &lt;soap:operation soapAction="urn:appian:wsclient:junit:robust-out-only"
+        style="document" /&gt;
+      &lt;wsdl:output&gt;
+        &lt;soap:body use="literal" /&gt;
+      &lt;/wsdl:output&gt;
+      &lt;wsdl:fault name="fault"&gt;
+        &lt;soap:fault name="fault" use="literal" /&gt;
+      &lt;/wsdl:fault&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="out-in"&gt;
+      &lt;soap:operation soapAction="urn:appian:wsclient:junit:out-in"
+        style="document" /&gt;
+      &lt;wsdl:output&gt;
+        &lt;soap:body use="literal" /&gt;
+      &lt;/wsdl:output&gt;
+      &lt;wsdl:input&gt;
+        &lt;soap:body use="literal" /&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:fault name="fault"&gt;
+        &lt;soap12:fault name="fault" use="literal" /&gt;
+      &lt;/wsdl:fault&gt;
+    &lt;/wsdl:operation&gt;
+  &lt;/wsdl:binding&gt;
+
+  &lt;wsdl:binding name="mep-soap12"
+    type="tns:message-exchange-patterns"&gt;
+    &lt;soap12:binding transport="http://schemas.xmlsoap.org/soap/http" /&gt;
+    &lt;wsdl:operation name="in-only"&gt;
+      &lt;soap12:operation soapAction="urn:appian:wsclient:junit:in-only"
+        style="document" /&gt;
+      &lt;wsdl:input&gt;
+        &lt;soap12:body use="literal" /&gt;
+      &lt;/wsdl:input&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="robust-in-only"&gt;
+      &lt;soap12:operation soapAction="urn:appian:wsclient:junit:robust-in-only"
+        style="document" /&gt;
+      &lt;wsdl:input&gt;
+        &lt;soap12:body use="literal" /&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:fault name="fault"&gt;
+        &lt;soap12:fault name="fault" use="literal" /&gt;
+      &lt;/wsdl:fault&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="in-out"&gt;
+      &lt;soap12:operation soapAction="urn:appian:wsclient:junit:in-out"
+        style="document" /&gt;
+      &lt;wsdl:input&gt;
+        &lt;soap12:body use="literal" /&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:output&gt;
+        &lt;soap12:body use="literal" /&gt;
+      &lt;/wsdl:output&gt;
+      &lt;wsdl:fault name="fault"&gt;
+        &lt;soap12:fault name="fault" use="literal" /&gt;
+      &lt;/wsdl:fault&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="out-only"&gt;
+      &lt;soap12:operation soapAction="urn:appian:wsclient:junit:out-only"
+        style="document" /&gt;
+      &lt;wsdl:output&gt;
+        &lt;soap12:body use="literal" /&gt;
+      &lt;/wsdl:output&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="robust-out-only"&gt;
+      &lt;soap12:operation soapAction="urn:appian:wsclient:junit:robust-out-only"
+        style="document" /&gt;
+      &lt;wsdl:output&gt;
+        &lt;soap12:body use="literal" /&gt;
+      &lt;/wsdl:output&gt;
+      &lt;wsdl:fault name="fault"&gt;
+        &lt;soap12:fault name="fault" use="literal" /&gt;
+      &lt;/wsdl:fault&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="out-in"&gt;
+      &lt;soap12:operation soapAction="urn:appian:wsclient:junit:out-in"
+        style="document" /&gt;
+      &lt;wsdl:output&gt;
+        &lt;soap12:body use="literal" /&gt;
+      &lt;/wsdl:output&gt;
+      &lt;wsdl:input&gt;
+        &lt;soap12:body use="literal" /&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:fault name="fault"&gt;
+        &lt;soap12:fault name="fault" use="literal" /&gt;
+      &lt;/wsdl:fault&gt;
+    &lt;/wsdl:operation&gt;
+  &lt;/wsdl:binding&gt;
+
+  &lt;wsdl:service name="message-exchange-patterns"&gt;
+    &lt;wsdl:documentation&gt;
+      Message Exchange Patterns
+    &lt;/wsdl:documentation&gt;
+    &lt;wsdl:port name="mep-soap11"
+      binding="tns:mep-soap11"&gt;
+      &lt;soap:address location="{0}" /&gt;
+    &lt;/wsdl:port&gt;
+    &lt;wsdl:port name="mep-soap12"
+      binding="tns:mep-soap12"&gt;
+      &lt;soap12:address location="{0}" /&gt;
+    &lt;/wsdl:port&gt;
+  &lt;/wsdl:service&gt;
+  
+&lt;/wsdl:definitions&gt;
+***,
+#"_a-0000e026-a760-8000-98ba-01ef9001ef90_24106"("soapmepservice")
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e026-a760-8000-98ba-01ef9001ef90_24366"/>
+    </history>
+</contentHaul>

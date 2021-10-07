@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24383</versionUuid>
+    <rule>
+        <name>SOAP_webserviceQueryAndWriteTestInterface</name>
+        <uuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24096</uuid>
+        <description></description>
+        <parentUuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24079</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>fn!load(
+  local!lastPushedLabel,
+  local!response,
+  local!echowsqData:{
+    endpoint: #"_a-0000e026-a760-8000-98ba-01ef9001ef90_24106"("soapechowsdl"),
+    service: "{https://services.ws.appian.com}EchoService",
+    port: "EchoServiceHttpSoap11Endpoint",
+    operation: "{https://services.ws.appian.com}echo"
+  },
+  local!wsdl20Data:{
+    endpoint: #"_a-0000e026-a760-8000-98ba-01ef9001ef90_24106"("soapwsdl20wsdl"),
+    service: "{http://example.com}SearchService",
+    port: "SearchEndpoint",
+    operation: "{http://example.com}Search"
+  },
+  local!wsdlMepData:{
+    endpoint: #"_a-0000e026-a760-8000-98ba-01ef9001ef90_24106"("soapmepwsdl"),
+    service: "{urn:appian:wsclient:junit}message-exchange-patterns",
+    port: "mep-soap11",
+    operation: "{urn:appian:wsclient:junit}in-only"
+  },
+  #"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Test Soap Things",
+  contents: {
+    #"SYSTEM_SYSRULES_sectionLayout_v1"(
+      contents: {
+        #"SYSTEM_SYSRULES_columnsLayout"(
+          columns: {
+            #"_a-0000e026-a760-8000-98ba-01ef9001ef90_24184"(
+              label: "Echo",
+              wsData: local!echowsqData,
+              response: local!response,
+              lastPushedLabel: local!lastPushedLabel
+            ),
+            #"_a-0000e026-a760-8000-98ba-01ef9001ef90_24184"(
+              label: "WSDL 20",
+              wsData: local!wsdl20Data,
+              response: local!response,
+              lastPushedLabel: local!lastPushedLabel
+            ),
+            #"_a-0000e026-a760-8000-98ba-01ef9001ef90_24184"(
+              label: "WSDL MEP",
+              wsData: local!wsdlMepData,
+              response: local!response,
+              lastPushedLabel: local!lastPushedLabel
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_textField"(
+          readOnly: fn!true(),
+          value: "You pushed " &amp; #"SYSTEM_SYSRULES_util_coalesce"(local!lastPushedLabel, "nothing")
+        ),
+        #"SYSTEM_SYSRULES_paragraphField"(
+          readOnly:fn!true(),
+          value: fn!prettyprint_value_appian_internal(
+            local!response,
+            #"SYSTEM_SYSRULES_prettyPrintValueOptions"(
+              shouldDisplayInternalTypes: fn!true(),
+              shouldAppendType: fn!false()
+            )
+          )
+        )
+      }
+    )
+  }
+)
+)</definition>
+        <metadataExpr></metadataExpr>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e026-a760-8000-98ba-01ef9001ef90_24207"/>
+        <historyInfo versionUuid="_a-0000e026-a760-8000-98ba-01ef9001ef90_24383"/>
+    </history>
+</contentHaul>

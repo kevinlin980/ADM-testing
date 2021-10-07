@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="urn:appian:wsclient:junit"
+  xmlns:tns="urn:appian:wsclient:junit" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="generic-element-in">
+    <xsd:complexType>
+      <xsd:annotation>
+        <xsd:appinfo source="http://www.appian.com/ae/types/2009">
+          <ns2:Metadata xmlns:ns2="http://www.appian.com/ae/types/2009">
+            <ns2:Flags>HIDDEN</ns2:Flags>
+            <ns2:versionUuid>0000e027-457b-8000-9885-014d98014d98</ns2:versionUuid>
+            <ns2:history>
+              <ns2:historyInfo versionUuid="0000e027-457b-8000-9885-014d98014d98"/>
+            </ns2:history>
+          </ns2:Metadata>
+        </xsd:appinfo>
+      </xsd:annotation>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

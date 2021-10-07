@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24179</versionUuid>
+    <rule>
+        <name>SOAP_echoWsdlExpression</name>
+        <uuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24084</uuid>
+        <description></description>
+        <parentUuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24079</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>fn!replacetokens_appian_internal(
+***
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                  xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+                  xmlns:ns="https://services.ws.appian.com"
+                  targetNamespace="https://services.ws.appian.com"&gt;
+
+  &lt;wsdl:documentation&gt;EchoService&lt;/wsdl:documentation&gt;
+  &lt;wsdl:types&gt;
+    &lt;xs:schema attributeFormDefault="qualified" elementFormDefault="qualified"
+               targetNamespace="https://services.ws.appian.com"&gt;
+      &lt;xs:element name="echo"&gt;
+        &lt;xs:complexType&gt;
+          &lt;xs:sequence&gt;
+            &lt;xs:element minOccurs="0" name="input" nillable="true" type="xs:string"/&gt;
+          &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+      &lt;/xs:element&gt;
+      &lt;xs:element name="echoResponse"&gt;
+        &lt;xs:complexType&gt;
+          &lt;xs:sequence&gt;
+            &lt;xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/&gt;
+          &lt;/xs:sequence&gt;
+        &lt;/xs:complexType&gt;
+      &lt;/xs:element&gt;
+    &lt;/xs:schema&gt;
+  &lt;/wsdl:types&gt;
+  &lt;wsdl:message name="echoRequest"&gt;
+    &lt;wsdl:part name="parameters" element="ns:echo"/&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="echoResponse"&gt;
+    &lt;wsdl:part name="parameters" element="ns:echoResponse"/&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:portType name="EchoServicePortType"&gt;
+    &lt;wsdl:operation name="echo"&gt;
+      &lt;wsdl:input message="ns:echoRequest" wsaw:Action="urn:echo"/&gt;
+      &lt;wsdl:output message="ns:echoResponse" wsaw:Action="urn:echoResponse"/&gt;
+    &lt;/wsdl:operation&gt;
+  &lt;/wsdl:portType&gt;
+  &lt;wsdl:binding name="EchoServiceSoap11Binding" type="ns:EchoServicePortType"&gt;
+    &lt;soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/&gt;
+    &lt;wsdl:operation name="echo"&gt;
+      &lt;soap:operation soapAction="urn:echo" style="document"/&gt;
+      &lt;wsdl:input&gt;
+        &lt;soap:body use="literal"/&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:output&gt;
+        &lt;soap:body use="literal"/&gt;
+      &lt;/wsdl:output&gt;
+    &lt;/wsdl:operation&gt;
+  &lt;/wsdl:binding&gt;
+  &lt;wsdl:binding name="EchoServiceSoap12Binding" type="ns:EchoServicePortType"&gt;
+    &lt;soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/&gt;
+    &lt;wsdl:operation name="echo"&gt;
+      &lt;soap12:operation soapAction="urn:echo" style="document"/&gt;
+      &lt;wsdl:input&gt;
+        &lt;soap12:body use="literal"/&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:output&gt;
+        &lt;soap12:body use="literal"/&gt;
+      &lt;/wsdl:output&gt;
+    &lt;/wsdl:operation&gt;
+  &lt;/wsdl:binding&gt;
+  &lt;wsdl:binding name="EchoServiceHttpBinding" type="ns:EchoServicePortType"&gt;
+    &lt;http:binding verb="POST"/&gt;
+    &lt;wsdl:operation name="echo"&gt;
+      &lt;http:operation location="echo"/&gt;
+      &lt;wsdl:input&gt;
+        &lt;mime:content type="application/xml" part="parameters"/&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:output&gt;
+        &lt;mime:content type="application/xml" part="parameters"/&gt;
+      &lt;/wsdl:output&gt;
+    &lt;/wsdl:operation&gt;
+  &lt;/wsdl:binding&gt;
+  &lt;wsdl:service name="EchoService"&gt;
+    &lt;wsdl:port name="EchoServiceHttpSoap11Endpoint" binding="ns:EchoServiceSoap11Binding"&gt;
+      &lt;soap:address location="{0}" /&gt;
+    &lt;/wsdl:port&gt;
+    &lt;wsdl:port name="EchoServiceHttpSoap12Endpoint" binding="ns:EchoServiceSoap12Binding"&gt;
+      &lt;soap12:address location="{0}" /&gt;
+    &lt;/wsdl:port&gt;
+    &lt;wsdl:port name="EchoServiceHttpEndpoint" binding="ns:EchoServiceHttpBinding"&gt;
+      &lt;http:address location="{0}" /&gt;
+    &lt;/wsdl:port&gt;
+  &lt;/wsdl:service&gt;
+&lt;/wsdl:definitions&gt;
+***,
+#"_a-0000e026-a760-8000-98ba-01ef9001ef90_24106"("soapechoservice")
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e026-a760-8000-98ba-01ef9001ef90_24179"/>
+    </history>
+</contentHaul>

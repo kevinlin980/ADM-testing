@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webApiHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>47a8aa5f-c77d-460e-afae-4f1c08bb0955</versionUuid>
+    <webApi a:uuid="4a39624a-8c48-47f6-adbe-0359d36a3086" name="SOAP Echo Service">
+        <a:description></a:description>
+        <a:expression>#"SYSTEM_SYSRULES_httpResponse_v1"(
+ headers: {
+    #"SYSTEM_SYSRULES_httpHeader"(name: "Content-Type", value: "application/xml")
+  },
+  body: fn!replacetokens_appian_internal(
+***
+  &lt;apn:echoResponse xmlns:apn="https://services.ws.appian.com"&gt;
+     &lt;apn:return&gt;&lt;![CDATA[{0}]]&gt;&lt;/apn:return&gt;
+  &lt;/apn:echoResponse&gt;
+***,
+   http!request.body &amp; http!request.headers
+)
+)</a:expression>
+        <a:urlAlias>soapechoservice</a:urlAlias>
+        <a:httpMethod>POST</a:httpMethod>
+        <a:system>false</a:system>
+    </webApi>
+    <roleMap/>
+    <typedValue>
+        <type>
+            <name>WebApiRequest?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:path/>
+                <a:body/>
+            </el>
+        </value>
+    </typedValue>
+    <history>
+        <historyInfo versionUuid="eb46db43-db25-4dfd-b744-4939bfea547d"/>
+        <historyInfo versionUuid="47a8aa5f-c77d-460e-afae-4f1c08bb0955"/>
+    </history>
+</webApiHaul>

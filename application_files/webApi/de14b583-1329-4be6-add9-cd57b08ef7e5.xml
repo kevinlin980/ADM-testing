@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webApiHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>817f9a8e-34c2-40cc-a83e-adfc113b96b5</versionUuid>
+    <webApi a:uuid="de14b583-1329-4be6-add9-cd57b08ef7e5" name="SOAP WSDL20 WSDL">
+        <a:description></a:description>
+        <a:expression>#"SYSTEM_SYSRULES_httpResponse_v1"(
+  headers: {
+    #"SYSTEM_SYSRULES_httpHeader"(name: "Content-Type", value: "application/xml")
+  },
+  body: fn!replacetokens_appian_internal(***
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;wsdl:description targetNamespace="http://example.com"
+  xmlns="http://example.com" xmlns:tns="http://example.com"
+  xmlns:wsdl="http://www.w3.org/ns/wsdl"
+  xmlns:whttp="http://www.w3.org/ns/wsdl/http"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+
+  &lt;wsdl:types&gt;
+    &lt;xs:schema targetNamespace="http://example.com"&gt;
+      &lt;xs:element name="Search" type="xs:string" /&gt;
+      &lt;xs:element name="SearchResponse" type="xs:string" /&gt;
+      &lt;xs:element name="stringIn" type="xs:string" /&gt;
+      &lt;xs:element name="stringOut" type="xs:string" /&gt;
+    &lt;/xs:schema&gt;
+  &lt;/wsdl:types&gt;
+
+  &lt;wsdl:interface name="SearchInterface"&gt;
+    &lt;wsdl:operation name="Search"&gt;
+      &lt;wsdl:input messageLabel="In" element="tns:Search" /&gt;
+      &lt;wsdl:output messageLabel="Out" element="tns:SearchResponse" /&gt;
+    &lt;/wsdl:operation&gt;
+  &lt;/wsdl:interface&gt;
+
+  &lt;wsdl:binding name="SearchBinding" interface="tns:SearchInterface"
+    type="http://www.w3.org/ns/wsdl/http"&gt;
+    &lt;wsdl:operation ref="tns:Search" whttp:location="somewhere" name="Search"&gt;
+      &lt;wsdl:input messageLabel="In"&gt;
+        &lt;whttp:header name="customHeaderIn" type="tns:stringIn" /&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:output messageLabel="Out"&gt;
+        &lt;whttp:header name="customHeaderOut" type="tns:stringOut" /&gt;
+      &lt;/wsdl:output&gt;
+    &lt;/wsdl:operation&gt;
+  &lt;/wsdl:binding&gt;
+
+  &lt;wsdl:service name="SearchService" interface="tns:SearchInterface"&gt;
+    &lt;wsdl:endpoint name="SearchEndpoint" binding="tns:SearchBinding"
+      address="{0}" /&gt;
+  &lt;/wsdl:service&gt;
+
+&lt;/wsdl:description&gt;
+***,
+  #"_a-0000e026-a760-8000-98ba-01ef9001ef90_24106"("soapwsdl20service")
+  )
+)</a:expression>
+        <a:urlAlias>soapwsdl20wsdl</a:urlAlias>
+        <a:httpMethod>GET</a:httpMethod>
+        <a:system>false</a:system>
+        <a:requestBodyType>NONE</a:requestBodyType>
+    </webApi>
+    <roleMap/>
+    <typedValue>
+        <type>
+            <name>WebApiRequest?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:path/>
+                <a:body/>
+            </el>
+        </value>
+    </typedValue>
+    <history>
+        <historyInfo versionUuid="817f9a8e-34c2-40cc-a83e-adfc113b96b5"/>
+    </history>
+</webApiHaul>

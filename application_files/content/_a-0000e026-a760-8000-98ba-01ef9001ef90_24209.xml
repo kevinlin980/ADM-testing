@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24335</versionUuid>
+    <rule>
+        <name>SOAP_webserviceWriteWrapper</name>
+        <uuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24209</uuid>
+        <description></description>
+        <parentUuid>_a-0000e026-a760-8000-98ba-01ef9001ef90_24079</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>fn!try(
+  fn!webservicewrite(
+  wsconfig: #"SYSTEM_SYSRULES_wsConfig"(
+    wsdlUrl: ri!wsData.endpoint,
+    service: ri!wsData.service,
+    port: ri!wsData.port,
+    operation: ri!wsData.operation,
+    wsdlCredentials: #"_a-0000e026-a760-8000-98ba-01ef9001ef90_24132"(),
+    endpointCredentials: #"_a-0000e026-a760-8000-98ba-01ef9001ef90_24132"()
+  ),
+  /* Eval here and not before */
+  inputVar: fn!eval(ri!wsData.inputVar)
+  ),
+  fn!LastError()
+)</definition>
+        <namedTypedValue>
+            <name>wsData</name>
+            <type>
+                <name>Variant</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e026-a760-8000-98ba-01ef9001ef90_24335"/>
+    </history>
+</contentHaul>

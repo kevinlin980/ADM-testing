@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="https://services.ws.appian.com"
+  xmlns:tns="https://services.ws.appian.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:simpleType name="echo@EchoServiceSoap11Binding$faults-1338079152">
+    <xsd:annotation>
+      <xsd:appinfo source="http://www.appian.com/ae/types/2009">
+        <ns2:Metadata xmlns:ns2="http://www.appian.com/ae/types/2009">
+          <ns2:Flags>HIDDEN UNION</ns2:Flags>
+          <ns2:versionUuid>0000e027-09bb-8000-9885-014d98014d98</ns2:versionUuid>
+          <ns2:history>
+            <ns2:historyInfo versionUuid="0000e015-9ba7-8000-cb01-014d98014d98"/>
+            <ns2:historyInfo versionUuid="0000e027-09bb-8000-9885-014d98014d98"/>
+          </ns2:history>
+        </ns2:Metadata>
+      </xsd:appinfo>
+      <xsd:documentation><![CDATA[Origin: https://181-axis-regression-test.appianci.net/suite/webapi/soapechowsdl]]></xsd:documentation>
+    </xsd:annotation>
+    <xsd:union memberTypes="xsd:string"/>
+  </xsd:simpleType>
+</xsd:schema>
