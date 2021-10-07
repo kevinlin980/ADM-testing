@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-afbb-8000-69c1-01ef9001ef90_25144</versionUuid>
+    <constant>
+        <name>UIExpressions_descriptions</name>
+        <uuid>_a-0000d717-1df1-8000-192d-010000010000_1743</uuid>
+        <description>Description of all the records</description>
+        <parentUuid>_a-0000d710-87e4-8000-837a-010000010000_1404</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <typedValue>
+            <type>
+                <name>Text?list</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+            <value>
+                <el>Contains TextFields and IntegerFields in two columns. They are embedded in a FormLayout, so you will see two titles</el>
+                <el>Contains an expression with four columns. The ui should collapse into a single one</el>
+                <el>Contains a single CheckBox field</el>
+                <el>Contains a single DateField</el>
+                <el>Contains a single DateTimeField</el>
+                <el>Contains a single DecimalNumberField</el>
+                <el>Contains a single DropDownField</el>
+                <el>Contains a MultipleDropDownField</el>
+                <el>Contains a single FileUploadField. This field is not ready yet on the server</el>
+                <el>Contains a single ImageField</el>
+                <el>Contains a single IntegerNumberField</el>
+                <el>Contains a single LinkField</el>
+                <el>Contains an empty expression ="". Will throw an error</el>
+                <el>Contains a single PeoplePickerField. This expression is not ready yet on the server</el>
+                <el>Contains a single RadioButtonField</el>
+                <el>Contains a single column ui</el>
+                <el>Contains a single Primary ButtonWidget</el>
+                <el>Contains a single ParagraphField</el>
+                <el>Contains a single TextField</el>
+                <el>Contains a single TimeField</el>
+                <el>Contains a single BooleanField</el>
+            </value>
+        </typedValue>
+        <isEnvironmentSpecific>false</isEnvironmentSpecific>
+    </constant>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-afbb-8000-69c1-01ef9001ef90_25144"/>
+    </history>
+</contentHaul>
