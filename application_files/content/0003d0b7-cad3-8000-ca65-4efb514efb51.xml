@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24527</versionUuid>
+    <folder>
+        <name>folder in custom security KC</name>
+        <uuid>0003d0b7-cad3-8000-ca65-4efb514efb51</uuid>
+        <description></description>
+        <parentUuid>0000d0b7-ca6d-8000-ca65-4efb514efb51</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+    </folder>
+    <roleMap public="false">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24527"/>
+    </history>
+</contentHaul>

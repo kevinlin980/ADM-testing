@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24835</versionUuid>
+    <rule>
+        <name>MU_adminConsolePasswords</name>
+        <uuid>717fa06e-2a62-466e-bb41-ef7e5dbdd99f</uuid>
+        <description></description>
+        <parentUuid>_a-0000d9f3-0972-8000-0018-010000010000_2856</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load(&#xD;
+  local!limitSessions,&#xD;
+  local!expirePasswords,&#xD;
+  local!lockAccounts:fn!true(),&#xD;
+  local!autoUnlock,&#xD;
+  local!deactivateIdle,&#xD;
+  local!warnExpire,&#xD;
+  local!expireTempPassword,&#xD;
+  local!minIOS,&#xD;
+  local!minAndroid,&#xD;
+  local!tos,&#xD;
+  #"SYSTEM_SYSRULES_formLayout"(&#xD;
+    label: "Site Access",&#xD;
+    firstColumnContents: {&#xD;
+      #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+        label: "Password Format",&#xD;
+        firstColumnContents: {&#xD;
+          #"SYSTEM_SYSRULES_integerField"(&#xD;
+            label: "Minimum Password Length",&#xD;
+            value: 1&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_integerField"(&#xD;
+            label: "Minimum Number of Alphabetic Characters",&#xD;
+            value: 0&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_integerField"(&#xD;
+            label: "Minimum Number of Lowercase Characters",&#xD;
+            value: 0&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_integerField"(&#xD;
+            label: "Minimum Number of Uppercase Characters",&#xD;
+            value: 0&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_integerField"(&#xD;
+            label: "Minimum Number of Numeric Characters",&#xD;
+            value: 0&#xD;
+          )&#xD;
+        },&#xD;
+        secondColumnContents:{&#xD;
+          &#xD;
+          #"SYSTEM_SYSRULES_integerField"(&#xD;
+            label: "Minimum Number of Special Characters",&#xD;
+            instructions: "Special characters are: ! "" # $ % &amp; ' ( ) * + , - . / \ : ; &lt; = &gt; ? @ [ ] ^ _ ` { | } ~",&#xD;
+            value: 0&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_integerField"(&#xD;
+            label: "Minimum Password Age (Days)",&#xD;
+            instructions: "Number of days a user must wait before changing a password",&#xD;
+            value: 0&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_integerField"(&#xD;
+            label: "Prevent Reuse of Previous Passwords",&#xD;
+            instructions: "Number of recent passwords that may not be reused (0–24)",&#xD;
+            value: 1&#xD;
+          )&#xD;
+          &#xD;
+        }&#xD;
+      ),&#xD;
+      #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+        label: "Expiration",&#xD;
+        firstColumnContents:{&#xD;
+          #"SYSTEM_SYSRULES_checkboxField"(&#xD;
+            labelPosition:"COLLAPSED",&#xD;
+            choiceLabels: {"Expire Passwords"},&#xD;
+            choiceValues: {true},&#xD;
+            value:local!expirePasswords,&#xD;
+            saveInto:local!expirePasswords&#xD;
+          )&#xD;
+        },&#xD;
+        secondColumnContents: {&#xD;
+         &#xD;
+        }&#xD;
+      ),&#xD;
+      #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+        label: "",&#xD;
+        firstColumnContents: {&#xD;
+          if(tostring(local!expirePasswords)=tostring(fn!true()),&#xD;
+            {&#xD;
+              #"SYSTEM_SYSRULES_integerField"(&#xD;
+                label: "Maximum Password Age (Days)",&#xD;
+                instructions: "How long a user can keep a password before it must be changed",&#xD;
+                value: 0&#xD;
+              )&#xD;
+            },&#xD;
+            {}&#xD;
+          )&#xD;
+        },&#xD;
+        secondColumnContents: {&#xD;
+          if(tostring(local!expirePasswords)=tostring(fn!true()),&#xD;
+            {&#xD;
+              #"SYSTEM_SYSRULES_checkboxField"(&#xD;
+                labelPosition:"COLLAPSED",&#xD;
+                choiceLabels: {"Warn Users Before Password Expiration"},&#xD;
+                choiceValues: {true},&#xD;
+                value:local!warnExpire,&#xD;
+                saveInto:local!warnExpire&#xD;
+              ),&#xD;
+              if(local!warnExpire,&#xD;
+                #"SYSTEM_SYSRULES_integerField"(&#xD;
+                  label: "Password Expiration Warning Period (Days)",&#xD;
+                  instructions: "How long prior to password expiration to warn users of their impending password expiration",&#xD;
+                  value: 0&#xD;
+                ),&#xD;
+                {}&#xD;
+              ),&#xD;
+              #"SYSTEM_SYSRULES_checkboxField"(&#xD;
+                labelPosition:"COLLAPSED",&#xD;
+                choiceLabels: {"Expire Temporary Passwords"},&#xD;
+                choiceValues: {true},&#xD;
+                value:local!expireTempPassword,&#xD;
+                saveInto:local!expireTempPassword&#xD;
+              ),&#xD;
+              if(local!expireTempPassword,&#xD;
+                #"SYSTEM_SYSRULES_integerField"(&#xD;
+                  label: "Maximum Temporary Password Age (Minutes)",&#xD;
+                  instructions: "Number of minutes after which to expire a temporary password",&#xD;
+                  value: 30&#xD;
+                ),&#xD;
+                {}&#xD;
+              )&#xD;
+            },&#xD;
+            {}&#xD;
+          )&#xD;
+        }&#xD;
+      ),&#xD;
+       #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+        label: "Account Locking",&#xD;
+        firstColumnContents: {&#xD;
+          #"SYSTEM_SYSRULES_checkboxField"(&#xD;
+            labelPosition:"COLLAPSED",&#xD;
+            instructions: "Locking a user account prevents the user from logging in. The user is otherwise considered ""active"", e.g. returned in user searches/pickers.",&#xD;
+            choiceLabels: {"Lock Accounts After Failed Logins"},&#xD;
+            choiceValues: {true},&#xD;
+            value: local!lockAccounts,&#xD;
+            saveInto: local!lockAccounts,&#xD;
+            align: ""&#xD;
+          ),&#xD;
+          if(tostring(local!lockAccounts)=tostring(fn!true()),&#xD;
+            {&#xD;
+              #"SYSTEM_SYSRULES_integerField"(&#xD;
+                label: "Maximum Password Attempts",&#xD;
+                instructions: "Number of failed login attempts after which a user's account will be temporarily locked",&#xD;
+                value: 6&#xD;
+              ),&#xD;
+              #"SYSTEM_SYSRULES_integerField"(&#xD;
+                label: "Password Attempt Reset Duration (Minutes)",&#xD;
+                instructions: "Number of minutes after which to reset the failed password attempt counter",&#xD;
+                value: 30&#xD;
+              ),&#xD;
+              #"SYSTEM_SYSRULES_checkboxField"(&#xD;
+                labelPosition:"COLLAPSED",&#xD;
+                choiceLabels: {"Unlock Accounts Automatically"},&#xD;
+                choiceValues: {true},&#xD;
+                value: local!autoUnlock,&#xD;
+                saveInto:local!autoUnlock,&#xD;
+                align: ""&#xD;
+              ),&#xD;
+              if(local!autoUnlock,&#xD;
+                #"SYSTEM_SYSRULES_integerField"(&#xD;
+                  label: "Lock Duration (Minutes)",&#xD;
+                  instructions: "Number of minutes until an account is automatically unlocked",&#xD;
+                  value: 30&#xD;
+                ),&#xD;
+                {}&#xD;
+              )&#xD;
+            },&#xD;
+          {}&#xD;
+          )&#xD;
+        },&#xD;
+        secondColumnContents:{&#xD;
+          &#xD;
+          &#xD;
+          #"SYSTEM_SYSRULES_checkboxField"(&#xD;
+            labelPosition:"COLLAPSED",&#xD;
+            choiceLabels: {"Limit Number of Concurrent Sessions Per User Account"},&#xD;
+            choiceValues: {true},&#xD;
+            value:local!limitSessions,&#xD;
+            saveInto:local!limitSessions&#xD;
+          ),&#xD;
+          if(local!limitSessions,&#xD;
+            #"SYSTEM_SYSRULES_integerField"(&#xD;
+              label: "Maximum Concurrent Sessions",&#xD;
+              instructions: "After the maximum number of sessions is reached the user will not be able to authenticate again until one of the open sessions ends",&#xD;
+              value: 3&#xD;
+            ),&#xD;
+            {}&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_checkboxField"(&#xD;
+            labelPosition:"COLLAPSED",&#xD;
+            choiceLabels: {"Deactivate Users Who Have Not Logged In Recently"},&#xD;
+            choiceValues: {true},&#xD;
+            value:local!deactivateIdle,&#xD;
+            saveInto:local!deactivateIdle&#xD;
+          ),&#xD;
+          if(local!deactivateIdle,&#xD;
+            #"SYSTEM_SYSRULES_integerField"(&#xD;
+              label: "Idle Duration for User Deactivation (Days)",&#xD;
+              instructions: "Number of days since a user's last successful login after which to deactivate their account",&#xD;
+              value: 30&#xD;
+            ),&#xD;
+            {}&#xD;
+          )&#xD;
+        }&#xD;
+      ),&#xD;
+      #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+        label:"Terms of Service Agreement",&#xD;
+        firstColumnContents:{&#xD;
+          #"SYSTEM_SYSRULES_checkboxField"(&#xD;
+            labelPosition:"COLLAPSED",&#xD;
+            choiceLabels: {"Require Users to Accept Terms of Service Before Logging In"},&#xD;
+            choiceValues: {true},&#xD;
+            value:local!tos,&#xD;
+            saveInto:local!tos&#xD;
+          ),&#xD;
+          if(local!tos,&#xD;
+            #"SYSTEM_SYSRULES_paragraphField"(&#xD;
+              label:"Terms of Service"&#xD;
+            ),&#xD;
+            {}&#xD;
+          )&#xD;
+        }&#xD;
+      ),&#xD;
+      #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+        label: "Mobile",&#xD;
+        firstColumnContents: {&#xD;
+          #"SYSTEM_SYSRULES_checkboxField"(&#xD;
+            labelPosition:"COLLAPSED",&#xD;
+            choiceLabels: {"Require Passcode Lock for Mobile Apps"},&#xD;
+            choiceValues: {true},&#xD;
+            value: {}&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_checkboxField"(&#xD;
+            labelPosition:"COLLAPSED",&#xD;
+            choiceLabels: {"Require Minimum iOS App Version"},&#xD;
+            choiceValues: {true},&#xD;
+            value: local!minIOS,&#xD;
+            saveInto: local!minIOS&#xD;
+          ),&#xD;
+          if(local!minIOS,&#xD;
+            #"SYSTEM_SYSRULES_textField"(&#xD;
+              label: "Minimum iOS App Version",&#xD;
+              instructions:"Example: 1.0.0",&#xD;
+              value: "8.0.1"&#xD;
+            ),&#xD;
+            {}&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_checkboxField"(&#xD;
+            labelPosition:"COLLAPSED",&#xD;
+            choiceLabels: {"Require Minimum Android App Version"},&#xD;
+            choiceValues: {true},&#xD;
+            value: local!minAndroid,&#xD;
+            saveInto: local!minAndroid&#xD;
+          ),&#xD;
+          if(local!minAndroid,&#xD;
+            #"SYSTEM_SYSRULES_textField"(&#xD;
+              label: "Minimum Android App Version",&#xD;
+              instructions:"Example: 1.0.0",&#xD;
+              value: "4.5"&#xD;
+            ),&#xD;
+            {}&#xD;
+          )&#xD;
+        },&#xD;
+        secondColumnContents: {&#xD;
+          #"SYSTEM_SYSRULES_textField"(&#xD;
+            readOnly:fn!true()&#xD;
+          )&#xD;
+        }&#xD;
+      )&#xD;
+    },&#xD;
+    secondColumnContents: {&#xD;
+     &#xD;
+    },&#xD;
+    buttons: #"SYSTEM_SYSRULES_ButtonLayout"(&#xD;
+      primaryButtons: {&#xD;
+        #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(&#xD;
+          label: "Save Changes",&#xD;
+          style: "PRIMARY"&#xD;
+        )&#xD;
+      },&#xD;
+      secondaryButtons:{&#xD;
+        #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(&#xD;
+          label: "Reset Changes"&#xD;
+        )&#xD;
+      }&#xD;
+    )&#xD;
+  )&#xD;
+)</definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24835"/>
+    </history>
+</contentHaul>

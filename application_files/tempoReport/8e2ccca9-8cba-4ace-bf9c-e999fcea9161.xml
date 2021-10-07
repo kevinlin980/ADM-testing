@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>dff7df77-50b5-496e-a2e1-18b70f38fb48</versionUuid>
+    <tempoReport a:uuid="8e2ccca9-8cba-4ace-bf9c-e999fcea9161" name="One-Column UI">
+        <a:description>One column cases based on layout_one_column.html in the mockups repo</a:description>
+        <a:uiExpr>=#"_a-0000d71d-822e-8000-7e17-010000010000_1455"()</a:uiExpr>
+        <a:urlStub>oneColumn</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_viewer">
+            <users/>
+            <groups>
+                <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="dff7df77-50b5-496e-a2e1-18b70f38fb48"/>
+    </history>
+</tempoReportHaul>

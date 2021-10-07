@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24575</versionUuid>
+    <rule>
+        <name>clientCertificateStandaloneGrid</name>
+        <uuid>bd0bb2a5-e56f-44a5-9e0a-8b03df1cee4e</uuid>
+        <description></description>
+        <parentUuid>_a-0000d971-e283-8000-db05-010000010000_2196</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load(&#xD;
+ local!pagingInfo: #"SYSTEM_SYSRULES_pagingInfo"(startIndex: 1, batchSize: 5),&#xD;
+ local!addNew:false,&#xD;
+ if(local!addnew,&#xD;
+ #"SYSTEM_SYSRULES_formLayout"(&#xD;
+   label: "Add New Certificate",&#xD;
+   firstColumnContents:{&#xD;
+    #"SYSTEM_SYSRULES_fileUploadField"(&#xD;
+      label: "Certificate"&#xD;
+    )&#xD;
+    },&#xD;
+    secondColumnContents:{&#xD;
+        #"SYSTEM_SYSRULES_textField"(&#xD;
+          label: "Certificate Password"&#xD;
+        )&#xD;
+      },&#xD;
+    buttons:#"SYSTEM_SYSRULES_ButtonLayout"(&#xD;
+     primaryButtons:#"SYSTEM_SYSRULES_ButtonWidget"(label:"Save Changes",style:"PRIMARY",value:false,saveInto:local!addNew),&#xD;
+     secondaryButtons:#"SYSTEM_SYSRULES_ButtonWidget"(label:"Cancel",style:"NORMAL",value:false,saveInto:local!addNew)&#xD;
+     )&#xD;
+  ),&#xD;
+ #"SYSTEM_SYSRULES_formLayout"(&#xD;
+   label: "Client Certificates",&#xD;
+   firstColumnContents: {&#xD;
+     #"SYSTEM_SYSRULES_gridField"(&#xD;
+       label: "",&#xD;
+       value: local!pagingInfo,&#xD;
+       columns:{&#xD;
+         #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+           label: "Common Name",&#xD;
+           data: {&#xD;
+             fn!repeat(local!pagingInfo.batchSize, "*.appianci.net")&#xD;
+           }&#xD;
+         ),&#xD;
+         #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+           label: "Serial Number",&#xD;
+           data: {&#xD;
+             fn!repeat(local!pagingInfo.batchSize, "04 42 c9 28 02 60 4c")&#xD;
+           }&#xD;
+         ),&#xD;
+         #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+           label: "Valid From",&#xD;
+           data: {&#xD;
+             fn!repeat(local!pagingInfo.batchSize, date(2014,4,8))&#xD;
+           }&#xD;
+         ),&#xD;
+         #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+           label: "Valid To",&#xD;
+           data: {&#xD;
+             fn!repeat(local!pagingInfo.batchSize, date(2017,1,11))&#xD;
+           }&#xD;
+         ),&#xD;
+         #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+           label: "Thumbprint",&#xD;
+           data: {&#xD;
+             fn!repeat(local!pagingInfo.batchSize, "1c bc e7 93 4f e8 bf 4c 56 29 cf 86 0c 86 28 2b 75 7c dd 37")&#xD;
+           }&#xD;
+         ),&#xD;
+         #"SYSTEM_SYSRULES_gridImageColumn"(&#xD;
+           label: "",&#xD;
+           size: "ICON",&#xD;
+           data: {&#xD;
+             fn!repeat(&#xD;
+               local!pagingInfo.batchSize,&#xD;
+               #"SYSTEM_SYSRULES_documentImage"( document: #"SYSTEM_SYSRULES_iconIndicator"(icon: "REMOVE"))&#xD;
+             )&#xD;
+           }&#xD;
+         )&#xD;
+       },&#xD;
+       totalCount: local!pagingInfo.batchSize&#xD;
+     ),&#xD;
+     #"SYSTEM_SYSRULES_linkField"(labelPostion:"COLLAPSED",links:{#"SYSTEM_SYSRULES_dynamicLink"(label:"+New Certificate",value:true,saveInto:local!addNew)})&#xD;
+   }&#xD;
+  )&#xD;
+ )&#xD;
+)</definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24575"/>
+    </history>
+</contentHaul>

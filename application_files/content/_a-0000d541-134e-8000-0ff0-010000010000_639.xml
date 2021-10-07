@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_20895</versionUuid>
+    <constant>
+        <name>company_descriptions</name>
+        <uuid>_a-0000d541-134e-8000-0ff0-010000010000_639</uuid>
+        <description></description>
+        <parentUuid>_a-0000d552-52d7-8000-4b9d-010000010000_614</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <typedValue>
+            <type>
+                <name>Text?list</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+            <value>
+                <el>awesome BPM company</el>
+                <el>from Arizona</el>
+                <el>english premeire league - aston villa</el>
+                <el>from Atlanta</el>
+                <el>operating system</el>
+                <el>from Baltimore</el>
+                <el>english premeire league - blackburn</el>
+                <el>from boston</el>
+                <el>get some burgers here</el>
+                <el>small letters</el>
+                <el>get some mexican food here</el>
+                <el>english premeire league - chelsea</el>
+                <el>from chicago</el>
+                <el>also from chicago</el>
+                <el>get some burritos here</el>
+                <el>get some really bad pizza here</el>
+                <el>from Cincinnati</el>
+                <el>from Cleveland</el>
+                <el>drink some soda here</el>
+                <el>be part of an awesome company here</el>
+                <el>from Colorado</el>
+                <el>a letter</el>
+                <el>From Detroit</el>
+                <el>get some alright pizza here</el>
+                <el>be the sponsor of jeff gordon's car here</el>
+                <el>ariginal gangsta</el>
+                <el>voted world's most evil company</el>
+                <el>some description</el>
+                <el>get your package delivered here</el>
+                <el>get your cars here</el>
+                <el>some accented characters</el>
+                <el>from Houston</el>
+                <el>get some questionable executive decisions here</el>
+                <el>russian maybe?</el>
+                <el>get that car here</el>
+                <el>some oriental language characters</el>
+                <el>tractors for sale</el>
+                <el>12345  description</el>
+                <el>from Kanson</el>
+                <el>facebook description</el>
+                <el>english premeire league - liverpool</el>
+                <el>steak here maybe?</el>
+                <el>from Anaheim. Wait no from LA. But they play in Anaheim</el>
+                <el>from LA</el>
+                <el>ebay  description</el>
+                <el>english premeire league - man U</el>
+                <el>Sims. Myst. Spore?</el>
+                <el>eat healthy here</el>
+                <el>from Miami</el>
+                <el>from Milwaukee</el>
+                <el>from Minnesota</el>
+                <el>statement</el>
+                <el>Gotta go to moe's</el>
+                <el>more social networks</el>
+                <el>national broadcast company</el>
+                <el>get your chocolate here</el>
+                <el>from New York</el>
+                <el>from New York</el>
+                <el>english premeire league - newcastle</el>
+                <el>gamecube</el>
+                <el>ramen</el>
+                <el>word association</el>
+                <el>from Oakland</el>
+                <el>soup salad and breadsticks only $6.99</el>
+                <el>place your ad</el>
+                <el>get some 'za here eat it with your bros</el>
+                <el>movietime</el>
+                <el>soda. Better than coke</el>
+                <el>nom nom</el>
+                <el>from Pittsburgh</el>
+                <el>nom nom pizza!</el>
+                <el>wireless</el>
+                <el>get inferior burritos here</el>
+                <el>english premeire league - QPR</el>
+                <el>Senior Citizens</el>
+                <el>eat the sea</el>
+                <el>headphones</el>
+                <el>from San Diego</el>
+                <el>From San Francisco</el>
+                <el>uhh. Seasons!</el>
+                <el>from Seattle</el>
+                <el>the sherwinator</el>
+                <el>sports but interactive</el>
+                <el>from St Louis</el>
+                <el>get your $5 cup of coffee here</el>
+                <el>the way a sandwich should be</el>
+                <el>stare into it</el>
+                <el>english premeire league - swansea</el>
+                <el>mouses and things</el>
+                <el>nom nom taco bell</el>
+                <el>from Tampa Bay</el>
+                <el>from Texas. Everything is bigger there.</el>
+                <el>from Toronto</el>
+                <el>computers and things</el>
+                <el>swedish cars</el>
+                <el>mostly red</el>
+                <el>from Washington</el>
+                <el>get some tasty fries here</el>
+                <el>english premeire league - wolverhampton</el>
+            </value>
+        </typedValue>
+        <isEnvironmentSpecific>false</isEnvironmentSpecific>
+    </constant>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_20895"/>
+    </history>
+</contentHaul>

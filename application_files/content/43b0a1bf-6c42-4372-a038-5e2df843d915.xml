@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25798</versionUuid>
+    <rule>
+        <name>MU_internationalSettingsOneCol</name>
+        <uuid>43b0a1bf-6c42-4372-a038-5e2df843d915</uuid>
+        <description></description>
+        <parentUuid>_a-0000d982-fa33-8000-f241-010000010000_2202</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>=
+choose(2,
+  load(local!language:null,
+    #"SYSTEM_SYSRULES_formLayout"(
+      /*label: "International",*/
+      instructions: "",
+      firstColumnContents: {
+        #"SYSTEM_SYSRULES_sectionLayout"(
+          label: "",
+          firstColumnContents: {
+            #"SYSTEM_SYSRULES_dropdownField"(
+              label: "Language",
+              labelPosition:"ADJACENT",
+              choiceLabels:{"English (United States)","English (United Kingdom)","French (Canada)","French (France)","Spanish"},
+              choiceValues:{"English (United States)","English (United Kingdom)","French (Canada)","French (France)","Spanish"},
+              placeholderLabel:"Use system default: English (United States)",
+              value:local!language,
+              saveInto:local!language
+            ),
+            with(
+              local!timezones:if(local!language="English (United States)",{"(UTC-10:00) Hawaii-Aleutian Standard Time (Pacific/Honolulu)","(UTC-09:00) Alaska Time (America/Anchorage)","(UTC-08:00) Pacific Time (America/Los_Angeles)","(UTC-07:00) Mountain Time (America/Denver)","(UTC-06:00) Central Time (America/Chicago)","(UTC-05:00) Eastern Time (America/New_York)","--","(UTC-12:00) GMT-12:00 (Etc/GMT+12)","(UTC-11:00) GMT-11:00 (Etc/GMT+11)","(UTC-11:00) Samoa Standard Time (Pacific/Midway)","(UTC-11:00) Niue Time (Pacific/Niue)","(UTC-11:00) Samoa Standard Time (Pacific/Pago_Pago)","(UTC+14:00) Line Islands Time (Pacific/Kiritimati)"},{"(UTC) GMT+00:00 (Greenwich)","--","(UTC-12:00) GMT-12:00 (Etc/GMT+12)","(UTC-11:00) GMT-11:00 (Etc/GMT+11)","(UTC-11:00) Samoa Standard Time (Pacific/Midway)","(UTC-11:00) Niue Time (Pacific/Niue)","(UTC-11:00) Samoa Standard Time (Pacific/Pago_Pago)","(UTC+14:00) Line Islands Time (Pacific/Kiritimati)"}),
+               #"SYSTEM_SYSRULES_dropdownField"(
+                label: "Time Zone",
+                labelPosition:"ADJACENT",
+                choiceLabels:local!timezones,
+                choiceValues:local!timezones,
+                placeholderLabel:"Use system default: (UTC-05:00) Eastern Time (America/New_York)",
+                value:null
+              )
+            ),
+            #"SYSTEM_SYSRULES_dropdownField"(
+              label: "Calendar Type",
+              labelPosition:"ADJACENT",
+              choiceLabels:{"Islamic Type 1 (Epoch A)","Islamic Type 1 (Epoch B)","Islamic Type 2 (Epoch A)","Islamic Type 2 (Epoch B)","Um Al-Qura أم القرى"},
+              choiceValues:{"Islamic Type 1 (Epoch A)","Islamic Type 1 (Epoch B)","Islamic Type 2 (Epoch A)","Islamic Type 2 (Epoch B)","Um Al-Qura أم القرى"},
+              placeholderLabel:"Use system default: Gregorian",
+              value:null
+            )
+          },
+          secondColumnContents: {
+            
+            
+          }
+        )
+      },
+      buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+        primaryButtons: {
+          #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(
+            label: "Save Changes",
+            style: "PRIMARY"
+          )
+        }
+      )
+    )
+  ),
+  /*2 col*/
+  load(local!language:null,
+  #"SYSTEM_SYSRULES_formLayout"(
+    /*label: "International",*/
+    instructions: "",
+    firstColumnContents: {
+      #"SYSTEM_SYSRULES_sectionLayout"(
+        label: "",
+        firstColumnContents: {
+          #"SYSTEM_SYSRULES_dropdownField"(
+            label: "Language",
+            choiceLabels:{"English (United States)","English (United Kingdom)","French (Canada)","French (France)","Spanish"},
+            choiceValues:{"English (United States)","English (United Kingdom)","French (Canada)","French (France)","Spanish"},
+            placeholderLabel:"Use system default: English (United States)",
+            value:local!language,
+            saveInto:local!language
+          ),
+          with(
+            local!timezones:if(local!language="English (United States)",{"(UTC-10:00) Hawaii-Aleutian Standard Time (Pacific/Honolulu)","(UTC-09:00) Alaska Time (America/Anchorage)","(UTC-08:00) Pacific Time (America/Los_Angeles)","(UTC-07:00) Mountain Time (America/Denver)","(UTC-06:00) Central Time (America/Chicago)","(UTC-05:00) Eastern Time (America/New_York)","--","(UTC-12:00) GMT-12:00 (Etc/GMT+12)","(UTC-11:00) GMT-11:00 (Etc/GMT+11)","(UTC-11:00) Samoa Standard Time (Pacific/Midway)","(UTC-11:00) Niue Time (Pacific/Niue)","(UTC-11:00) Samoa Standard Time (Pacific/Pago_Pago)","(UTC+14:00) Line Islands Time (Pacific/Kiritimati)"},{"(UTC) GMT+00:00 (Greenwich)","--","(UTC-12:00) GMT-12:00 (Etc/GMT+12)","(UTC-11:00) GMT-11:00 (Etc/GMT+11)","(UTC-11:00) Samoa Standard Time (Pacific/Midway)","(UTC-11:00) Niue Time (Pacific/Niue)","(UTC-11:00) Samoa Standard Time (Pacific/Pago_Pago)","(UTC+14:00) Line Islands Time (Pacific/Kiritimati)"}),
+             #"SYSTEM_SYSRULES_dropdownField"(
+              label: "Time Zone",
+              choiceLabels:local!timezones,
+              choiceValues:local!timezones,
+              placeholderLabel:"Use system default: (UTC-05:00) Eastern Time (America/New_York)",
+              value:null
+            )
+          ),
+          #"SYSTEM_SYSRULES_dropdownField"(
+            label: "Calendar Type",
+            choiceLabels:{"Islamic Type 1 (Epoch A)","Islamic Type 1 (Epoch B)","Islamic Type 2 (Epoch A)","Islamic Type 2 (Epoch B)","Um Al-Qura أم القرى"},
+            choiceValues:{"Islamic Type 1 (Epoch A)","Islamic Type 1 (Epoch B)","Islamic Type 2 (Epoch A)","Islamic Type 2 (Epoch B)","Um Al-Qura أم القرى"},
+            placeholderLabel:"Use system default: Gregorian",
+            value:null
+          ),
+          #"SYSTEM_SYSRULES_ButtonLayout"(
+            primaryButtons: {
+              #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(
+                label: "Save Changes",
+                style: "PRIMARY"
+              )
+            }
+          )
+        },
+        secondColumnContents: {
+         #"SYSTEM_SYSRULES_textField"(readOnly:true)
+        }
+      )
+    }
+  )
+)
+
+
+)</definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25798"/>
+    </history>
+</contentHaul>

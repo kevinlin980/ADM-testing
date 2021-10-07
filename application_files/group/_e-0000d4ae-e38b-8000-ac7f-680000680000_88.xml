@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<groupHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_e-0000e71b-9358-8000-6ea0-011e94011e94_314</versionUuid>
+    <group>
+        <name>Proposal Team</name>
+        <securityMap>SECURITYMAP_PERSONAL</securityMap>
+        <uuid>_e-0000d4ae-e38b-8000-ac7f-680000680000_88</uuid>
+        <groupTypeUuid>SYSTEM_GROUP_TYPE_CUSTOM</groupTypeUuid>
+        <description>This team will general be an admin of processes related to proposal management, including the bid decision app.</description>
+        <delegatedCreation>false</delegatedCreation>
+        <memberPolicy>MEMBERPOLICY_CLOSED</memberPolicy>
+        <viewingPolicy>VIEWINGPOLICY_HIGH</viewingPolicy>
+        <attributes/>
+    </group>
+    <members>
+        <users/>
+        <groups/>
+    </members>
+    <admins>
+        <users/>
+        <groups>
+            <groupUuid>_e-0000d4ae-e38b-8000-ac7f-680000680000_87</groupUuid>
+        </groups>
+    </admins>
+    <ruleSet/>
+    <history>
+        <historyInfo versionUuid="_e-0000e71b-9358-8000-6ea0-011e94011e94_314"/>
+    </history>
+</groupHaul>

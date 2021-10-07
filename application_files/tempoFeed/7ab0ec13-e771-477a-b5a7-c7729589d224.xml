@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoFeedHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>99812217-f59e-4579-a9c1-30cbefe25e56</versionUuid>
+    <tempoFeed>
+        <uuid>7ab0ec13-e771-477a-b5a7-c7729589d224</uuid>
+        <name>همه چیز را فروختم جز آن صندلی که جای تو بود</name>
+        <description>همه چیز را فروختم جز آن صندلی که جای تو بود</description>
+        <showInCatalog>true</showInCatalog>
+        <systemFeed>false</systemFeed>
+    </tempoFeed>
+    <roleMap/>
+    <history>
+        <historyInfo versionUuid="99812217-f59e-4579-a9c1-30cbefe25e56"/>
+    </history>
+</tempoFeedHaul>

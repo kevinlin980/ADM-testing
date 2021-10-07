@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26272</versionUuid>
+    <rule>
+        <name>reportMilestoneField</name>
+        <uuid>_a-0001d7bc-e497-8000-e497-010000010000_2071</uuid>
+        <description>Runtime equivalent to the mockups repository's component_milestone.html</description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>='type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+  columns: {
+    'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+      contents: {
+        'type!{http://www.appian.com/ae/types/2009}SectionLayout'(
+      	    content: 'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+            columns: {
+              'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+                contents: {
+                  #"SYSTEM_SYSRULES_milestoneField"(
+                    steps: {"Request Initiated", "Submitted to Contracting", "Contracting Specialist Assigned", "Final RFQ Uploaded", "RFQ Released to Vendors", "Contract Awarded"},
+                    active: 4
+                  ),
+                  #"SYSTEM_SYSRULES_milestoneField"(
+                    label: "High Density With Label &amp; Instructions",
+                    instructions: "When &gt;7 steps, use dense layout.",
+                    steps: {"General", "Type", "Overview", "Management", "Capital", "Convenience", "Premises", "Information Systems", "Other", "OCC Certification", "FDIC Certification", "Oath of Bank Director", "Oath of Savings Association", "Upload", "Exhibits"},
+                    active: 2
+                  ),
+                  #"SYSTEM_SYSRULES_milestoneField"(
+                    label: "High Density With Abbreviated Step Names",
+                    instructions: "This is how OCC actually abreviates their step names",
+                    steps: {"General", "Type", "Overview", "Mgmt", "Capital", "Conv", "Premise", "Info Sys", "Other", "OCC Cert", "FDIC Cert", "Oath Bank", "Oath Savings", "Upload", "Exhibits"},
+                    active: 2
+                  )
+                }
+              )
+            }
+          )
+        ),
+        'type!{http://www.appian.com/ae/types/2009}SectionLayout'(
+          content: 'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+            columns: {
+              'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+                contents: {
+                  #"SYSTEM_SYSRULES_milestoneField"(
+                    label: "In Column",
+                    steps: {"Ready", "Set", "Go!"},
+                    active: 1
+                  ),
+                  #"SYSTEM_SYSRULES_milestoneField"(
+                    label: "Mega-Dense",
+                    steps: {"Bacon ipsum dolor sit amet short loin spare ribs rump", "Rump pork beef ribs, short ribs kielbasa", "Prosciutto turkey pork strip steak, pork loin boudin fatback", "Pastrami beef bacon, rump doner swine tenderloin drumstick", "Bacon ipsum dolor sit amet short loin spare ribs rump", "Rump pork beef ribs, short ribs kielbasa", "Prosciutto turkey pork strip steak, pork loin boudin fatback", "Pastrami beef bacon, rump doner swine tenderloin drumstick"},
+                    active: 2
+                  ),
+                  #"SYSTEM_SYSRULES_milestoneField"(
+                    label: "Last Step is Current (In-Progress)",
+                    steps: {"Apple", "Orange", "Banana"},
+                    active: 3
+                  ),
+                  #"SYSTEM_SYSRULES_milestoneField"(
+                    label: "All Steps Done (Last Step Completed)",
+                    steps: {"Apple", "Orange", "Banana"},
+                    active: -1
+                  )
+                }
+              ),
+              'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+                contents: {
+                  #"SYSTEM_SYSRULES_milestoneField"(
+                    label: "Two Steps (Minimum Allowed)",
+                    steps: {"One", "Two"},
+                    active: 1
+                  ),
+                  #"SYSTEM_SYSRULES_milestoneField"(
+                    label: "No Spaces",
+                    steps: {"Baconipsumdolorsitametshortloinspareribsrump", "Rumpporkbeefribsshortribskielbasa", "Prosciuttoturkeyporkstripsteakporkloinboudinfatback", "Pastramibeefbaconrumpdonerswinetenderloindrumstick"},
+                    active: 2
+                  )
+                }
+              )
+            }
+          )
+        ),
+        'type!{http://www.appian.com/ae/types/2009}SectionLayout'(
+          label: "Nested Sub-Step Demo",
+          content: 'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+            columns: {
+              'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+                contents: {
+                  #"SYSTEM_SYSRULES_milestoneField"(
+                    steps: {"Application", "Processing", "Underwriting", "Closing"},
+                    active: 3
+                  ),
+                  #"SYSTEM_SYSRULES_milestoneField"(
+                    steps: {"Title", "Appraisal", "Insurance", "Inspection"},
+                    active: 2
+                  )
+                }
+              )
+            }
+          )
+        )
+      }
+    )
+  }
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26272"/>
+    </history>
+</contentHaul>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<groupTypeHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_f-0000e71b-9358-8000-6ea0-011e94011e94_40</versionUuid>
+    <groupType>
+        <name>Proposal Management Groups</name>
+        <uuid>_f-0000d4ae-e38b-8000-ac7f-680000680000_5</uuid>
+        <description>Groups involved in the proposal stage of an opportunity, used within proposal management apps.</description>
+        <attributes/>
+    </groupType>
+    <history>
+        <historyInfo versionUuid="_f-0000e71b-9358-8000-6ea0-011e94011e94_40"/>
+    </history>
+</groupTypeHaul>

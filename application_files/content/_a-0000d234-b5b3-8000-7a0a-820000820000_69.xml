@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26488</versionUuid>
+    <constant>
+        <name>TempoNFT_EndDate</name>
+        <uuid>_a-0000d234-b5b3-8000-7a0a-820000820000_69</uuid>
+        <description></description>
+        <parentUuid>_a-0000d239-7887-8000-768c-820000820000_316</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <typedValue>
+            <type>
+                <name>dateTime</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value>2010-09-22T12:10:00Z</value>
+        </typedValue>
+        <isEnvironmentSpecific>false</isEnvironmentSpecific>
+    </constant>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26488"/>
+    </history>
+</contentHaul>

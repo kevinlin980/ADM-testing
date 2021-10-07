@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>529923a2-e222-447b-b70d-56d431bd2ce9</versionUuid>
+    <tempoReport a:uuid="c429516d-8301-4dcb-b6d1-68caabb644aa" name="Kudos vs. Followers">
+        <a:description>Employees with the most kudos showing number of followers for each</a:description>
+        <a:uiExpr>=#"_a-0000d6fd-7cb9-8000-7886-010000010000_955"()</a:uiExpr>
+        <a:urlStub>kudosFollowers</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>0002d0bf-9218-8000-9218-0f2a550f2a55</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="529923a2-e222-447b-b70d-56d431bd2ce9"/>
+    </history>
+</tempoReportHaul>

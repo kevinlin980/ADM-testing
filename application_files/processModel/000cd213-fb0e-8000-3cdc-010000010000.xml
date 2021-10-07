@@ -1,0 +1,3093 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<processModelHaul>
+  <versionUuid>0001e71b-96eb-8000-6fa6-014d98014d98</versionUuid>
+  <folderUuid>_g-0000d228-f81e-8000-5451-680000680000_25</folderUuid>
+  <roleMap>
+    <role name="ADMIN_OWNER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="EDITOR">
+      <users/>
+      <groups/>
+    </role>
+    <role name="EXPLICIT_NONMEMBER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="VIEWER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="MANAGER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="INITIATOR">
+      <users/>
+      <groups/>
+    </role>
+  </roleMap>
+  <process_model_port schemaVersion="007.000.004"
+    xmlns="http://www.appian.com/ae/types/2009"
+    xmlns:a="http://www.appian.com/ae/types/2009"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <pm>
+      <meta>
+        <uuid><![CDATA[000cd213-fb0e-8000-3cdc-010000010000]]></uuid>
+        <name>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value><![CDATA[Exceptions Based on CDT Field Changes]]></value>
+            </pair>
+          </string-map>
+        </name>
+        <desc>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value/>
+            </pair>
+          </string-map>
+        </desc>
+        <versionStatus>0</versionStatus>
+        <process-name>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value><![CDATA[Exceptions Based on CDT Field Changes]]></value>
+            </pair>
+          </string-map>
+        </process-name>
+        <deadline>
+          <enabled>false</enabled>
+          <type>0</type>
+          <units>0</units>
+          <rex/>
+          <aex/>
+        </deadline>
+        <pm-notification-settings>
+          <custom-settings>false</custom-settings>
+          <notify-initiator>false</notify-initiator>
+          <notify-owner>false</notify-owner>
+          <usersandgroups/>
+          <recipients-exp/>
+        </pm-notification-settings>
+        <cleanup-action>3</cleanup-action>
+        <auto-archive-delay>30</auto-archive-delay>
+        <auto-delete-delay>0</auto-delete-delay>
+        <timeZoneId><![CDATA[America/New_York]]></timeZoneId>
+        <useProcessInitiatorTimeZone>true</useProcessInitiatorTimeZone>
+      </meta>
+      <pvs>
+        <pv name="Foo">
+          <a:value xmlns:n1="urn:appian:test:rule-exceptions"
+            xsi:nil="true" xsi:type="n1:BasicFoo"/>
+          <expr><![CDATA[={id:1,name:"a",fooDate:date(2009,10,26),foolean:true()}]]></expr>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="NewFoo">
+          <a:value xmlns:n1="urn:appian:test:rule-exceptions"
+            xsi:nil="true" xsi:type="n1:BasicFoo"/>
+          <expr><![CDATA[={id:1,name:"a",fooDate:date(2009,10,26),foolean:true()}]]></expr>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+      </pvs>
+      <nodes>
+        <node uuid="0000d213-fb0e-8000-3cdc-010000010000">
+          <guiId>0</guiId>
+          <owner/>
+          <icon id="50"/>
+          <picon id="0"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Start Event]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>112</x>
+          <y>392</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Start Event]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>true</overrideLaneAssignment>
+          <ac>
+            <local-id>core.0</local-id>
+            <name><![CDATA[Start Node]]></name>
+            <acps/>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map/>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections>
+            <connection>
+              <guiId>0</guiId>
+              <to>3</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor/>
+              <toAnchor/>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>true</chained>
+              <overridesAssignment>true</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+            <connection>
+              <guiId>1</guiId>
+              <to>2</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor/>
+              <toAnchor/>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>false</chained>
+              <overridesAssignment>false</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+            <connection>
+              <guiId>2</guiId>
+              <to>6</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor/>
+              <toAnchor/>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>false</chained>
+              <overridesAssignment>false</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+            <connection>
+              <guiId>3</guiId>
+              <to>15</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor/>
+              <toAnchor/>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>false</chained>
+              <overridesAssignment>false</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+            <connection>
+              <guiId>4</guiId>
+              <to>20</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor/>
+              <toAnchor/>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>false</chained>
+              <overridesAssignment>false</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+            <connection>
+              <guiId>5</guiId>
+              <to>21</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor/>
+              <toAnchor/>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>false</chained>
+              <overridesAssignment>false</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </connections>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0001d213-fb0e-8000-3cdc-010000010000">
+          <guiId>6</guiId>
+          <owner/>
+          <icon id="21"/>
+          <picon id="1"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[general change]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>420</x>
+          <y>112</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[general change]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <assignments>
+            <assignee>
+              <type>28</type>
+              <privilege>3</privilege>
+              <value>
+                <ac>
+                  <local-id>assignee-pool.101</local-id>
+                  <name><![CDATA[Assign To Actor]]></name>
+                  <acps>
+                    <acp name="displayName">
+                      <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                      <a:local-id>0</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="expression">
+                      <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                      <a:local-id>1</a:local-id>
+                      <a:expr><![CDATA[pp!initiator]]></a:expr>
+                      <a:required>0</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outUsers">
+                      <a:value xsi:nil="true" xsi:type="a:User?list"/>
+                      <a:local-id>2</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outGroups">
+                      <a:value xsi:nil="true" xsi:type="a:Group?list"/>
+                      <a:local-id>3</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                  </acps>
+                  <custom-params/>
+                  <output-exprs/>
+                  <requires-user-interaction>true</requires-user-interaction>
+                  <run-as>
+                    <performer id="0"/>
+                  </run-as>
+                  <helper-class/>
+                </ac>
+              </value>
+            </assignee>
+            <assignment-function/>
+            <position>0</position>
+            <accept-mode>1</accept-mode>
+          </assignments>
+          <ac>
+            <local-id>internal.17</local-id>
+            <name><![CDATA[User Input Task]]></name>
+            <acps/>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>false</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"buttonConfirm":"false","customEvents":[],"labelPosition":"right","namespace":"DESIGN","id":"button1","typeName":"button","customValidations":[],"buttonLabel":"Submit","view":"single","key":"button1","buttonValue":"Submit","confirmMessage":"Submit this form?"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Exception Flow Test]]></label>
+                          <instructions><![CDATA[Do not submit this task.  It is part of a test.  Exception flow will cancel this task when the main task in this test process is submitted with the correct value.]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"form0","typeName":"form","elementCounter":2,"columns":1,"customEvents":[{}],"labelPosition":"right","view":"single","key":"form0","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label/>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"tree","children":[[]],"buttons":["button1"],"key":"form0"}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <jsp-form>
+                      <path><![CDATA[/process/forms]]></path>
+                    </jsp-form>
+                    <hiddenSections>7</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections/>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow>
+            <rule-trigger index="0">
+              <persistentId>000ad213-fb0e-8000-3cdc-010000010000</persistentId>
+              <name><![CDATA[Rule_1]]></name>
+              <desc/>
+              <rules>
+                <rule>
+                  <type>0</type>
+                  <leftOperand><![CDATA[!NewFoo]]></leftOperand>
+                  <operator><![CDATA[<>]]></operator>
+                  <rightOperand><![CDATA[!Foo]]></rightOperand>
+                  <expression/>
+                </rule>
+              </rules>
+            </rule-trigger>
+          </exception-flow>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0002d213-fb0e-8000-3cdc-010000010000">
+          <guiId>8</guiId>
+          <owner/>
+          <icon id="23"/>
+          <picon id="5"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Send Alert]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>616</x>
+          <y>112</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Send Alert]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <ac>
+            <local-id>internal.28</local-id>
+            <name><![CDATA[Send Alert]]></name>
+            <acps>
+              <acp name="Users and Groups">
+                <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                <a:local-id>0</a:local-id>
+                <a:expr><![CDATA[=pp!initiator]]></a:expr>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="Message">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id>1</a:local-id>
+                <a:expr><![CDATA[=concatenate(pv!Foo & " change to " & pv!NewFoo)]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference>htmlarea</a:customDisplayReference>
+              </acp>
+              <acp name="Subject">
+                <a:value xmlns="" xsi:type="xsd:string">Exception Flow Tiggered - General</a:value>
+                <a:local-id>2</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </acps>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[Configure Alert]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>17</type>
+                          <options/>
+                          <name><![CDATA[Message1]]></name>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Recipients]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>6</type>
+                          <options/>
+                          <name><![CDATA[Question2]]></name>
+                          <mapped-to><![CDATA[Users and Groups]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Alert Subject]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name><![CDATA[Question3]]></name>
+                          <mapped-to><![CDATA[Subject]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Alert Message]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>25</type>
+                          <options/>
+                          <name><![CDATA[Question4]]></name>
+                          <mapped-to><![CDATA[Message]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <hiddenSections>0</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections/>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0003d213-fb0e-8000-3cdc-010000010000">
+          <guiId>2</guiId>
+          <owner/>
+          <icon id="21"/>
+          <picon id="1"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[id]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>420</x>
+          <y>252</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[id]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <assignments>
+            <assignee>
+              <type>28</type>
+              <privilege>3</privilege>
+              <value>
+                <ac>
+                  <local-id>assignee-pool.101</local-id>
+                  <name><![CDATA[Assign To Actor]]></name>
+                  <acps>
+                    <acp name="displayName">
+                      <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                      <a:local-id>0</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="expression">
+                      <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                      <a:local-id>1</a:local-id>
+                      <a:expr><![CDATA[pp!initiator]]></a:expr>
+                      <a:required>0</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outUsers">
+                      <a:value xsi:nil="true" xsi:type="a:User?list"/>
+                      <a:local-id>2</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outGroups">
+                      <a:value xsi:nil="true" xsi:type="a:Group?list"/>
+                      <a:local-id>3</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                  </acps>
+                  <custom-params/>
+                  <output-exprs/>
+                  <requires-user-interaction>true</requires-user-interaction>
+                  <run-as>
+                    <performer id="0"/>
+                  </run-as>
+                  <helper-class/>
+                </ac>
+              </value>
+            </assignee>
+            <assignment-function/>
+            <position>0</position>
+            <accept-mode>1</accept-mode>
+          </assignments>
+          <ac>
+            <local-id>internal.17</local-id>
+            <name><![CDATA[User Input Task]]></name>
+            <acps/>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>false</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"buttonConfirm":"false","customEvents":[],"labelPosition":"right","namespace":"DESIGN","id":"button1","typeName":"button","customValidations":[],"buttonLabel":"Submit","view":"single","key":"button1","buttonValue":"Submit","confirmMessage":"Submit this form?"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Exception Flow Test]]></label>
+                          <instructions><![CDATA[Do not submit this task.  It is part of a test.  Exception flow will cancel this task when the main task in this test process is submitted with the correct value.]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"form0","typeName":"form","elementCounter":2,"columns":1,"customEvents":[{}],"labelPosition":"right","view":"single","key":"form0","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label/>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"tree","children":[[]],"buttons":["button1"],"key":"form0"}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <jsp-form>
+                      <path><![CDATA[/process/forms]]></path>
+                    </jsp-form>
+                    <hiddenSections>7</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections/>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow>
+            <rule-trigger index="0">
+              <persistentId>000bd213-fb0e-8000-3cdc-010000010000</persistentId>
+              <name><![CDATA[Rule_1]]></name>
+              <desc/>
+              <rules>
+                <rule>
+                  <type>1</type>
+                  <leftOperand/>
+                  <operator/>
+                  <rightOperand/>
+                  <expression><![CDATA[pv!NewFoo.id > 1]]></expression>
+                </rule>
+              </rules>
+            </rule-trigger>
+          </exception-flow>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0004d213-fb0e-8000-3cdc-010000010000">
+          <guiId>10</guiId>
+          <owner/>
+          <icon id="23"/>
+          <picon id="5"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Send Alert]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>616</x>
+          <y>252</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Send Alert]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <ac>
+            <local-id>internal.28</local-id>
+            <name><![CDATA[Send Alert]]></name>
+            <acps>
+              <acp name="Users and Groups">
+                <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                <a:local-id>0</a:local-id>
+                <a:expr><![CDATA[=pp!initiator]]></a:expr>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="Message">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id>1</a:local-id>
+                <a:expr><![CDATA[=concatenate(pv!Foo & " change to " & pv!NewFoo)]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference>htmlarea</a:customDisplayReference>
+              </acp>
+              <acp name="Subject">
+                <a:value xmlns="" xsi:type="xsd:string">Exception Flow Tiggered - Id</a:value>
+                <a:local-id>2</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </acps>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[Configure Alert]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>17</type>
+                          <options/>
+                          <name><![CDATA[Message1]]></name>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Recipients]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>6</type>
+                          <options/>
+                          <name><![CDATA[Question2]]></name>
+                          <mapped-to><![CDATA[Users and Groups]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Alert Subject]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name><![CDATA[Question3]]></name>
+                          <mapped-to><![CDATA[Subject]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Alert Message]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>25</type>
+                          <options/>
+                          <name><![CDATA[Question4]]></name>
+                          <mapped-to><![CDATA[Message]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <hiddenSections>0</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections/>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0005d213-fb0e-8000-3cdc-010000010000">
+          <guiId>12</guiId>
+          <owner/>
+          <icon id="76"/>
+          <picon id="78"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Timer_1]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>784</x>
+          <y>392</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Timer_1]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>true</overrideLaneAssignment>
+          <ac>
+            <local-id>core.7</local-id>
+            <name><![CDATA[Intermediate Consuming Event]]></name>
+            <acps/>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map/>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections>
+            <connection>
+              <guiId>6</guiId>
+              <to>1</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor/>
+              <toAnchor/>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>false</chained>
+              <overridesAssignment>false</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </connections>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers>
+            <timer-trigger index="0">
+              <persistentId>0000d263-07ad-8000-c584-820000820000</persistentId>
+              <name><![CDATA[Timer_1]]></name>
+              <desc/>
+              <rules/>
+              <schedule absoluteDelay="false"
+                isAbsoluteOrRelative="true" isRecurring="false">
+                <interval>
+                  <hours>1</hours>
+                </interval>
+              </schedule>
+            </timer-trigger>
+          </pre-triggers>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0006d213-fb0e-8000-3cdc-010000010000">
+          <guiId>1</guiId>
+          <owner/>
+          <icon id="51"/>
+          <picon id="0"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[End Event]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>896</x>
+          <y>392</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[End Event]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>true</overrideLaneAssignment>
+          <ac>
+            <local-id>core.1</local-id>
+            <name><![CDATA[End Node]]></name>
+            <acps>
+              <acp name="pmID">
+                <a:value xsi:nil="true" xsi:type="a:ProcessModel"/>
+                <a:local-id>0</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>0</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="inMap">
+                <a:value xsi:nil="true" xsi:type="a:Bean?list"/>
+                <a:local-id>1</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="procInheritsPriority">
+                <a:value xmlns="" xsi:type="xsd:int">1</a:value>
+                <a:local-id>5</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>false</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="pmUUID">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id>6</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isAsynchronous">
+                <a:value xmlns="" xsi:type="xsd:boolean">true</a:value>
+                <a:local-id>7</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>0</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isTransparent">
+                <a:value xmlns="" xsi:type="xsd:boolean">true</a:value>
+                <a:local-id>14</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="inheritSecurity">
+                <a:value xmlns="" xsi:type="xsd:boolean">false</a:value>
+                <a:local-id>15</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </acps>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map/>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections/>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers>
+            <terminate-producer index="0">
+              <persistentId>0009d213-fb0e-8000-3cdc-010000010000</persistentId>
+              <name><![CDATA[Terminate Process_1]]></name>
+              <desc/>
+            </terminate-producer>
+          </event-producers>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0000d213-fcd7-8000-3cdc-010000010000">
+          <guiId>15</guiId>
+          <owner/>
+          <icon id="21"/>
+          <picon id="1"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[name]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>420</x>
+          <y>448</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[name]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <assignments>
+            <assignee>
+              <type>28</type>
+              <privilege>3</privilege>
+              <value>
+                <ac>
+                  <local-id>assignee-pool.101</local-id>
+                  <name><![CDATA[Assign To Actor]]></name>
+                  <acps>
+                    <acp name="displayName">
+                      <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                      <a:local-id>0</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="expression">
+                      <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                      <a:local-id>1</a:local-id>
+                      <a:expr><![CDATA[pp!initiator]]></a:expr>
+                      <a:required>0</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outUsers">
+                      <a:value xsi:nil="true" xsi:type="a:User?list"/>
+                      <a:local-id>2</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outGroups">
+                      <a:value xsi:nil="true" xsi:type="a:Group?list"/>
+                      <a:local-id>3</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                  </acps>
+                  <custom-params/>
+                  <output-exprs/>
+                  <requires-user-interaction>true</requires-user-interaction>
+                  <run-as>
+                    <performer id="0"/>
+                  </run-as>
+                  <helper-class/>
+                </ac>
+              </value>
+            </assignee>
+            <assignment-function/>
+            <position>0</position>
+            <accept-mode>1</accept-mode>
+          </assignments>
+          <ac>
+            <local-id>internal.17</local-id>
+            <name><![CDATA[User Input Task]]></name>
+            <acps/>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>false</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"buttonConfirm":"false","customEvents":[],"labelPosition":"right","namespace":"DESIGN","id":"button1","typeName":"button","customValidations":[],"buttonLabel":"Submit","view":"single","key":"button1","buttonValue":"Submit","confirmMessage":"Submit this form?"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Exception Flow Test]]></label>
+                          <instructions><![CDATA[Do not submit this task.  It is part of a test.  Exception flow will cancel this task when the main task in this test process is submitted with the correct value.]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"form0","typeName":"form","elementCounter":2,"columns":1,"customEvents":[{}],"labelPosition":"right","view":"single","key":"form0","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label/>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"tree","children":[[]],"buttons":["button1"],"key":"form0"}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <jsp-form>
+                      <path><![CDATA[/process/forms]]></path>
+                    </jsp-form>
+                    <hiddenSections>7</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections/>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow>
+            <rule-trigger index="0">
+              <persistentId>0007d213-fcd7-8000-3cdc-010000010000</persistentId>
+              <name><![CDATA[Rule_1]]></name>
+              <desc/>
+              <rules>
+                <rule>
+                  <type>1</type>
+                  <leftOperand/>
+                  <operator/>
+                  <rightOperand/>
+                  <expression><![CDATA[pv!NewFoo.name <> "a"]]></expression>
+                </rule>
+              </rules>
+            </rule-trigger>
+          </exception-flow>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0001d213-fcd7-8000-3cdc-010000010000">
+          <guiId>16</guiId>
+          <owner/>
+          <icon id="23"/>
+          <picon id="5"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Send Alert]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>616</x>
+          <y>448</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Send Alert]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <ac>
+            <local-id>internal.28</local-id>
+            <name><![CDATA[Send Alert]]></name>
+            <acps>
+              <acp name="Users and Groups">
+                <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                <a:local-id>0</a:local-id>
+                <a:expr><![CDATA[=pp!initiator]]></a:expr>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="Message">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id>1</a:local-id>
+                <a:expr><![CDATA[=concatenate(pv!Foo & " change to " & pv!NewFoo)]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference>htmlarea</a:customDisplayReference>
+              </acp>
+              <acp name="Subject">
+                <a:value xmlns="" xsi:type="xsd:string">Exception Flow Tiggered - Name</a:value>
+                <a:local-id>2</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </acps>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[Configure Alert]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>17</type>
+                          <options/>
+                          <name><![CDATA[Message1]]></name>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Recipients]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>6</type>
+                          <options/>
+                          <name><![CDATA[Question2]]></name>
+                          <mapped-to><![CDATA[Users and Groups]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Alert Subject]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name><![CDATA[Question3]]></name>
+                          <mapped-to><![CDATA[Subject]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Alert Message]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>25</type>
+                          <options/>
+                          <name><![CDATA[Question4]]></name>
+                          <mapped-to><![CDATA[Message]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <hiddenSections>0</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections/>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0002d213-fcd7-8000-3cdc-010000010000">
+          <guiId>20</guiId>
+          <owner/>
+          <icon id="21"/>
+          <picon id="1"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[date]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>420</x>
+          <y>560</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[date]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <assignments>
+            <assignee>
+              <type>28</type>
+              <privilege>3</privilege>
+              <value>
+                <ac>
+                  <local-id>assignee-pool.101</local-id>
+                  <name><![CDATA[Assign To Actor]]></name>
+                  <acps>
+                    <acp name="displayName">
+                      <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                      <a:local-id>0</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="expression">
+                      <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                      <a:local-id>1</a:local-id>
+                      <a:expr><![CDATA[pp!initiator]]></a:expr>
+                      <a:required>0</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outUsers">
+                      <a:value xsi:nil="true" xsi:type="a:User?list"/>
+                      <a:local-id>2</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outGroups">
+                      <a:value xsi:nil="true" xsi:type="a:Group?list"/>
+                      <a:local-id>3</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                  </acps>
+                  <custom-params/>
+                  <output-exprs/>
+                  <requires-user-interaction>true</requires-user-interaction>
+                  <run-as>
+                    <performer id="0"/>
+                  </run-as>
+                  <helper-class/>
+                </ac>
+              </value>
+            </assignee>
+            <assignment-function/>
+            <position>0</position>
+            <accept-mode>1</accept-mode>
+          </assignments>
+          <ac>
+            <local-id>internal.17</local-id>
+            <name><![CDATA[User Input Task]]></name>
+            <acps/>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>false</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"buttonConfirm":"false","customEvents":[],"labelPosition":"right","namespace":"DESIGN","id":"button1","typeName":"button","customValidations":[],"buttonLabel":"Submit","view":"single","key":"button1","buttonValue":"Submit","confirmMessage":"Submit this form?"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Exception Flow Test]]></label>
+                          <instructions><![CDATA[Do not submit this task.  It is part of a test.  Exception flow will cancel this task when the main task in this test process is submitted with the correct value.]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"form0","typeName":"form","elementCounter":2,"columns":1,"customEvents":[{}],"labelPosition":"right","view":"single","key":"form0","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label/>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"tree","children":[[]],"buttons":["button1"],"key":"form0"}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <jsp-form>
+                      <path><![CDATA[/process/forms]]></path>
+                    </jsp-form>
+                    <hiddenSections>7</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections/>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow>
+            <rule-trigger index="0">
+              <persistentId>0008d213-fcd7-8000-3cdc-010000010000</persistentId>
+              <name><![CDATA[Rule_1]]></name>
+              <desc/>
+              <rules>
+                <rule>
+                  <type>1</type>
+                  <leftOperand/>
+                  <operator/>
+                  <rightOperand/>
+                  <expression><![CDATA[pv!NewFoo.fooDate > date(2009,10,26)]]></expression>
+                </rule>
+              </rules>
+            </rule-trigger>
+          </exception-flow>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0003d213-fcd7-8000-3cdc-010000010000">
+          <guiId>21</guiId>
+          <owner/>
+          <icon id="21"/>
+          <picon id="1"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[boolean]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>420</x>
+          <y>672</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[boolean]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <assignments>
+            <assignee>
+              <type>28</type>
+              <privilege>3</privilege>
+              <value>
+                <ac>
+                  <local-id>assignee-pool.101</local-id>
+                  <name><![CDATA[Assign To Actor]]></name>
+                  <acps>
+                    <acp name="displayName">
+                      <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                      <a:local-id>0</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="expression">
+                      <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                      <a:local-id>1</a:local-id>
+                      <a:expr><![CDATA[pp!initiator]]></a:expr>
+                      <a:required>0</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outUsers">
+                      <a:value xsi:nil="true" xsi:type="a:User?list"/>
+                      <a:local-id>2</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outGroups">
+                      <a:value xsi:nil="true" xsi:type="a:Group?list"/>
+                      <a:local-id>3</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                  </acps>
+                  <custom-params/>
+                  <output-exprs/>
+                  <requires-user-interaction>true</requires-user-interaction>
+                  <run-as>
+                    <performer id="0"/>
+                  </run-as>
+                  <helper-class/>
+                </ac>
+              </value>
+            </assignee>
+            <assignment-function/>
+            <position>0</position>
+            <accept-mode>1</accept-mode>
+          </assignments>
+          <ac>
+            <local-id>internal.17</local-id>
+            <name><![CDATA[User Input Task]]></name>
+            <acps/>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>false</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"buttonConfirm":"false","customEvents":[],"labelPosition":"right","namespace":"DESIGN","id":"button1","typeName":"button","customValidations":[],"buttonLabel":"Submit","view":"single","key":"button1","buttonValue":"Submit","confirmMessage":"Submit this form?"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Exception Flow Test]]></label>
+                          <instructions><![CDATA[Do not submit this task.  It is part of a test.  Exception flow will cancel this task when the main task in this test process is submitted with the correct value.]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"form0","typeName":"form","elementCounter":2,"columns":1,"customEvents":[{}],"labelPosition":"right","view":"single","key":"form0","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label/>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"tree","children":[[]],"buttons":["button1"],"key":"form0"}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <jsp-form>
+                      <path><![CDATA[/process/forms]]></path>
+                    </jsp-form>
+                    <hiddenSections>7</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections/>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow>
+            <rule-trigger index="0">
+              <persistentId>0009d213-fcd7-8000-3cdc-010000010000</persistentId>
+              <name><![CDATA[Rule_1]]></name>
+              <desc/>
+              <rules>
+                <rule>
+                  <type>1</type>
+                  <leftOperand/>
+                  <operator/>
+                  <rightOperand/>
+                  <expression><![CDATA[pv!NewFoo.foolean = false()]]></expression>
+                </rule>
+              </rules>
+            </rule-trigger>
+          </exception-flow>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0004d213-fcd7-8000-3cdc-010000010000">
+          <guiId>24</guiId>
+          <owner/>
+          <icon id="23"/>
+          <picon id="5"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Send Alert]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>616</x>
+          <y>560</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Send Alert]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <ac>
+            <local-id>internal.28</local-id>
+            <name><![CDATA[Send Alert]]></name>
+            <acps>
+              <acp name="Users and Groups">
+                <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                <a:local-id>0</a:local-id>
+                <a:expr><![CDATA[=pp!initiator]]></a:expr>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="Message">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id>1</a:local-id>
+                <a:expr><![CDATA[=concatenate(pv!Foo & " change to " & pv!NewFoo)]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference>htmlarea</a:customDisplayReference>
+              </acp>
+              <acp name="Subject">
+                <a:value xmlns="" xsi:type="xsd:string">Exception Flow Tiggered - Date</a:value>
+                <a:local-id>2</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </acps>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[Configure Alert]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>17</type>
+                          <options/>
+                          <name><![CDATA[Message1]]></name>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Recipients]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>6</type>
+                          <options/>
+                          <name><![CDATA[Question2]]></name>
+                          <mapped-to><![CDATA[Users and Groups]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Alert Subject]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name><![CDATA[Question3]]></name>
+                          <mapped-to><![CDATA[Subject]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Alert Message]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>25</type>
+                          <options/>
+                          <name><![CDATA[Question4]]></name>
+                          <mapped-to><![CDATA[Message]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <hiddenSections>0</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections/>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0005d213-fcd7-8000-3cdc-010000010000">
+          <guiId>25</guiId>
+          <owner/>
+          <icon id="23"/>
+          <picon id="5"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Send Alert]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>616</x>
+          <y>672</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Send Alert]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <ac>
+            <local-id>internal.28</local-id>
+            <name><![CDATA[Send Alert]]></name>
+            <acps>
+              <acp name="Users and Groups">
+                <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                <a:local-id>0</a:local-id>
+                <a:expr><![CDATA[=pp!initiator]]></a:expr>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="Message">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id>1</a:local-id>
+                <a:expr><![CDATA[=concatenate(pv!Foo & " change to " & pv!NewFoo)]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference>htmlarea</a:customDisplayReference>
+              </acp>
+              <acp name="Subject">
+                <a:value xmlns="" xsi:type="xsd:string">Exception Flow Tiggered - Boolean</a:value>
+                <a:local-id>2</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </acps>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[Configure Alert]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>17</type>
+                          <options/>
+                          <name><![CDATA[Message1]]></name>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Recipients]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>6</type>
+                          <options/>
+                          <name><![CDATA[Question2]]></name>
+                          <mapped-to><![CDATA[Users and Groups]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Alert Subject]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name><![CDATA[Question3]]></name>
+                          <mapped-to><![CDATA[Subject]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Alert Message]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>25</type>
+                          <options/>
+                          <name><![CDATA[Question4]]></name>
+                          <mapped-to><![CDATA[Message]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <hiddenSections>0</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections/>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0007d213-fb0e-8000-3cdc-010000010000">
+          <guiId>3</guiId>
+          <owner/>
+          <icon id="21"/>
+          <picon id="1"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[start test]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>252</x>
+          <y>392</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[start test]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <assignments>
+            <assignee>
+              <type>28</type>
+              <privilege>3</privilege>
+              <value>
+                <ac>
+                  <local-id>assignee-pool.101</local-id>
+                  <name><![CDATA[Assign To Actor]]></name>
+                  <acps>
+                    <acp name="displayName">
+                      <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                      <a:local-id>0</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="expression">
+                      <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                      <a:local-id>1</a:local-id>
+                      <a:expr><![CDATA[pp!initiator]]></a:expr>
+                      <a:required>0</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outUsers">
+                      <a:value xsi:nil="true" xsi:type="a:User?list"/>
+                      <a:local-id>2</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outGroups">
+                      <a:value xsi:nil="true" xsi:type="a:Group?list"/>
+                      <a:local-id>3</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                  </acps>
+                  <custom-params/>
+                  <output-exprs/>
+                  <requires-user-interaction>true</requires-user-interaction>
+                  <run-as>
+                    <performer id="0"/>
+                  </run-as>
+                  <helper-class/>
+                </ac>
+              </value>
+            </assignee>
+            <assignment-function/>
+            <position>0</position>
+            <accept-mode>1</accept-mode>
+          </assignments>
+          <ac>
+            <local-id>internal.17</local-id>
+            <name><![CDATA[User Input Task]]></name>
+            <acps/>
+            <custom-params>
+              <acp name="foo">
+                <a:value xmlns=""
+                  xmlns:n1="urn:appian:test:rule-exceptions" xsi:type="n1:BasicFoo">
+                  <n1:name/>
+                  <n1:foolean>true</n1:foolean>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[NewFoo]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+                <a:interior-expressions xmlns="">
+                  <n1:id xmlns:n1="urn:appian:test:rule-exceptions">=pv!Foo.id</n1:id>
+                  <n1:name xmlns:n1="urn:appian:test:rule-exceptions">=pv!Foo.name</n1:name>
+                  <n1:fooDate xmlns:n1="urn:appian:test:rule-exceptions">=pv!Foo.fooDate</n1:fooDate>
+                </a:interior-expressions>
+              </acp>
+            </custom-params>
+            <output-exprs/>
+            <requires-user-interaction>false</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[Id]]></label>
+                          <instructions><![CDATA[change this value to something greater than 1 to trigger exception flow in the "Id" user input task]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[foo]]></mapped-to>
+                          <value><![CDATA[=pv!Foo.id]]></value>
+                          <extra><![CDATA[{"typeName":"number","id":"number2","saveAs":{"name":"foo","propertyIndex":[{"index":0,"name":"id"}]},"validationMessages":[],"subType":"integer","customValidations":[{}],"labelPosition":"right","customEvents":[{}],"view":"single","displayExpField":"","key":"number2","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Name]]></label>
+                          <instructions><![CDATA[change this value to trigger exception flow in the "name" user input task]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[foo]]></mapped-to>
+                          <value><![CDATA[=pv!Foo.name]]></value>
+                          <extra><![CDATA[{"typeName":"text","id":"text3","saveAs":{"name":"foo","propertyIndex":[{"index":1,"name":"name"}]},"validationMessages":[],"customValidations":[{}],"width":"medium","labelPosition":"right","customEvents":[{}],"view":"single","displayExpField":"","key":"text3","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Yes or No]]></label>
+                          <instructions><![CDATA[negativity triggers exception flows in the "Boolean" user input task]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[foo]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","defValKnowsExpressions":true,"expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","id":"truefalse6","typeName":"truefalse","saveAs":{"name":"foo","propertyIndex":[{"index":3,"name":"foolean"}]},"customValidations":[{}],"displayType":"radio","isExpression":false,"view":"single","key":"truefalse6"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!Foo.foolean]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Date]]></label>
+                          <instructions><![CDATA[change this value to a date after 10/26/2009 to trigger exception flow in the "date" user input task]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[foo]]></mapped-to>
+                          <value><![CDATA[=pv!Foo.fooDate]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","id":"datetime4","typeName":"datetime","saveAs":{"name":"foo","propertyIndex":[{"index":2,"name":"fooDate"}]},"customValidations":[{}],"subType":"date","isExpression":"true","view":"single","expressionValueString":"###EXPR0","key":"datetime4"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!Foo.fooDate]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"button","id":"button1","customValidations":[],"buttonLabel":"Submit","buttonConfirm":"false","labelPosition":"right","customEvents":[],"view":"single","buttonValue":"Submit","key":"button1","confirmMessage":"Submit this form?","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Exceptions based on CDT fields values]]></label>
+                          <instructions><![CDATA[This test triggers exception flows when CDT fields are changed in various ways.  Change the values and submit the task below to trigger exception flows on various other tasks in this process.  The test process will run for 1 hour after submitting this task.  Ready go.]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"form","id":"form0","elementCounter":7,"columns":1,"labelPosition":"right","customEvents":[{}],"view":"single","key":"form0","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label/>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"tree","children":[["number2","text3","datetime4","truefalse6"]],"buttons":["button1"],"key":"form0"}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <jsp-form>
+                      <path><![CDATA[/process/forms]]></path>
+                    </jsp-form>
+                    <hiddenSections>7</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections>
+            <connection>
+              <guiId>7</guiId>
+              <to>12</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor/>
+              <toAnchor/>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>false</chained>
+              <overridesAssignment>false</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </connections>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+      </nodes>
+      <annotations/>
+      <lanes/>
+      <attachments/>
+      <notes/>
+      <priority id="1"/>
+      <form-map>
+        <pair>
+          <locale country="US" lang="en" variant=""/>
+          <form-config>
+            <form>
+              <type>0</type>
+              <enabled>true</enabled>
+              <dynamic-form>
+                <form-elements/>
+              </dynamic-form>
+              <hiddenSections>0</hiddenSections>
+            </form>
+          </form-config>
+        </pair>
+      </form-map>
+      <emailAttachmentFolderUuid><![CDATA[SYSTEM_FOLDER_TEMPORARY_DOCS]]></emailAttachmentFolderUuid>
+      <isPublic>false</isPublic>
+    </pm>
+  </process_model_port>
+  <isPublished>false</isPublished>
+  <history>
+    <historyInfo versionUuid="0001e71b-96eb-8000-6fa6-014d98014d98"/>
+  </history>
+</processModelHaul>

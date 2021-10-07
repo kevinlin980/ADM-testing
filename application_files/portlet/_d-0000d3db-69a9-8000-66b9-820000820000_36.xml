@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<portletHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <portlet>
+        <uuid>_d-0000d3db-69a9-8000-66b9-820000820000_36</uuid>
+        <name>Quick Tasks</name>
+        <portletType>portal.portlet.quicktask</portletType>
+        <frame>portlet.default</frame>
+        <shared>false</shared>
+        <public>true</public>
+        <inheritsSecurity>true</inheritsSecurity>
+        <parameters>
+            <item>
+                <key>displayStyle</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">0</value>
+            </item>
+            <item>
+                <key>displayLinks</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">1</value>
+            </item>
+            <item>
+                <key>displayedQuickTask</key>
+            </item>
+            <item>
+                <key>openBehavior</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">0</value>
+            </item>
+            <item>
+                <key>useDashboardContext</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">1</value>
+            </item>
+            <item>
+                <key>includeQuickTasksFromSubProcesses</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">1</value>
+            </item>
+            <item>
+                <key>defaultQuickTask</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">-1</value>
+            </item>
+            <item>
+                <key>selectedLinks</key>
+            </item>
+        </parameters>
+    </portlet>
+    <roleMap>
+        <role name="editor">
+            <users/>
+            <groups/>
+        </role>
+        <role name="viewer">
+            <users/>
+            <groups/>
+        </role>
+        <role name="admin">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</portletHaul>

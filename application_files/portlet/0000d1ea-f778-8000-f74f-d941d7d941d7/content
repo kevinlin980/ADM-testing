@@ -1,0 +1,3 @@
+=concatenate("<P>doc: ",tostring(pv!Document),"</P>
+<P>&nbsp;</P>
+<P>Null(): ",tostring(null()),"</P>")

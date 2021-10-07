@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24557</versionUuid>
+    <rule>
+        <name>MU_rulePerformanceAndUsageAnalytics</name>
+        <uuid>30c9a733-1478-486c-a987-c317a62bc396</uuid>
+        <description></description>
+        <parentUuid>_a-0000d982-fa33-8000-f241-010000010000_2220</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load(&#xD;
+  local!aggregation: "Daily",&#xD;
+  #"SYSTEM_SYSRULES_dashboardLayout"(&#xD;
+    /*label: "Rule Performance Over Time: rule!CRM_customerSummaryDashboard",*/&#xD;
+    instructions:"Select an interval to group by and a date range for the performance evaluation",&#xD;
+    firstColumnContents: {&#xD;
+      #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+        label: "",&#xD;
+        firstColumnContents: {&#xD;
+          #"SYSTEM_SYSRULES_radioButtonField"(&#xD;
+            label: "Group By",&#xD;
+            choiceLabels: {&#xD;
+              "None", "Hourly", "Daily", "Weekly"&#xD;
+            },&#xD;
+            choiceValues: {&#xD;
+              "None", "Hourly", "Daily", "Weekly"&#xD;
+            },&#xD;
+            value: local!aggregation,&#xD;
+            saveInto: local!aggregation&#xD;
+          ),&#xD;
+        },&#xD;
+        secondColumnContents:&#xD;
+        {&#xD;
+        if(&#xD;
+        and(local!aggregation&lt;&gt;"None",local!aggregation&lt;&gt;"Hourly"),&#xD;
+        {&#xD;
+          #"SYSTEM_SYSRULES_dateField"(&#xD;
+            label: "From",&#xD;
+            value: date(2014,5,1)&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_dateField"(&#xD;
+            label: "To",&#xD;
+            value: date(2014,5,7)&#xD;
+          )&#xD;
+        },&#xD;
+        {&#xD;
+          #"SYSTEM_SYSRULES_dateTimeField"(&#xD;
+            label: "From",&#xD;
+            value: date(2014,5,1)&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_dateTimeField"(&#xD;
+            label: "To",&#xD;
+            value: date(2014,5,7)&#xD;
+          )&#xD;
+        }&#xD;
+        )&#xD;
+      }&#xD;
+      ),&#xD;
+      if(&#xD;
+        local!aggregation&lt;&gt;"None",&#xD;
+        #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+          label:"Rule Performance Trends",&#xD;
+          firstColumnContents: {&#xD;
+            #"SYSTEM_SYSRULES_gridField"(&#xD;
+              label: "Execution Time ("&amp;local!aggregation&amp;")",&#xD;
+              columns: {&#xD;
+                #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+                  label: "Date",&#xD;
+                  field: "date",&#xD;
+                  data: {&#xD;
+                    date(2014,5,1),&#xD;
+                    date(2014,5,2),&#xD;
+                    date(2014,5,3),&#xD;
+                    date(2014,5,4),&#xD;
+                    date(2014,5,5),&#xD;
+                    date(2014,5,6),&#xD;
+                    date(2014,5,7)&#xD;
+                  }, &#xD;
+                  links: {&#xD;
+                    repeat(7, #"SYSTEM_SYSRULES_safeLink"(uri: "www.google.com"))&#xD;
+                  }&#xD;
+                ),&#xD;
+                #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+                  label: "# of Times Called",&#xD;
+                  alignment: "RIGHT",&#xD;
+                  data: {35,28,42,45,29,33,50}&#xD;
+                ),&#xD;
+                #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+                  label: "Min (ms)",&#xD;
+                  alignment: "RIGHT",&#xD;
+                  data: {23, 22, 25, 22, 31, 65, 60}&#xD;
+                ),&#xD;
+                #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+                  label: "Average (ms)",&#xD;
+                  alignment: "RIGHT",&#xD;
+                  data: {32, 25, 28, 35, 34, 66, 64}&#xD;
+                ),&#xD;
+                #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+                  label: "Max (ms)",&#xD;
+                  alignment: "RIGHT",&#xD;
+                  data: {55, 69, 61, 67, 58, 70, 65}&#xD;
+                ),&#xD;
+              },&#xD;
+              totalCount: 7,&#xD;
+              value: #"SYSTEM_SYSRULES_pagingInfo"(&#xD;
+                startIndex: 1,&#xD;
+                batchSize: 7,&#xD;
+                sort: #"SYSTEM_SYSRULES_sortInfo"(&#xD;
+                  field: "date"&#xD;
+                )&#xD;
+              )&#xD;
+            )&#xD;
+          },&#xD;
+          secondColumnContents:{&#xD;
+            #"SYSTEM_SYSRULES_lineChartField"(&#xD;
+              label:"Execution Time in Milliseconds ("&amp;local!aggregation&amp;")",&#xD;
+              series:{&#xD;
+                #"SYSTEM_SYSRULES_chartSeries"(data: {23, 22, 25, 22, 31, 65, 60}, label: "Min"),&#xD;
+                #"SYSTEM_SYSRULES_chartSeries"(data: {32, 25, 28, 35, 34, 66, 64}, label: "Average"),&#xD;
+                #"SYSTEM_SYSRULES_chartSeries"(data: {55, 69, 61, 67, 58, 70, 65}, label: "Max")&#xD;
+              },&#xD;
+              categories:{&#xD;
+                date(2014,5,1),&#xD;
+                date(2014,5,2),&#xD;
+                date(2014,5,3),&#xD;
+                date(2014,5,4),&#xD;
+                date(2014,5,5),&#xD;
+                date(2014,5,6),&#xD;
+                date(2014,5,7)&#xD;
+              },&#xD;
+              yAxisMin: 0,&#xD;
+              yAxisTitle: "ms",&#xD;
+              xAxisTitle: "Date"&#xD;
+            ),&#xD;
+            #"SYSTEM_SYSRULES_lineChartField"(&#xD;
+              label:"Number of Times Called ("&amp;local!aggregation&amp;")",&#xD;
+              series:{&#xD;
+                #"SYSTEM_SYSRULES_chartSeries"(data: {35,28,42,45,29,33,50}, label: "Count")&#xD;
+              },&#xD;
+              categories:{&#xD;
+                date(2014,5,1),&#xD;
+                date(2014,5,2),&#xD;
+                date(2014,5,3),&#xD;
+                date(2014,5,4),&#xD;
+                date(2014,5,5),&#xD;
+                date(2014,5,6),&#xD;
+                date(2014,5,7)&#xD;
+              },&#xD;
+              showLegend: false,&#xD;
+              yAxisMin: 0,&#xD;
+              yAxisTitle: "Count",&#xD;
+              xAxisTitle: "Date"&#xD;
+            )&#xD;
+          }&#xD;
+        ),&#xD;
+        #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+          label:"Performance Metrics",&#xD;
+          firstColumnContents: {&#xD;
+            #"SYSTEM_SYSRULES_gridField"(&#xD;
+              label: "",&#xD;
+              columns: {&#xD;
+                #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+                  label: "Timestamp",&#xD;
+                  data: {&#xD;
+                    datetime(2014,5,1),&#xD;
+                    datetime(2014,5,2),&#xD;
+                    datetime(2014,5,3),&#xD;
+                    datetime(2014,5,4),&#xD;
+                    datetime(2014,5,5),&#xD;
+                    datetime(2014,5,6),&#xD;
+                    datetime(2014,5,7),&#xD;
+                    datetime(2014,5,1),&#xD;
+                    datetime(2014,5,2),&#xD;
+                    datetime(2014,5,3),&#xD;
+                    datetime(2014,5,4),&#xD;
+                    datetime(2014,5,5),&#xD;
+                    datetime(2014,5,6),&#xD;
+                    datetime(2014,5,7),&#xD;
+                    datetime(2014,5,3),&#xD;
+                    datetime(2014,5,4),&#xD;
+                    datetime(2014,5,5),&#xD;
+                    datetime(2014,5,6),&#xD;
+                    datetime(2014,5,7),&#xD;
+                    datetime(2014,5,4),&#xD;
+                    datetime(2014,5,1),&#xD;
+                    datetime(2014,5,2),&#xD;
+                    datetime(2014,5,3),&#xD;
+                    datetime(2014,5,4),&#xD;
+                    datetime(2014,5,5),&#xD;
+                    datetime(2014,5,6),&#xD;
+                    datetime(2014,5,7),&#xD;
+                    datetime(2014,5,1),&#xD;
+                    datetime(2014,5,2),&#xD;
+                    datetime(2014,5,3),&#xD;
+                    datetime(2014,5,4),&#xD;
+                    datetime(2014,5,5),&#xD;
+                    datetime(2014,5,6),&#xD;
+                    datetime(2014,5,7),&#xD;
+                    datetime(2014,5,3),&#xD;
+                    datetime(2014,5,4),&#xD;
+                    datetime(2014,5,5),&#xD;
+                    datetime(2014,5,6),&#xD;
+                    datetime(2014,5,7),&#xD;
+                    datetime(2014,5,4),&#xD;
+                    datetime(2014,5,1),&#xD;
+                    datetime(2014,5,2),&#xD;
+                    datetime(2014,5,3),&#xD;
+                    datetime(2014,5,4),&#xD;
+                    datetime(2014,5,5),&#xD;
+                    datetime(2014,5,6),&#xD;
+                    datetime(2014,5,7),&#xD;
+                    datetime(2014,5,1),&#xD;
+                    datetime(2014,5,2),&#xD;
+                    datetime(2014,5,3)&#xD;
+                  }&#xD;
+                ),&#xD;
+                #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+                  label: "Evaluation Time (ms)",&#xD;
+                  alignment: "RIGHT",&#xD;
+                  data:  {23, 22, 25, 22, 17, 65, 60, 23, 25, 22, 31, 65, 60, 19, 65, 60, 23,  60, 23, 25, 23, 22, 25, 22, 17, 65, 60, 23, 25, 22, 31, 65, 60, 19, 65, 60, 23,  60, 23, 25, 23, 22, 25, 22, 17, 65, 60, 23, 25, 22}&#xD;
+                ),&#xD;
+                #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+                  label: "User",&#xD;
+                  data:{&#xD;
+                    "abhi.agarwal",&#xD;
+                    "carlos.aguayo",&#xD;
+                    "nanda.ajeet",&#xD;
+                    "david.alberto",&#xD;
+                    "jimmy.alderman",&#xD;
+                    "joseph.ambrogne",&#xD;
+                    "amilcar.andrade",&#xD;
+                    "antonio.andrade",&#xD;
+                    "jeremy.ankur",&#xD;
+                    "andrew.bai",&#xD;
+                    "max.baine",&#xD;
+                    "kevin.barrett",&#xD;
+                    "abhi.agarwal",&#xD;
+                    "carlos.aguayo",&#xD;
+                    "nanda.ajeet",&#xD;
+                    "david.alberto",&#xD;
+                    "jimmy.alderman",&#xD;
+                    "joseph.ambrogne",&#xD;
+                    "amilcar.andrade",&#xD;
+                    "antonio.andrade",&#xD;
+                    "jeremy.ankur",&#xD;
+                    "andrew.bai",&#xD;
+                    "max.baine",&#xD;
+                    "kevin.barrett",&#xD;
+                    "abhi.agarwal",&#xD;
+                    "carlos.aguayo",&#xD;
+                    "nanda.ajeet",&#xD;
+                    "david.alberto",&#xD;
+                    "jimmy.alderman",&#xD;
+                    "joseph.ambrogne",&#xD;
+                    "amilcar.andrade",&#xD;
+                    "antonio.andrade",&#xD;
+                    "jeremy.ankur",&#xD;
+                    "andrew.bai",&#xD;
+                    "max.baine",&#xD;
+                    "kevin.barrett",&#xD;
+                    "abhi.agarwal",&#xD;
+                    "carlos.aguayo",&#xD;
+                    "nanda.ajeet",&#xD;
+                    "david.alberto",&#xD;
+                    "jimmy.alderman",&#xD;
+                    "joseph.ambrogne",&#xD;
+                    "amilcar.andrade",&#xD;
+                    "antonio.andrade",&#xD;
+                    "jeremy.ankur",&#xD;
+                    "andrew.bai",&#xD;
+                    "max.baine",&#xD;
+                    "kevin.barrett",&#xD;
+                    "abhi.agarwal",&#xD;
+                    "carlos.aguayo"&#xD;
+                  }&#xD;
+                )&#xD;
+              },&#xD;
+              totalCount: 700,&#xD;
+              value: #"SYSTEM_SYSRULES_pagingInfo"(&#xD;
+                startIndex: 1,&#xD;
+                batchSize: 50&#xD;
+              )&#xD;
+            )&#xD;
+          }&#xD;
+        )&#xD;
+      )&#xD;
+    }&#xD;
+  )&#xD;
+)&#xD;
+&#xD;
+</definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24557"/>
+    </history>
+</contentHaul>

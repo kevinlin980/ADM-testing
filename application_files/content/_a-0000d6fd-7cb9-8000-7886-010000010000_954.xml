@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26341</versionUuid>
+    <rule>
+        <name>reportCode9x</name>
+        <uuid>_a-0000d6fd-7cb9-8000-7886-010000010000_954</uuid>
+        <description></description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>=#"SYSTEM_SYSRULES_barChartField"(
+  stacking: fn!true(),
+  categories: { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug","Sep","Oct","Nov","Dec" },
+  series: {
+    #"SYSTEM_SYSRULES_chartSeries"(label: "Code 99", data: { 3, 1, 2, 2, 2, 1, 0, 1, 0, 1, 0, 1 }),
+    #"SYSTEM_SYSRULES_chartSeries"(label: "Code 98", data: { 4, 3, 3, 2, 4, 2, 1, 2, 0, 0, 1, 2 })
+  },
+  showDataLabels: true,
+   showLegend: true
+)
+</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26341"/>
+    </history>
+</contentHaul>

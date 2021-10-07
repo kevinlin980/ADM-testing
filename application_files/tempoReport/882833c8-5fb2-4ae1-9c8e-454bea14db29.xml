@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>8fb1d216-4f41-46e7-948c-a4b464e8659e</versionUuid>
+    <tempoReport a:uuid="882833c8-5fb2-4ae1-9c8e-454bea14db29" name="Local State Preservation">
+        <a:description></a:description>
+        <a:uiExpr>=#"_a-0000d86d-ef71-8000-e630-010000010000_2956"()</a:uiExpr>
+        <a:urlStub>j22d-w</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_DESIGNERS</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="8fb1d216-4f41-46e7-948c-a4b464e8659e"/>
+    </history>
+</tempoReportHaul>

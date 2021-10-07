@@ -1,0 +1,1912 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<processModelHaul>
+  <versionUuid>0003e71b-96d6-8000-6f92-014d98014d98</versionUuid>
+  <folderUuid>_g-0000d4ae-e38d-8000-ac7b-680000680000_171</folderUuid>
+  <roleMap>
+    <role name="ADMIN_OWNER">
+      <users/>
+      <groups>
+        <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+      </groups>
+    </role>
+    <role name="EDITOR">
+      <users/>
+      <groups/>
+    </role>
+    <role name="EXPLICIT_NONMEMBER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="VIEWER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="MANAGER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="INITIATOR">
+      <users/>
+      <groups/>
+    </role>
+  </roleMap>
+  <process_model_port schemaVersion="007.000.004"
+    xmlns="http://www.appian.com/ae/types/2009"
+    xmlns:a="http://www.appian.com/ae/types/2009"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <pm>
+      <meta>
+        <uuid><![CDATA[0002d4b8-1b11-8000-ac7b-680000680000]]></uuid>
+        <name>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value><![CDATA[Bid Decision]]></value>
+            </pair>
+          </string-map>
+        </name>
+        <desc>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value/>
+            </pair>
+          </string-map>
+        </desc>
+        <versionStatus>2</versionStatus>
+        <process-name>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value><![CDATA[="Bid Decision: " & pv!oppName]]></value>
+            </pair>
+          </string-map>
+        </process-name>
+        <deadline>
+          <enabled>false</enabled>
+          <type>0</type>
+          <units>0</units>
+          <rex/>
+          <aex/>
+        </deadline>
+        <pm-notification-settings>
+          <custom-settings>true</custom-settings>
+          <notify-initiator>false</notify-initiator>
+          <notify-owner>true</notify-owner>
+          <usersandgroups/>
+          <recipients-exp/>
+        </pm-notification-settings>
+        <cleanup-action>2</cleanup-action>
+        <auto-archive-delay>30</auto-archive-delay>
+        <auto-delete-delay>0</auto-delete-delay>
+        <timeZoneId><![CDATA[GMT]]></timeZoneId>
+        <useProcessInitiatorTimeZone>true</useProcessInitiatorTimeZone>
+      </meta>
+      <pvs>
+        <pv name="accountExecutive">
+          <a:value xsi:nil="true" xsi:type="a:User"/>
+          <expr><![CDATA[=loggedinuser()]]></expr>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="additionalInfo">
+          <a:value xmlns="" xsi:type="xsd:string"/>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="approxValue">
+          <a:value xmlns="" xsi:type="xsd:string">@2,500 Users = $2.5M at list price with appropriate volume discount.  There may also be an opportunity for external users also.</a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="bidApprovedBySvp">
+          <a:value xsi:nil="true" xsi:type="xsd:boolean"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="competitors">
+          <a:value xmlns="" xsi:type="xsd:string">Appian and Lombardi mentioned as potential solution SW.  In addition, this RFQ calls for mobility and hooks to Acquisition Planning Wizard.  No demo or orals are contemplated as part of the selection.</a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="contractType">
+          <a:value xmlns="" xsi:type="xsd:string">FFP</a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="decisionPendingFromUsers">
+          <a:value xmlns="" xsi:type="a:User?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="decisionResults">
+          <a:value
+            xmlns:n1="http://cilin03.appiancorp.com:8080/suite/types/"
+            xsi:nil="true" xsi:type="n1:DecisionResult?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="feedEntryIdForBidInitiation">
+          <a:value xmlns="" xsi:type="xsd:string"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="finalDecisionCommentsBySvpSales">
+          <a:value xmlns="" xsi:type="xsd:string"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="finalDecisionMakerForSvpRole">
+          <a:value xsi:nil="true" xsi:type="a:User"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="isAppianPrime">
+          <a:value xmlns="" xsi:type="xsd:boolean">false</a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="isExistingCustomer">
+          <a:value xmlns="" xsi:type="xsd:boolean">true</a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="isFollowOnRfx">
+          <a:value xmlns="" xsi:type="xsd:boolean">false</a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="licensingType">
+          <a:value xmlns="" xsi:type="xsd:string">On Premise</a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="numberOfLicenses">
+          <a:value xmlns="" xsi:type="xsd:string"/>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="oppName">
+          <a:value xmlns="" xsi:type="xsd:string">GSA PBS eLease</a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="opportunityOverview">
+          <a:value xmlns="" xsi:type="xsd:string">BACKGROUND:&#xd;
+The mission of GSA’s Public Buildings Service (PBS) is to provide a superior workplace for the federal worker and superior value to the American taxpayer. The vision is to be the best real estate organization in the world. &#xd;
+&#xd;
+PBS is the landlord of the civilian federal government, with a total inventory of over 345 million square feet of workspace for a million federal employees in 2,000 American communities. This comprises over 1,600 government-owned buildings, or approximately 55 percent of GSA's total inventory. The remaining 45 percent is in privately owned leased facilities.&#xd;
+eLease system:&#xd;
+•	eLease automates leasing processes and daily tasks of Realty Specialists by storing documents, providing electronic templates, utilizing a workflow engine, facilitating communication, and integrating with other systems </a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="partnerNames">
+          <a:value xmlns="" xsi:type="xsd:string">We have been approached by iTG and CGI to be subs to them.  Both appear to be well positioned and have been pursuing this for over a year.</a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="projectName">
+          <a:value xmlns="" xsi:type="xsd:string">eLease (Public Building Service)</a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="prospectName">
+          <a:value xmlns="" xsi:type="xsd:string">GSA</a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="region">
+          <a:value a:id="_e-0000d4ae-e38b-8000-ac7f-680000680000_83"
+            xmlns="" xsi:type="a:Group"/>
+          <parameter>true</parameter>
+          <required>true</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="regionTeamMembers">
+          <a:value xmlns="" xsi:type="a:User?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="rfxDoc">
+          <a:value xsi:nil="true" xsi:type="a:CollaborationDocument"/>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="rfxType">
+          <a:value xmlns="" xsi:type="xsd:string">RFP</a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="rfxTypeOtherDetails">
+          <a:value xmlns="" xsi:type="xsd:string"/>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="winProposition">
+          <a:value xmlns="" xsi:type="xsd:string">GSA PBS looking to modernize their current eLease systems with a mobil-capable flexible BPM solution.  Appian named in RFQ as potential solution along with Lombardi.  Win proposition is a modern configurable born-mobile solution already in use and known by GSA.</a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+      </pvs>
+      <nodes>
+        <node uuid="0000d4b8-1b11-8000-ac7b-680000680000">
+          <guiId>0</guiId>
+          <owner/>
+          <icon id="50"/>
+          <picon id="0"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Start Event]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>84</x>
+          <y>280</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Start Event]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>true</overrideLaneAssignment>
+          <ac>
+            <local-id>core.0</local-id>
+            <name><![CDATA[Start Node]]></name>
+            <acps/>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map/>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections>
+            <connection>
+              <guiId>6</guiId>
+              <to>6</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor>1</fromAnchor>
+              <toAnchor>3</toAnchor>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>true</chained>
+              <overridesAssignment>true</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </connections>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0001d4b8-1b11-8000-ac7b-680000680000">
+          <guiId>1</guiId>
+          <owner/>
+          <icon id="51"/>
+          <picon id="0"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[End Event]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>560</x>
+          <y>280</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[End Event]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>true</overrideLaneAssignment>
+          <ac>
+            <local-id>core.1</local-id>
+            <name><![CDATA[End Node]]></name>
+            <acps>
+              <acp name="pmID">
+                <a:value xsi:nil="true" xsi:type="a:ProcessModel"/>
+                <a:local-id>0</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>0</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="inMap">
+                <a:value xsi:nil="true" xsi:type="a:Bean?list"/>
+                <a:local-id>1</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="procInheritsPriority">
+                <a:value xmlns="" xsi:type="xsd:int">1</a:value>
+                <a:local-id>5</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>false</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="pmUUID">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id>6</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isAsynchronous">
+                <a:value xmlns="" xsi:type="xsd:boolean">true</a:value>
+                <a:local-id>7</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>0</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isTransparent">
+                <a:value xmlns="" xsi:type="xsd:boolean">true</a:value>
+                <a:local-id>14</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="inheritSecurity">
+                <a:value xmlns="" xsi:type="xsd:boolean">false</a:value>
+                <a:local-id>15</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </acps>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map/>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections/>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers>
+            <terminate-producer index="0">
+              <persistentId>0001d4b8-3abe-8000-ac7b-680000680000</persistentId>
+              <name><![CDATA[Terminate Process_1]]></name>
+              <desc/>
+            </terminate-producer>
+          </event-producers>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0000d4cb-e11e-8000-65ad-820000820000">
+          <guiId>6</guiId>
+          <owner/>
+          <icon id="68"/>
+          <picon id="69"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Populate regional team feedback]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>224</x>
+          <y>280</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Populate regional team feedback]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <ac>
+            <local-id>internal.16</local-id>
+            <name><![CDATA[Unattended Multiple Questions]]></name>
+            <acps/>
+            <custom-params>
+              <acp name="decisionResults">
+                <a:value xmlns=""
+                  xmlns:n1="http://cilin03.appiancorp.com:8080/suite/types/" xsi:type="n1:DecisionResult?list"/>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[decisionResults]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+                <a:interior-expressions xmlns="">
+                  <decision>={"No Bid", "Bid", "Bid", "No Bid", "Bid"}</decision>
+                  <decisionMaker>={"Hannah Saunders", "Chris Wherry", "Cathy Thornton", "Joseph Aleardi", "Tony Durso"}</decisionMaker>
+                  <comment>={"-no comments-", "Concerns about historical data. Need to discuss certain requirements with client to determine technology fit.", "Trying this for testing process.", "Too little information regarding the overall process and drivers to decision. Also, some requirements are far outside our scope.", "If cloud is an option, this would make a great social/mobile use case."}</comment>
+                </a:interior-expressions>
+              </acp>
+            </custom-params>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map/>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections>
+            <connection>
+              <guiId>7</guiId>
+              <to>3</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor>1</fromAnchor>
+              <toAnchor>3</toAnchor>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>true</chained>
+              <overridesAssignment>true</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </connections>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0000d4c3-3bac-8000-f92f-7f0000014e7a">
+          <guiId>3</guiId>
+          <owner/>
+          <icon id="21"/>
+          <picon id="1"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Final Approval by SVP Sales]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>392</x>
+          <y>280</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[="[Final] Bid/No Bid for " & pv!oppName & ": " &  #"_a-0000d4ae-e38c-8000-ac7a-680000680000_4095"(pv!decisionResults.decision)]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <assignments>
+            <assignee>
+              <type>28</type>
+              <privilege>3</privilege>
+              <value>
+                <ac>
+                  <local-id>assignee-pool.101</local-id>
+                  <name><![CDATA[Assign To Actor]]></name>
+                  <acps>
+                    <acp name="displayName">
+                      <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                      <a:local-id>0</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="expression">
+                      <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                      <a:local-id>1</a:local-id>
+                      <a:expr><![CDATA[pp!initiator]]></a:expr>
+                      <a:required>0</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outUsers">
+                      <a:value xsi:nil="true" xsi:type="a:User?list"/>
+                      <a:local-id>2</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outGroups">
+                      <a:value xsi:nil="true" xsi:type="a:Group?list"/>
+                      <a:local-id>3</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                  </acps>
+                  <custom-params/>
+                  <output-exprs/>
+                  <requires-user-interaction>true</requires-user-interaction>
+                  <run-as>
+                    <performer id="0"/>
+                  </run-as>
+                  <helper-class/>
+                </ac>
+              </value>
+            </assignee>
+            <assignment-function/>
+            <position>0</position>
+            <accept-mode>1</accept-mode>
+          </assignments>
+          <ac>
+            <local-id>internal.17</local-id>
+            <name><![CDATA[User Input Task]]></name>
+            <acps/>
+            <custom-params>
+              <acp name="hasRejected">
+                <a:value xmlns="" xsi:type="xsd:string">1</a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="region">
+                <a:value xsi:nil="true" xsi:type="a:Group"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!region]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="competitors">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!competitors]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="numberOfLicenses">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isExistingCustomer">
+                <a:value xsi:nil="true" xsi:type="xsd:boolean"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!isExistingCustomer]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="opportunityOverview">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!opportunityOverview]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="winProposition">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!winProposition]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="partnerNames">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!partnerNames]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="licensingType">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="prospectName">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!prospectName]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isAppianPrime">
+                <a:value xsi:nil="true" xsi:type="xsd:boolean"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!isAppianPrime]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="contractType">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!contractType]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="oppName">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!oppName]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="approxValue">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="accountExecutive">
+                <a:value xsi:nil="true" xsi:type="a:User"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!accountExecutive]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="projectName">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!projectName]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isFollowOnRfx">
+                <a:value xsi:nil="true" xsi:type="xsd:boolean"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!isFollowOnRfx]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="finalDecisionComments">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[finalDecisionCommentsBySvpSales]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </custom-params>
+            <output-exprs>
+              <el typeFlag="0"><![CDATA[bidApprovedBySvp:ac!hasRejected<>"1"]]></el>
+              <el typeFlag="0"><![CDATA[finalDecisionMakerForSvpRole:tp!owner]]></el>
+            </output-exprs>
+            <requires-user-interaction>false</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[Decision]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[decision]]></value>
+                          <extra><![CDATA[{"id":"pagingGridChildComponent_gridpaging50_1326386382174","typeName":"message","parentKey":"gridpaging50","customValidations":[{}],"labelPosition":"right","customEvents":[{}],"view":"list","richText":"","displayExpField":"","key":"pagingGridChildComponent_gridpaging50_1326386382174","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Opportunity Name]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[oppName]]></mapped-to>
+                          <value><![CDATA[=pv!oppName]]></value>
+                          <extra><![CDATA[{"typeName":"text","id":"text15","saveAs":{"name":"oppName"},"validationMessages":[],"customValidations":[{}],"width":"long","labelPosition":"right","customEvents":[{}],"view":"single","displayExpField":"","key":"text15","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Your Comments]]></label>
+                          <instructions><![CDATA[Your decision will be posted on tempo and can be seen by the regional team and account executive who submitted this bid justification form.]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[finalDecisionComments]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{"validationMessages":[],"customEvents":[{}],"labelPosition":"right","richText":"","displayExpField":"","namespace":"DESIGN","id":"paragraph49","typeName":"paragraph","saveAs":{"name":"finalDecisionComments"},"height":5,"allowRichText":"false","customValidations":[{}],"view":"single","key":"paragraph49","plainText":""}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Existing Customer?]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[isExistingCustomer]]></mapped-to>
+                          <value><![CDATA[=pv!isExistingCustomer]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","id":"truefalse17","typeName":"truefalse","saveAs":{"name":"isExistingCustomer"},"customValidations":[{}],"displayType":"dropdown","defValueKnowsExpressions":true,"isExpression":true,"view":"single","checkboxLabel":"","disabled":"true","key":"truefalse17"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!isExistingCustomer]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[hasRejected]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"buttonConfirm":"false","customEvents":[],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","typeName":"button","id":"button29","saveAs":{"name":"hasRejected"},"customValidations":[],"buttonLabel":"Don't Bid","view":"single","buttonValue":"1","key":"button29","confirmMessage":"Submit this form?"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Follow-on RFx?]]></label>
+                          <instructions><![CDATA[For example, we previously responded to an RFI, and now the customer has issued an RFP.]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[isFollowOnRfx]]></mapped-to>
+                          <value><![CDATA[=pv!isFollowOnRfx]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","id":"truefalse18","typeName":"truefalse","saveAs":{"name":"isFollowOnRfx"},"customValidations":[{}],"displayType":"dropdown","defValueKnowsExpressions":true,"isExpression":true,"view":"single","checkboxLabel":"","disabled":"true","key":"truefalse18"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!isFollowOnRfx]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Decision Maker]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[decisionMaker]]></value>
+                          <extra><![CDATA[{"id":"pagingGridChildComponent_gridpaging50_1326386384068","typeName":"message","parentKey":"gridpaging50","customValidations":[{}],"labelPosition":"right","customEvents":[{}],"view":"list","richText":"","displayExpField":"","key":"pagingGridChildComponent_gridpaging50_1326386384068","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Partner Names]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[=pv!partnerNames]]></value>
+                          <extra><![CDATA[{"labelPosition":"right","customEvents":[{}],"richText":"###EXPR0","displayExpField":"","namespace":"DESIGN","id":"paragraph42","typeName":"paragraph","height":5,"allowRichText":"false","customValidations":[{}],"view":"single","key":"paragraph42","plainText":"###EXPR1"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!partnerNames]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!partnerNames]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Decision Breakdown and Comments]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"emptyValidationMessage":"At least one item must be selected.","sourceType":{"id":"{http://cilin03.appiancorp.com:8080/suite/types/}DecisionResult","description":"","qualifiedName":"DecisionResult (http://cilin03.appiancorp.com:8080/suite/types/)","display":"DecisionResult","nameWithinNamespace":"DecisionResult","type":80,"namespace":"http://cilin03.appiancorp.com:8080/suite/types/"},"dataSource":"=todatasubset(pv!decisionResults,data!pagingInfo)","columns":["pagingGridChildComponent_gridpaging50_1326386382174","pagingGridChildComponent_gridpaging50_1326386384068","pagingGridChildComponent_gridpaging50_1326386385325"],"pageSize":10,"customEvents":[],"labelPosition":"right","allowAddDelete":false,"displayExpField":"","namespace":"DESIGN","typeName":"gridpaging","hasComponentBeenValidated":true,"id":"gridpaging50","height":-1,"customValidations":[],"view":"single","key":"gridpaging50"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=todatasubset(pv!decisionResults,data!pagingInfo)]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Approx. Value]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[=pv!approxValue]]></value>
+                          <extra><![CDATA[{"labelPosition":"right","customEvents":[{}],"richText":"###EXPR0","displayExpField":"","namespace":"DESIGN","id":"paragraph40","typeName":"paragraph","height":5,"allowRichText":"false","customValidations":[{}],"view":"single","key":"paragraph40","plainText":"###EXPR1"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!approxValue]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!approxValue]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number of Licenses]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[=pv!numberOfLicenses]]></value>
+                          <extra><![CDATA[{"labelPosition":"right","customEvents":[{}],"richText":"###EXPR0","displayExpField":"","namespace":"DESIGN","id":"paragraph41","typeName":"paragraph","height":5,"allowRichText":"false","customValidations":[{}],"view":"single","key":"paragraph41","plainText":"###EXPR1"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!numberOfLicenses]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!numberOfLicenses]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[RFx Type]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[=pv!rfxType & if(pv!rfxTypeOtherDetails="", "", " (" & pv!rfxTypeOtherDetails & ")")]]></value>
+                          <extra><![CDATA[{"id":"text35","typeName":"text","customValidations":[{}],"width":"medium","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"text35","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Competitors]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[=pv!competitors]]></value>
+                          <extra><![CDATA[{"labelPosition":"right","customEvents":[{}],"richText":"###EXPR0","displayExpField":"","namespace":"DESIGN","id":"paragraph39","typeName":"paragraph","height":5,"allowRichText":"false","customValidations":[{}],"view":"single","key":"paragraph39","plainText":"###EXPR1"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!competitors]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!competitors]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[RFx Document]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>true</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[(none attached)]]></value>
+                          <extra><![CDATA[{"id":"text48","typeName":"text","customValidations":[{}],"width":"medium","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"###EXPR0","key":"text48","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=isnull(pv!rfxDoc)]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Partner Situation]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[isAppianPrime]]></mapped-to>
+                          <value><![CDATA[=pv!isAppianPrime]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Appian is the prime","expressionValue":"###EXPR0","noLabel":"Appian is the sub","customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","id":"truefalse22","typeName":"truefalse","saveAs":{"name":"isAppianPrime"},"customValidations":[{}],"displayType":"checkbox","defValueKnowsExpressions":true,"isExpression":true,"view":"single","checkboxLabel":"If Appian is partnering with somebody, whether or not Appian is the prime.","disabled":"true","key":"truefalse22"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!isAppianPrime]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Account Exec]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>4</type>
+                          <options/>
+                          <name><![CDATA[Field5]]></name>
+                          <mapped-to><![CDATA[accountExecutive]]></mapped-to>
+                          <value><![CDATA[=pv!accountExecutive]]></value>
+                          <extra><![CDATA[{"typeName":"people","id":"Field5","pickedItems":[{"id":"###EXPR0","display":"###EXPR1","type":29}],"saveAs":{"name":"accountExecutive"},"validationMessages":[],"subType":"user","customValidations":[{}],"labelPosition":"right","customEvents":[{}],"view":"single","displayExpField":"","key":"Field5","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!accountExecutive]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!accountExecutive]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Licensing Type]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[=pv!licensingType]]></value>
+                          <extra><![CDATA[{"id":"text26","typeName":"text","customValidations":[{}],"width":"long","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"text26","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Region]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[region]]></mapped-to>
+                          <value><![CDATA[=pv!region]]></value>
+                          <extra><![CDATA[{"typeName":"people","id":"people25","pickedItems":[{"id":"###EXPR0","display":"###EXPR1","type":29}],"saveAs":{"name":"region"},"validationMessages":[],"customValidations":[{}],"subType":"group","labelPosition":"right","customEvents":[{}],"view":"single","displayExpField":"","key":"people25","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!region]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!region]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Why Appian Will Win]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[=pv!winProposition]]></value>
+                          <extra><![CDATA[{"labelPosition":"right","customEvents":[{}],"richText":"###EXPR0","displayExpField":"","namespace":"DESIGN","id":"paragraph38","typeName":"paragraph","height":"7","allowRichText":"false","customValidations":[{}],"view":"single","key":"paragraph38","plainText":"###EXPR1"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!winProposition]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!winProposition]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[hasRejected]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"buttonConfirm":"false","labelPosition":"right","customEvents":[],"displayExpField":"","namespace":"DESIGN","typeName":"button","id":"button3","saveAs":{"name":"hasRejected"},"customValidations":[],"buttonLabel":"Bid","view":"single","key":"button3","buttonValue":"0","confirmMessage":"Submit this form?"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Opportunity Overview]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[=pv!opportunityOverview]]></value>
+                          <extra><![CDATA[{"labelPosition":"right","customEvents":[{}],"richText":"###EXPR0","displayExpField":"","namespace":"DESIGN","id":"paragraph37","typeName":"paragraph","height":"15","allowRichText":"false","customValidations":[{}],"view":"single","key":"paragraph37","plainText":"###EXPR1"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!opportunityOverview]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!opportunityOverview]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Contract Type]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[contractType]]></mapped-to>
+                          <value><![CDATA[=pv!contractType]]></value>
+                          <extra><![CDATA[{"typeName":"text","id":"text8","saveAs":{"name":"contractType"},"validationMessages":[],"customValidations":[{}],"width":"long","labelPosition":"right","customEvents":[{}],"view":"single","displayExpField":"","key":"text8","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Tempo Discussion]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>true</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"link","id":"link28","defaultUrlValue":"###EXPR0","wlocation":"_blank","customValidations":[],"align":"imageLeft","labelPosition":"right","customEvents":[{}],"defaultAltValue":"","view":"single","displayExpField":"","key":"link28","defaultTitleValue":"Here","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=#"_a-0000d4ae-e38c-8000-ac7a-680000680000_4106"(pv!feedEntryIdForBidInitiation)]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Project/Solution Name]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[projectName]]></mapped-to>
+                          <value><![CDATA[=pv!projectName]]></value>
+                          <extra><![CDATA[{"typeName":"text","id":"text6","saveAs":{"name":"projectName"},"validationMessages":[],"customValidations":[{}],"width":"long","labelPosition":"right","customEvents":[{}],"view":"single","displayExpField":"","key":"text6","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[="[Final Decision] Bid/No Bid for " & pv!oppName & ". Result: " &  #"_a-0000d4ae-e38c-8000-ac7a-680000680000_4095"(pv!decisionResults.decision)]]></label>
+                          <instructions><![CDATA[Search for the opportunity name on Tempo to find related feed entries, and review discussions. Your decision will be posted to the regional team on Tempo, along with any comments you enter below.]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"form","id":"form0","elementCounter":51,"columns":1,"labelPosition":"right","customEvents":[{}],"view":"single","key":"form0","mobile":"true","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[RFx Document]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>true</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"link","id":"link34","defaultUrlValue":"###EXPR1","wlocation":"_self","customValidations":[],"align":"imageLeft","labelPosition":"right","customEvents":[{}],"defaultAltValue":"###EXPR0","view":"single","displayExpField":"###EXPR2","key":"link34","defaultTitleValue":"###EXPR3","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=document(pv!rfxDoc, "name")]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=linktodocument(pv!rfxDoc, "doc")]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=not(isnull(pv!rfxDoc))]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=document(pv!rfxDoc, "name")]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Comment]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[comment]]></value>
+                          <extra><![CDATA[{"id":"pagingGridChildComponent_gridpaging50_1326386385325","typeName":"message","parentKey":"gridpaging50","customValidations":[{}],"labelPosition":"right","customEvents":[{}],"view":"list","richText":"","displayExpField":"","key":"pagingGridChildComponent_gridpaging50_1326386385325","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Account/Prospect Name]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[prospectName]]></mapped-to>
+                          <value><![CDATA[=pv!prospectName]]></value>
+                          <extra><![CDATA[{"typeName":"text","id":"text20","saveAs":{"name":"prospectName"},"validationMessages":[],"customValidations":[{}],"width":"long","labelPosition":"right","customEvents":[{}],"view":"single","displayExpField":"","key":"text20","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label/>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"tree","children":[["link28",{"children":[["pagingGridChildComponent_gridpaging50_1326386382174"],["pagingGridChildComponent_gridpaging50_1326386384068"],["pagingGridChildComponent_gridpaging50_1326386385325"]],"key":"gridpaging50"},"text20","text15","text6","truefalse17","text35","truefalse18","people25","Field5","paragraph37","paragraph38","paragraph39","paragraph40","paragraph41","text26","text8","truefalse22","paragraph42","link34","text48","paragraph49"]],"buttons":["button3","button29"],"key":"form0"}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <jsp-form>
+                      <path><![CDATA[/process/forms]]></path>
+                    </jsp-form>
+                    <hiddenSections>30</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <priority id="2"/>
+          <connections>
+            <connection>
+              <guiId>8</guiId>
+              <to>1</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor>1</fromAnchor>
+              <toAnchor>3</toAnchor>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>false</chained>
+              <overridesAssignment>true</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </connections>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>true</enabled>
+            <type>0</type>
+            <units>2</units>
+            <rex><![CDATA[2]]></rex>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>true</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+      </nodes>
+      <annotations>
+        <annotation>
+          <guiId>1</guiId>
+          <text><![CDATA[represents the original MIN task to the regional team]]></text>
+          <x>168</x>
+          <y>112</y>
+          <width>171</width>
+          <height>49</height>
+          <label>
+            <fontColor>#1111cc</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <associations>
+            <connection>
+              <guiId>9</guiId>
+              <to>6</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor>2</fromAnchor>
+              <toAnchor>0</toAnchor>
+              <showArrowhead>false</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#1111cc</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>false</chained>
+              <overridesAssignment>true</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </associations>
+        </annotation>
+      </annotations>
+      <lanes/>
+      <attachments/>
+      <notes/>
+      <priority id="1"/>
+      <form-map>
+        <pair>
+          <locale country="US" lang="en" variant=""/>
+          <form-config>
+            <form>
+              <type>0</type>
+              <enabled>true</enabled>
+              <dynamic-form>
+                <form-elements>
+                  <form-element>
+                    <label><![CDATA[Partner Situation]]></label>
+                    <instructions><![CDATA[If Appian is partnering with somebody, indicate whether or not Appian is the prime, and list the partner name(s) below.]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[isAppianPrime]]></mapped-to>
+                    <value><![CDATA[0]]></value>
+                    <extra><![CDATA[{"validationMessages":[],"yesLabel":"Appian is the prime","noLabel":"Appian is the sub","customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","id":"truefalse22","typeName":"truefalse","saveAs":{"name":"isAppianPrime"},"displayType":"checkbox","customValidations":[{}],"isExpression":"false","view":"single","checkboxLabel":"Appian is the prime","key":"truefalse22"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Account Exec]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>true</required>
+                    <type>4</type>
+                    <options/>
+                    <name><![CDATA[Field5]]></name>
+                    <mapped-to><![CDATA[accountExecutive]]></mapped-to>
+                    <value><![CDATA[=loggedinuser()]]></value>
+                    <extra><![CDATA[{"typeName":"people","id":"Field5","pickedItems":[{"id":"###EXPR0","display":"###EXPR1","type":29}],"saveAs":{"name":"accountExecutive"},"validationMessages":[],"subType":"user","customValidations":[{}],"labelPosition":"right","customEvents":[{}],"view":"single","displayExpField":"","key":"Field5","namespace":"DESIGN"}]]></extra>
+                    <expression xsi:type="xsd:string"><![CDATA[=loggedinuser()]]></expression>
+                    <expression xsi:type="xsd:string"><![CDATA[=loggedinuser()]]></expression>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Opportunity Name]]></label>
+                    <instructions><![CDATA[Use Salesforce opportunity name if applicable]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>true</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[oppName]]></mapped-to>
+                    <value><![CDATA[GSA PBS eLease]]></value>
+                    <extra><![CDATA[{"typeName":"text","id":"text15","saveAs":{"name":"oppName"},"validationMessages":[],"customValidations":[{}],"width":"long","labelPosition":"right","customEvents":[{}],"view":"single","displayExpField":"","key":"text15","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label/>
+                    <instructions><![CDATA[If RFx Type is "Other", please provide more details.]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[rfxTypeOtherDetails]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"id":"text27","typeName":"text","saveAs":{"name":"rfxTypeOtherDetails"},"validationMessages":[],"customValidations":[{}],"width":"long","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"text27","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[RFx Document]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[rfxDoc]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"id":"inlinefileupload25","hasComponentBeenValidated":true,"typeName":"inlinefileupload","saveAs":{"name":"rfxDoc"},"validationMessages":[],"customValidations":[],"subType":"document","customEvents":[],"labelPosition":"right","view":"single","saveInFolder":{"id":"SYSTEM_FOLDER_TEMPORARY_DOCS","description":"","subtype":"0","name":"Temporary Documents","display_ac":"/Default Community/Temporary Documents Knowledge Center/Temporary Documents","path":"/Default Community/Temporary Documents Knowledge Center/Temporary Documents","display":"Temporary Documents","typemask":"2","type":12},"displayExpField":"","key":"inlinefileupload25","destination":"newFile","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Why Will We Win?]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[winProposition]]></mapped-to>
+                    <value><![CDATA[GSA PBS looking to modernize their current eLease systems with a mobil-capable flexible BPM solution.  Appian named in RFQ as potential solution along with Lombardi.  Win proposition is a modern configurable born-mobile solution already in use and known by GSA.]]></value>
+                    <extra><![CDATA[{"validationMessages":[],"customEvents":[{}],"labelPosition":"right","richText":"GSA PBS looking to modernize their current eLease systems with a mobil-capable flexible BPM solution.  Appian named in RFQ as potential solution along with Lombardi.  Win proposition is a modern configurable born-mobile solution already in use and known by GSA.","displayExpField":"","namespace":"DESIGN","id":"paragraph19","typeName":"paragraph","saveAs":{"name":"winProposition"},"height":5,"allowRichText":"false","customValidations":[{}],"view":"single","key":"paragraph19","plainText":"GSA PBS looking to modernize their current eLease systems with a mobil-capable flexible BPM solution.  Appian named in RFQ as potential solution along with Lombardi.  Win proposition is a modern configurable born-mobile solution already in use and known by GSA."}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Label]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"button","id":"button3","customValidations":[],"buttonConfirm":"false","buttonLabel":"Submit","customEvents":[],"labelPosition":"right","view":"single","displayExpField":"","buttonValue":"Submit","key":"button3","confirmMessage":"Submit this form?","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Contract Type]]></label>
+                    <instructions><![CDATA[E.g. perpetual, term]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[contractType]]></mapped-to>
+                    <value><![CDATA[FFP]]></value>
+                    <extra><![CDATA[{"typeName":"text","id":"text8","saveAs":{"name":"contractType"},"validationMessages":[],"customValidations":[{}],"width":"long","labelPosition":"right","customEvents":[{}],"view":"single","displayExpField":"","key":"text8","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Licensing Type]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[licensingType]]></mapped-to>
+                    <value><![CDATA[On Premise]]></value>
+                    <extra><![CDATA[{"validationMessages":[],"choices":{"entries":[{"id":"On Premise","label":"On Premise"},{"id":"Cloud","label":"Cloud"},{"id":"TBD","label":"TBD"}]},"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","id":"dropdown12","typeName":"dropdown","saveAs":{"name":"licensingType"},"importChoices":"literal","subType":"text","customValidations":[{}],"view":"single","key":"dropdown12"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Existing Customer?]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[isExistingCustomer]]></mapped-to>
+                    <value><![CDATA[1]]></value>
+                    <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","noLabel":"No","customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","id":"truefalse17","typeName":"truefalse","saveAs":{"name":"isExistingCustomer"},"displayType":"dropdown","customValidations":[{}],"isExpression":"false","view":"single","checkboxLabel":"","key":"truefalse17"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Project/Solution Name]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[projectName]]></mapped-to>
+                    <value><![CDATA[eLease (Public Building Service)]]></value>
+                    <extra><![CDATA[{"typeName":"text","id":"text6","saveAs":{"name":"projectName"},"validationMessages":[],"customValidations":[{}],"width":"long","labelPosition":"right","customEvents":[{}],"view":"single","displayExpField":"","key":"text6","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Follow-on RFx?]]></label>
+                    <instructions><![CDATA[For example, we previously responded to an RFI, and now the customer has issued an RFP.]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[isFollowOnRfx]]></mapped-to>
+                    <value><![CDATA[0]]></value>
+                    <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","noLabel":"No","customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","id":"truefalse18","typeName":"truefalse","saveAs":{"name":"isFollowOnRfx"},"displayType":"dropdown","customValidations":[{}],"isExpression":"false","view":"single","checkboxLabel":"","key":"truefalse18"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Proposal Bid Justification Form]]></label>
+                    <instructions><![CDATA[[FOR TESTING: Submit this form then refresh your tasks.] This form will be sent to the regional team to decide if Appian should respond to this RFx, and the final decision will be made by Edward Hughes.]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"form","id":"form0","elementCounter":28,"columns":1,"labelPosition":"right","customEvents":[{}],"view":"single","key":"form0","mobile":"true","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Region]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>true</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[region]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"dropdown","id":"dropdown4","saveAs":{"name":"region"},"importChoices":"literal","validationMessages":[],"customValidations":[{}],"subType":"group","choices":{"entries":[{"id":"_e-0000d4ae-e38b-8000-ac7f-680000680000_85","display":"APAC","label":"APAC","type":5},{"id":"_e-0000d4ae-e38b-8000-ac7f-680000680000_83","display":"Commercial N.A.","label":"Commercial","type":5},{"id":"_e-0000d4ae-e38b-8000-ac7f-680000680000_84","display":"EMEA","label":"EMEA","type":5},{"id":"_e-0000d4ae-e38b-8000-ac7f-680000680000_86","display":"Federal","label":"Federal","type":5}]},"customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"dropdown4","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[RFx Type]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[rfxType]]></mapped-to>
+                    <value><![CDATA[RFP]]></value>
+                    <extra><![CDATA[{"validationMessages":[],"choices":{"entries":[{"id":"RFP","label":"RFP"},{"id":"RFI","label":"RFI"},{"id":"RFQ","label":"RFQ"},{"id":"SS","label":"SS"},{"id":"Other","label":"Other"}]},"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","id":"dropdown26","typeName":"dropdown","saveAs":{"name":"rfxType"},"importChoices":"literal","subType":"text","customValidations":[{}],"view":"single","key":"dropdown26"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Competitors]]></label>
+                    <instructions><![CDATA[If known...]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[competitors]]></mapped-to>
+                    <value><![CDATA[Appian and Lombardi mentioned as potential solution SW.  In addition, this RFQ calls for mobility and hooks to Acquisition Planning Wizard.  No demo or orals are contemplated as part of the selection.]]></value>
+                    <extra><![CDATA[{"id":"text23","typeName":"text","saveAs":{"name":"competitors"},"validationMessages":[],"customValidations":[{}],"width":"long","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"text23","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Partner Names]]></label>
+                    <instructions><![CDATA[If applicable...]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[partnerNames]]></mapped-to>
+                    <value><![CDATA[We have been approached by iTG and CGI to be subs to them.  Both appear to be well positioned and have been pursuing this for over a year.]]></value>
+                    <extra><![CDATA[{"typeName":"text","id":"text10","saveAs":{"name":"partnerNames"},"validationMessages":[],"customValidations":[{}],"width":"long","labelPosition":"right","customEvents":[{}],"view":"single","displayExpField":"","key":"text10","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Number of Licenses]]></label>
+                    <instructions><![CDATA[If known...]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[numberOfLicenses]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"id":"text24","typeName":"text","saveAs":{"name":"numberOfLicenses"},"validationMessages":[],"customValidations":[{}],"width":"long","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"text24","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Approx. Value]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[approxValue]]></mapped-to>
+                    <value><![CDATA[@2,500 Users = $2.5M at list price with appropriate volume discount.  There may also be an opportunity for external users also.]]></value>
+                    <extra><![CDATA[{"typeName":"text","id":"text13","saveAs":{"name":"approxValue"},"validationMessages":[],"customValidations":[{}],"width":"long","labelPosition":"right","customEvents":[{}],"view":"single","displayExpField":"","key":"text13","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Account/Prospect Name]]></label>
+                    <instructions><![CDATA[Use Salesforce account name if applicable]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>true</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[prospectName]]></mapped-to>
+                    <value><![CDATA[GSA]]></value>
+                    <extra><![CDATA[{"typeName":"text","id":"text20","saveAs":{"name":"prospectName"},"validationMessages":[],"customValidations":[{}],"width":"long","labelPosition":"right","customEvents":[{}],"view":"single","displayExpField":"","key":"text20","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Opportunity Overview]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[opportunityOverview]]></mapped-to>
+                    <value><![CDATA[BACKGROUND:
+The mission of GSA’s Public Buildings Service (PBS) is to provide a superior workplace for the federal worker and superior value to the American taxpayer. The vision is to be the best real estate organization in the world. 
+
+PBS is the landlord of the civilian federal government, with a total inventory of over 345 million square feet of workspace for a million federal employees in 2,000 American communities. This comprises over 1,600 government-owned buildings, or approximately 55 percent of GSA's total inventory. The remaining 45 percent is in privately owned leased facilities.
+eLease system:
+•	eLease automates leasing processes and daily tasks of Realty Specialists by storing documents, providing electronic templates, utilizing a workflow engine, facilitating communication, and integrating with other systems ]]></value>
+                    <extra><![CDATA[{"validationMessages":[],"customEvents":[{}],"labelPosition":"right","richText":"BACKGROUND:\r\nThe mission of GSA’s Public Buildings Service (PBS) is to provide a superior workplace for the federal worker and superior value to the American taxpayer. The vision is to be the best real estate organization in the world. \r\n\r\nPBS is the landlord of the civilian federal government, with a total inventory of over 345 million square feet of workspace for a million federal employees in 2,000 American communities. This comprises over 1,600 government-owned buildings, or approximately 55 percent of GSA's total inventory. The remaining 45 percent is in privately owned leased facilities.\r\neLease system:\r\n•\teLease automates leasing processes and daily tasks of Realty Specialists by storing documents, providing electronic templates, utilizing a workflow engine, facilitating communication, and integrating with other systems ","displayExpField":"","namespace":"DESIGN","id":"paragraph21","typeName":"paragraph","saveAs":{"name":"opportunityOverview"},"height":"7","customValidations":[{}],"view":"single","key":"paragraph21","plainText":"BACKGROUND:\r\nThe mission of GSA’s Public Buildings Service (PBS) is to provide a superior workplace for the federal worker and superior value to the American taxpayer. The vision is to be the best real estate organization in the world. \r\n\r\nPBS is the landlord of the civilian federal government, with a total inventory of over 345 million square feet of workspace for a million federal employees in 2,000 American communities. This comprises over 1,600 government-owned buildings, or approximately 55 percent of GSA's total inventory. The remaining 45 percent is in privately owned leased facilities.\r\neLease system:\r\n•\teLease automates leasing processes and daily tasks of Realty Specialists by storing documents, providing electronic templates, utilizing a workflow engine, facilitating communication, and integrating with other systems "}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label/>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"tree","children":[["text20","text15","text6","truefalse17","truefalse18","dropdown26","text27","dropdown4","Field5","paragraph21","paragraph19","text23","text13","text24","dropdown12","text8","truefalse22","text10","inlinefileupload25"]],"buttons":["button3"],"key":"form0"}]]></extra>
+                  </form-element>
+                </form-elements>
+              </dynamic-form>
+              <jsp-form>
+                <path><![CDATA[/process/forms]]></path>
+              </jsp-form>
+              <hiddenSections>16</hiddenSections>
+            </form>
+          </form-config>
+        </pair>
+      </form-map>
+      <emailAttachmentFolderUuid><![CDATA[SYSTEM_FOLDER_TEMPORARY_DOCS]]></emailAttachmentFolderUuid>
+      <isPublic>false</isPublic>
+    </pm>
+  </process_model_port>
+  <isPublished>true</isPublished>
+  <history>
+    <historyInfo versionUuid="0003e71b-96d6-8000-6f92-014d98014d98"/>
+  </history>
+</processModelHaul>

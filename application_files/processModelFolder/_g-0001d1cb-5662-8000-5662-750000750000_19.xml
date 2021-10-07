@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<processModelFolderHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_g-0000e71b-9358-8000-6ef5-014d98014d98_431</versionUuid>
+    <processModelFolder>
+        <name>JEX</name>
+        <uuid>_g-0001d1cb-5662-8000-5662-750000750000_19</uuid>
+        <description></description>
+        <parentFolderUuid>_g-0000d260-35d2-8000-0aa8-820000820000_24</parentFolderUuid>
+    </processModelFolder>
+    <roleMap>
+        <role name="ADMIN_OWNER">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role name="EDITOR">
+            <users/>
+            <groups/>
+        </role>
+        <role name="EXPLICIT_NONMEMBER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="VIEWER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="MANAGER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="INITIATOR">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_g-0000e71b-9358-8000-6ef5-014d98014d98_431"/>
+    </history>
+</processModelFolderHaul>

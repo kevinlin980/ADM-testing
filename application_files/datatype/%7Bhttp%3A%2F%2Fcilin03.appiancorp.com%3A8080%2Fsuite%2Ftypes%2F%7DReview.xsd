@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+  targetNamespace="http://cilin03.appiancorp.com:8080/suite/types/"
+  xmlns:tns="http://cilin03.appiancorp.com:8080/suite/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="Review">
+    <xsd:annotation>
+      <xsd:appinfo source="http://www.appian.com/ae/types/2009">
+        <ns2:Metadata xmlns:ns2="http://www.appian.com/ae/types/2009">
+          <ns2:versionUuid>002ee71b-9284-8000-6ef1-014d98014d98</ns2:versionUuid>
+          <ns2:history>
+            <ns2:historyInfo versionUuid="002ee71b-9284-8000-6ef1-014d98014d98"/>
+          </ns2:history>
+        </ns2:Metadata>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Reviewer" nillable="true" type="xsd:string"/>
+      <xsd:element name="reviewedOn" nillable="true" type="xsd:dateTime"/>
+      <xsd:element name="Comments" nillable="true" type="xsd:string"/>
+      <xsd:element name="madeChanges" nillable="true" type="xsd:boolean"/>
+      <xsd:element name="status" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

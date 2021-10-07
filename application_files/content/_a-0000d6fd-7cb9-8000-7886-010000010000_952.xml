@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26416</versionUuid>
+    <rule>
+        <name>reportAppianSoftwareDocumentation</name>
+        <uuid>_a-0000d6fd-7cb9-8000-7886-010000010000_952</uuid>
+        <description></description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>'type!{http://www.appian.com/ae/types/2009}FormLayout'(
+  content: 'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns: {
+    'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+      #"_a-0000d73d-f7dd-8000-4594-010000010000_1052"(),
+      'type!{http://www.appian.com/ae/types/2009}SectionLayout'(
+        label: "About",
+        content: 'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns: {
+          'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+            'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Industry", value: "Retail", readOnly: true),
+            'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Region", value: "North America Commercial", readOnly: true),
+            'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Location", value: "Seattle, WA", readOnly: true),
+            'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Functional Areas", value: "Finance/Legal", readOnly: true),
+            'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Sales Executive", value: "Scott Ulrichs", readOnly: true),
+            'type!{http://www.appian.com/ae/types/2009}ParagraphField'(label: "Why Appian", value: "The quantity of beer, too, is very large, 10,800 barrels. Now, as those polar fisheries could only be prosecuted in the short summer of that climate, so that the whole cruise of one of these Dutch whalemen, including the short voyage to and from the Spitzbergen sea, did not much exceed three months, say, and reckoning 30 men to each of their fleet of 180 sail, we have 5,400 Low Dutch seamen in all; therefore, I say, we have precisely two barrels of beer per man, for a twelve weeks' allowance, exclusive of his fair proportion of that 550 ankers of gin.", readOnly: true)
+          }),
+          'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+            'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Competitors", value: "IBM/Lombardi", readOnly: true),
+            'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Client Since", value: "Apr 15, 2009", readOnly: true),
+            'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Number of User Licenses", value: "123", readOnly: true),
+            'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Integrations", value: "Database, Custom System, Web Services", readOnly: true),
+            'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Stock Symbol", value: "AMZN", readOnly: true)
+          })
+        })
+      )
+    })
+  })
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26416"/>
+    </history>
+</contentHaul>

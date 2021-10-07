@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoFeedHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>47681ffa-de4a-473a-82f1-794384b8fee3</versionUuid>
+    <tempoFeed>
+        <uuid>0bf76f5a-6502-40f2-adf2-8580e634d381</uuid>
+        <name>topic 3</name>
+        <showInCatalog>true</showInCatalog>
+        <systemFeed>false</systemFeed>
+    </tempoFeed>
+    <roleMap/>
+    <history>
+        <historyInfo versionUuid="47681ffa-de4a-473a-82f1-794384b8fee3"/>
+    </history>
+</tempoFeedHaul>

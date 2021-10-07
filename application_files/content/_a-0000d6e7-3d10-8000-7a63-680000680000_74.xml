@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25792</versionUuid>
+    <rule>
+        <name>recordDetailExpression</name>
+        <uuid>_a-0000d6e7-3d10-8000-7a63-680000680000_74</uuid>
+        <description></description>
+        <parentUuid>_a-0001d6e6-373b-8000-373b-680000680000_72</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>'type!{http://www.appian.com/ae/types/2009}SectionLayout' (label: "About", content: 
+  'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+    columns: {
+      'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+        contents: {
+          'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Industry", value: "Retail"),
+          'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Region", value: "North America Commercial")
+        }
+      ),
+      'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+        contents: {
+          'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Competitors", value: "IBM/Lombardi"),
+          'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Client Since", value: "April 15, 2009" )
+        }
+      )
+    }
+  )
+)
+</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25792"/>
+    </history>
+</contentHaul>

@@ -1,0 +1,364 @@
+1,Certify on iOS 5 / iPhone 4S,1,100,0,,,3,0
+2,iPad 2 Col Layout: (Image / People / Link),1,100,0,,https://issues.appian.com/browse/IOS-559,3,0
+3,iPad 2 Col Layout (Not Image / People / Link),1,100,0,,https://issues.appian.com/browse/IOS-559,3,0
+4,BB: Mobile Forms - Checkboxes - Appian Types (Users/ Groups/ People/ Docs/ Folders),1,100,0,,,4,0
+5,DR Mobile Forms - Image Component,1,100,0,,,2,0
+6,Release Android 1.2 (Android Forms) (Dependency on 6.6.1),1,100,0,,,2,0
+7,Mobile Forms - Paging Grid - Small (Phone)--PROTOTYPE,1,100,1,,,2,0
+8,Release iOS 1.2.5 [REMOVED],1,0,0,decided it was not necessary,,3,0
+9,BB: Link Component: Parse Document URL Structure,1,8,0,the test plan/cases are insufficiently clear for testing in rodrigo's absence,,4,0
+10,BB: Mobile Forms - Radio Buttons - Appian Types  (Users/ Groups/ People/ Docs/ Folders),1,100,0,,,4,0
+11,BB: devices.txt file for BB App World Deployments,1,0,0,the test plan/cases are insufficiently clear for testing in rodrigo's absence,,4,0
+12,BB: Mobile Forms - Dropdowns - Appian Types  (Users/ Groups/ People/ Docs/ Folders),1,100,0,,,4,0
+13,File Upload Component,2,0,0,Missing: 1 functional issue (saved files do not display)/ several styling issues/ WebDriver tests/ 2 tickets re error msgs,,15,0
+14,Datetime Component (Mobile Parity) - Date Time,2,0,1,,,8,2
+18,Sauce Labs - Get Paid Account/ Figure out if Performance is Better,2,0,0,,,15,1
+19,Paging Grid - Select,2,76,0,,,9,0
+20,Datetime Component (Mobile Parity) - Date,2,100,0,,,8,0
+21,Column Layout Component--HTML Mockup only,2,0,0,PO prioritized other UI work over this/ so I didn't spend much time on it this sprint,,1,0
+22,Sauce Labs - Job Config,2,0,1,,,15,2
+23,Sauce Labs - Matrix Jobs for Selenium Tests,2,0,1,,,15,2
+24,Editable Paging Grid - round-trip with string fields only/ no add/remove/ no column-specific configs,2,100,1,,,7,0
+25,Datetime Component (Mobile Parity) - Time,2,30,0,Implementation took longer than expected due the complexity of the component and the amount of code review comments.,,8,0
+26,Editable Paging Grid - ApplyDelta() [Uncommitted],2,76,0,,,7,0
+27,GetReportPage performance optimizations (Sorting/ Grouping/ Aggregation),3,75,0,There seem to be a problem with the analytics ci tests since build number 22. The commit that seem to has caused the issue is: https://github.com/appian/ae/commit/512842bdf2c424034c2589976be52f3ed15cf364 The following commits could have had an impact afterwards: https://github.com/appian/ae/commit/c46e855bfab6b52ce91cabe09b4772182cbf54d0 https://github.com/appian/ae/commit/94e8b79a4865b411f621a924a4e63a284bbe67bb https://github.com/appian/ae/commit/402609448701e5401247f72d72e363c010a59f27 later on changes to casting: https://github.com/appian/ae/commit/d8d40cedb547171a008352625145d21d95c7b9c0 Find the cause of the issue: Why the processes are not getting to Jane during incremental update.,,13,1
+28,Process Upgrade API including performance improvements,3,100,0,,,10,4
+29,Sync across flows,3,100,0,,,14,0
+36,add sorting and facets to Record definition,4,100,0,Round trip works/ but significant code refactoring still requires code review.,https://issues.appian.com/browse/AN-45339,17,0
+37,Create and Persist the new Record definition (no facets/ no security/ no ix/ no app builder),4,100,0,Round trip works/ but significant code refactoring still requires code review.,,17,0
+38,Display Records based on Entities in a List View (no facets/ no security/ no sorting/ no paging),4,100,0,,,18,0
+39,add initial facets to list view runtime,4,100,1,,https://issues.appian.com/browse/AN-45345,18,0
+40,Smart Service to modify security of an entity \row\ --Functionality only (no NFT) ,4,7,1,,,19,0
+41,JPA annotations on datatype plugins,4,38,0,Need to handle \ref\ s in XSDs ,,19,0
+42,add sorting and paging to list view runtime,4,100,0,,,18,0
+43,Smart Service to modify security of an entity \row\ --Infrastructure only (virtual CDT's) ,4,0,0,,,19,0
+49,Work with IT to establish the Production VPC,6,100,0,,https://issues.appian.com/browse/INFRA-87,22,0
+50,Make 6.6.1.0 a released cloud site version,6,100,0,,https://issues.appian.com/browse/INFRA-114,22,0
+51,Stand up the production Puppet server in the VPC,6,100,0,,https://issues.appian.com/browse/INFRA-90,22,0
+52,Linux CI slaves should be started in the VPC,6,100,0,,https://issues.appian.com/browse/INFRA-94,22,2
+53,Upgrade to Jenkins in the cloud,6,58,1,,https://issues.appian.com/browse/INFRA-115,22,1
+54,Smart Service to modify security of an entity \row\ --Functionality only (no NFT) ,7,8,1,,https://issues.appian.com/browse/AN-44570,19,1
+55,JPA annotations on datatype plugins,7,100,0,,https://issues.appian.com/browse/AN-45489,19,4
+56,AN-41899 - Data Stores: security role map is ignored after publishing it,7,100,0,,https://issues.appian.com/browse/AN-41899,18,13
+57,Spring upgrade,7,100,0,,https://issues.appian.com/browse/AN-45454,17,12
+58,Entity as Source of Record (java api including facets),7,100,0,,https://issues.appian.com/browse/AN-45474,18,7
+59,New Record Object Backend - REST CRUD API,7,16,1,This was a stretch and only about half the subtasks were completed.,https://issues.appian.com/browse/AN-45457,17,2
+60,List View Atom feed (including facets),7,0,1,1) This item was a stretch. 2) I underestimated the work for XSD choice groups. 3) I underallocated time for reviews. 4) I took an unplanned indie time to prototype things needed by stephanie,https://issues.appian.com/browse/AN-45477,20,1
+61,Choice groups for system datatypes,7,100,0,,https://issues.appian.com/browse/AN-45487,20,5
+62,New Record Object Backend - add Facets to REST API,7,100,0,,https://issues.appian.com/browse/AN-45479,17,9
+63,Facets - Time (entity only) - internal java api for returning filtered listview and list of facets,7,25,1,A few reasons: 1. Implementing eror handling for entity as source of record took longer than estimated. 2. The spec for time facets was done only 2 days before the sprint end/ and it included a detail that was not accounted for in the API built during the previous sprint. 3. The design-time record definition stores a literal configration with some fields as expressions. Converting this to a single expression passed to the runtime code turned out to be more complicated than expected (the java expression framework doesn't yet support what we wanted to do).,https://issues.appian.com/browse/AN-45485,18,3
+64,File Upload Component,8,16,0,Fixing issues found in testing took much longer than planned. Will get done as part of 1/18/12 sprint.,https://issues.appian.com/browse/AN-45290,15,4
+65,Datetime Component (Mobile Parity) - Date Time,8,16,1,Styling and miscellaneous bugs delayed the delivery of the time component. This component is far from getting delivered on this sprint.,https://issues.appian.com/browse/AN-45275,8,1
+66,Sauce Labs - Get Paid Account/ Figure out if Performance is Better,8,0,0,Did not start/ File Upload took longer than expected.,https://issues.appian.com/browse/AN-45289,15,2
+67,Paging Grid - read-only/ Select with fixed height,8,100,0,I rebased from master already. Creating pull request. GWT Forms will be ON by default on master as soon as I merge this.,https://issues.appian.com/browse/AN-45244,9,0
+68,Column Layout Component--HTML Mockup only,8,100,0,,https://issues.appian.com/browse/AN-45492,1,6
+69,Sauce Labs - Job Config,8,0,1,Did not start because file upload took longer than expected.,https://issues.appian.com/browse/AN-45287,15,2
+70,Sauce Labs - Matrix Jobs for Selenium Tests,8,0,1,Did not start because file upload took longer than expected.,https://issues.appian.com/browse/AN-45288,15,2
+72,AN-44870:  WebSphere: Tempo doesn't work on verification builds or cloud sites,8,100,0,,https://issues.appian.com/browse/AN-44870,8,5
+73,AN-45391: Various app designer UI breakage in FF9,8,100,0,,https://issues.appian.com/browse/AN-45391,7,2
+74,Editable Paging Grid - new design-time component & runtime round-trip (non add/remove),8,83,0,PO rejected implementation. A couple of changes will be made to the spec and thus implementation of the design time part.,https://issues.appian.com/browse/AN-45493,7,5
+75,Datetime Component (Mobile Parity) - Time,8,100,0,,https://issues.appian.com/browse/AN-45262,8,7
+76,Race conditions,3,83,0,,,14,5
+77,Paging Grid - read-only/ Select with NON-fixed height,8,100,0,,https://issues.appian.com/browse/AN-45078,9,6
+78,BB: Link Component: Parse Document URL Structure,9,100,0,All tickets closed and verified. The pending NFT one has been closed as well. Acceptance passed in the latest build (tested against one device only),https://issues.appian.com/browse/BB-231,4,8
+79,BB: devices.txt file for BB App World Deployments,9,100,0,We are leaving the ticket as 'Open' and we will verify once RIM fixes their portal. I'm now Watching the issue on JIRA so I should receive a notification once the issue is updated,https://issues.appian.com/browse/BB-247,4,5
+81,DR: Read-only paging grid (small),9,0,0,Last minute issue found on Friday pushed this over to the next sprint. ,https://issues.appian.com/browse/DR-583,2,3
+82,BB: Image Component enhancements,9,8,1,Code for SOW9 hasn't been pushed yet. On our side/ we still need to update the existing test plans to add these enhancements,https://issues.appian.com/browse/BB-242,4,1
+83,BB: Link Component enhancements,9,16,1,Code for SOW9 hasn't been pushed yet. On our side/ we still need to update the existing test plans to add these enhancements,https://issues.appian.com/browse/BB-244,4,1
+84,iOS: Editable paging grid (Text)/ NO roundtrip,9,0,1,did not even get started,https://issues.appian.com/browse/IOS-635,4,1
+85,DR: Editable paging grid (Text)/ NO roundtrip,9,0,1,Configuration problems delayed the unit test code. This/ coupled with the read only changes and read only grid bugs/ did not allow for any time to be spent on this item. ,https://issues.appian.com/browse/DR-590,2,2
+86,Deliver process-based privilege escalation feature,10,100,0,,https://issues.appian.com/browse/AN-44723,26,5
+87,Remove as many impediments to Continuous Release as possible by addressing some of the current customizations required by ...,10,100,1,,https://issues.appian.com/browse/AN-39487,26,4
+88,AN-45434: Inefficient memory usage for large numbers of versions of same item in content,11,100,0,,https://issues.appian.com/browse/AN-45434,14,5
+89,Report Definitions - REST API through to rdbms roundtrip,11,83,0,need the ticket to be closed,https://issues.appian.com/browse/AN-45572,13,5
+90,Report Definitions List and Selection - prototype,11,100,1,the ticket needs to be closed,https://issues.appian.com/browse/AN-45573,10,5
+91,Upgrade to Jenkins in the cloud,12,100,0,,https://issues.appian.com/browse/INFRA-115,22,5
+92,Update Android SDK and maven for Android CI,12,100,0,,https://issues.appian.com/browse/INFRA-126,22,4
+93,Make JBoss EAP a supported cloud site app server,12,100,0,,https://issues.appian.com/browse/INFRA-127,22,4
+94,Git commit hook for android and blackbery,12,100,0,,https://issues.appian.com/browse/INFRA-128,22,8
+95,Use in-VPC dynamic slaves instead of local physical ones,12,100,0,,https://issues.appian.com/browse/INFRA-129,22,4
+96,iOS: Read-only paging grid (small),9,41,0,We still need to verify the final tickets and run acceptance once these are closed.,https://issues.appian.com/browse/IOS-606,4,1
+97,File Upload Component,13,58,0,Two issues remain. Will be refactored to remove GWTUpload library and unnecessary features and improve reliability.,https://issues.appian.com/browse/AN-45290,15,8
+98,Datetime Component (Mobile Parity) - Date Time,13,100,0,,https://issues.appian.com/browse/AN-45275,8,9
+99,Sauce Labs - Get Paid Account/ Figure out if Performance is Better,13,66,0,Will require additional work from the infrastructure sprint. Work began late due to file upload taking longer than expected.,https://issues.appian.com/browse/AN-45289,15,1
+100,Sauce Labs - Job Config,13,100,0,,https://issues.appian.com/browse/AN-45287,15,4
+101,Sauce Labs - Matrix Jobs for Selenium Tests,13,58,0,Will require additional work from the infrastructure sprint. Work began late due to file upload taking longer than expected.,https://issues.appian.com/browse/AN-45288,15,4
+102,Editable Paging Grid - new design-time component & runtime round-trip (non add/remove),13,100,0,I fixed the following issues: - Label not updating in the grid - Server exception seen by Raziel and Annelise - Columns were showing the column name where they should have showed the column type. - Setting a default value and saving it into a grid delta would break the grid.,https://issues.appian.com/browse/AN-45493,7,2
+103,Paging Grid / Editable Paging Grid - Styling,13,100,0,,https://issues.appian.com/browse/AN-45632,7,8
+104,Editable Paging Grid - Remove (round-trip only),13,75,1,,,9,3
+105,show actions that are not mobile-enabled,13,100,0,,https://issues.appian.com/browse/AN-45638,7,6
+106,figure out how to fix the double-scrollbar issue,13,100,0,As soon as this is approved/ I'll generate the merge request.  Would be good if the text inputs above would be textareas.,,7,3
+107,Editable Paging Grid - Edit (round-trip only),13,83,0,,,9,4
+108,Forms Saving--round-trip,13,0,1,Not started due to file upload taking longer than expected.,,15,1
+109,Activity Chaining (Mobile Parity)--round-trip,13,0,1,Won't get done/ I was not able to get to it. I spent extra time in extending the test coverage for the date&time component.,,8,2
+110,Editable Paging Grid: Server-side run-time improvements,13,0,1,,,7,1
+121,New Record Object Backend - REST CRUD API,15,16,1,This was a stretch and only about half the subtasks were completed.,https://issues.appian.com/browse/AN-45457,17,0
+122,List View Atom feed & GWT UI (WITH facets),15,0,1,1) This item was a stretch. 2) I underestimated the work for XSD choice groups. 3) I underallocated time for reviews. 4) I took an unplanned indie time to prototype things needed by stephanie,https://issues.appian.com/browse/AN-45477,20,1
+123,Facets - Time (entity only) - internal java api for returning filtered listview and list of facets,15,100,1,,https://issues.appian.com/browse/AN-45485,18,5
+124,Make primary data source required,15,100,0,,,17,9
+125,Error handling refactoring,15,100,0,,,18,4
+126,Listview Refactoring,15,0,0,,,20,1
+127,Listview atom feed & GWT UI (withOUT facets),15,0,0,,,20,2
+128,Update IX command line tool to use a REST web API,15,8,1,,,17,1
+129,Row-level security Java API,15,100,0,I removed the fix version from the old tickets (they're not applicable until we re-introduce the Modify Record Security node).  I don't think that the failures in the CI oracle job are related to functional changes/ I see similar breaks intermittently on master CI with \Socket read timed out\ . ,,19,8
+130,Query: apply row-level security at runtime (on root entity only),15,83,1,The code for this is ready/ but still needs review.  I was waiting for Nikita to finish my previous code review before giving him another.,,19,2
+131,DR: Read-only paging grid (small),16,100,0,,https://issues.appian.com/browse/DR-583,2,5
+132,BB: Image Component enhancements,,8,0,Code for SOW9 hasn't been pushed yet. On our side/ we still need to update the existing test plans to add these enhancements,https://issues.appian.com/browse/BB-242,4,3
+133,BB: Link Component enhancements,,16,0,Code for SOW9 hasn't been pushed yet. On our side/ we still need to update the existing test plans to add these enhancements,https://issues.appian.com/browse/BB-244,4,3
+134,iOS: Editable paging grid (Text)/ NO roundtrip,16,66,0,Missing two tickets (bugs) totally related to UI. 1. Selection counter not updated after deleting rows 2. 'Delete' dialog is not hidden when user clicks 'Back' on details view,https://issues.appian.com/browse/IOS-635,4,4
+135,DR: Editable paging grid (Text)/ NO roundtrip,16,100,0,,https://issues.appian.com/browse/DR-590,2,8
+136,iOS: Read-only paging grid (small),16,100,0,Ready to be merged after showing it to Bob,https://issues.appian.com/browse/IOS-667,4,3
+137,BB: Mobile Forms - Grid - Small (Read Only)   (Old Paging Grid API),,0,1,,https://issues.appian.com/browse/BB-252,4,2
+138,get zucchini working in ci on minis reliably/ then decide how to get automated tests working reliably,16,100,0,,https://issues.appian.com/browse/IOS-670,4,4
+139,test with ios 5.1 beta,16,100,0,Everything worked properly while doing acceptance testing on iOS 5.1 Beta 3,https://issues.appian.com/browse/IOS-669,4,3
+140,DR: Fix crashes,16,0,0,,https://issues.appian.com/browse/DR-607,2,2
+141,DR: Update testing infrastructure to latest version,16,100,1,,https://issues.appian.com/browse/DR-611,4,5
+142,iOS: Prototype/decide on new Request library and approach to integration,16,83,1,Kevin already sent the information about this in a pull request/ it still needs to be reviewed by Dan/ David and Ali.  https://github.com/kevinbarrett/ios/pull/4,https://issues.appian.com/browse/IOS-671,4,5
+143,Report Definitions - REST API through to rdbms roundtrip,17,100,0,,https://issues.appian.com/browse/AN-45572,13,3
+144,Execute Report Expression function round-trip,17,58,1,,https://issues.appian.com/browse/AN-45700,13,3
+145,Common Query Library,17,100,0,,https://issues.appian.com/browse/AN-45695,13,6
+146,Runtime Grid UI without process context (round-trip only),17,16,0,Several days behind largely due to RRT issues.,https://issues.appian.com/browse/AN-45713,14,3
+147,Figure out how QR can return data that does not match the entity type,17,100,0,,,10,3
+148,Implement Projection,17,25,1,,https://issues.appian.com/browse/AN-45708,10,3
+149,File Upload Component,18,100,0,,https://issues.appian.com/browse/AN-45290,15,6
+150,Sauce Labs - Get Paid Account/ Figure out if Performance is Better,18,66,0,Will require additional work from the infrastructure sprint. Work began late due to file upload taking longer than expected.,https://issues.appian.com/browse/AN-45288,15,2
+151,Sauce Labs - Matrix Jobs for Selenium Tests,18,66,0,Many more than expected IE/chrome issues. Final chrome issue is isolated/ fully green test run and signoff expected today.,https://issues.appian.com/browse/AN-45288,15,3
+152,Editable Paging Grid - Remove (round-trip only),18,100,0,,https://issues.appian.com/browse/AN-45656,9,4
+153,Editable Paging Grid - Edit (round-trip only),18,100,0,,https://issues.appian.com/browse/AN-45658,9,4
+154,Forms Saving--round-trip,18,0,0,Not started due to file upload taking longer than expected.,,15,2
+155,Activity Chaining (Mobile Parity)--round-trip,18,100,0,,https://issues.appian.com/browse/AN-45644,8,6
+156,Editable Paging Grid: Server-side run-time improvements,18,0,0,,,7,2
+157,Refactoring the Date and Time components,18,100,0,,https://issues.appian.com/browse/AN-45775,8,4
+158,Fix instability in automated webdriver tests,18,100,0,,https://issues.appian.com/browse/AN-45776,15,3
+159,Paging Grid: Grid will not render on start form,18,100,0,This was already merged to master.,https://issues.appian.com/browse/AN-45756,15,3
+160,Paging Grid: Cannot save into a single field from CDT,18,100,0,This is the pull request  https://github.com/appian/ae/pull/237,https://issues.appian.com/browse/AN-45605,7,6
+161,Grid: Special characters are escaped,18,100,0,,https://issues.appian.com/browse/AN-45556,15,3
+162,GWT Forms: Confirmation message when clicking submit buttons,18,100,0,,https://issues.appian.com/browse/AN-45784,9,5
+163,GWT Forms: submission button values not saved,18,100,0,,https://issues.appian.com/browse/AN-43392,9,4
+164,Activity chaining to start forms from user input tasks causes error alert,18,100,1,This fix is within the activity chaining feature. When we merge activity chaining we will have the fix for this one.,https://issues.appian.com/browse/AN-45236,7,5
+165,Editable Paging Grid - Add (runtime only),18,75,1,,https://issues.appian.com/browse/AN-45785,9,6
+166,New Record Object Backend - REST CRUD API,19,16,1,,https://issues.appian.com/browse/AN-45457,18,3
+167,Listview Refactoring,19,0,1,,https://issues.appian.com/browse/AN-45457,18,3
+168,Listview atom feed (withOUT facets),19,0,1,,https://issues.appian.com/browse/AN-45457,18,3
+169,Record data security initial roundtrip (on root entity only),19,100,0,,https://issues.appian.com/browse/AN-45679,19,8
+170,AN-45768: Fix CI failures due to running out of DB connections,19,100,0,There is a separate sprint delivery checklist for AN-45799. I won't send the merge to Adam until that's verified and you've approved the checklist. This item is done though.,https://issues.appian.com/browse/AN-45768,18,8
+171,Tempo Comments Search,19,100,0,,https://issues.appian.com/browse/AN-45797,26,10
+172,Record data security initial NFT (mysql only),19,100,0,,https://issues.appian.com/browse/AN-45805,19,7
+173,iOS: Editable paging grid (Text)/ NO roundtrip,20,100,0,All remaining tickets have been closed and verified.,https://issues.appian.com/browse/IOS-635,4,3
+174,DR: Fix crashes,20,100,0,waiting on Meghan to close the documentation ticket (DR-644),https://issues.appian.com/browse/DR-607,2,4
+175,iOS: Prototype/decide on new Request library and approach to integration,20,100,0,Dan/ Kevin and David already took a look at it. Everybody is on the same page now  https://github.com/kevinbarrett/ios/pull/4,https://issues.appian.com/browse/IOS-671,4,2
+176,iOS: Encryption Enhancements,20,100,0,,https://issues.appian.com/browse/IOS-715,4,4
+177,iOS: Add more languages,,0,0,,https://issues.appian.com/browse/IOS-677,4,2
+178,iOS: Mobile Forms - Image Component Enhancements,20,100,0,,https://issues.appian.com/browse/IOS-700,4,4
+179,iOS: Mobile Forms - Link Component Enhancements,20,75,0,IOS-739  is still open,https://issues.appian.com/browse/IOS-705,4,6
+180,iOS: Increase timeout to 60s,20,100,0,Kevin is doing the pull request right now.,https://issues.appian.com/browse/IOS-672,4,4
+181,iOS: Release 1.2.5,,0,0,,https://issues.appian.com/browse/IOS-711,4,2
+182,iOS: Avineon Branding,20,100,1,Kevin already coordinated with Sunny on this application. The app is currently on the Appstore,https://issues.appian.com/browse/IOS-699,4,5
+183,DR: Implement PIN Protection,20,100,0,,https://issues.appian.com/browse/DR-629,2,8
+184,DR: Increase timeout to 60s,20,100,0,,https://issues.appian.com/browse/DR-637,2,5
+185,DR: Encryption Enhancements,20,100,0,,https://issues.appian.com/browse/DR-638,2,5
+186,DR: Image Component Resizing (Server Side),20,0,0,Proper test plan and testing missing. ,https://issues.appian.com/browse/DR-639,2,2
+187,DR: Add more languages,,0,1,,,2,1
+188,BB: Add more languages,,0,0,,https://issues.appian.com/browse/BB-256,4,2
+189,BB: Mobile Forms - Image Component Enhancements,,0,0,From Rodrigo: still one issue open and they will come back on Monday with some options on how to fix it.,https://issues.appian.com/browse/BB-242,4,4
+190,BB: Mobile Forms - Link Component Enhancements,20,83,0,BB-267 is the ticket pending as an enhancement on big screens. We failed verification,https://issues.appian.com/browse/BB-244,4,5
+191,BB: Release 1.2.3,,0,1,,https://issues.appian.com/browse/BB-258,4,2
+192,Nexus upgrade and migration to the cloud,21,100,0,,https://issues.appian.com/browse/INFRA-134,22,5
+193,Migrate subversion maven repos into Nexus,21,100,0,,https://issues.appian.com/browse/INFRA-135,22,4
+194,Remove dependency on qalin7 and keep everything working,21,100,0,,https://issues.appian.com/browse/INFRA-136,22,5
+195,Update AWS certs and keys,21,100,0,,https://issues.appian.com/browse/INFRA-137,22,4
+196,Use EBS backups for Nexus and Jenkins,21,100,0,,https://issues.appian.com/browse/INFRA-139,22,4
+197,Address CI proxy error,21,100,0,,https://issues.appian.com/browse/INFRA-140,22,5
+198,Implement robustness improvements to CI app,21,100,1,,https://issues.appian.com/browse/INFRA-141,22,5
+199,Execute Report Expression function,22,58,0,,https://issues.appian.com/browse/AN-45843,13,5
+200,Runtime Report UI with paging & sorting,22,16,0,Several days behind largely due to RRT issues.,https://issues.appian.com/browse/AN-45830,14,3
+201,RDBMS Projection,22,100,0,,https://issues.appian.com/browse/AN-45708,10,7
+202,Merge Report Def CRUD REST API to records branch,22,91,0,Won't get done. There was a miss communication with the records team. They were trying to merge with master before we merge into records branch as it was planed,,13,4
+203,Grouping & Aggregation (without NFT/ without test framework),22,0,1,Implementing projection was more involved than expected since Hibernate does not support projections of lists.,https://issues.appian.com/browse/AN-45851,10,2
+204,Detailed Gap analysis between unified reports and analytics reports,22,100,0,,https://issues.appian.com/browse/AN-45858,21,5
+205,References to users in the database and audit info for Tempo Feeds,19,100,0,,https://issues.appian.com/browse/AN-45799,18,5
+216,New Tempo Layout,24,75,0,Rodrigo when doing verifications of the last tickets/ found a new blocker issue. I already fixed the issue last night but I didn't get to write unit tests for it. I'd like to quickly write tests and have it code reviewed by Raziel to ensure I'm not missing any other scenario. That's the only missing thing right now for TempoLayout.,https://issues.appian.com/browse/AN-45932,7,7
+217,Required/Multiple missing on new ACPs,24,100,0,This has already been merged to master,https://issues.appian.com/browse/AN-45906,7,5
+218,Groundwork for Form Saving,24,100,0,For next sprint: Webdriver tests Why did we skip acceptance: Rodrigo and I anticipated the feature is going to change once tempo layout gets into master. We are going to run acceptance until then.,https://issues.appian.com/browse/AN-45911,8,8
+219,User Profile Page,24,0,0,Ran out of time.,https://issues.appian.com/browse/AN-45933,7,4
+220,Groundwork for Editable Grid,24,100,0,,https://issues.appian.com/browse/AN-45931,9,6
+221,User Settings API,24,0,0,Not started this sprint due to not finishing AN-45933.,https://issues.appian.com/browse/AN-45934,15,4
+222,Move Legacy User Settings in UI,24,0,1,Not started this sprint due to not finishing AN-45933.,https://issues.appian.com/browse/AN-45935,15,4
+223,Investigate errors when navigating across Appian versions,24,0,1,This was not even started. Delays with webdriver tests prevented me from taking care of this task,https://issues.appian.com/browse/AN-45206,8,4
+224,Records List View with Sort,24,100,0,,https://issues.appian.com/browse/AN-45936,9,8
+225,Sauce Labs - Matrix Jobs for Selenium Tests,24,100,0,Please notify me when this merges. It will require updating the appian_master-webdriver job's seleniumBrowser property from 'firefox' to 'firefox-local'.,https://issues.appian.com/browse/AN-45288,15,4
+226,Add whitelist csv to branch,25,100,0,,https://issues.appian.com/browse/AN-45535,21,3
+227,Record definition persistence,25,100,0,,https://issues.appian.com/browse/AN-45457,18,3
+228,Record definition IX,25,16,0,,https://issues.appian.com/browse/AN-45894,26,5
+229,Fix bug: JBoss runs out of heap space,25,100,0,Ticket has been submitted to Teneo bugzilla  https://bugs.eclipse.org/bugs/show_bug.cgi?id=372869,https://issues.appian.com/browse/AN-44575,19,7
+230,Implement basic performance fixes for secure reads,25,100,1,,,19,4
+231,Record definition REST API,25,100,0,,https://issues.appian.com/browse/AN-45457,18,5
+232,Listview Refactoring (included in Record list view Atom feed server-side),25,100,0,I think this item was actually the refactoring that Valdis/Antonio worked on and is already in master.,https://issues.appian.com/browse/AN-45672,18,7
+233,Record list view Atom feed server-side,25,100,0,this won't merge.  we will hand it off to raziel/ while we will then do more NFT.,https://issues.appian.com/browse/AN-45672,18,9
+234,ActivityChaining: Action with no start form chaining to non-mobile enabled task,24,100,0,,https://issues.appian.com/browse/AN-45938,7,5
+235,iOS: Tech debt: wiping and reconfiguring minis,26,100,0,,,4,3
+236,iOS: Release 1.2.5,26,100,0,App has been submitted to iTunes and waiting for approval,,4,4
+237,iOS: Load/unload form resources based on elements on screen (IOS-736),26,100,0,FYI. There was no Pull Request for the Code Review/ isolated commits were reviewed by David Montemayor/ Dan and myself.,,4,3
+238,iOS: New Tab View Layout (iPhone),26,100,0,There are three commits for the main ticket/branch/ and there is a bug overall related to tasks. Ali/ if you agree we can mark this commit as done and just the last one as 'Pending' and the only one 'mergeable'/ if not.. feel free to reject Pending ticket: https://issues.appian.com/browse/IOS-775,,4,5
+239,iOS: Move Search to top of News Feed  (iPhone),26,100,0,There are three commits for the main ticket/branch/ and there is a bug overall related to tasks. Ali/ if you agree we can mark this commit as done and just the last one as 'Pending' and the only one 'mergeable'/ if not.. feel free to reject Pending ticket: https://issues.appian.com/browse/IOS-775  As for this ticket/ search was properly moved to the bottom,,4,4
+240,iOS: Separate Tasks to their own View (iPhone),26,100,1,All tickets have been closed. Bob already signed-off,,4,5
+241,DR: Image Component Enhancements,26,100,0,,,2,3
+242,DR: Link Component Enhancements,26,100,0,,,2,3
+243,DR: Additional Encryption enhancement,26,100,0,,,2,3
+244,DR: ap.version issue (DR-651),26,100,0,,,2,3
+245,DR: Release 1.2.1,26,100,1,Pushed to Android Market today,,4,3
+246,DR: Fragment Library Refactoring,26,0,0,Reasons for not getting done: a) other commits took longer that budgeted for. b) other refactoring was needed before proceeding with this ,,2,1
+247,BB: Image Component Enhancements (client-side),26,0,1,,,4,2
+248,BB: Investigate 3G issues (BB-268),26,0,1,,,4,3
+249,iOS: Mobile Forms - Link Component Enhancements,26,100,0,Everything is ready,https://issues.appian.com/browse/IOS-705,4,2
+250,DR: Image Component Resizing (Server Side),26,100,0,,https://issues.appian.com/browse/DR-639,2,3
+251,BB: Mobile Forms - Link Component Enhancements,26,100,0,,https://issues.appian.com/browse/BB-244,4,4
+252,All Notifications Routed Through Java,27,100,0,,,14,7
+253,Notifications Spec,27,100,0,,,29,8
+254,AN-45868: WSDL consumption fails for anonymous data type,28,100,0,,https://issues.appian.com/browse/AN-45868,10,5
+255,Merge Projection to Master,28,100,0,,https://issues.appian.com/browse/AN-46004,10,3
+256,Unified Reports Testing Framework (grouping & projection only),28,0,1,,https://issues.appian.com/browse/AN-46005,13,3
+257,Execute Report Expression function,28,83,0,,https://issues.appian.com/browse/AN-45996,13,5
+258,Merge Report Def CRUD REST API and Report Execution Expression to master,28,91,1,Won't get done. There was a miss communication with the records team. They were trying to merge with master before we merge into records branch as it was planed,https://issues.appian.com/browse/AN-46002,13,3
+259,Grouping (with a single aggregation function) for simple fields (no NFT),28,0,1,Implementing projection was more involved than expected since Hibernate does not support projections of lists.,https://issues.appian.com/browse/AN-46015,10,3
+260,Use in-VPC Windows slaves instead of local virtual ones and run SQL Server in the cloud,29,100,0,,https://issues.appian.com/browse/INFRA-153,22,5
+261,Enable Dan's new maven project,29,100,0,,https://issues.appian.com/browse/INFRA-157,22,4
+262,Update CI app for changes in test jobs,29,100,0,,https://issues.appian.com/browse/INFRA-160,22,4
+263,Have long-running jobs run periodically instead of downstream,29,100,0,,https://issues.appian.com/browse/INFRA-163,22,4
+264,Update slave AMI to current OS,29,100,0,,https://issues.appian.com/browse/INFRA-165,22,4
+265,Prune unused local CI slaves,29,100,0,,https://issues.appian.com/browse/INFRA-168,22,3
+266,Automatically create fixVersions in JIRA every time a branch is pushed to GitHub,29,0,0,,https://issues.appian.com/browse/INFRA-169,22,2
+267,Get DB2 onto each CI slave,29,40,1,,https://issues.appian.com/browse/INFRA-170,22,2
+268,Unsubscribing from a feed causes an error,30,100,0,,https://issues.appian.com/browse/AN-46079,9,5
+269,DataType designer is broken,30,100,0,,https://issues.appian.com/browse/AN-46071,7,7
+270,Tempo feed retrieval is 4x slower in 6.6.2,30,100,0,,https://issues.appian.com/browse/AN-46025,7,5
+271,Transient flagged documents should not be downloadable,30,100,0,,https://issues.appian.com/browse/AN-45986,8,4
+272,QUERY performance metrics not written to log,30,100,0,Ticket was been already verified and closed. The fix is in Rafael's branch for the fix of the gzip/ and that is expected to be merged into master today.,https://issues.appian.com/browse/AN-45967,7,5
+273,Expressions as button labels,30,100,1,,https://issues.appian.com/browse/AN-45790,15,5
+274,Give Comments Search patch to Cloud,31,100,0,,,26,3
+275,https://issues.appian.com/browse/AN-44661 Fix fragile search tests--Try quick fix,31,100,0,,https://issues.appian.com/browse/AN-44661,26,3
+276,Memory bug fix,31,91,0,Investigation is done/ root cause was found and I put all my notes in the associated 2 tickets.  No code changes are needed/ the root bug was already fixed.  Ali will decide as a separate item if we need a kdb migration or other further action.,https://issues.appian.com/browse/AN-46048,19,5
+277,Try QuickFix fragile failures ListViewDataSourceImplIntegrationTest,31,83,0,it failed again today https://ci.appian.com/view/KevinClaudius_listview-fragile-ci/job/KevinClaudius_listview-fragile-ci-rdbms-oracle/130/,https://issues.appian.com/browse/AN-46036,19,6
+278,Fix Plugin Loading Problems,31,100,0,,https://issues.appian.com/browse/AN-46052,19,8
+279,https://issues.appian.com/browse/AN-45768 fragile tests in CI dues to leaked database connections--Try quickfix,31,100,0,,https://issues.appian.com/browse/AN-45768,18,3
+280,Investigate security query performance in rdbms--time-boxed,31,0,0,,https://issues.appian.com/browse/AN-46107,18,2
+281,Upgrade Teneo if Martin delivers fix,31,100,1,,https://issues.appian.com/browse/AN-46130,19,10
+282,Record definition IX,31,16,0,,https://issues.appian.com/browse/AN-45894,26,2
+283,BB: Read-only Paging Grid,32,0,1,,https://issues.appian.com/browse/BB-252,4,2
+284,BB: Release 1.2.3,32,0,1,,https://issues.appian.com/browse/BB-258,4,2
+285,DR: New Tempo UI Layout with old servers,32,0,1,,https://issues.appian.com/browse/DR-671,2,2
+286,iOS: hide search on Tasks for old servers,32,100,0,,https://issues.appian.com/browse/IOS-780,4,4
+287,iOS: Record List View UI,32,100,0,,https://issues.appian.com/browse/IOS-781,4,4
+288,iOS: Grid-looking grid prototype,32,100,0,Charles and Bob already saw the prototype,https://issues.appian.com/browse/IOS-788,4,4
+289,iOS: Replace feed requests with AFNetworking,32,0,1,,https://issues.appian.com/browse/IOS-789,4,2
+290,DR: Fragment Library Refactoring,32,100,0,,https://issues.appian.com/browse/DR-663,2,4
+291,BB: Image Component Enhancements (client-side),32,100,1,,https://issues.appian.com/browse/BB-242,4,5
+292,BB: Investigate 3G issues (BB-268),32,0,1,,https://issues.appian.com/browse/BB-268,4,3
+293,Fix ProcessUpgradeTest fragility,33,100,0,,https://issues.appian.com/browse/AN-46113,10,9
+294,Grouping/aggregation supported in Teneo Query Executor,33,0,1,,https://issues.appian.com/browse/AN-46114,10,4
+295,ReportExpression supports initial aggregations,33,0,1,,https://issues.appian.com/browse/AN-46115,10,4
+296,Unified Reports Testing Framework (grouping & projection only),33,100,0,Some tests still failing/ but not because of a problem with the testing framework itself. Original commit was just to finish the framework.,https://issues.appian.com/browse/AN-46005,13,7
+297,Execute Report Expression function,33,100,0,,https://issues.appian.com/browse/AN-45996,13,6
+298,Records List View,34,0,0,,https://issues.appian.com/browse/AN-46124,8,3
+299,Record Type List View,34,0,0,,https://issues.appian.com/browse/AN-46125,8,3
+300,Record Detail View,34,0,0,,https://issues.appian.com/browse/AN-46126,7,3
+301,Actions Page,34,0,1,,https://issues.appian.com/browse/AN-46127,9,3
+302,iOS: Open branding requests for any partners that have all their information to us,32,0,1,,https://issues.appian.com/browse/IOS-787,4,1
+303,Atom Feed Changes for Records,34,90,0,AN-46138 is still in Needs Verification and there is an open ticket on this branch.,https://issues.appian.com/browse/AN-46138,7,4
+304,UI Expression: Form and Text-Field Types,34,100,0,CI tests passing at https://ci.appian.com/view/raziel-git_AN-46139_UiDesignerConfig/,https://issues.appian.com/browse/AN-46139,9,5
+305,UI Expression: Form Function,34,100,0,CI: https://ci.appian.com/view/raziel-git_AN-46141_ToTextFieldConfig/,https://issues.appian.com/browse/AN-46140,9,3
+306,UI Expression: TextField Function,34,100,1,CI: https://ci.appian.com/view/raziel-git_AN-46141_ToTextFieldConfig/,https://issues.appian.com/browse/AN-46141,9,3
+307,Tempo Autoscroll filtering bug,34,100,0,,https://issues.appian.com/browse/AN-46142,7,3
+308,Mobile Forms topeople() shows people and number for choices label,34,100,0,,https://issues.appian.com/browse/AN-46137,7,3
+309,Alerts: unable to view an alert about process model,34,100,0,This bug was fixed/ verified and merged before it was entered in the sprint tracker.,https://issues.appian.com/browse/AN-46143,7,2
+310,Form Designer: JS error creating a non-English language form,,0,0,,https://issues.appian.com/browse/AN-46148,9,1
+311,Row-level security in RDBMS/ SOW for consultant,35,100,0,SOW doc: https://docs.google.com/a/appian.com/document/d/1_s1WyIoJFJAJoZE7_7Xx4JM2dS_WzETKWkC4f6SR8aE/edit  First draft is done and under discussion/review.,https://issues.appian.com/browse/AN-46107,18,6
+312,Rename RecordDef to RecordType in DB schema,35,100,0,,https://issues.appian.com/browse/AN-46155,19,6
+313,Expand RecordType to include a list of  detail views ,35,100,0,,https://issues.appian.com/browse/AN-46156,19,10
+314,Rename RecordDef to RecordType in Java code,35,100,0,,https://issues.appian.com/browse/AN-46157,26,6
+315,Migration datastore rolemap bug,35,100,0,,https://issues.appian.com/browse/AN-41899,26,6
+316,RecordType \detail views\  included in IX ,35,70,1,,https://issues.appian.com/browse/AN-46158,26,4
+317,Investigate Fragile ListView Integration Tests,35,0,1,,https://issues.appian.com/browse/AN-46036,19,3
+318,Record definition IX,35,100,0,,https://issues.appian.com/browse/AN-45894,26,8
+319,BB: Read-only Paging Grid,36,100,1,,https://issues.appian.com/browse/BB-252,4,4
+320,DR: New Tempo UI Layout with old servers,36,100,0,,https://issues.appian.com/browse/DR-671,2,3
+321,iOS: Replace feed requests with AFNetworking,36,0,0,This was a STRETCH.. some requests have been changed and Reviewed but there is a lot more to change still. Remaining work will be finished on next sprint,https://issues.appian.com/browse/IOS-789,4,1
+322,DR: Forms Accepts Header bug fix,36,100,0,,https://issues.appian.com/browse/DR-689,2,3
+323,DR: Confirm application is using preemptive authorization,36,100,0,,https://issues.appian.com/browse/DR-684,2,3
+324,DR: Tempo v7 - Support for New Servers,36,0,0,There's no server that has both the records and the menu changes/ and we decided to prioritize work on records.,https://issues.appian.com/browse/DR-679,2,2
+325,DR: Record Type List Round Trip,36,0,0,,https://issues.appian.com/browse/DR-690,2,2
+326,DR: Record List Round Trip,36,0,0,,https://issues.appian.com/browse/DR-691,2,2
+327,DR: Records Detail View,36,0,1,,https://issues.appian.com/browse/DR-692,2,2
+328,iOS: Record Type List Round-Trip,36,90,0,The roundtrip works correctly and some tickets related to switching accounts and showing/not showing the listview were addressed. An important enhancement missing is the use of icons for each Record Type/ talked to Kevin and according to him not in the scope for the Sprint (since the spec changed in the middle of it). Still some open tickets and crashes due to Requests refactoring so the branch cannot be merged.,https://issues.appian.com/browse/IOS-804,4,4
+329,iOS: Record List Round-Trip,36,90,0,The roundtrip on the Records list view works properly. Same thing as the Records Type list view/ there are still some open tickets and crashes due to Requests refactoring so the branch cannot be merged.,https://issues.appian.com/browse/IOS-805,4,4
+330,iOS: Record Details View,36,20,0,Will not get done since the client gets an error when trying to access the Details View. Seems to be a server issue.. I talked to Kevin and he told me to use the Administrator credentials/ but not even with those I can test it.,https://issues.appian.com/browse/IOS-806,4,3
+331,BB: BlackBerry SOW,36,100,0,,,30,3
+332,BB: Shifted Date Field bug fix,36,0,1,,https://issues.appian.com/browse/BB-266,4,1
+333,Grouping/aggregation supported in Teneo Query Executor,37,0,0,,https://issues.appian.com/browse/AN-46114,10,1
+334,ReportExpression supports initial aggregations,37,100,0,,https://issues.appian.com/browse/AN-46115,13,10
+335,RDBMS NFT for Aggregation,37,100,0,Test results at \\\\hermes\\qa\\Tests\\Misc\\UnifiedReports\\Grouping\\Grouping_25000.xls.,https://issues.appian.com/browse/AN-46207,10,4
+336,Record Query Validation,37,100,0,,https://issues.appian.com/browse/AN-46208,13,8
+337,Records List View,38,80,0,,https://issues.appian.com/browse/AN-46124,8,5
+338,Record Type List View,38,80,0,,https://issues.appian.com/browse/AN-46125,8,5
+339,Record Detail View,38,0,0,,https://issues.appian.com/browse/AN-46126,7,0
+340,Atom Feed Changes for Records,38,100,0,,https://issues.appian.com/browse/AN-46138,7,4
+341,2-column support on Record Detail Views for all UIs,38,90,0,The feature is ready/ has been code reviewed and verified by Rodrigo and Leslie/ CI jobs are green and is ready to go to master.,https://issues.appian.com/browse/AN-46236,7,8
+342,Backport IX hotfix,38,100,0,,https://issues.appian.com/browse/AN-46237,18,2
+343,Custom Record Detail View: UI Expression with Data Binding,38,0,0,,https://issues.appian.com/browse/AN-46238,9,0
+344,Backend for detail view evaluation,38,100,0,,https://issues.appian.com/browse/AN-46239,18,4
+345,UI Expressions: Workaround to support any component as a children of a column,38,100,0,Tests passing except for 1 failure in mysql. That's part of existing fragile tests that Kevin is addressing.,https://issues.appian.com/browse/AN-46240,9,8
+346,RecordType detail views included in IX,38,100,0,,https://issues.appian.com/browse/AN-46158,26,7
+347,RecordType IX UI,38,100,0,,https://issues.appian.com/browse/AN-46241,26,14
+348,DB2 hotfix,38,100,0,This was already merged by Adam after Kevin reviewed the tests.  The only thing going into master was more tests to assert the behavior on the various platforms.  The docs are updated on the live 6.6.x docs and Meghan has reviewed and moved them to the Appian 7 docs as well.,https://issues.appian.com/browse/AN-46111,19,3
+349,Read-Only Text View for Number/ Text and Paragraph Form Components - AW12,38,0,0,,https://issues.appian.com/browse/AN-46242,8,1
+350,Exclusive Static Facets Roundtrip,38,0,0,,https://issues.appian.com/browse/AN-46243,8,0
+351,Related Actions Tab View (Quick Tasks),38,0,1,,https://issues.appian.com/browse/AN-46244,7,1
+352,News Tab View,38,0,1,,https://issues.appian.com/browse/AN-46245,7,1
+353,Generate Real/ Repeatable Export and Import from from JIRA Record Data,38,0,0,,https://issues.appian.com/browse/AN-46246,21,0
+354,Build Backlog / Ticketing App,38,70,1,,https://issues.appian.com/browse/AN-46247,29,2
+355,Concurrent task submission bug fix,38,100,0,,https://issues.appian.com/browse/AN-45940,7,9
+356,ListViewDataSourceTest fragility fix,38,100,0,,https://issues.appian.com/browse/AN-46036,19,4
+357,Apply security in Write to DS node -- root entity only,38,70,0,,https://issues.appian.com/browse/AN-46248,19,2
+358,Modify Record Security Smart Service Spec,38,90,0,,https://issues.appian.com/browse/AN-46249,29,15
+359,Record Documentation - End User Exp,38,70,0,,https://issues.appian.com/browse/AN-46250,5,4
+360,Remove Appian 6 logo - Use Appian logo instead,38,90,0,Ali signed this off on behalf Bob.  No merge needed/ this is within the TempoLayout branch.,https://issues.appian.com/browse/AN-46251,8,6
+361,Modify Record Security Smart Service,38,0,1,,https://issues.appian.com/browse/AN-46252,19,0
+362,Row-Level Security in RDBMS -- Performance,38,0,1,,https://issues.appian.com/browse/AN-46253,18,0
+363,Record Permissions view middle-tier,38,0,1,,https://issues.appian.com/browse/AN-46254,18,0
+364,Dismissed tasks still accessible from Tempo feed fix,,0,1,,https://issues.appian.com/browse/AN-46152,7,1
+365,Record Documentation - Designer Exp,38,70,1,,https://issues.appian.com/browse/AN-46255,5,2
+366,Automatically create fixVersions in JIRA every time a branch is pushed to GitHub,39,100,0,,https://issues.appian.com/browse/INFRA-169,22,3
+367,Get DB2 onto each CI slave,39,100,0,,https://issues.appian.com/browse/INFRA-170,22,4
+368,Stabilize Windows CI slave,39,100,0,,https://issues.appian.com/browse/INFRA-176,22,3
+369,Email doesn't work for Weblogic/WebSphere sites,39,100,0,,https://issues.appian.com/browse/INFRA-106,22,3
+370,update-product-version ant target doesn't work in Windows,39,100,0,,https://issues.appian.com/browse/AN-46233,22,4
+371,Detect leaked EC2 resources,39,100,0,,https://issues.appian.com/browse/INFRA-177,22,6
+372,Changelog job needs to not use subversion,39,0,0,,https://issues.appian.com/browse/INFRA-178,22,0
+373,Webdriver (non-saucelabs version) to the cloud and available via CI app,39,0,0,,https://issues.appian.com/browse/INFRA-179,22,0
+374,Move migration job from qawin7 to the cloud and available CI app,39,0,0,,https://issues.appian.com/browse/INFRA-180,22,0
+375,Add new OOB languages to Appian,39,0,0,,https://issues.appian.com/browse/AN-45517,22,0
+376,Determine requirements for moving process-internal to the cloud,39,0,1,,https://issues.appian.com/browse/INFRA-181,22,0
+377,UI Expressions: Re-evaluation round trip,38,100,0,The commitment (reevaluation roundtrip) was signed off with POs (Bob and Marco).  ,https://issues.appian.com/browse/AN-46267,9,7
+378,GWT interfaces throw errors when moving across versions of Appian,38,100,0,,https://issues.appian.com/browse/AN-45206,7,4
+379,iOS: Replace feed requests with AFNetworking,40,100,0,All tickets (relevant to this commit specifically) have been closed and verified. Acceptance passed.,https://issues.appian.com/browse/IOS-789,4,3
+380,DR: Record Type List Round Trip,40,100,0,,https://issues.appian.com/browse/DR-690,2,9
+381,DR: Record List Round Trip,40,100,0,,https://issues.appian.com/browse/DR-691,2,9
+382,DR: Records Detail View,40,0,0,,https://issues.appian.com/browse/DR-692,2,2
+383,iOS: Record Type List Round-Trip,40,0,0,The roundtrip works correctly and some tickets related to switching accounts and showing/not showing the listview were addressed. An important enhancement missing is the use of icons for each Record Type/ talked to Kevin and according to him not in the scope for the Sprint (since the spec changed in the middle of it). Still some open tickets and crashes due to Requests refactoring so the branch cannot be merged.,https://issues.appian.com/browse/IOS-804,4,0
+384,iOS: Record List Round-Trip,40,0,0,The roundtrip on the Records list view works properly. Same thing as the Records Type list view/ there are still some open tickets and crashes due to Requests refactoring so the branch cannot be merged.,https://issues.appian.com/browse/IOS-805,4,0
+385,iOS: Record Details View,40,0,0,Will not get done since the client gets an error when trying to access the Details View. Seems to be a server issue.. I talked to Kevin and he told me to use the Administrator credentials/ but not even with those I can test it.,https://issues.appian.com/browse/IOS-806,4,0
+386,DR: Merge task form refactoring into master,40,100,0,,https://issues.appian.com/browse/DR-716,2,8
+387,DR: Update Record list to distinguish between avatars and icons,40,0,0,,https://issues.appian.com/browse/DR-718,2,0
+388,DR: Fix CI emulator crashing in Ubuntu 11.10,40,0,0,,https://issues.appian.com/browse/DR-717,2,0
+389,Make Malcolm a Records expert,40,0,0,,,4,0
+390,iOS: 1.2.6 Release,40,100,0,1.2.6 build has been pushed to iTunes Store.,,4,4
+391,iOS: Replace feed requests with AFNetworking,40,100,0,This commit is a duplicate,https://issues.appian.com/browse/IOS-789,4,3
+392,iOS: Support Facets (single select only),40,0,0,,https://issues.appian.com/browse/IOS-837,4,0
+393,iOS: Update Record list to distinguish between avatars and icons,40,0,1,,https://issues.appian.com/browse/IOS-838,4,0
+394,iOS: Record details view tabs,40,0,1,,https://issues.appian.com/browse/IOS-839,4,0
+395,BB: 1.2.3 Release,40,0,0,,https://issues.appian.com/browse/BB-258,4,0
+396,Grouping/aggregation supported in Teneo Query Executor,41,0,0,,https://issues.appian.com/browse/AN-46114,10,0
+397,Support columns in query object,41,0,0,,https://issues.appian.com/browse/AN-46346,13,0
+398,Use column alias for sorting,41,0,0,,https://issues.appian.com/browse/AN-46347,13,0
+399,New queryR1 expr uses Column/Alias with working visibility,41,0,0,,https://issues.appian.com/browse/AN-46348,13,0
+400,Process property and process model property reporting,41,0,1,,https://issues.appian.com/browse/AN-46349,13,0

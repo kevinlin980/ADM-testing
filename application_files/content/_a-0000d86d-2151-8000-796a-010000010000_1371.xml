@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_23440</versionUuid>
+    <rule>
+        <name>reportChartColors</name>
+        <uuid>_a-0000d86d-2151-8000-796a-010000010000_1371</uuid>
+        <description></description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>
+=#"SYSTEM_SYSRULES_dashboardLayout"(
+  firstColumnContents:{
+    #"SYSTEM_SYSRULES_lineChartField"(
+      label: "Line Chart",
+      categories: {"Start", "End"},
+      series: {
+        #"SYSTEM_SYSRULES_chartSeries"(label: "Red", data: {1,1}, color: "RED"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "GREEN", data: {2,2}, color: "GREEN"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "RED",   data: {3,3}, color: "RED"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "GREEN", data: {4,4}, color: "GREEN"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "RED",   data: {5,5}, color: "RED")
+      }
+    ),
+    #"SYSTEM_SYSRULES_pieChartField"(
+      label: "Pie Chart",
+      series: {
+        #"SYSTEM_SYSRULES_chartSeries"(label: "RED",   data: 1, color: "RED"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "GREEN", data: 1, color: "GREEN"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "RED",   data: 1, color: "RED"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "GREEN", data: 1, color: "GREEN"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "RED",   data: 1, color: "RED")
+      },
+      showDataLabels: true
+    ),
+    #"SYSTEM_SYSRULES_barChartField"(
+      label: "Bar Chart",
+      series: {
+        #"SYSTEM_SYSRULES_chartSeries"(label: "RED",   data: 1, color: "RED"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "GREEN", data: 1, color: "GREEN"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "RED",   data: 1, color: "RED"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "GREEN", data: 1, color: "GREEN"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "RED",   data: 1, color: "RED")
+      },
+      showDataLabels: true
+    ),
+    #"SYSTEM_SYSRULES_columnChartField"(
+      label: "Column Chart",
+      series: {
+        #"SYSTEM_SYSRULES_chartSeries"(label: "RED",   data: 1, color: "RED"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "GREEN", data: 1, color: "GREEN"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "RED",   data: 1, color: "RED"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "GREEN", data: 1, color: "GREEN"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "RED",   data: 1, color: "RED")
+      },
+      showDataLabels: true
+    ),
+    'type!{http://www.appian.com/ae/types/2009}LineChart'(
+      label: "Color Demo",
+      instructions: "Some of these colors are specified by the designer and some are the default",
+      categories: {"Start", "End"},
+      series: {
+        #"SYSTEM_SYSRULES_chartSeries"(label: "BLUEGRAY (default)", data: {1,1}, color: ""),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "RED (specified)",    data: {2,2}, color: "RED"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "GREEN (default)",    data: {3,3}, color: null),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "RED (specified)",    data: {4,4}, color: "RED"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "GOLD (default)",     data: {5,5}),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "RED (specified)",    data: {6,6}, color: "RED"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "ORANGE (default)",      data: {7,7}),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "RED (specified)",    data: {8,8}, color: "RED"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "PURPLE (default)",  data: {9,9})
+      }
+    ),
+    load(
+      local!indices: {1,2,3},
+      local!alldata: {
+        #"SYSTEM_SYSRULES_chartSeries"(label: "Active Users", data: {6500, 5300, 5500, 7000, 5200, 5000, 5750, 5600, 5800, 5200}, color: "SKYBLUE"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "Mobile Users", data: {260, 280, 255, 253, 240, 230, 248, 242, 255, 250}, color: "GREEN"),
+        #"SYSTEM_SYSRULES_chartSeries"(label: "Social Users", data: {null, null, null, null, null, null, null, null, null, null}, color: "YELLOW")
+      },
+      with(
+        local!somedata: index(local!alldata, local!indices),
+        {
+          #"SYSTEM_SYSRULES_checkboxFieldByIndex"(
+            label: "Select Data",
+            choiceLabels: local!alldata.label,
+            value: local!indices,
+            saveInto: local!indices 
+          ),
+          #"SYSTEM_SYSRULES_lineChartField"(
+            label: "Unique Monthly Users for Aggregate Customers",
+            xAxisTitle: "Month",
+            yAxisTitle: "Users",
+            yAxisMin: 0,
+            showTooltips: false,
+            series:somedata,
+            categories: {
+              "Jan 2013",
+              "Feb 2013",
+              "Mar 2013",
+              "Apr 2013",
+              "May 2013",
+              "Jun 2013",
+              "Jul 2013",
+              "Aug 2013",
+              "Sep 2013",
+              "Oct 2013"
+            }
+          )
+        }
+      )
+    )
+
+  }
+)
+  
+        
+        </definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_23440"/>
+    </history>
+</contentHaul>

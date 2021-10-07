@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_23117</versionUuid>
+    <personalKnowledgeCenter>
+        <name>My Private Knowledge Center</name>
+        <uuid>0000d065-fa59-8000-e533-651c48651c48</uuid>
+        <description>Private documents</description>
+        <parentUuid>SYSTEM_COMMUNITY_ROOT</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>true</quota>
+            <searchable>false</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <expirationDays>10000</expirationDays>
+    </personalKnowledgeCenter>
+    <roleMap public="false">
+        <role inherit="false" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_23117"/>
+    </history>
+</contentHaul>

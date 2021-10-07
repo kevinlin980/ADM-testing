@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.appian.com/tech/test"
+  xmlns:tns="http://www.appian.com/tech/test" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="InternationalAddress">
+    <xsd:annotation>
+      <xsd:appinfo source="http://www.appian.com/ae/types/2009">
+        <ns2:Metadata xmlns:ns2="http://www.appian.com/ae/types/2009">
+          <ns2:versionUuid>004fe71b-9284-8000-6ef1-014d98014d98</ns2:versionUuid>
+          <ns2:history>
+            <ns2:historyInfo versionUuid="004fe71b-9284-8000-6ef1-014d98014d98"/>
+          </ns2:history>
+        </ns2:Metadata>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element form="qualified" name="streetAddress" type="xsd:string"/>
+      <xsd:element form="qualified" name="aptOrSuite" type="xsd:string"/>
+      <xsd:element form="qualified" name="city" type="xsd:string"/>
+      <xsd:element form="qualified" name="stateOrProvince" type="xsd:string"/>
+      <xsd:element form="qualified" name="postalCode" type="xsd:string"/>
+      <xsd:element form="qualified" name="country" type="xsd:string"/>
+      <xsd:element form="qualified" name="companyName" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

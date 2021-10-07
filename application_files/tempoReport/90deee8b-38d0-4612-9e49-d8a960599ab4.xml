@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>046a6aad-e266-42d2-b8e5-f79f679125d6</versionUuid>
+    <tempoReport a:uuid="90deee8b-38d0-4612-9e49-d8a960599ab4" name="Charts: Drillable Chart">
+        <a:description>Drillable charts</a:description>
+        <a:uiExpr>=#"_a-0000d7fd-38c3-8000-2bf7-010000010000_1389"()</a:uiExpr>
+        <a:urlStub>IBeqLw</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>0001d065-e6ac-8000-e6ac-65075c65075c</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="046a6aad-e266-42d2-b8e5-f79f679125d6"/>
+    </history>
+</tempoReportHaul>

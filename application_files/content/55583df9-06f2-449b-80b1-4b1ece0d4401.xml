@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25381</versionUuid>
+    <rule>
+        <name>MU_httpResponsePreviewPane</name>
+        <uuid>55583df9-06f2-449b-80b1-4b1ece0d4401</uuid>
+        <description></description>
+        <parentUuid>_a-0000d9f3-0972-8000-0018-010000010000_2856</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>{&#xD;
+  #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+    label: "Test HTTP Request",&#xD;
+    isCollapsible:fn!false(),&#xD;
+    firstColumnContents: {&#xD;
+      &#xD;
+      #"SYSTEM_SYSRULES_textField"(&#xD;
+        label: "URL",&#xD;
+        readOnly: fn!false(),&#xD;
+        value: "https://home.appian.com/suite/webapi/commits/?userID=4"&#xD;
+      ),&#xD;
+    },&#xD;
+    secondColumnContents:{&#xD;
+      #"SYSTEM_SYSRULES_dropdownField"(&#xD;
+        label:"Method",&#xD;
+        choiceValues:{"Get"},&#xD;
+        choiceLabels:{"Get"},&#xD;
+        value:"Get"&#xD;
+      ),&#xD;
+    }&#xD;
+  ),&#xD;
+  #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+    label:"",&#xD;
+    firstColumnContents:{&#xD;
+      #"SYSTEM_SYSRULES_gridLayout"(&#xD;
+         label: "Query Parameters",&#xD;
+         /*instructions:"Higher rows in the grid take precedence over lower rows.",*/&#xD;
+         headerCells: {&#xD;
+           &#xD;
+           #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Name"),&#xD;
+           #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Value")&#xD;
+         },&#xD;
+         columnConfigs: {&#xD;
+           #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "DISTRIBUTE"),&#xD;
+           #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "DISTRIBUTE")&#xD;
+         },&#xD;
+         rows: {&#xD;
+           /*a!gridRowLayout(&#xD;
+             contents: {&#xD;
+               a!textField(readOnly:fn!true(),align: "LEFT",value:"userID"),&#xD;
+               a!textField(align: "LEFT",value:"4")&#xD;
+             }&#xD;
+           )*/&#xD;
+         }&#xD;
+       ),&#xD;
+       #"SYSTEM_SYSRULES_gridLayout"(&#xD;
+         label: "Path Parameters",&#xD;
+         /*instructions:"Higher rows in the grid take precedence over lower rows.",*/&#xD;
+         headerCells: {&#xD;
+           &#xD;
+           #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Name"),&#xD;
+           #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Value")&#xD;
+         },&#xD;
+         columnConfigs: {&#xD;
+           #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "DISTRIBUTE"),&#xD;
+           #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "DISTRIBUTE")&#xD;
+         },&#xD;
+         rows: {&#xD;
+           /*a!gridRowLayout(&#xD;
+             contents: {&#xD;
+               a!textField(readOnly:fn!true(),align: "LEFT",value:"userID"),&#xD;
+               a!textField(align: "LEFT",value:"4")&#xD;
+             }&#xD;
+           )*/&#xD;
+         }&#xD;
+       ),&#xD;
+      #"SYSTEM_SYSRULES_gridLayout"(&#xD;
+        label: "Headers",&#xD;
+        /*instructions:"Higher rows in the grid take precedence over lower rows.",*/&#xD;
+        headerCells: {&#xD;
+          &#xD;
+          #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Name"),&#xD;
+          #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Value")&#xD;
+        },&#xD;
+        columnConfigs: {&#xD;
+          #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "DISTRIBUTE"),&#xD;
+          #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "DISTRIBUTE")&#xD;
+        },&#xD;
+        rows: {&#xD;
+          #"SYSTEM_SYSRULES_gridRowLayout"(&#xD;
+            contents: {&#xD;
+              #"SYSTEM_SYSRULES_textField"(readOnly:fn!true(),align: "LEFT",value:"Cache-Control"),&#xD;
+              #"SYSTEM_SYSRULES_textField"(align: "LEFT",value:"max-age=0")&#xD;
+            }&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_gridRowLayout"(&#xD;
+            contents: {&#xD;
+              #"SYSTEM_SYSRULES_textField"(readOnly:fn!true(),align: "LEFT",value:"Cache-Control"),&#xD;
+              #"SYSTEM_SYSRULES_textField"(align: "LEFT",value:"no-cache, no-store")&#xD;
+            }&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_gridRowLayout"(&#xD;
+            contents: {&#xD;
+              #"SYSTEM_SYSRULES_textField"(readOnly:fn!true(),align: "LEFT",value:"Content-Encoding"),&#xD;
+              #"SYSTEM_SYSRULES_textField"(align: "LEFT",value:"gzip")&#xD;
+            }&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_gridRowLayout"(&#xD;
+            contents: {&#xD;
+              #"SYSTEM_SYSRULES_textField"(readOnly:fn!true(),align: "LEFT",value:"Content-Type"),&#xD;
+              #"SYSTEM_SYSRULES_textField"(align: "LEFT",value:"application/json")&#xD;
+            }&#xD;
+          )&#xD;
+        }&#xD;
+      ),&#xD;
+      #"SYSTEM_SYSRULES_paragraphField"(&#xD;
+        label: "Body",&#xD;
+        readOnly: false,&#xD;
+        value: ""&#xD;
+      ),&#xD;
+      #"SYSTEM_SYSRULES_ButtonLayout"(&#xD;
+        primaryButtons:#"SYSTEM_SYSRULES_ButtonWidget"(label:"Test Request",style:"PRIMARY")&#xD;
+      )&#xD;
+    }&#xD;
+  ),&#xD;
+  #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+    label: "HTTP Response",&#xD;
+    isCollapsible:fn!false(),&#xD;
+    instructions: "",&#xD;
+    firstColumnContents: {&#xD;
+      #"SYSTEM_SYSRULES_textField"(&#xD;
+        label: "Status Code",&#xD;
+        value:"200 OK",&#xD;
+        readOnly:fn!true()&#xD;
+      ),&#xD;
+      #"SYSTEM_SYSRULES_gridField"(&#xD;
+        label: "Headers",&#xD;
+        totalCount:4,&#xD;
+        columns:{&#xD;
+          #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+            label:"Name",&#xD;
+            data:{&#xD;
+              "Cache-Control",&#xD;
+              "Cache-Control",&#xD;
+              "Content-Encoding",&#xD;
+              "Content-Type"&#xD;
+            }&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+            label:"Value",&#xD;
+            data:{&#xD;
+              "max-age=0",&#xD;
+              "no-cache, no-store",&#xD;
+              "gzip",&#xD;
+              "application/json"&#xD;
+            }&#xD;
+          )&#xD;
+        },&#xD;
+        value:#"SYSTEM_SYSRULES_pagingInfo"(startIndex:1,batchSize:-1)&#xD;
+      )&#xD;
+    }&#xD;
+  ),&#xD;
+  #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+    firstColumnContents:{&#xD;
+      #"SYSTEM_SYSRULES_richTextDisplayField"(&#xD;
+        label:"Body",&#xD;
+        labelPosition:"COLLAPSED",&#xD;
+        value:#"SYSTEM_SYSRULES_richTextItem"(&#xD;
+          text:"Body",&#xD;
+          style:"STRONG"&#xD;
+        )&#xD;
+      )&#xD;
+    },&#xD;
+    secondColumnContents:{&#xD;
+      #"SYSTEM_SYSRULES_checkboxField"(&#xD;
+        labelPosition:"COLLAPSED",&#xD;
+        align:"RIGHT",&#xD;
+        /*label:"Body",*/&#xD;
+        choiceLabels:{"Auto-format"},&#xD;
+        choiceValues:{fn!true()},&#xD;
+        value:null&#xD;
+      ),&#xD;
+      /*&#xD;
+      a!richTextDisplayField(&#xD;
+        label:"Body",&#xD;
+        labelPosition:"COLLAPSED",&#xD;
+        value:{&#xD;
+          a!richTextItem(&#xD;
+            text:"Formatted",&#xD;
+            style:"STRONG"&#xD;
+          ),&#xD;
+          a!richTextItem(&#xD;
+            text:" | "&#xD;
+          ),&#xD;
+          a!richTextItem(&#xD;
+            text:"RAW",&#xD;
+            style:"NORMAL",&#xD;
+            link:a!dynamicLink(value:fn!true)&#xD;
+          )&#xD;
+        }&#xD;
+      ),*/&#xD;
+    }&#xD;
+  ),&#xD;
+  #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+    firstColumnContents:{&#xD;
+      #"SYSTEM_SYSRULES_paragraphField"(&#xD;
+        label:"Body",&#xD;
+        labelPosition:"COLLAPSED",&#xD;
+        value: "{&#xD;
+          ""startIndex"": 1,&#xD;
+          ""batchSize"": 5,&#xD;
+          ""sort"": [&#xD;
+            {&#xD;
+              ""field"": ""desc"",&#xD;
+              ""ascending"": true&#xD;
+            }&#xD;
+          ],&#xD;
+          ""totalCount"": 364,&#xD;
+          ""data"": [&#xD;
+            {&#xD;
+              ""version"": 8,&#xD;
+              ""featureOwner"": 7,&#xD;
+              ""jiraLink"": ""https://issues.appian.com/browse/AN-46236"",&#xD;
+              ""notes"": ""The feature is ready/ has been code reviewed and verified by Rodrigo and Leslie/ CI jobs are green and is ready to go to master."",&#xD;
+              ""isStretch"": false,&#xD;
+              ""percentComplete"": 90,&#xD;
+              ""sprintId"": 38,&#xD;
+              ""desc"": ""2-column support on Record Detail Views for all UIs"",&#xD;
+              ""id"": 305&#xD;
+            },&#xD;
+            {&#xD;
+              ""version"": 3,&#xD;
+              ""featureOwner"": 9,&#xD;
+              ""jiraLink"": ""https://issues.appian.com/browse/AN-46127"",&#xD;
+              ""notes"": """",&#xD;
+              ""isStretch"": true,&#xD;
+              ""percentComplete"": 0,&#xD;
+              ""sprintId"": 34,&#xD;
+              ""desc"": ""Actions Page"",&#xD;
+              ""id"": 265&#xD;
+            },&#xD;
+            {&#xD;
+              ""version"": 2,&#xD;
+              ""featureOwner"": 8,&#xD;
+              ""jiraLink"": """",&#xD;
+              ""notes"": ""Won't get done/ I was not able to get to it. I spent extra time in extending the test coverage for the date&amp;time component."",&#xD;
+              ""isStretch"": true,&#xD;
+              ""percentComplete"": 0,&#xD;
+              ""sprintId"": 13,&#xD;
+              ""desc"": ""Activity Chaining (Mobile Parity)--round-trip"",&#xD;
+              ""id"": 93&#xD;
+            },&#xD;
+            {&#xD;
+              ""version"": 6,&#xD;
+              ""featureOwner"": 8,&#xD;
+              ""jiraLink"": ""https://issues.appian.com/browse/AN-45644"",&#xD;
+              ""notes"": """",&#xD;
+              ""isStretch"": false,&#xD;
+              ""percentComplete"": 100,&#xD;
+              ""sprintId"": 18,&#xD;
+              ""desc"": ""Activity Chaining (Mobile Parity)--round-trip"",&#xD;
+              ""id"": 129&#xD;
+            },&#xD;
+            {&#xD;
+              ""version"": 5,&#xD;
+              ""featureOwner"": 7,&#xD;
+              ""jiraLink"": ""https://issues.appian.com/browse/AN-45236"",&#xD;
+              ""notes"": ""This fix is within the activity chaining feature. When we merge activity chaining we will have the fix for this one."",&#xD;
+              ""isStretch"": true,&#xD;
+              ""percentComplete"": 100,&#xD;
+              ""sprintId"": 18,&#xD;
+              ""desc"": ""Activity chaining to start forms from user input tasks causes error alert"",&#xD;
+              ""id"": 138&#xD;
+            }&#xD;
+          ],&#xD;
+          ""identifiers"": [&#xD;
+            305,&#xD;
+            265,&#xD;
+            93,&#xD;
+            129,&#xD;
+            138&#xD;
+          ]&#xD;
+&#xD;
+        }",&#xD;
+        readOnly:fn!true()&#xD;
+      )&#xD;
+    }&#xD;
+  )&#xD;
+}</definition>
+        <namedTypedValue>
+            <name>cancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25381"/>
+    </history>
+</contentHaul>

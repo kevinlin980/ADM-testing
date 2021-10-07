@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>98d8e0ff-4298-4cbe-a2ee-228ebb6e40c2</versionUuid>
+    <tempoReport a:uuid="c1f4fa68-658f-419d-948f-ba160ec37107" name="Masked Text Component">
+        <a:description>Runtime equivalent to the mockup within the Masked Text Component spec</a:description>
+        <a:uiExpr>=#"_a-0001d7ad-feac-8000-feac-cb0000cb0000_1181"()</a:uiExpr>
+        <a:urlStub>maskedTextComponent</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+            </groups>
+        </role>
+        <role name="report_viewer">
+            <users/>
+            <groups>
+                <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="98d8e0ff-4298-4cbe-a2ee-228ebb6e40c2"/>
+    </history>
+</tempoReportHaul>

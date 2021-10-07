@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<processModelFolderHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_g-0000e71b-9358-8000-6ef5-014d98014d98_323</versionUuid>
+    <processModelFolder>
+        <name>Paging Grid</name>
+        <uuid>_g-0000d73b-40eb-8000-507b-010000010000_47</uuid>
+        <description></description>
+    </processModelFolder>
+    <roleMap>
+        <role name="ADMIN_OWNER">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role name="EDITOR">
+            <users/>
+            <groups/>
+        </role>
+        <role name="EXPLICIT_NONMEMBER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="VIEWER">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_APPLICATION_USERS</groupUuid>
+            </groups>
+        </role>
+        <role name="MANAGER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="INITIATOR">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_g-0000e71b-9358-8000-6ef5-014d98014d98_323"/>
+    </history>
+</processModelFolderHaul>

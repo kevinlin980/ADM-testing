@@ -1,0 +1,34 @@
+Business Event?,System Event?,Approval Task?,Mobile Task?,Complex task?,BodyText,Custom Image?,# Comments,# Hazards,OpenACase?,SecurityGroup?,EventData?,Topic_id?,MaxTextLength
+1,1,1,1,1,Topic id=0; 0 comments; 0 hazards; with Open a Case; no Security; no Data Table.  ,1,0,0,1,0,0,0,200
+1,1,0,0,0,Topic id=0; 1 comments; 0 hazards; with Open a Case; no Security; with Data Table.  ,1,1,0,1,0,1,0,200
+1,1,0,0,0,Topic id=0; 2 comments; 0 hazards; with Open a Case; with Security; no Data Table.  ,1,2,0,1,1,0,0,200
+1,1,0,0,0,Topic id=0; 3 comments; 0 hazards; with Open a Case; with Security; with Data Table.  ,1,3,0,1,1,1,0,200
+1,1,0,0,0,Topic id=0; 5 comments; 0 hazards; no Open a Case; no Security; no Data Table.  ,1,5,0,0,0,0,0,200
+1,1,0,0,0,Topic id=0; 10 comments; 0 hazards; no Open a Case; no Security; with Data Table.  ,1,10,0,0,0,1,0,200
+1,1,0,0,0,Topic id=0; 20 comments; 0 hazards; no Open a Case; with Security; no Data Table.  ,1,20,0,0,1,0,0,200
+1,1,0,0,0,Topic id=0; 0 comments; 1 hazards; no Open a Case; with Security; with Data Table.  ,1,0,1,0,1,1,0,200
+1,1,0,0,0,Topic id=0; 1 comments; 1 hazards; with Open a Case; no Security; no Data Table.  ,0,1,1,1,0,0,0,200
+1,1,0,0,0,Topic id=0; 2 comments; 1 hazards; with Open a Case; no Security; with Data Table.  ,0,2,1,1,0,1,0,200
+1,1,0,0,0,Topic id=0; 3 comments; 1 hazards; with Open a Case; with Security; no Data Table.  ,0,3,1,1,1,0,0,200
+1,1,0,0,0,Topic id=0; 5 comments; 1 hazards; with Open a Case; with Security; with Data Table.  ,0,5,1,1,1,1,0,200
+1,1,0,0,0,Topic id=0; 10 comments; 1 hazards; no Open a Case; no Security; no Data Table.  ,0,10,1,0,0,0,0,200
+1,1,0,0,0,Topic id=0; 20 comments; 1 hazards; no Open a Case; no Security; with Data Table.  ,0,20,1,0,0,1,0,200
+1,1,0,0,0,Topic id=0; 0 comments; 2 hazards; no Open a Case; with Security; no Data Table.  ,0,0,2,0,1,0,0,200
+1,1,0,0,0,Topic id=0; 1 comments; 2 hazards; no Open a Case; with Security; with Data Table.  ,0,1,2,0,1,1,0,200
+1,1,0,0,0,Topic id=0; 2 comments; 2 hazards; with Open a Case; no Security; no Data Table.  ,1,2,2,1,0,0,0,200
+1,1,0,0,0,Topic id=0; 3 comments; 2 hazards; with Open a Case; no Security; with Data Table.  ,1,3,2,1,0,1,0,200
+1,1,0,0,0,Topic id=0; 5 comments; 2 hazards; with Open a Case; with Security; no Data Table.  ,1,5,2,1,1,0,0,200
+1,1,0,0,0,Topic id=0; 10 comments; 2 hazards; with Open a Case; with Security; with Data Table.  ,1,10,2,1,1,1,0,200
+1,1,0,0,0,Topic id=0; 20 comments; 2 hazards; no Open a Case; no Security; no Data Table.  ,1,20,2,0,0,0,0,200
+1,1,0,0,0,Topic id=0; 0 comments; 3 hazards; no Open a Case; no Security; with Data Table.  ,1,0,3,0,0,1,0,200
+1,1,0,0,0,Topic id=0; 1 comments; 3 hazards; no Open a Case; with Security; no Data Table.  ,1,1,3,0,1,0,0,200
+1,1,0,0,0,Topic id=0; 2 comments; 3 hazards; no Open a Case; with Security; with Data Table.  ,1,2,3,0,1,1,0,200
+1,1,0,0,0,Topic id=0; 3 comments; 3 hazards; with Open a Case; no Security; no Data Table.  ,0,3,3,1,0,0,0,200
+1,1,0,0,0,Topic id=0; 5 comments; 3 hazards; with Open a Case; no Security; with Data Table.  ,0,5,3,1,0,1,0,200
+1,1,0,0,0,Topic id=0; 10 comments; 3 hazards; with Open a Case; with Security; no Data Table.  ,0,10,3,1,1,0,0,200
+1,1,0,0,0,Topic id=0; 20 comments; 3 hazards; with Open a Case; with Security; with Data Table.  ,0,20,3,1,1,1,0,200
+1,1,0,0,0,Topic id=0; 0 comments; 20 hazards; no Open a Case; no Security; no Data Table.  ,0,0,20,0,0,0,0,200
+1,1,0,0,0,Topic id=0; 1 comments; 20 hazards; no Open a Case; no Security; with Data Table.  ,0,1,20,0,0,1,0,200
+1,1,0,0,0,Topic id=0; 2 comments; 20 hazards; no Open a Case; with Security; no Data Table.  ,0,2,20,0,1,0,0,200
+1,1,0,0,0,Topic id=0; 3 comments; 20 hazards; no Open a Case; with Security; with Data Table.  ,0,3,20,0,1,1,0,200
+--EOF--,,,,,,,,,,,,,

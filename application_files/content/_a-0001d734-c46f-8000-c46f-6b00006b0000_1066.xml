@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_23969</versionUuid>
+    <rule>
+        <name>reportParagraphField</name>
+        <uuid>_a-0001d734-c46f-8000-c46f-6b00006b0000_1066</uuid>
+        <description></description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load(
+ local!a,
+ local!b: """Quelala being the first owner of the Golden Cap,"" replied the Monkey, ""he was the first to lay his wishes upon us. As his bride could not bear the sight of us, he called us all to him in the forest after he had married her and ordered us always to keep where she could never again set eyes on a Winged Monkey, which we were glad to do, for we were all afraid of her.""",
+ local!c: "No label or instructions",
+ local!d: """Oh, indeed,"" said the Woodman, making a bow." &amp; char(10) &amp; char(10) &amp; """Therefore you have done a great deed, as well as a brave one, in saving my life,"" added the Queen." &amp; char(10) &amp; char(10) &amp; "At that moment several mice were seen running up as fast as their little legs could carry them, and when they saw their Queen they exclaimed: ""Oh, your Majesty, we thought you would be killed! How did you manage to escape the great Wildcat?"" They all bowed so low to the little Queen that they almost stood upon their heads." &amp; char(10) &amp; char(10) &amp; """This funny tin man,"" she answered, ""killed the Wildcat and saved my life. So hereafter you must all serve him, and obey his slightest wish.""" &amp; char(10) &amp; char(10) &amp; """We will!"" cried all the mice, in a shrill chorus. And then they scampered in all directions, for Toto had awakened from his sleep, and seeing all these mice around him he gave one bark of delight and jumped right into the middle of the group. Toto had always loved to chase mice when he lived in Kansas, and he saw no harm in it.",
+ local!e: char(9) &amp; "One tab before.          10 spaces in between. 2 line breaks following this:" &amp; char(10) &amp; char(10) &amp; "  2 space indent." &amp; char(9) &amp; "One tab in between.",
+ local!f: "Observed behavior: An error occurs when this UI expression is rendered in Tempo reports" &amp; char(10) &amp; char(10) &amp; "type!ColumnArrayLayout(" &amp; char(10) &amp; "  columns: {" &amp; char(10) &amp; "    type!ColumnLayout(" &amp; char(10) &amp; "      contents: {" &amp; char(10) &amp; "        type!DateField(" &amp; char(10) &amp; "          label: ""Requested""," &amp; char(10) &amp; "          value: date(2013, 1, 20)," &amp; char(10) &amp; "          readOnly: true" &amp; char(10) &amp; "        )" &amp; char(10) &amp; "      }" &amp; char(10) &amp; "    )" &amp; char(10) &amp; "  }" &amp; char(10) &amp; ")     ",
+ local!g: "Observed behavior: An error occurs when this UI expression is rendered in Tempo reports" &amp; char(10) &amp; char(10) &amp; "type!ColumnArrayLayout(" &amp; char(10) &amp; "  columns: {" &amp; char(10) &amp; "    type!ColumnLayout(" &amp; char(10) &amp; "      contents: {" &amp; char(10) &amp; "        type!DateField(" &amp; char(10) &amp; "          label: ""Requested""," &amp; char(10) &amp; "          value: date(2013, 1, 20)," &amp; char(10) &amp; "          readOnly: true" &amp; char(10) &amp; "        )" &amp; char(10) &amp; "      }" &amp; char(10) &amp; "    )" &amp; char(10) &amp; "  }" &amp; char(10) &amp; ")" &amp; char(10) &amp; char(10) &amp; "LongUnbrokenTextaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+ local!h: "1" &amp; char(10) &amp; "2" &amp; char(10) &amp; "3",
+ local!i: "1" &amp; char(10) &amp; "2" &amp; char(10) &amp; "3" &amp; char(10) &amp; "4" &amp; char(10) &amp; "5" &amp; char(10) &amp; "6",
+ local!j: "1" &amp; char(10) &amp; "2" &amp; char(10) &amp; "3" &amp; char(10) &amp; "4" &amp; char(10) &amp; "5" &amp; char(10) &amp; "6" &amp; char(10) &amp; "7" &amp; char(10) &amp; "8" &amp; char(10) &amp; "9" &amp; char(10) &amp; "10" &amp; char(10) &amp; "11" &amp; char(10) &amp; "12",
+ 'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns: {
+   'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+     'type!{http://www.appian.com/ae/types/2009}SectionLayout'(content: {
+       'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns: {
+         'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Standard Paragraph",
+             instructions: "Paragraph instructions",
+             validations: {
+               #"SYSTEM_SYSRULES_validationMessage"(
+                 message: if(true, "Validation error message", "")
+               )},
+             value: local!a,
+             saveInto: local!a
+           ),
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Default Value",
+             value: local!b,
+             saveInto: local!b
+           ),
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             value: local!c,
+             saveInto: local!c
+           ),
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Disabled",
+             disabled: true,
+             readOnly: false,
+             value: "With default value"
+           ),
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Disabled Long Default",
+             disabled: true,
+             readOnly: false,
+             value: local!b
+           )
+         }),
+         'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Read-Only",
+             readOnly: true,
+             value: local!b
+           ),
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Read-Only &amp; Disabled",
+             instructions: "Setting a read-only paragraph component as disabled is redundant",
+             readOnly: true,
+             disabled: true,
+             value: "Hello World"
+           ),
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Read-Only No Value",
+             instructions: "Instructions for read-only field without a value",
+             readOnly: true
+           ),
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Read-Only With Line Breaks",
+             readOnly: true,
+             value: local!d
+           )
+         })
+       })
+     }),
+     'type!{http://www.appian.com/ae/types/2009}SectionLayout'(label: "One Column Section", content: {
+       'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns: {
+         'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "One-Column Editable",
+             value: local!b,
+             saveInto: local!b
+           ),
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "One-Column Read-Only",
+             readOnly: true,
+             value: local!b
+           )
+         })
+       })
+     }),
+     'type!{http://www.appian.com/ae/types/2009}SectionLayout'(label: "Preserve Formatting", content: {
+       'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns: {
+         'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Leading and Intermediate Spaces",
+             value: local!e,
+             saveInto: local!e
+           ),
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Leading and Intermediate Spaces",
+             instructions: "Browser ignores tab character for read-only",
+             readOnly: true,
+             value: local!e
+           ),
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "JIRA Ticket Description (Edit)",
+             value: local!f,
+             saveInto: local!f
+           ),
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "JIRA Ticket Description (Display Using Pre-Wrap Attribute)",
+             instructions: "Implementation Note: uses CSS white-space: pre-wrap. But any extra spaces in the markup will be rendered.",
+             readOnly: true,
+             value: local!g
+           )
+         })
+       })
+     }),
+     'type!{http://www.appian.com/ae/types/2009}SectionLayout'(label: "Layout Options", content: {
+       'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns: {
+         'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Label Above",
+             labelPosition: "ABOVE",
+             instructions: "Paragraph instructions",
+             validations: {
+               #"SYSTEM_SYSRULES_validationMessage"(
+                 message: if(true, "Validation error message", "")
+               )},
+             value: local!a,
+             saveInto: local!a
+           ),
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             labelPosition: "COLLAPSED",
+             value: "No label",
+             saveInto: local!a
+           )
+         }),
+         'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Label Above",
+             labelPosition: "ABOVE",
+             value: local!b,
+             saveInto: local!b
+           ),
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Read-Only Label Above",
+             labelPosition: "ABOVE",
+             readOnly: true;
+             value: local!b
+           ),
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Read-Only With Instructions",
+             labelPosition: "ABOVE",
+             instructions: "This is the note entered by the user when reassigning the task",
+             readOnly: true,
+             value: local!b
+           ),
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Read-Only No Value",
+             labelPosition: "ABOVE",
+             instructions: "Instructions for read-only field without a value",
+             readOnly: true,
+             value: local!a
+           )
+         })
+       })
+     }),
+     'type!{http://www.appian.com/ae/types/2009}SectionLayout'(label: "Height Configuration Options", content: {
+       'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns: {
+         'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Short",
+             labelPosition: "ABOVE",
+             value: local!h,
+             saveInto: local!h,
+             height: "SHORT"
+           ),
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Medium",
+             labelPosition: "ABOVE",
+             value: local!i,
+             saveInto: local!i,
+             height: "MEDIUM"
+           )
+         }),
+         'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+           'type!{http://www.appian.com/ae/types/2009}ParagraphField'(
+             label: "Tall",
+             labelPosition: "ABOVE",
+             value: local!j,
+             saveInto: local!j,
+             height: "TALL"
+           )
+         })
+       })
+     })
+   })
+ })
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_23969"/>
+    </history>
+</contentHaul>

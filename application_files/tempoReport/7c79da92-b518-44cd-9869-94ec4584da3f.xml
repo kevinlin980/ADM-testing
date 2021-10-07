@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>e8a48c6b-1e41-4d34-92da-f0159c25fda6</versionUuid>
+    <tempoReport a:uuid="7c79da92-b518-44cd-9869-94ec4584da3f" name="Charts: Column Chart">
+        <a:description>Runtime equivalent to mockup's component_stacked_column_chart.html for stacked and unstacked</a:description>
+        <a:uiExpr>=#"_a-0000d7ac-cebf-8000-cab9-010000010000_1236"()</a:uiExpr>
+        <a:urlStub>colChartDemo</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>0001d065-e6ac-8000-e6ac-65075c65075c</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="e8a48c6b-1e41-4d34-92da-f0159c25fda6"/>
+    </history>
+</tempoReportHaul>

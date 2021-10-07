@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<portletHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <portlet>
+        <uuid>0000d0d6-3343-8000-9814-7341d77341d7</uuid>
+        <name>Launch</name>
+        <portletType>process.portlet.launcher</portletType>
+        <frame>portlet.default</frame>
+        <shared>false</shared>
+        <public>true</public>
+        <inheritsSecurity>true</inheritsSecurity>
+        <parameters>
+            <item>
+                <key>redirect</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">inchannel</value>
+            </item>
+            <item>
+                <key>instructions</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"/>
+            </item>
+            <item>
+                <key>popStartForm</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">false</value>
+            </item>
+            <item>
+                <key>processModelUuid</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">0005d194-08a3-8000-2562-680000680000</value>
+            </item>
+            <item>
+                <key>useButton</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">true</value>
+            </item>
+            <item>
+                <key>startLabel</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">Launch "Data Generator"</value>
+            </item>
+            <item>
+                <key>useDashboardContext</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">0</value>
+            </item>
+            <item>
+                <key>refreshPage</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">0</value>
+            </item>
+            <item>
+                <key>hasStartForm</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">true</value>
+            </item>
+        </parameters>
+    </portlet>
+    <roleMap>
+        <role name="editor">
+            <users/>
+            <groups/>
+        </role>
+        <role name="viewer">
+            <users/>
+            <groups/>
+        </role>
+        <role name="admin">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+    </roleMap>
+</portletHaul>

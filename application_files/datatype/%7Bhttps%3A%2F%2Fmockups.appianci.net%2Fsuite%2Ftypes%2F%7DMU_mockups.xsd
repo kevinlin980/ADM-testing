@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="https://mockups.appianci.net/suite/types/"
+  xmlns:tns="https://mockups.appianci.net/suite/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="MU_mockups">
+    <xsd:annotation>
+      <xsd:appinfo source="http://www.appian.com/ae/types/2009">
+        <ns2:Metadata xmlns:ns2="http://www.appian.com/ae/types/2009">
+          <ns2:versionUuid>0070e71b-9284-8000-6ef1-014d98014d98</ns2:versionUuid>
+          <ns2:history>
+            <ns2:historyInfo versionUuid="0070e71b-9284-8000-6ef1-014d98014d98"/>
+          </ns2:history>
+        </ns2:Metadata>
+      </xsd:appinfo>
+      <xsd:documentation><![CDATA[mockups CDT for record]]></xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="mockupID" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Id
+            @GeneratedValue  
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="name" nillable="true" type="xsd:string"/>
+      <xsd:element name="description" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

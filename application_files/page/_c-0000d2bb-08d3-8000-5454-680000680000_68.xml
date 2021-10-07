@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pageHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <page>
+        <name>Test Web Content Channels</name>
+        <description>See AN-41210 for details on the dynamic content and the dynamic height behaviors of the web-content channel.</description>
+        <public>false</public>
+        <type>0</type>
+        <url></url>
+        <template>portal.template.community.2.7030</template>
+        <zoneCount>2</zoneCount>
+        <approvalRequired>false</approvalRequired>
+        <uuid>_c-0000d2bb-08d3-8000-5454-680000680000_68</uuid>
+        <portlets>
+            <item index="0" zone="0">_d-0000d2bb-6b0f-8000-5454-680000680000_134</item>
+            <item index="1" zone="0">_d-0001d3b5-ad0f-8000-ad0f-900000900000_15</item>
+            <item index="0" zone="1">_d-0001d3b5-ad0f-8000-ad0f-900000900000_6</item>
+            <item index="1" zone="1">_d-0001d3b5-ad0f-8000-ad0f-900000900000_9</item>
+            <item index="2" zone="1">_d-0001d3b5-ad0f-8000-ad0f-900000900000_7</item>
+            <item index="3" zone="1">_d-0001d3b5-ad0f-8000-ad0f-900000900000_16</item>
+        </portlets>
+    </page>
+    <roleMap>
+        <role name="approver">
+            <users/>
+            <groups/>
+        </role>
+        <role name="editor">
+            <users/>
+            <groups/>
+        </role>
+        <role name="viewer">
+            <users/>
+            <groups/>
+        </role>
+        <role name="admin">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+    </roleMap>
+</pageHaul>

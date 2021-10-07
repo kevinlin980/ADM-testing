@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<groupHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_e-0000e71b-9358-8000-6ea0-011e94011e94_324</versionUuid>
+    <group>
+        <name>Federal</name>
+        <securityMap>SECURITYMAP_PUBLIC</securityMap>
+        <uuid>_e-0000d4ae-e38b-8000-ac7f-680000680000_86</uuid>
+        <groupTypeUuid>_f-0000d4ae-e38b-8000-ac7f-680000680000_5</groupTypeUuid>
+        <parentUuid>_e-0000d4ae-e38b-8000-ac7f-680000680000_89</parentUuid>
+        <description>Members of the Federal team responsible for deciding whether or not to bid on an opportunity.</description>
+        <delegatedCreation>false</delegatedCreation>
+        <memberPolicy>MEMBERPOLICY_CLOSED</memberPolicy>
+        <viewingPolicy>VIEWINGPOLICY_LOW</viewingPolicy>
+        <attributes/>
+    </group>
+    <members>
+        <users/>
+        <groups>
+            <groupUuid>_e-0000d4ae-e38b-8000-ac7f-680000680000_88</groupUuid>
+        </groups>
+    </members>
+    <admins>
+        <users/>
+        <groups>
+            <groupUuid>_e-0000d4ae-e38b-8000-ac7f-680000680000_87</groupUuid>
+        </groups>
+    </admins>
+    <ruleSet/>
+    <history>
+        <historyInfo versionUuid="_e-0000e71b-9358-8000-6ea0-011e94011e94_324"/>
+    </history>
+</groupHaul>

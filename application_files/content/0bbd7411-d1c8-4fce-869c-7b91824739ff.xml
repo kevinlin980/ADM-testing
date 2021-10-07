@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25052</versionUuid>
+    <rule>
+        <name>ActiveUsers</name>
+        <uuid>0bbd7411-d1c8-4fce-869c-7b91824739ff</uuid>
+        <description></description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load(
+  local!pagingInfo: #"SYSTEM_SYSRULES_pagingInfo"(
+    batchSize: 10,
+    startIndex: 1,
+    sort: #"SYSTEM_SYSRULES_sortInfo"(ascending: false, field: "lastRequestTs")
+  ),
+  with(
+    local!datasubset: todatasubset(
+      getrecentactivity_appian_internal(100),
+      local!pagingInfo
+    ),
+    #"SYSTEM_SYSRULES_dashboardLayout"(
+      firstColumnContents:{
+        #"SYSTEM_SYSRULES_gridField"(
+          label: "User Activity",
+          columns:{
+            #"SYSTEM_SYSRULES_gridTextColumn"(label: "User", data: index(local!datasubset.data, "user", null), field: "user"),
+            #"SYSTEM_SYSRULES_gridTextColumn"(label: "Client", data: index(local!datasubset.data, "clientType", null), field: "clientType"),
+            #"SYSTEM_SYSRULES_gridTextColumn"(label: "Time", data: index(local!datasubset.data, "lastRequestTs", null), field: "lastRequestTs")
+          },
+          value: local!pagingInfo,
+          saveInto: local!pagingInfo,
+          totalCount: count(local!datasubset.data)
+        )
+      }
+    )
+  )
+)</definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25052"/>
+    </history>
+</contentHaul>

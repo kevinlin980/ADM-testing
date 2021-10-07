@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_23548</versionUuid>
+    <rule>
+        <name>generateColumnsBrowser</name>
+        <uuid>d3d3402e-0afb-4207-a8ee-83da47b6268b</uuid>
+        <description>This interface showcases the columns browser</description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load(
+  local!path,
+  local!selection,
+  {
+    #"SYSTEM_SYSRULES_hierarchyBrowserFieldColumns"(
+      label: "Sample Hierarchical Dataset",
+      labelPosition: "ABOVE",
+      instructions: "Click on a drillable node (&gt;) to navigate the hierarchy. Click on a node that shows a checkmark on hover to select it.",
+      helpTooltip: "Nodes with even values are drillable. Nodes divisble by 3 are not selectable. Drillable and selectable nodes have unique on-hover displays.",
+      height: "TALL",
+      firstColumnValues: fn!enumerate(9),
+      pathValue: local!path,
+      pathSaveInto: local!path,
+      selectionValue: local!selection,
+      selectionSaveInto: local!selection,
+      nextColumnValues: enumerate(fv!nodeValue),
+      nodeConfigs: #"SYSTEM_SYSRULES_hierarchyBrowserFieldColumnsNode"(
+        id: fv!nodeValue,
+        label: "Node Value " &amp; fv!nodeValue,
+        image: #"SYSTEM_SYSRULES_documentImage"(
+          document: #"SYSTEM_SYSRULES_iconIndicator"(
+            icon: if(
+              fv!nodeValue = 0,
+              "HARVEY_0",
+              if(
+                mod(fv!nodeValue, 4) = 0,
+                "HARVEY_100",
+                "HARVEY_" &amp; mod(fv!nodeValue, 4) * 25
+              )
+            )
+          ),
+          caption: fv!nodeValue &amp; " nodes in the next column"
+        ),
+        isDrillable: 1 - mod(fv!nodeValue, 2),
+        isSelectable: mod(fv!nodeValue, 3),
+        nextColumnCount: fv!nodeValue
+      )
+    ),
+    #"SYSTEM_SYSRULES_textField"(
+      label: "Path",
+      labelPosition: "ADJACENT",
+      value: local!path,
+      readOnly: true
+    ),
+    #"SYSTEM_SYSRULES_textField"(
+      label: "Selection",
+      labelPosition: "ADJACENT",
+      value: local!selection,
+      readOnly: true
+    )
+  }
+)</definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_23548"/>
+    </history>
+</contentHaul>

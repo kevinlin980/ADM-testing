@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26047</versionUuid>
+    <rule>
+        <name>MU_objectRelationshipTreeGrid</name>
+        <uuid>743e1000-83e8-40a6-8cf9-e84eac84be64</uuid>
+        <description></description>
+        <parentUuid>_a-0000d991-7a0e-8000-1f5c-010000010000_2140</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>=load(local!gridSelection:#"SYSTEM_SYSRULES_gridSelection"(pagingInfo:#"SYSTEM_SYSRULES_pagingInfo"(startIndex:1, batchsize:-1), selected:{}),
+  local!show:fn!false(),
+  #"SYSTEM_SYSRULES_dashboardLayout"(
+    firstColumnContents: {
+      #"SYSTEM_SYSRULES_sectionLayout"(
+        label: "Items"&amp;char(9)&amp;"test",
+        firstColumnContents: {
+          /* This grid is not configured to page or sort */
+          #"SYSTEM_SYSRULES_gridField"(
+            labelPosition: "ABOVE",
+            totalCount: 5,
+            columns: 
+            if(toString(local!show)=toString(fn!true()),
+              {
+               /* a!gridTextColumn(label: "", data: {char(09660)}, alignment: "CENTER",links:{a!dynamicLink(value:fn!false(),saveInto:local!show)}),*/
+                /*a!gridImageColumn(label:"", size:"ICON",data:{a!documentImage(document:a!iconIndicator(icon:"TREND_FLAT"),link:a!dynamicLink(value:fn!true))}),*/
+                #"SYSTEM_SYSRULES_gridImageColumn"(label:"",data:{#"SYSTEM_SYSRULES_documentImage"(document:#"SYSTEM_SYSRULES_iconIndicator"(icon:"FOLDER")),#"SYSTEM_SYSRULES_documentImage"(document:#"SYSTEM_SYSRULES_iconIndicator"(icon:"DOC_GENERIC")),#"SYSTEM_SYSRULES_documentImage"(document:#"SYSTEM_SYSRULES_iconIndicator"(icon:"DOC_GENERIC"))}, size:"ICON"),
+                #"SYSTEM_SYSRULES_gridTextColumn"(label: "Name", data: {char(09660)&amp;" Mobile device for demos", char(8212)&amp;" Video software upgrade", char(8212)&amp;" Device accessories"}, alignment: "LEFT",links:{#"SYSTEM_SYSRULES_dynamicLink"(value:fn!false(),saveInto:local!show)}),
+                #"SYSTEM_SYSRULES_gridTextColumn"(label: "Location", data: {"Interface Definition (3 References)", "Outstanding Purchase Request Node", "Rule Definition"}, alignment: "LEFT"),
+                #"SYSTEM_SYSRULES_gridTextColumn"(label: "Last Modified", data: {"3/17 by christopher.walken", "3/17 by christopher.walken", "3/17 by christopher.walken"}, alignment: "LEFT")
+              },
+              {
+                /*a!gridTextColumn(label: "", data: {char(09658)}, alignment: "CENTER",links:{a!dynamicLink(value:fn!true(),saveInto:local!show)}),*/
+                /*a!gridImageColumn(label:"", size:"ICON",data:{a!documentImage(document:a!iconIndicator(icon:"TREND_FLAT"),link:a!dynamicLink(value:fn!true))}),*/
+                #"SYSTEM_SYSRULES_gridImageColumn"(label:"",data:{#"SYSTEM_SYSRULES_documentImage"(document:#"SYSTEM_SYSRULES_iconIndicator"(icon:"FOLDER"))}, size:"ICON"),
+                #"SYSTEM_SYSRULES_gridTextColumn"(label: "Name", data: {char(09658)&amp;" Mobile device for demos"}, alignment: "LEFT",links:{#"SYSTEM_SYSRULES_dynamicLink"(value:fn!true(),saveInto:local!show)}),
+                #"SYSTEM_SYSRULES_gridTextColumn"(label: "Location", data: {"Interface Definition (3 References)"}, alignment: "LEFT"),
+                #"SYSTEM_SYSRULES_gridTextColumn"(label: "Last Modified", data: {"3/17 by christopher.walken"}, alignment: "LEFT")
+              }
+            ),
+            identifiers:if(toString(local!show)=toString(fn!true()),{1,2,3},{1}),
+            value:local!gridSelection,
+            saveInto:local!gridSelection,
+            selection:fn!true()
+          )
+        },
+        secondColumnContents: {}
+      )
+    },
+    secondColumnContents: {}
+  )
+)</definition>
+        <namedTypedValue>
+            <name>cancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26047"/>
+    </history>
+</contentHaul>

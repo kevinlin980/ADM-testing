@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26122</versionUuid>
+    <rule>
+        <name>reportClosedOpportunities</name>
+        <uuid>_a-0000d6fd-7cb9-8000-7886-010000010000_953</uuid>
+        <description></description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>=#"SYSTEM_SYSRULES_gridField"(
+  totalCount: 18,
+  columns: {
+    #"SYSTEM_SYSRULES_gridTextColumn"(
+      label: "Opportunity",
+      data: {"DataScan Tech", "KBC Direct - Phase 2 Licenses", "Fidelity Investments - BPM", "Husky PS - Addt'l services for ALC", "Clayton 2012 Subscription", "Frankfort Business School", "Additional licenses for SuperIQ", "Library of Congress - LOC - OSI", "BANA - GBCS - Process Analysis", "NSN - Maint Renewal 04/2012","Primatics of M&amp;T Bank", "School Bd of Polk County - Maint renewal 12/2012", "Library of Congress - ITS", "SOW1 of NBN Process Management", "Incentra - Maint Renewal 9/2012", "Epana - Maint Renewal 9/2012", "British Columbia Teachers Fed - Maint Renewal", "Wellmark - Maint Renewal 9/2012"}
+    ),
+    #"SYSTEM_SYSRULES_gridTextColumn"(
+      label: "Account",
+      data: {"DataScan Tech", "KBC Group NV", "Fidelity", "Husky Energy", "Clayton Holdings, Inc.", "Frankfurt Business School", "SuperIQ Pty Limited", "U.S. Library of Congress", "Bank of America", "Nokia Siemens Networks", "M&amp;T Bank", "School Board of Polk County, FL", "U.S. Library of Congress", "Telstra", "Incentra", "Epana Networks, Inc.", "British Columbia Teachers Federation", "Wellmark, Inc."}
+    ),
+    #"SYSTEM_SYSRULES_gridTextColumn"(
+      label: "Win Date",
+      field: "Win Date",
+      alignment: "RIGHT",
+      data: {tostring("4/14/2012"), tostring("4/13/2012"), tostring("4/9/2012"), tostring("4/8/2012"), tostring("4/8/2012"), tostring("4/8/2012"), tostring("4/8/2012"), tostring("4/4/2012"), tostring("4/2/2012"), tostring("4/2/2012"), tostring("4/1/2012"), tostring("4/1/2012"), tostring("4/1/2012"), tostring("4/1/2012"), tostring("4/1/2012"), tostring("4/1/2012"), tostring("4/1/2012"), tostring("4/1/2012")}
+),
+    #"SYSTEM_SYSRULES_gridTextColumn"(
+      label: "Type",
+      data: {"Software Sale-Perpetual License", "Software Sale - Perpetual License", "Software Sale - Perpetual License", "Professional Services Sale", "Software Sale - Cloud Subscription", "Software Sale - Cloud Subscription", "Software Sale - Perpetual License", "Software Sale - Cloud Subscription", "Professional Services Sale", "Maintenance Sale","Software Sale - Perpetual License", "Maintenance Sale", "Software Sale - Cloud Subscription", "Professional Services Sale", "Maintenance Sale", "Maintenance Sale", "Maintenance Sale", "Maintenance Sale"}
+),
+    #"SYSTEM_SYSRULES_gridTextColumn"(
+      label: "Owner",
+      data: {"Roxann Kerner", "Ryan Gates", "Michael Massa", "Scott Ulrichs", "Scott Ulrichs", "Ryan Gates", "Karen Astley", "John Ryan", "Joe Barry", "Justin Thomas", "Marc Wilson", "Glenn Healy", "John Ryan", "Ambarish Desai", "Scott Ulrichs", "Jamie Friedman", "Scott Ulrichs", "Scott Ulrichs"}
+    )
+  },
+  value: 'type!{http://www.appian.com/ae/types/2009}PagingInfo'(
+    startIndex: 1,
+    batchSize: 18,
+    sort: 'type!{http://www.appian.com/ae/types/2009}SortInfo'(field: "Win Date", ascending:true)
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26122"/>
+    </history>
+</contentHaul>

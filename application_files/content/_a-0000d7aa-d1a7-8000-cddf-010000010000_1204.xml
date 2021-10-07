@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25713</versionUuid>
+    <rule>
+        <name>reportInteractivityTests</name>
+        <uuid>_a-0000d7aa-d1a7-8000-cddf-010000010000_1204</uuid>
+        <description></description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load(
+  local!component: 1,
+  local!label: "Example label",
+  local!choices: 1,
+  local!selected: 2,
+  local!validationMessage: "Example validation message",
+  local!speed: null,
+  local!unused: null,
+  'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns: {
+    'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+      'type!{http://www.appian.com/ae/types/2009}SectionLayout'(label: "Configuration", content:
+        'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns: {
+          'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+            #"SYSTEM_SYSRULES_dropdownField"(
+              label: "Component",
+              choiceLabels: { "Radio", "Checkbox", "Dropdown", "Multiple Dropdown" },
+              choiceValues: {1, 2, 3, 4},
+              value: local!component,
+              saveInto: local!component
+            ),
+            'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Label", value: local!label, saveInto: local!label),
+            'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Validation Message", value: local!validationMessage, saveInto: local!validationMessage),
+            #"SYSTEM_SYSRULES_radioButtonField"(
+              label: "Choice List",
+              choiceLabels: { "3 choices", "6 choices" },
+              choiceValues: {1, 2},
+              value: local!choices,
+              saveInto: local!choices
+            ),
+            'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Selected index", readOnly: true, value: local!selected),
+            #"SYSTEM_SYSRULES_checkboxField"(
+              label: "Speed",
+              choiceLabels: { "Make reevaluation really slow" },
+              choiceValues: {1},
+              value: local!speed,
+              saveInto: local!speed
+            ),
+            'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Isolated Field", instructions: "This field causes reevaluation but does not change the component below", value: local!unused, saveInto: local!unused)
+          })
+        })
+      ),
+      'type!{http://www.appian.com/ae/types/2009}SectionLayout'(label: "Rendered Component", content:
+        'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns: {
+          'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+            collecttimingdata_appian_internal(
+              "renderedComponent",
+              with(
+                local!choiceList: if(local!choices = 1, { "one of three", "two of three", "three of three" }, { "one of six", "two of six", "three of six", "four of six", "five of six", "six of six" }),
+                local!unused: if(not(isnull(local!speed)), length(apply(fn!uppercase, enumerate(500000))), {}),
+
+                  choose(local!component,
+                    #"SYSTEM_SYSRULES_radioButtonField"(
+                      label: local!label,
+                      choiceLabels: local!choiceList,
+                      choiceValues: fn!enumerate(fn!length(local!choiceList))+1,
+                      value: local!selected,
+                      saveInto: local!selected,
+                      validations: #"SYSTEM_SYSRULES_validationMessage"(message: local!validationMessage)
+                    ),
+                    #"SYSTEM_SYSRULES_checkboxField"(
+                      label: local!label,
+                      choiceLabels: local!choiceList,
+                      choiceValues: fn!enumerate(fn!length(local!choiceList))+1,
+                      value: local!selected,
+                      saveInto: local!selected,
+                      validations: #"SYSTEM_SYSRULES_validationMessage"(message: local!validationMessage)
+                    ),
+                    #"SYSTEM_SYSRULES_dropdownField"(
+                      label: local!label,
+                      choiceLabels: local!choiceList,
+                      choiceValues: fn!enumerate(fn!length(local!choiceList))+1,
+                      value: local!selected,
+                      saveInto: local!selected,
+                      validations: #"SYSTEM_SYSRULES_validationMessage"(message: local!validationMessage)
+                    ),
+                    #"SYSTEM_SYSRULES_multipleDropdownField"(
+                      label: local!label,
+                      choiceLabels: local!choiceList,
+                      choiceValues: fn!enumerate(fn!length(local!choiceList))+1,
+                      value: local!selected,
+                      saveInto: local!selected,
+                      validations: #"SYSTEM_SYSRULES_validationMessage"(message: local!validationMessage)
+                    )
+                  )
+
+              )
+            )
+          })
+        })
+      ),
+      'type!{http://www.appian.com/ae/types/2009}SectionLayout'(label: "Timing", content:
+        'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns: {
+          'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+            with(
+              local!timings: displaytimingdata_appian_internal(),
+              #"SYSTEM_SYSRULES_textField"(
+                label: "Rendered Component Section",
+                value: index(local!timings,"renderedComponent", 0) &amp; " ms",
+                readOnly:true
+              )
+            )
+          })
+        })
+      )
+    })
+  })
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25713"/>
+    </history>
+</contentHaul>

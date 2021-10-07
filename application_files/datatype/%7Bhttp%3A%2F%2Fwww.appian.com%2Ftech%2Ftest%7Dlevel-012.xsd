@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.appian.com/tech/test"
+  xmlns:tns="http://www.appian.com/tech/test" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="%7Bhttp%3A%2F%2Fwww.appian.com%2Ftech%2Ftest%7Dlevel-013.xsd"/>
+  <xsd:complexType name="level-012">
+    <xsd:annotation>
+      <xsd:appinfo source="http://www.appian.com/ae/types/2009">
+        <ns2:Metadata xmlns:ns2="http://www.appian.com/ae/types/2009">
+          <ns2:versionUuid>000ce71b-9284-8000-6ef1-014d98014d98</ns2:versionUuid>
+          <ns2:history>
+            <ns2:historyInfo versionUuid="000ce71b-9284-8000-6ef1-014d98014d98"/>
+          </ns2:history>
+        </ns2:Metadata>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element form="qualified" name="id" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column @Id @GeneratedValue</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element form="qualified" name="name" type="xsd:string"/>
+      <xsd:element form="qualified" maxOccurs="unbounded"
+        name="listField" type="tns:level-013"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

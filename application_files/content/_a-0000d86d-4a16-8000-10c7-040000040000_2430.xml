@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_23346</versionUuid>
+    <rule>
+        <name>reportCustomPickerTest</name>
+        <uuid>_a-0000d86d-4a16-8000-10c7-040000040000_2430</uuid>
+        <description></description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load(
+  local!pickerDataSet: 1,
+  local!limitSelections: false,
+  local!pickedItems,
+  with(
+    local!bookTitles: { "The Lord of the Rings", "The Hitchhiker's Guide to the Galaxy", "Ender's Game", "Dune", "A Game of Thrones", "1984", "Fahrenheit 451", "Foundation trilogy", "Brave New World", "American Gods", "The Princess Bride", "The Wheel of Time", "Animal Farm", "Neuromancer", "Watchmen", "I, Robot", "Stranger in a Strange Land", "The Name of the Wind (Kingkiller Chronicles)", "Slaughterhouse-Five", "Frankenstein", "Do Androids Dream of Electric Sheep?", "The Handmaid's Tale", "The Dark Tower", "2001: A Space Odyssey", "The Stand", "Snow Crash", "The Martian Chronicles", "Cat’s Cradle", "The Sandman series", "A Clockwork Orange", "Starship Troopers", "Watership Down", "Dragonflight (Pern)", "The Moon is a Harsh Mistress", "A Canticle for Leibowitz", "The Time Machine", "Twenty Thousand Leagues Under the Sea", "Flowers for Algernon", "The War of the Worlds", "Amber Chronicles", "The Belgariad", "The Mists of Avalon", "Mistborn trilogy", "Ringworld", "The Left Hand of Darkness", "The Silmarillion", "The Once and Future King", "Neverwhere", "Childhood's End", "Contact", "Hyperion", "Stardust", "Cryptonomicon", "World War Z: An Oral History of the Zombie War", "The Last Unicorn", "The Forever War", "Small Gods", "The Chronicles of Thomas Covenant, the Unbeliever", "The Vorkosigan Saga", "Going Postal", "The Mote in God's Eye", "The Sword of Truth", "The Road", "Jonathan Strange and Mr Norrell", "I Am Legend", "The Riftwar Saga", "The Sword of Shannara Trilogy", "Conan the Barbarian", "The Farseer trilogy", "The Time Traveler's Wife", "The Way of Kings", "A Journey To The Center Of The Earth", "The Legend of Drizzt series", "Old Man's War series", "The Diamond Age", "Rendezvous With Rama", "Kushiel's Dart trilogy", "The Dispossessed", "Something Wicked This Way Comes", "Wicked: The Life and Times of the Wicked Witch of the West", "The Malazan Book Of The Fallen series", "The Eyre Affair", "The Culture series", "The Crystal Cave", "Anathem", "The Codex Alera", "The Book of the New Sun", "The Thrawn trilogy", "Outlander series", "The Elric saga", "The Illustrated Man", "Sunshine", "A Fire Upon the Deep", "The Caves of Steel", "The Mars trilogy", "Lucifer's Hammer", "Doomsday Book", "Perdido Street Station", "The Xanth series", "The Space trilogy" },
+    local!primeNumbers: { "2", "3", "5", "7", "11", "13", "17", "19", "23", "29", "31", "37", "41", "43", "47", "53", "59", "61", "67", "71", "73", "79", "83", "89", "97", "101", "103", "107", "109", "113", "127", "131", "137", "139", "149", "151", "157", "163", "167", "173", "179", "181", "191", "193", "197", "199", "211", "223", "227", "229", "233", "239", "241", "251", "257", "263", "269", "271", "277", "281", "283", "293", "307", "311", "313", "317", "331", "337", "347", "349", "353", "359", "367", "373", "379", "383", "389", "397", "401", "409", "419", "421", "431", "433", "439", "443", "449", "457", "461", "463", "467", "479", "487", "491", "499" },    
+    local!filterArray: lambda_appian_internal(
+      ri!filter, ri!array,
+      index(ri!array, where(apply(search(ri!filter, _), ri!array)))
+    ),
+    local!searchBookTitles: lambda_appian_internal(
+      ri!filter,
+      with(
+        local!results: local!filterArray(ri!filter, local!bookTitles),
+        'type!{http://www.appian.com/ae/types/2009}DataSubset'(data: local!results, identifiers: local!results)
+      )
+    ),
+    local!searchPrimes: lambda_appian_internal(
+      ri!filter,
+      with(
+        local!results: local!filterArray(ri!filter, local!primeNumbers),
+        'type!{http://www.appian.com/ae/types/2009}DataSubset'(data: local!results, identifiers: toint(local!results))
+      )
+    ),
+    #"SYSTEM_SYSRULES_dashboardLayout"(firstColumnContents: {
+      #"SYSTEM_SYSRULES_dropdownFieldByIndex"(
+        label: "Data Set",
+        instructions: "Book titles use text identifiers, prime numbers use integer identifiers",
+        choiceLabels: {
+          "NPR Top 100 SF and Fantasy Novel Titles",
+          "Prime Numbers up to 500"
+        },
+        value: local!pickerDataSet,
+        saveInto: {
+          local!pickerDataSet,
+          local!pickedItems &lt;&lt; #"SYSTEM_SYSRULES_returnFirst"(null, _)
+        }
+      ),
+      #"SYSTEM_SYSRULES_ButtonArrayLayout"(buttons: {
+        #"SYSTEM_SYSRULES_ButtonWidget"(
+          label: if(local!limitSelections, "Remove Selection Limit", "Limit Selections to 5"),
+          value: not(local!limitSelections),
+          saveInto: local!limitSelections
+        )
+      }),
+      choose(
+        local!pickerDataSet,
+        #"SYSTEM_SYSRULES_pickerFieldCustom"(
+          label: "Select a Book",
+          instructions: "Many entries are actually book series, not single books",
+          maxSelections: if(local!limitSelections, 5, null),
+          suggestFunction: local!searchBookTitles,
+          selectedLabels: local!pickedItems,
+          value: local!pickedItems,
+          saveInto: local!pickedItems
+        ),
+        #"SYSTEM_SYSRULES_pickerFieldCustom"(
+          label: "Select a Prime Number",
+          instructions: "Every integer larger than 1 can be written as a product of one or more primes.",
+          maxSelections: if(local!limitSelections, 5, null),
+          suggestFunction: local!searchPrimes,
+          selectedLabels: if(not(#"SYSTEM_SYSRULES_isNullOrEmpty"(local!pickedItems)), apply(fn!tostring, local!pickedItems), null),
+          value: local!pickedItems,
+          saveInto: local!pickedItems
+        )
+      ),
+      #"SYSTEM_SYSRULES_textField"(label: "Picked Items Value", instructions: "Type: " &amp; typename(typeof(local!pickedItems)), readOnly: true, value: local!pickedItems),
+      if(not(#"SYSTEM_SYSRULES_isNullOrEmpty"(local!pickedItems)), #"SYSTEM_SYSRULES_textField"(label: "First Item", instructions: "Type: " &amp; typename(runtimetypeof(local!pickedItems[1])), readOnly: true, value: local!pickedItems[1]), {})
+    })
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_23346"/>
+    </history>
+</contentHaul>

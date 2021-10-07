@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<portletHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <portlet>
+        <uuid>_7074-0000d16e-95e3-8000-1d1c-01000001000000000000024</uuid>
+        <name>My Tasks</name>
+        <portletType>process.portlet.mytasks</portletType>
+        <frame>portlet.default</frame>
+        <shared>false</shared>
+        <public>true</public>
+        <inheritsSecurity>true</inheritsSecurity>
+        <parameters/>
+    </portlet>
+    <roleMap>
+        <role name="editor">
+            <users/>
+            <groups/>
+        </role>
+        <role name="viewer">
+            <users/>
+            <groups/>
+        </role>
+        <role name="admin">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+    </roleMap>
+</portletHaul>

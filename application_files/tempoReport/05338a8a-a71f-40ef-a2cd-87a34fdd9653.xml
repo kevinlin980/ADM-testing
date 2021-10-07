@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>ed62ea68-c820-40ce-8701-a9515c65c4e6</versionUuid>
+    <tempoReport a:uuid="05338a8a-a71f-40ef-a2cd-87a34fdd9653" name="Optional Inputs">
+        <a:description>Runtime equivalent to the mockups repository's component_optional.html</a:description>
+        <a:uiExpr>=#"_a-0001d74e-0e42-8000-0e42-6b00006b0000_1049"()</a:uiExpr>
+        <a:urlStub>optional</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>_e-0000d615-4c23-8000-da6f-010000010000_7</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="ed62ea68-c820-40ce-8701-a9515c65c4e6"/>
+    </history>
+</tempoReportHaul>

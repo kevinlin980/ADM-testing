@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="OneApp" xmlns:tns="OneApp" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="Status">
+    <xsd:annotation>
+      <xsd:appinfo source="http://www.appian.com/ae/types/2009">
+        <ns2:Metadata xmlns:ns2="http://www.appian.com/ae/types/2009">
+          <ns2:versionUuid>0094e71b-9284-8000-6ef1-014d98014d98</ns2:versionUuid>
+          <ns2:history>
+            <ns2:historyInfo versionUuid="0094e71b-9284-8000-6ef1-014d98014d98"/>
+          </ns2:history>
+        </ns2:Metadata>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="id" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">
+            @Column(nullable=false)
+            @Id
+            @GeneratedValue
+          </xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="name" nillable="true" type="xsd:string"/>
+      <xsd:element name="order" nillable="true" type="xsd:int"/>
+      <xsd:element name="isActive" nillable="true" type="xsd:boolean"/>
+      <xsd:element name="type" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

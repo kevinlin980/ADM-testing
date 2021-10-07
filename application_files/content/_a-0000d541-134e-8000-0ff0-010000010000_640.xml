@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_20009</versionUuid>
+    <constant>
+        <name>company_logos</name>
+        <uuid>_a-0000d541-134e-8000-0ff0-010000010000_640</uuid>
+        <description></description>
+        <parentUuid>_a-0000d552-52d7-8000-4b9d-010000010000_614</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <typedValue>
+            <type>
+                <name>CollaborationDocument?list</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+            <value>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_750</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_751</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_752</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_753</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_773</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_754</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_755</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_756</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_757</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_773</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_758</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_759</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_760</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_761</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_762</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_763</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_764</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_765</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_766</el>
+                <el>_a-0000d579-c3be-8000-8f27-010000010000_767</el>
+            </value>
+        </typedValue>
+        <isEnvironmentSpecific>false</isEnvironmentSpecific>
+    </constant>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_20009"/>
+    </history>
+</contentHaul>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24944</versionUuid>
+    <rule>
+        <name>BARCHART_demo</name>
+        <uuid>_a-0000d791-6737-8000-636f-010000010000_1069</uuid>
+        <description></description>
+        <parentUuid>_a-0000d6d7-6af8-8000-66c6-010000010000_944</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>
+'type!{http://www.appian.com/ae/types/2009}FormLayout'(content: {
+  'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+    columns: {
+      'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+        contents: {
+          'type!{http://www.appian.com/ae/types/2009}SectionLayout'(
+            content: 'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+              columns: {
+                'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+                  contents: {
+                    #"SYSTEM_SYSRULES_barChartField"(
+                      label: "Opportunities by Type",
+                      instructions: "allowDecimals set to false",
+                      categories: {"Americas", "EMEA", "APAC"},
+                      series: {
+                        #"SYSTEM_SYSRULES_chartSeries"(label: "Maintenance", data: {19, 8, null}),
+                        #"SYSTEM_SYSRULES_chartSeries"(label: "Software (Cloud)", data: {11, 16, 10}),
+                        #"SYSTEM_SYSRULES_chartSeries"(label: "Software (Perpetual)", data: {14, 12, 7})
+                      },
+                      yAxisTitle: "Active Opportunities",
+                      showDataLabels: true,
+                      showLegend: null
+                    )
+                  }
+                )
+              }
+            )
+          ),
+          'type!{http://www.appian.com/ae/types/2009}SectionLayout'(
+            content: 'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+              columns: {
+                'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+                  contents: {
+                    #"SYSTEM_SYSRULES_barChartField"(
+                      label: "Negative Values",
+                      categories: {"Americas", "EMEA", "APAC"},
+                      series: {
+                        #"SYSTEM_SYSRULES_chartSeries"(label: "Maintenance", data: {19, 8, null}),
+                        #"SYSTEM_SYSRULES_chartSeries"(label: "Professional Services", data: {-15, 9, 6}),
+                        #"SYSTEM_SYSRULES_chartSeries"(label: "Software (Cloud)", data: {11, 16, -10}),
+                        #"SYSTEM_SYSRULES_chartSeries"(label: "Software (Perpetual)", data: {14, 12, 7})
+                      },
+                      yAxisTitle: "Active Opportunities",
+                      showDataLabels: true
+                    )                    
+                  }
+                ),
+                'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+                  contents: {
+                    #"SYSTEM_SYSRULES_barChartField"(
+                      label: "Label Spread, Long Labels",
+                      categories: {"North, Central, and South America", "Europe, Middle East, Africa", "Asia Pacific"},
+                      series: {
+                        #"SYSTEM_SYSRULES_chartSeries"(data: {19, 8, 6}),
+                        #"SYSTEM_SYSRULES_chartSeries"(data: {1543141, 9, 10}),
+                        #"SYSTEM_SYSRULES_chartSeries"(data: {11, 16, 7}),
+                        #"SYSTEM_SYSRULES_chartSeries"(data: {14, 125315, null})
+                      },
+                      yAxisTitle: "Active Opportunities",
+                      showLegend: false,
+                      showDataLabels: true                        
+                    ),
+                    #"SYSTEM_SYSRULES_barChartField"(
+                      label: "Extra Series Data",
+                      instructions: "Each series has an extra value. An extra group of Bars is rendered for that virtual category and it is shown with a default label.",
+                      categories: {"Americas", "EMEA", "APAC"},
+                      series: {
+                        #"SYSTEM_SYSRULES_chartSeries"(label: "Maintenance", data: {19, 8, null, 8}),
+                        #"SYSTEM_SYSRULES_chartSeries"(label: "Professional Services", data: {15, 9, 6, 6}),
+                        #"SYSTEM_SYSRULES_chartSeries"(label: "Software (Cloud)", data: {11, 16, 10, 4}),
+                        #"SYSTEM_SYSRULES_chartSeries"(label: "Software (Perpetual)", data: {14, 12, 7, 2})
+                      },
+                      yAxisTitle: "Active Opportunities",
+                      allowDecimalAxisLabels: true,
+                      showDataLabels: true
+                    )                     
+                  }
+                )
+              }
+            )
+          )
+        }
+      )
+    }
+  )
+})
+</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24944"/>
+    </history>
+</contentHaul>

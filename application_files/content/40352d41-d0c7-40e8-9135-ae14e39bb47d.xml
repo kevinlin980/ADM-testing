@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24786</versionUuid>
+    <queryRule>
+        <name>gwtpgStartIndex</name>
+        <uuid>40352d41-d0c7-40e8-9135-ae14e39bb47d</uuid>
+        <description></description>
+        <folderUuid>_a-0000d493-0756-8000-0428-010000010000_528</folderUuid>
+        <dataStoreEntityCompositeUuid>837d49b8-eb7f-4705-9573-68fefc8cab8f@_a-0000d499-93a3-8000-9087-010000010000_493</dataStoreEntityCompositeUuid>
+        <params>
+            <param>
+                <description></description>
+                <name>index</name>
+                <type>{http://www.w3.org/2001/XMLSchema}int</type>
+            </param>
+        </params>
+        <filters>
+            <filter>
+                <field>
+                    <name>EmployeeID</name>
+                    <type>{http://www.w3.org/2001/XMLSchema}int</type>
+                </field>
+                <op>&gt;</op>
+                <value>index</value>
+                <valueType>PARAMETER</valueType>
+            </filter>
+        </filters>
+        <orderings/>
+    </queryRule>
+    <roleMap public="false">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24786"/>
+    </history>
+</contentHaul>

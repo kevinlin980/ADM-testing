@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25828</versionUuid>
+    <rule>
+        <name>MU_webAPIFullVersion</name>
+        <uuid>6f799ac6-213f-4229-92bb-052fdd0dcea1</uuid>
+        <description></description>
+        <parentUuid>_a-0000d984-4b61-8000-4342-010000010000_2234</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>=#"SYSTEM_SYSRULES_formLayout"(&#xD;
+  label: "",&#xD;
+  instructions: "",&#xD;
+  firstColumnContents: {&#xD;
+    #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+      label: "Properties",&#xD;
+      firstColumnContents: {&#xD;
+        #"SYSTEM_SYSRULES_textField"(&#xD;
+          label: "Name",&#xD;
+          value: "Query account process record"&#xD;
+        ),&#xD;
+        &#xD;
+        /*a!linkField(&#xD;
+          label: "Generated URL",&#xD;
+          links:a!safeLink(&#xD;
+            label:"http://jboss-verification.appianci.net/suite/webapi/query_account_process_record",&#xD;
+            uri:"www.google.com"&#xD;
+          )&#xD;
+        )*/&#xD;
+      },&#xD;
+      secondColumnContents:{&#xD;
+        #"SYSTEM_SYSRULES_textField"(&#xD;
+          label: "Description",&#xD;
+          value:"Query account process record given the region and type id"&#xD;
+        )&#xD;
+      }&#xD;
+    ),&#xD;
+   /* a!sectionLayout(&#xD;
+      label:"Endpoint",&#xD;
+      firstColumnContents:{&#xD;
+        a!radioButtonFieldByIndex(&#xD;
+          label:"Type",&#xD;
+          value:3,&#xD;
+          choiceLabels:{"Rule","JSON","Raw HTTP","SOAP"}&#xD;
+        )&#xD;
+      },&#xD;
+        secondColumnContents:{&#xD;
+          a!textField(&#xD;
+            label:"Rule",&#xD;
+            value:"rule!queryAccountProcessRecordByRegionAndTypeID"&#xD;
+          )&#xD;
+        }&#xD;
+    ),*/&#xD;
+    #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+      label: "Variables",&#xD;
+      firstColumnContents: {&#xD;
+        /*Var and type r/o for rule based */&#xD;
+        #"SYSTEM_SYSRULES_gridLayout"(&#xD;
+            label: "",&#xD;
+            headerCells: {&#xD;
+              #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Request Data"),&#xD;
+              &#xD;
+              #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Variable"),&#xD;
+              #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Type"),&#xD;
+            },&#xD;
+            columnConfigs: {&#xD;
+              #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "DISTRIBUTE"),&#xD;
+             &#xD;
+              #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "DISTRIBUTE"),&#xD;
+              #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "DISTRIBUTE")&#xD;
+            },&#xD;
+            rows: {&#xD;
+              #"SYSTEM_SYSRULES_gridRowLayout"(&#xD;
+                contents: {&#xD;
+                  #"SYSTEM_SYSRULES_dropdownField"(align: "LEFT",choiceLabels:{"Body","Headers","Parameters","Method"},choiceValues:{"body","headers","parameters","method"},value:"parameters", placeholderLabel:"---Select Type---",saveInto:""),&#xD;
+                 &#xD;
+                  #"SYSTEM_SYSRULES_textField"(align: "LEFT",readOnly:false(),value:"Region"),&#xD;
+                   /*a!textField(align: "LEFT",readOnly:false(),value:"Text")*/&#xD;
+                   #"SYSTEM_SYSRULES_dropdownField"(align: "LEFT",choiceLabels:{"Body","Headers","Parameters","Method"},choiceValues:{"body","headers","parameters","method"}, placeholderLabel:"Text",saveInto:""),&#xD;
+                }&#xD;
+              ),&#xD;
+              #"SYSTEM_SYSRULES_gridRowLayout"(&#xD;
+                contents: {&#xD;
+                  #"SYSTEM_SYSRULES_dropdownField"(align: "LEFT",choiceLabels:{"Body","Headers","Parameters","Method"},choiceValues:{"body","headers","parameters","method"}, placeholderLabel:"---Select Type---",saveInto:""),&#xD;
+                 &#xD;
+                  #"SYSTEM_SYSRULES_textField"(align: "LEFT",readOnly:false(),value:"TypeID"),&#xD;
+                  /* a!textField(align: "LEFT",readOnly:true(),value:"Number (Integer)")*/&#xD;
+                  #"SYSTEM_SYSRULES_dropdownField"(align: "LEFT",choiceLabels:{"Body","Headers","Parameters","Method"},choiceValues:{"body","headers","parameters","method"}, placeholderLabel:"Number (Integer)",saveInto:""),&#xD;
+                }&#xD;
+              )&#xD;
+            }&#xD;
+          ),&#xD;
+        #"SYSTEM_SYSRULES_linkField"(&#xD;
+          labelPosition: "COLLAPSED",&#xD;
+          links: {&#xD;
+            #"SYSTEM_SYSRULES_dynamicLink"(label: "+ New Variable")&#xD;
+          }&#xD;
+        )&#xD;
+      },&#xD;
+      secondColumnContents: {&#xD;
+        &#xD;
+      }&#xD;
+    ),&#xD;
+    #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+      label: "Action",&#xD;
+      firstColumnContents:{&#xD;
+        #"SYSTEM_SYSRULES_dropdownFieldByIndex"(&#xD;
+          label:"Smart Service",&#xD;
+          choiceLabels:{"Write to Data Store Entity"},&#xD;
+          placeholderLabel:"===Select Smart Service===",&#xD;
+          value:1&#xD;
+        )&#xD;
+      },&#xD;
+      secondColumnContents:{&#xD;
+        #"SYSTEM_SYSRULES_textField"(&#xD;
+          readOnly:fn!true()&#xD;
+        )&#xD;
+        &#xD;
+      }&#xD;
+    ),&#xD;
+    #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+      label: "",&#xD;
+      firstColumnContents:{&#xD;
+        #"SYSTEM_SYSRULES_pickerFieldCustom"(&#xD;
+          label:"Data Store Entity",&#xD;
+          selectedLabels:"TMS_AccountType",&#xD;
+          value:"TMS_customers"&#xD;
+        ),&#xD;
+      },&#xD;
+      secondColumnContents:{&#xD;
+        #"SYSTEM_SYSRULES_dropdownFieldByIndex"(&#xD;
+          label:"typeID",&#xD;
+          choiceLabels:"ri!TypeID",&#xD;
+          value:1&#xD;
+        ),&#xD;
+        #"SYSTEM_SYSRULES_dropdownFieldByIndex"(&#xD;
+          label:"Region",&#xD;
+          choiceLabels:"ri!Region",&#xD;
+          value:1&#xD;
+        ),&#xD;
+        #"SYSTEM_SYSRULES_dropdownFieldByIndex"(&#xD;
+          label:"accountName",&#xD;
+          choiceLabels:"ri!TypeID",&#xD;
+          placeholderLabel:"Do not update"&#xD;
+        )&#xD;
+        &#xD;
+      }&#xD;
+    ),&#xD;
+    #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+      label: "Expression",&#xD;
+      firstColumnContents:{&#xD;
+        #"SYSTEM_SYSRULES_paragraphField"(&#xD;
+          label: "",&#xD;
+          labelPosition:"COLLAPSED",&#xD;
+          value:"=a!toJSON(&#xD;
+    queryrecord(&#xD;
+      cons!AccountRecordType,&#xD;
+      a!query(&#xD;
+        aggregation:a!queryAggregation(&#xD;
+          columns:{&#xD;
+            a!queryAggregationColumn(&#xD;
+              field:ri!TypeID,&#xD;
+              visible:true(),&#xD;
+              isgrouping:true()&#xD;
+            ),&#xD;
+            a!queryAggregationColumn(&#xD;
+              field:ri!Region,&#xD;
+              visible:true(),&#xD;
+              function:SUM&#xD;
+            )&#xD;
+          }&#xD;
+        ),&#xD;
+        pagingInfo: a!pagingInfo(&#xD;
+          startIndex:1,&#xD;
+          batchSize:100,&#xD;
+          sort:a!sortInfo(&#xD;
+            ascending:true()&#xD;
+          )&#xD;
+        )&#xD;
+      )&#xD;
+    )"&#xD;
+        )&#xD;
+      }&#xD;
+    )&#xD;
+  },&#xD;
+  secondColumnContents: {&#xD;
+    &#xD;
+  },&#xD;
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(&#xD;
+    primaryButtons: {&#xD;
+      #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(&#xD;
+        label: "Save",&#xD;
+        style: "PRIMARY"&#xD;
+      )&#xD;
+    },&#xD;
+    secondaryButtons: {&#xD;
+      #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(&#xD;
+        label: "Cancel",&#xD;
+        skipValidation: true,&#xD;
+        value: true&#xD;
+      )&#xD;
+    }&#xD;
+  )&#xD;
+) </definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25828"/>
+    </history>
+</contentHaul>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>3e73ca36-a3bd-4b2a-8519-f1a802a3f8db</versionUuid>
+    <tempoReport a:uuid="sail-record-type-designer" name="Record Type Designer">
+        <a:description></a:description>
+        <a:uiExpr>=#"SYSTEM_SYSRULES_rtd_main"("SYSTEM_RECORD_TYPE_USER","dummy-id").ui</a:uiExpr>
+        <a:urlStub>rtd</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_DESIGNERS</groupUuid>
+            </groups>
+        </role>
+        <role name="report_viewer">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_APPLICATION_USERS</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="3e73ca36-a3bd-4b2a-8519-f1a802a3f8db"/>
+    </history>
+</tempoReportHaul>

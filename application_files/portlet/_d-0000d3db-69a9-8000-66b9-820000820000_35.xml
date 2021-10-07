@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<portletHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <portlet>
+        <uuid>_d-0000d3db-69a9-8000-66b9-820000820000_35</uuid>
+        <name>Current Tasks</name>
+        <portletType>portal.portlet.report</portletType>
+        <frame>portlet.default</frame>
+        <shared>false</shared>
+        <public>true</public>
+        <inheritsSecurity>true</inheritsSecurity>
+        <parameters>
+            <item>
+                <key>graphSize</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">70</value>
+            </item>
+            <item>
+                <key>useDashboardContext</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">1</value>
+            </item>
+            <item>
+                <key>showUserControls</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">0</value>
+            </item>
+            <item>
+                <key>filterOperation</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">0</value>
+            </item>
+            <item>
+                <key>showFilters</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">0</value>
+            </item>
+            <item>
+                <key>pickerType_contextIds</key>
+                <listValue/>
+            </item>
+            <item>
+                <key>chartHeight</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">270</value>
+            </item>
+            <item>
+                <key>contextUuids</key>
+                <listValue/>
+            </item>
+            <item>
+                <key>showToolbar</key>
+            </item>
+            <item>
+                <key>reportUuid</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">SYSTEM_REPORT_CURRENT_TASKS_PER_PROCESS</value>
+            </item>
+            <item>
+                <key>chartWidth</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">360</value>
+            </item>
+            <item>
+                <key>filterValue</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"/>
+            </item>
+            <item>
+                <key>showEditControls</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">0</value>
+            </item>
+            <item>
+                <key>filterColumn</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:int">-1</value>
+            </item>
+            <item>
+                <key>batchSize</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string"/>
+            </item>
+            <item>
+                <key>chartSize</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">medium</value>
+            </item>
+        </parameters>
+    </portlet>
+    <roleMap>
+        <role name="editor">
+            <users/>
+            <groups/>
+        </role>
+        <role name="viewer">
+            <users/>
+            <groups/>
+        </role>
+        <role name="admin">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</portletHaul>

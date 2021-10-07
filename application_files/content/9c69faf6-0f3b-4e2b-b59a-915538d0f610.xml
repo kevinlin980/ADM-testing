@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24811</versionUuid>
+    <rule>
+        <name>MU_adminConsoleRulePerformance</name>
+        <uuid>9c69faf6-0f3b-4e2b-b59a-915538d0f610</uuid>
+        <description></description>
+        <parentUuid>_a-0000d9f3-0972-8000-0018-010000010000_2856</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>fn!load(&#xD;
+  local!showAnalyze,&#xD;
+  local!ruleToAnalyze: "reportEditableGridLayout",&#xD;
+  local!suggestFunction: fn!lambda_appian_internal(ri!inputText, #"SYSTEM_SYSRULES_dataSubset"(&#xD;
+    data:{"Samira", "Other text", ri!inputText},&#xD;
+    startIndex: 1,&#xD;
+    batchSize: 10,&#xD;
+    totalCount: 2,&#xD;
+    identifiers: {"ID1", "ID2", ri!inputText}&#xD;
+    )&#xD;
+    ),&#xD;
+  local!PERFORMANCE_VIEW: 1,&#xD;
+  local!aggregationTypeIdx: 1,&#xD;
+  /* chopTimeZoneLabel gets rid of the time zone lable and assumes that it is the chunk of text after the last&#xD;
+   * space. This is better than using text because it preserves the locale-specific datetime format.&#xD;
+   */&#xD;
+  local!chopTimeZoneLabel: fn!lambda_appian_internal(ri!dateTime,&#xD;
+    fn!trim(&#xD;
+      fn!concat(&#xD;
+        fn!apply(&#xD;
+          fn!append,&#xD;
+            fn!rdrop(&#xD;
+              fn!split(fn!tostring(ri!dateTime)," "),&#xD;
+              1&#xD;
+            ),&#xD;
+          " "&#xD;
+        )&#xD;
+      )&#xD;
+    )&#xD;
+  ),&#xD;
+  #"SYSTEM_SYSRULES_formLayout"(&#xD;
+    label: if(fn!isnull(local!showAnalyze),"Rule Performance", local!showAnalyze&amp;" Performance Details"),&#xD;
+    instructions:instructions:"Execution history for the past 30 days",&#xD;
+    firstColumnContents: {&#xD;
+      if(tostring(not(fn!isnull(local!showAnalyze)))=tostring(fn!false()),&#xD;
+        {&#xD;
+        #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+          secondColumnContents:&#xD;
+          {&#xD;
+             #"SYSTEM_SYSRULES_textField"(&#xD;
+              label:"Search Rules",&#xD;
+              labelPosition:"ADJACENT"&#xD;
+            ),&#xD;
+          }&#xD;
+        ),&#xD;
+        #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+          /*label: "Performance Data",*/&#xD;
+          firstColumnContents: {&#xD;
+            #"SYSTEM_SYSRULES_gridField"(&#xD;
+              &#xD;
+              labelPosition: "COLLAPSED",&#xD;
+              totalCount: 5,&#xD;
+              columns: {&#xD;
+                #"SYSTEM_SYSRULES_gridImageColumn"(data:{#"SYSTEM_SYSRULES_documentImage"(document:#"SYSTEM_SYSRULES_iconIndicator"("DOC_GENERIC")),#"SYSTEM_SYSRULES_documentImage"(document:#"SYSTEM_SYSRULES_iconIndicator"("DOC_GENERIC")),#"SYSTEM_SYSRULES_documentImage"(document:#"SYSTEM_SYSRULES_iconIndicator"("DOC_GENERIC"))},size:"ICON"),&#xD;
+                #"SYSTEM_SYSRULES_gridTextColumn"(label: "Rule", &#xD;
+                  data: {"reportEditableGridLayout", "otherRuleIMade", "aReallyBadRule"}, &#xD;
+                  links: apply(#"SYSTEM_SYSRULES_dynamicLink"(value:_,saveInto:local!showAnalyze),{"reportEditableGridLayout", "otherRuleIMade", "aReallyBadRule"}),&#xD;
+                  alignment: "LEFT"&#xD;
+                ),&#xD;
+                &#xD;
+                 #"SYSTEM_SYSRULES_gridTextColumn"(label: "Number of Executions", data: {"45", "5", "78"}, alignment: "RIGHT"),&#xD;
+                #"SYSTEM_SYSRULES_gridTextColumn"(label: "Average Time (ms)", data: apply(fn!fixed(_,2),{600, 50.99, 64530.45}), alignment: "RIGHT"),&#xD;
+                #"SYSTEM_SYSRULES_gridTextColumn"(label: "Minimum Time (ms)", data: apply(fn!fixed(_,2),{2, 1, 6989}), alignment: "RIGHT"),&#xD;
+                #"SYSTEM_SYSRULES_gridTextColumn"(label: "Maximum Time (ms)", data: apply(fn!fixed(_,2),{1100, 54.84, 566561.88}), alignment: "RIGHT"),&#xD;
+               &#xD;
+              },&#xD;
+              value: #"SYSTEM_SYSRULES_pagingInfo"(startIndex: 1, batchSize: 5),&#xD;
+              saveInto: {}&#xD;
+            )&#xD;
+          }&#xD;
+        )&#xD;
+        },&#xD;
+        {&#xD;
+        #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+         firstColumnContents:&#xD;
+         #"SYSTEM_SYSRULES_linkField"(&#xD;
+           labelPosition:"COLLAPSED",&#xD;
+           links:#"SYSTEM_SYSRULES_dynamicLink"(label:"Return to Rule Performance History",value:null, saveInto:local!showAnalyze)&#xD;
+          )&#xD;
+        ),&#xD;
+        /*a!sectionLayout(&#xD;
+          label: "Analyze Rule",&#xD;
+          firstColumnContents:&#xD;
+            a!pickerFieldCustom(&#xD;
+              label: "Rule Name",&#xD;
+              saveInto: {a!save(local!ruleToAnalyze, save!value[1])},&#xD;
+              value: local!ruleToAnalyze,&#xD;
+              selectedLabels: fn!if(local!ruleToAnalyze="", fn!null(), local!ruleToAnalyze),&#xD;
+              maxSelections: 1,&#xD;
+              suggestFunction: local!suggestFunction&#xD;
+            )&#xD;
+          ),*/&#xD;
+        fn!if(&#xD;
+          #"SYSTEM_SYSRULES_isNullOrEmpty"(local!ruleToAnalyze),&#xD;
+          #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+            firstColumnContents: {&#xD;
+              #"SYSTEM_SYSRULES_tag"(&#xD;
+                {&#xD;
+                  style: "INFO",&#xD;
+                  autoSizeColumnWidths: "true"&#xD;
+                },&#xD;
+                'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(&#xD;
+                  columns: {&#xD;
+                    'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(&#xD;
+                      contents: {&#xD;
+                        #"SYSTEM_SYSRULES_richTextDisplayField"(&#xD;
+                          labelPosition: "COLLAPSED",&#xD;
+                          value: #"SYSTEM_SYSRULES_richTextItem"(&#xD;
+                            text: {&#xD;
+                              fn!resource_appian_internal("sysrule.profiler_trends.youMustFirstSave")&#xD;
+                            }&#xD;
+                          )&#xD;
+                        )&#xD;
+                      }&#xD;
+                    )&#xD;
+                  }&#xD;
+                )&#xD;
+              )&#xD;
+            }&#xD;
+          ),&#xD;
+          {#"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+            firstColumnContents: {&#xD;
+              #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(&#xD;
+                label: fn!resource_appian_internal("sysrule.profiler_trends.agg.aggregation"),&#xD;
+                choiceLabels: {&#xD;
+                  fn!resource_appian_internal("sysrule.profiler_trends.agg.none"),&#xD;
+                  fn!resource_appian_internal("sysrule.profiler_trends.agg.hourly"),&#xD;
+                  fn!resource_appian_internal("sysrule.profiler_trends.agg.daily"),&#xD;
+                  fn!resource_appian_internal("sysrule.profiler_trends.agg.weekly")&#xD;
+                },&#xD;
+                value: local!aggregationTypeIdx,&#xD;
+                saveInto: local!aggregationTypeIdx&#xD;
+              )&#xD;
+            },&#xD;
+            secondColumnContents: {&#xD;
+              /* placeholder for filter controls */&#xD;
+            }&#xD;
+          ),&#xD;
+          fn!if(&#xD;
+            local!aggregationTypeIdx = 1,&#xD;
+            /* Aggregation: None */&#xD;
+            #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+              firstColumnContents: {&#xD;
+                fn!load(&#xD;
+                  local!pagingInfo: #"SYSTEM_SYSRULES_pagingInfo"(startIndex: 1, batchSize: 10, sort: #"SYSTEM_SYSRULES_sortInfo"(field: "timestamp", ascending: fn!false())),&#xD;
+                  fn!with(&#xD;
+                    local!results: fn!queryrulemetrics_appian_internal(&#xD;
+                      #"SYSTEM_SYSRULES_query"(&#xD;
+                        filter: #"SYSTEM_SYSRULES_queryFilter"(&#xD;
+                          field: "name",&#xD;
+                          operator: "=",&#xD;
+                          value: fn!lower(local!ruleToAnalyze)&#xD;
+                        ),&#xD;
+                        pagingInfo: local!pagingInfo&#xD;
+                      )&#xD;
+                    ),&#xD;
+                    #"SYSTEM_SYSRULES_gridField"(&#xD;
+                      label: "Trends Grid",&#xD;
+                      labelPosition: "COLLAPSED",&#xD;
+                      columns: {&#xD;
+                        #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+                          label: fn!resource_appian_internal("sysrule.profiler_trends.timestampHeader"),&#xD;
+                          field: "timestamp",&#xD;
+                          data: fn!apply(local!chopTimeZoneLabel, fn!index(local!results.data,"timestamp",{})),&#xD;
+                          links: {}&#xD;
+                        ),&#xD;
+                        #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+                          label: fn!resource_appian_internal("sysrule.profiler_trends.evalTimeHeader"),&#xD;
+                          field: "durationMs",&#xD;
+                          alignment: "RIGHT",&#xD;
+                          data: fn!index(local!results.data,"durationMs",{})&#xD;
+                        ),&#xD;
+                        #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+                          label: fn!resource_appian_internal("sysrule.profiler_trends.userHeader"),&#xD;
+                          field: "username",&#xD;
+                          data: fn!index(local!results.data,"username",{})&#xD;
+                        )&#xD;
+                      },&#xD;
+                      totalCount: local!results.totalCount,&#xD;
+                      value: local!pagingInfo,&#xD;
+                      saveInto: local!pagingInfo&#xD;
+                    )&#xD;
+                  )&#xD;
+                )&#xD;
+              }&#xD;
+            ),&#xD;
+            /*Aggregation: Hourly, Daily, or Weekly */&#xD;
+            fn!load(&#xD;
+              local!pagingInfoAgg: #"SYSTEM_SYSRULES_pagingInfo"(startIndex: 1, batchSize: 25, sort: #"SYSTEM_SYSRULES_sortInfo"(field: "timestamp", ascending: fn!false())),&#xD;
+              fn!with(&#xD;
+                local!resultsAgg: fn!queryrulemetrics_appian_internal(&#xD;
+                  #"SYSTEM_SYSRULES_query"(&#xD;
+                    aggregation: #"SYSTEM_SYSRULES_queryAggregation"(&#xD;
+                      aggregationColumns: {&#xD;
+                        #"SYSTEM_SYSRULES_queryAggregationColumnES"(&#xD;
+                          field: "timestamp",&#xD;
+                          isGrouping: fn!true(),&#xD;
+                          aggregationFunction: fn!choose(local!aggregationTypeIdx, "", "INTERVAL_HOUR", "INTERVAL_DAY", "INTERVAL_WEEK")&#xD;
+                        ),&#xD;
+                        #"SYSTEM_SYSRULES_queryAggregationColumn"(&#xD;
+                          field: "timestamp",&#xD;
+                          alias: "count",&#xD;
+                          aggregationFunction: "COUNT"&#xD;
+                        ),&#xD;
+                        #"SYSTEM_SYSRULES_queryAggregationColumn"(&#xD;
+                          field: "durationMs",&#xD;
+                          alias: "min",&#xD;
+                          aggregationFunction: "MIN"&#xD;
+                        ),&#xD;
+                        #"SYSTEM_SYSRULES_queryAggregationColumn"(&#xD;
+                          field: "durationMs",&#xD;
+                          alias: "avg",&#xD;
+                          aggregationFunction: "AVG"&#xD;
+                        ),&#xD;
+                        #"SYSTEM_SYSRULES_queryAggregationColumn"(&#xD;
+                          field: "durationMs",&#xD;
+                          alias: "max",&#xD;
+                          aggregationFunction: "MAX"&#xD;
+                        )&#xD;
+                      }&#xD;
+                    ),&#xD;
+                    filter: #"SYSTEM_SYSRULES_queryFilter"(&#xD;
+                      field: "name",&#xD;
+                      operator: "=",&#xD;
+                      value: fn!lower(local!ruleToAnalyze)&#xD;
+                    ),&#xD;
+                    pagingInfo: local!pagingInfoAgg&#xD;
+                  )&#xD;
+                ),&#xD;
+                local!weekRange: fn!lambda_appian_internal(ri!startDateTime,&#xD;
+                  fn!todate(ri!startDateTime) &amp; " - " &amp; fn!todate(ri!startDateTime+6)&#xD;
+                ),&#xD;
+                {#"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+                  firstColumnContents: {&#xD;
+                    #"SYSTEM_SYSRULES_lineChartField"(&#xD;
+                      label: fn!resource_appian_internal(&#xD;
+                        "sysrule.profiler_trends.ruleResponseTimePer",&#xD;
+                        fn!choose(&#xD;
+                          local!aggregationTypeIdx,&#xD;
+                          /* None   */ "",&#xD;
+                          /* Hourly */ fn!resource_appian_internal("sysrule.profiler_trends.interval.hour"),&#xD;
+                          /* Daily  */ fn!resource_appian_internal("sysrule.profiler_trends.interval.day"),&#xD;
+                          /* Weekly */ fn!resource_appian_internal("sysrule.profiler_trends.interval.week")&#xD;
+                        )&#xD;
+                      ),&#xD;
+                      series:{&#xD;
+                        #"SYSTEM_SYSRULES_chartSeries"(&#xD;
+                          data: fn!index(local!resultsAgg.data,"min",{}),&#xD;
+                          label: fn!resource_appian_internal("sysrule.profiler_trends.min")&#xD;
+                        ),&#xD;
+                        #"SYSTEM_SYSRULES_chartSeries"(&#xD;
+                          data: fn!index(local!resultsAgg.data,"avg",{}),&#xD;
+                          label: fn!resource_appian_internal("sysrule.profiler_trends.avg")&#xD;
+                        ),&#xD;
+                        #"SYSTEM_SYSRULES_chartSeries"(&#xD;
+                          data: fn!index(local!resultsAgg.data,"max",{}),&#xD;
+                          label: fn!resource_appian_internal("sysrule.profiler_trends.max")&#xD;
+                        )&#xD;
+                      },&#xD;
+                      categories:{&#xD;
+                        fn!choose(&#xD;
+                          local!aggregationTypeIdx,&#xD;
+                          /* None   */ {},&#xD;
+                          /* Hourly */ fn!apply(local!chopTimeZoneLabel, fn!index(local!resultsAgg.data,"timestamp",{})),&#xD;
+                          /* Daily  */ fn!apply(fn!todate, fn!index(local!resultsAgg.data,"timestamp",{})),&#xD;
+                          /* Weekly */ fn!apply(local!weekRange, fn!index(local!resultsAgg.data,"timestamp",{}))&#xD;
+                        )&#xD;
+                      },&#xD;
+                      yAxisMin: 0,&#xD;
+                      yAxisTitle: fn!resource_appian_internal("sysrule.profiler_trends.ms"),&#xD;
+                      xAxisTitle: fn!choose(&#xD;
+                        local!aggregationTypeIdx,&#xD;
+                        /* None   */ "",&#xD;
+                        /* Hourly */ fn!resource_appian_internal("sysrule.profiler_trends.hourHeader"),&#xD;
+                        /* Daily  */ fn!resource_appian_internal("sysrule.profiler_trends.dateHeader"),&#xD;
+                        /* Weekly */ fn!resource_appian_internal("sysrule.profiler_trends.weekHeader")&#xD;
+                      )&#xD;
+                    ),&#xD;
+  &#xD;
+                  #"SYSTEM_SYSRULES_lineChartField"(&#xD;
+                      label: fn!resource_appian_internal(&#xD;
+                        "sysrule.profiler_trends.ruleCallsPer",&#xD;
+                        fn!choose(&#xD;
+                          local!aggregationTypeIdx,&#xD;
+                          /* None   */ "",&#xD;
+                          /* Hourly */ fn!resource_appian_internal("sysrule.profiler_trends.interval.hour"),&#xD;
+                          /* Daily  */ fn!resource_appian_internal("sysrule.profiler_trends.interval.day"),&#xD;
+                          /* Weekly */ fn!resource_appian_internal("sysrule.profiler_trends.interval.week")&#xD;
+                        )&#xD;
+                      ),&#xD;
+                      series:{&#xD;
+                        #"SYSTEM_SYSRULES_chartSeries"(&#xD;
+                          data: fn!index(local!resultsAgg.data,"count",{}),&#xD;
+                          label: fn!resource_appian_internal("sysrule.profiler_trends.countHeader")&#xD;
+                        )&#xD;
+                      },&#xD;
+                      categories:{&#xD;
+                        fn!choose(&#xD;
+                          local!aggregationTypeIdx,&#xD;
+                          /* None */ {},&#xD;
+                          /* Hourly */ fn!apply(local!chopTimeZoneLabel, fn!index(local!resultsAgg.data,"timestamp",{})),&#xD;
+                          /* Daily */ fn!apply(fn!todate, fn!index(local!resultsAgg.data,"timestamp",{})),&#xD;
+                          /* Weekly */ fn!apply(local!weekRange, fn!index(local!resultsAgg.data,"timestamp",{}))&#xD;
+                        )&#xD;
+                      },&#xD;
+                      yAxisMin: 0,&#xD;
+                      yAxisTitle: fn!resource_appian_internal("sysrule.profiler_trends.countHeader"),&#xD;
+                      xAxisTitle: fn!choose(&#xD;
+                        local!aggregationTypeIdx,&#xD;
+                        /* None */ "",&#xD;
+                        /* Hourly */ fn!resource_appian_internal("sysrule.profiler_trends.hourHeader"),&#xD;
+                        /* Daily */ fn!resource_appian_internal("sysrule.profiler_trends.dateHeader"),&#xD;
+                        /* Weekly */ fn!resource_appian_internal("sysrule.profiler_trends.weekHeader")&#xD;
+                      )&#xD;
+                    )}&#xD;
+                ),&#xD;
+                #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+                  firstColumnContents: {&#xD;
+                    #"SYSTEM_SYSRULES_gridField"(&#xD;
+                      label: fn!resource_appian_internal(&#xD;
+                        "sysrule.profiler_trends.ruleCallsPer",&#xD;
+                        fn!choose(&#xD;
+                          local!aggregationTypeIdx,&#xD;
+                          /* None   */ "",&#xD;
+                          /* Hourly */ fn!resource_appian_internal("sysrule.profiler_trends.interval.hour"),&#xD;
+                          /* Daily  */ fn!resource_appian_internal("sysrule.profiler_trends.interval.day"),&#xD;
+                          /* Weekly */ fn!resource_appian_internal("sysrule.profiler_trends.interval.week")&#xD;
+                        )&#xD;
+                      ),&#xD;
+                      columns: {&#xD;
+                        #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+                          label: fn!choose(&#xD;
+                            local!aggregationTypeIdx,&#xD;
+                            /* None   */ "",&#xD;
+                            /* Hourly */ fn!resource_appian_internal("sysrule.profiler_trends.hourHeader"),&#xD;
+                            /* Daily  */ fn!resource_appian_internal("sysrule.profiler_trends.dateHeader"),&#xD;
+                            /* Weekly */ fn!resource_appian_internal("sysrule.profiler_trends.weekHeader")&#xD;
+                          ),&#xD;
+                          field: "timestamp",&#xD;
+                          data: fn!choose(&#xD;
+                            local!aggregationTypeIdx,&#xD;
+                            /* None   */ {},&#xD;
+                            /* Hourly */ fn!apply(local!chopTimeZoneLabel, fn!index(local!resultsAgg.data,"timestamp",{})),&#xD;
+                            /* Daily  */ fn!apply(fn!todate, fn!index(local!resultsAgg.data,"timestamp",{})),&#xD;
+                            /* Weekly */ fn!apply(local!weekRange, fn!index(local!resultsAgg.data,"timestamp",{}))&#xD;
+                          ),&#xD;
+                          links: {}&#xD;
+                        ),&#xD;
+                        #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+                          label: fn!resource_appian_internal("sysrule.profiler_trends.countHeader"),&#xD;
+                          field: "count",&#xD;
+                          alignment: "RIGHT",&#xD;
+                          data: fn!index(local!resultsAgg.data,"count",{})&#xD;
+                        ),&#xD;
+                        #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+                          label: fn!resource_appian_internal("sysrule.profiler_trends.minHeader"),&#xD;
+                          field: "min",&#xD;
+                          alignment: "RIGHT",&#xD;
+                          data: fn!index(local!resultsAgg.data,"min",{})&#xD;
+                        ),&#xD;
+                        #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+                          label: fn!resource_appian_internal("sysrule.profiler_trends.avgHeader"),&#xD;
+                          field: "avg",&#xD;
+                          alignment: "RIGHT",&#xD;
+                          data: fn!apply(fn!fixed,fn!index(local!resultsAgg.data,"avg",{}),1)&#xD;
+                        ),&#xD;
+                        #"SYSTEM_SYSRULES_gridTextColumn"(&#xD;
+                          label: fn!resource_appian_internal("sysrule.profiler_trends.maxHeader"),&#xD;
+                          field: "max",&#xD;
+                          alignment: "RIGHT",&#xD;
+                          data: fn!index(local!resultsAgg.data,"max",{})&#xD;
+                        )&#xD;
+                      },&#xD;
+                      totalCount: local!resultsAgg.totalCount,&#xD;
+                      value: local!pagingInfoAgg,&#xD;
+                      saveInto: local!pagingInfoAgg&#xD;
+                    )&#xD;
+                  }&#xD;
+                )}&#xD;
+              )&#xD;
+            )&#xD;
+          )&#xD;
+          }&#xD;
+        )&#xD;
+        }&#xD;
+      )&#xD;
+    }&#xD;
+  )&#xD;
+)</definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24811"/>
+    </history>
+</contentHaul>

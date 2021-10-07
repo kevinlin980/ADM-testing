@@ -1,0 +1,1852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<processModelHaul>
+  <versionUuid>0003e71b-96ec-8000-6fa7-014d98014d98</versionUuid>
+  <folderUuid>_g-0000d193-f622-8000-2562-680000680000_35</folderUuid>
+  <roleMap>
+    <role name="ADMIN_OWNER">
+      <users>
+        <userUuid>Administrator</userUuid>
+      </users>
+      <groups>
+        <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+      </groups>
+    </role>
+    <role name="EDITOR">
+      <users/>
+      <groups/>
+    </role>
+    <role name="EXPLICIT_NONMEMBER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="VIEWER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="MANAGER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="INITIATOR">
+      <users/>
+      <groups/>
+    </role>
+  </roleMap>
+  <process_model_port schemaVersion="007.000.004"
+    xmlns="http://www.appian.com/ae/types/2009"
+    xmlns:a="http://www.appian.com/ae/types/2009"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <pm>
+      <meta>
+        <uuid><![CDATA[0004d194-0c7a-8000-2562-680000680000]]></uuid>
+        <name>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value><![CDATA[Grids - Pickers]]></value>
+            </pair>
+          </string-map>
+        </name>
+        <desc>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value/>
+            </pair>
+          </string-map>
+        </desc>
+        <versionStatus>2</versionStatus>
+        <process-name>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value><![CDATA[Grids - All Types]]></value>
+            </pair>
+          </string-map>
+        </process-name>
+        <deadline>
+          <enabled>false</enabled>
+          <type>0</type>
+          <units>0</units>
+          <rex/>
+          <aex/>
+        </deadline>
+        <pm-notification-settings>
+          <custom-settings>false</custom-settings>
+          <notify-initiator>false</notify-initiator>
+          <notify-owner>false</notify-owner>
+          <usersandgroups/>
+          <recipients-exp/>
+        </pm-notification-settings>
+        <cleanup-action>3</cleanup-action>
+        <auto-archive-delay>30</auto-archive-delay>
+        <auto-delete-delay>0</auto-delete-delay>
+        <timeZoneId><![CDATA[GMT]]></timeZoneId>
+        <useProcessInitiatorTimeZone>true</useProcessInitiatorTimeZone>
+      </meta>
+      <pvs>
+        <pv name="DocsNFoldersReadOnly">
+          <a:value xsi:nil="true" xsi:type="a:CollaborationDocumentOrFolder?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="communityReadOnly">
+          <a:value xsi:nil="true" xsi:type="a:CollaborationCommunity?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="communityRequired">
+          <a:value xsi:nil="true" xsi:type="a:CollaborationCommunity?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="docsNFoldersRequired">
+          <a:value xsi:nil="true" xsi:type="a:CollaborationDocumentOrFolder?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="pageReadOnly">
+          <a:value xsi:nil="true" xsi:type="a:Page?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="pageRequired">
+          <a:value xsi:nil="true" xsi:type="a:Page?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="peopleReadOnly">
+          <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="peopleRequired">
+          <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="startForm_community">
+          <a:value xsi:nil="true" xsi:type="a:CollaborationCommunity?list"/>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="startForm_docsNFolders">
+          <a:value xsi:nil="true" xsi:type="a:CollaborationDocumentOrFolder?list"/>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="startForm_people">
+          <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="startForm_portalPage">
+          <a:value xsi:nil="true" xsi:type="a:Page?list"/>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+      </pvs>
+      <nodes>
+        <node uuid="0000d194-0c7a-8000-2562-680000680000">
+          <guiId>0</guiId>
+          <owner/>
+          <icon id="50"/>
+          <picon id="0"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Start Event]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>112</x>
+          <y>392</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Start Event]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>true</overrideLaneAssignment>
+          <ac>
+            <local-id>core.0</local-id>
+            <name><![CDATA[Start Node]]></name>
+            <acps/>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map/>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections>
+            <connection>
+              <guiId>0</guiId>
+              <to>2</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor/>
+              <toAnchor/>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>true</chained>
+              <overridesAssignment>true</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </connections>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0001d194-0c7a-8000-2562-680000680000">
+          <guiId>1</guiId>
+          <owner/>
+          <icon id="51"/>
+          <picon id="0"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[End Event]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>588</x>
+          <y>392</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[End Event]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>true</overrideLaneAssignment>
+          <ac>
+            <local-id>core.1</local-id>
+            <name><![CDATA[End Node]]></name>
+            <acps>
+              <acp name="pmID">
+                <a:value xsi:nil="true" xsi:type="a:ProcessModel"/>
+                <a:local-id>0</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>0</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="inMap">
+                <a:value xsi:nil="true" xsi:type="a:Bean?list"/>
+                <a:local-id>1</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="procInheritsPriority">
+                <a:value xmlns="" xsi:type="xsd:int">1</a:value>
+                <a:local-id>5</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>false</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="pmUUID">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id>6</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isAsynchronous">
+                <a:value xmlns="" xsi:type="xsd:boolean">true</a:value>
+                <a:local-id>7</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>0</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isTransparent">
+                <a:value xmlns="" xsi:type="xsd:boolean">true</a:value>
+                <a:local-id>14</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="inheritSecurity">
+                <a:value xmlns="" xsi:type="xsd:boolean">false</a:value>
+                <a:local-id>15</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </acps>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map/>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections/>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0002d194-0c7a-8000-2562-680000680000">
+          <guiId>2</guiId>
+          <owner/>
+          <icon id="21"/>
+          <picon id="1"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Show all types in different grids]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>252</x>
+          <y>392</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Show all types in different grids]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <assignments>
+            <assignee>
+              <type>28</type>
+              <privilege>3</privilege>
+              <value>
+                <ac>
+                  <local-id>assignee-pool.101</local-id>
+                  <name><![CDATA[Assign To Actor]]></name>
+                  <acps>
+                    <acp name="displayName">
+                      <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                      <a:local-id>0</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="expression">
+                      <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                      <a:local-id>1</a:local-id>
+                      <a:expr><![CDATA[pp!initiator]]></a:expr>
+                      <a:required>0</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outUsers">
+                      <a:value xsi:nil="true" xsi:type="a:User?list"/>
+                      <a:local-id>2</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outGroups">
+                      <a:value xsi:nil="true" xsi:type="a:Group?list"/>
+                      <a:local-id>3</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                  </acps>
+                  <custom-params/>
+                  <output-exprs/>
+                  <requires-user-interaction>true</requires-user-interaction>
+                  <run-as>
+                    <performer id="0"/>
+                  </run-as>
+                  <helper-class/>
+                </ac>
+              </value>
+            </assignee>
+            <assignment-function/>
+            <position>0</position>
+            <accept-mode>1</accept-mode>
+          </assignments>
+          <ac>
+            <local-id>internal.17</local-id>
+            <name><![CDATA[User Input Task]]></name>
+            <acps/>
+            <custom-params>
+              <acp name="docsNFoldersMultiple">
+                <a:value xsi:nil="true" xsi:type="a:CollaborationDocumentOrFolder?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!startForm_docsNFolders]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[startForm_docsNFolders]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="usersNGpsMultiple">
+                <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!startForm_people]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[startForm_people]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="pageMultiple">
+                <a:value xsi:nil="true" xsi:type="a:Page?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!startForm_portalPage]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[startForm_portalPage]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="communityMultiple">
+                <a:value xsi:nil="true" xsi:type="a:CollaborationCommunity?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!startForm_community]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[startForm_community]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="communityRequired">
+                <a:value xsi:nil="true" xsi:type="a:CollaborationCommunity?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!startForm_community]]></a:expr>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[communityRequired]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="docsNFoldersRequired">
+                <a:value xsi:nil="true" xsi:type="a:CollaborationDocumentOrFolder?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!startForm_docsNFolders]]></a:expr>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[docsNFoldersRequired]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="communityReadOnly">
+                <a:value xsi:nil="true" xsi:type="a:CollaborationCommunity?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!startForm_community]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[communityReadOnly]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="DocsNFoldersReadOnly">
+                <a:value xsi:nil="true" xsi:type="a:CollaborationDocumentOrFolder?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!startForm_docsNFolders]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[DocsNFoldersReadOnly]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="peopleRequired">
+                <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!startForm_people]]></a:expr>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[peopleRequired]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="peopleReadOnly">
+                <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!startForm_people]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[peopleReadOnly]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="pageRequired">
+                <a:value xsi:nil="true" xsi:type="a:Page?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!startForm_portalPage]]></a:expr>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[pageRequired]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="pageReadOnly">
+                <a:value xsi:nil="true" xsi:type="a:Page?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!startForm_portalPage]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[pageReadOnly]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </custom-params>
+            <output-exprs/>
+            <requires-user-interaction>false</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[PageRequired]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[pageRequired]]></mapped-to>
+                          <value><![CDATA[=pv!startForm_portalPage]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"typeName":"page","id":"page120","saveAs":{"name":"pageRequired"},"customValidations":[{}],"customEvents":[{}],"labelPosition":"right","view":"list","displayExpField":"","key":"page120","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_portalPage]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_portalPage]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Page]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid93","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid93","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Documents & Folders]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid60","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid60","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[PageReadOnly]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[pageReadOnly]]></mapped-to>
+                          <value><![CDATA[=pv!startForm_portalPage]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"typeName":"page","id":"page121","saveAs":{"name":"pageReadOnly"},"customValidations":[{}],"customEvents":[{}],"labelPosition":"right","view":"list","displayExpField":"","disabled":"true","key":"page121","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_portalPage]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_portalPage]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[People]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid76","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid76","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[CommunityMultiple]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[communityMultiple]]></mapped-to>
+                          <value><![CDATA[=pv!startForm_community]]></value>
+                          <extra><![CDATA[{"id":"community111","typeName":"community","pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"saveAs":{"name":"communityMultiple"},"parentId":"grid110","validationMessages":[],"customValidations":[{}],"labelPosition":"right","customEvents":[{}],"view":"list","displayExpField":"","key":"community111","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_community]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_community]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Users&GrpsRequired]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[peopleRequired]]></mapped-to>
+                          <value><![CDATA[=pv!startForm_people]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"typeName":"people","id":"people118","saveAs":{"name":"peopleRequired"},"customValidations":[{}],"subType":"people","customEvents":[{}],"labelPosition":"right","view":"list","displayExpField":"","key":"people118","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_people]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_people]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Users&GrpsReadOnly]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[peopleReadOnly]]></mapped-to>
+                          <value><![CDATA[=pv!startForm_people]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","typeName":"people","id":"people119","saveAs":{"name":"peopleReadOnly"},"customValidations":[{}],"subType":"people","view":"list","key":"people119","disabled":"true"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_people]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_people]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Community]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid110","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid110","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[CommunityRequired]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[communityRequired]]></mapped-to>
+                          <value><![CDATA[=pv!startForm_community]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"typeName":"community","id":"community114","saveAs":{"name":"communityRequired"},"customValidations":[{}],"customEvents":[{}],"labelPosition":"right","view":"list","displayExpField":"","key":"community114","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_community]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_community]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Show pickers' values in grids]]></label>
+                          <instructions><![CDATA[Values from the start form will populate this grid]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"form","id":"form0","elementCounter":122,"columns":1,"customEvents":[{}],"labelPosition":"right","view":"single","key":"form0","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[CommunityReadOnly]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[communityReadOnly]]></mapped-to>
+                          <value><![CDATA[=pv!startForm_community]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"typeName":"community","id":"community115","saveAs":{"name":"communityReadOnly"},"customValidations":[{}],"customEvents":[{}],"labelPosition":"right","view":"list","displayExpField":"","disabled":"true","key":"community115","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_community]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_community]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[PageMultiple]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[pageMultiple]]></mapped-to>
+                          <value><![CDATA[=pv!startForm_portalPage]]></value>
+                          <extra><![CDATA[{"id":"page97","typeName":"page","pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"saveAs":{"name":"pageMultiple"},"parentId":"grid93","validationMessages":[],"customValidations":[{}],"labelPosition":"right","customEvents":[{}],"view":"list","displayExpField":"","key":"page97","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_portalPage]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_portalPage]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Users&GrpsMultiple]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[usersNGpsMultiple]]></mapped-to>
+                          <value><![CDATA[=pv!startForm_people]]></value>
+                          <extra><![CDATA[{"id":"people79","typeName":"people","pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"saveAs":{"name":"usersNGpsMultiple"},"parentId":"grid76","validationMessages":[],"subType":"people","customValidations":[{}],"labelPosition":"right","customEvents":[{}],"view":"list","displayExpField":"","key":"people79","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_people]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_people]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Docs&FoldersMultiple]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[docsNFoldersMultiple]]></mapped-to>
+                          <value><![CDATA[=pv!startForm_docsNFolders]]></value>
+                          <extra><![CDATA[{"id":"content72","typeName":"content","pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"saveAs":{"name":"docsNFoldersMultiple"},"parentId":"grid60","validationMessages":[],"subType":"content","customValidations":[{}],"labelPosition":"right","customEvents":[{}],"view":"list","displayExpField":"","key":"content72","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_docsNFolders]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_docsNFolders]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Docs&FoldersRequired]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[docsNFoldersRequired]]></mapped-to>
+                          <value><![CDATA[=pv!startForm_docsNFolders]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"typeName":"content","id":"content116","saveAs":{"name":"docsNFoldersRequired"},"customValidations":[{}],"subType":"content","customEvents":[{}],"labelPosition":"right","view":"list","displayExpField":"","key":"content116","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_docsNFolders]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_docsNFolders]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Docs&FoldersReadOnly]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[DocsNFoldersReadOnly]]></mapped-to>
+                          <value><![CDATA[=pv!startForm_docsNFolders]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","typeName":"content","id":"content117","saveAs":{"name":"DocsNFoldersReadOnly"},"customValidations":[{}],"subType":"content","view":"list","key":"content117","disabled":"true"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_docsNFolders]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_docsNFolders]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"button","id":"button1","customValidations":[],"buttonLabel":"Submit","buttonConfirm":"false","customEvents":[],"labelPosition":"right","view":"single","key":"button1","buttonValue":"Submit","confirmMessage":"Submit this form?","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label/>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"tree","children":[[{"children":[["community111"],["community114"],["community115"]],"key":"grid110"},{"children":[["content72"],["content116"],["content117"]],"key":"grid60"},{"children":[["people79"],["people118"],["people119"]],"key":"grid76"},{"children":[["page97"],["page120"],["page121"]],"key":"grid93"}]],"buttons":["button1"],"key":"form0"}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <jsp-form>
+                      <path><![CDATA[/process/forms]]></path>
+                    </jsp-form>
+                    <hiddenSections>6</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections>
+            <connection>
+              <guiId>1</guiId>
+              <to>3</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor/>
+              <toAnchor/>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>true</chained>
+              <overridesAssignment>true</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </connections>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>true</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>true</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0003d194-0c7a-8000-2562-680000680000">
+          <guiId>3</guiId>
+          <owner/>
+          <icon id="21"/>
+          <picon id="1"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Show changes in pickers]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>448</x>
+          <y>392</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Show changes in pickers]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <assignments>
+            <assignee>
+              <type>28</type>
+              <privilege>3</privilege>
+              <value>
+                <ac>
+                  <local-id>assignee-pool.101</local-id>
+                  <name><![CDATA[Assign To Actor]]></name>
+                  <acps>
+                    <acp name="displayName">
+                      <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                      <a:local-id>0</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="expression">
+                      <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                      <a:local-id>1</a:local-id>
+                      <a:expr><![CDATA[pp!initiator]]></a:expr>
+                      <a:required>0</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outUsers">
+                      <a:value xsi:nil="true" xsi:type="a:User?list"/>
+                      <a:local-id>2</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outGroups">
+                      <a:value xsi:nil="true" xsi:type="a:Group?list"/>
+                      <a:local-id>3</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                  </acps>
+                  <custom-params/>
+                  <output-exprs/>
+                  <requires-user-interaction>true</requires-user-interaction>
+                  <run-as>
+                    <performer id="0"/>
+                  </run-as>
+                  <helper-class/>
+                </ac>
+              </value>
+            </assignee>
+            <assignment-function/>
+            <position>0</position>
+            <accept-mode>1</accept-mode>
+          </assignments>
+          <ac>
+            <local-id>internal.17</local-id>
+            <name><![CDATA[User Input Task]]></name>
+            <acps/>
+            <custom-params>
+              <acp name="docsNFoldersMultiple">
+                <a:value xsi:nil="true" xsi:type="a:CollaborationDocumentOrFolder?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!startForm_docsNFolders]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[startForm_docsNFolders]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="usersNGpsMultiple">
+                <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!startForm_people]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[startForm_people]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="pageMultiple">
+                <a:value xsi:nil="true" xsi:type="a:Page?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!startForm_portalPage]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[startForm_portalPage]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="communityMultiple">
+                <a:value xsi:nil="true" xsi:type="a:CollaborationCommunity?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!startForm_community]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[startForm_community]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="communityRequired">
+                <a:value xsi:nil="true" xsi:type="a:CollaborationCommunity?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!communityRequired]]></a:expr>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="docsNFoldersRequired">
+                <a:value xsi:nil="true" xsi:type="a:CollaborationDocumentOrFolder?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!docsNFoldersRequired]]></a:expr>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="communityReadOnly">
+                <a:value xsi:nil="true" xsi:type="a:CollaborationCommunity?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!communityReadOnly]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="DocsNFoldersReadOnly">
+                <a:value xsi:nil="true" xsi:type="a:CollaborationDocumentOrFolder?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!DocsNFoldersReadOnly]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="peopleRequired">
+                <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!peopleRequired]]></a:expr>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="peopleReadOnly">
+                <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!peopleReadOnly]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="pageRequired">
+                <a:value xsi:nil="true" xsi:type="a:Page?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!pageRequired]]></a:expr>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="pageReadOnly">
+                <a:value xsi:nil="true" xsi:type="a:Page?list"/>
+                <a:local-id/>
+                <a:expr><![CDATA[=pv!pageReadOnly]]></a:expr>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </custom-params>
+            <output-exprs/>
+            <requires-user-interaction>false</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[PageRequired]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[pageRequired]]></mapped-to>
+                          <value><![CDATA[=pv!pageRequired]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"validationMessages":[],"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","typeName":"page","id":"page120","parentId":"grid93","saveAs":{"name":"pageRequired"},"customValidations":[{}],"view":"list","disabled":"true","key":"page120"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!pageRequired]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!pageRequired]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Page]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid93","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid93","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Documents & Folders]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid60","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid60","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[PageReadOnly]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[pageReadOnly]]></mapped-to>
+                          <value><![CDATA[=pv!pageReadOnly]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"validationMessages":[],"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","typeName":"page","id":"page121","parentId":"grid93","saveAs":{"name":"pageReadOnly"},"customValidations":[{}],"view":"list","disabled":"true","key":"page121"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!pageReadOnly]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!pageReadOnly]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[People]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid76","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid76","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[CommunityMultiple]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[communityMultiple]]></mapped-to>
+                          <value><![CDATA[=pv!startForm_community]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"validationMessages":[],"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","typeName":"community","id":"community111","parentId":"grid110","saveAs":{"name":"communityMultiple"},"customValidations":[{}],"view":"list","disabled":"true","key":"community111"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_community]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_community]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Users&GrpsRequired]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[peopleRequired]]></mapped-to>
+                          <value><![CDATA[=pv!peopleRequired]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"validationMessages":[],"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","typeName":"people","id":"people118","parentId":"grid76","saveAs":{"name":"peopleRequired"},"customValidations":[{}],"subType":"people","view":"list","disabled":"true","key":"people118"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!peopleRequired]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!peopleRequired]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Users&GrpsReadOnly]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[peopleReadOnly]]></mapped-to>
+                          <value><![CDATA[=pv!peopleReadOnly]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"validationMessages":[],"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","typeName":"people","id":"people119","parentId":"grid76","saveAs":{"name":"peopleReadOnly"},"customValidations":[{}],"subType":"people","view":"list","disabled":"true","key":"people119"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!peopleReadOnly]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!peopleReadOnly]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Community]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid110","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid110","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[CommunityRequired]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[communityRequired]]></mapped-to>
+                          <value><![CDATA[=pv!communityRequired]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"validationMessages":[],"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","typeName":"community","id":"community114","parentId":"grid110","saveAs":{"name":"communityRequired"},"customValidations":[{}],"view":"list","disabled":"true","key":"community114"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!communityRequired]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!communityRequired]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Show pickers' values in grids]]></label>
+                          <instructions><![CDATA[Values from the start form will populate this grid]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"form","id":"form0","elementCounter":122,"columns":1,"customEvents":[{}],"labelPosition":"right","view":"single","key":"form0","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[CommunityReadOnly]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[communityReadOnly]]></mapped-to>
+                          <value><![CDATA[=pv!communityReadOnly]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"validationMessages":[],"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","typeName":"community","id":"community115","parentId":"grid110","saveAs":{"name":"communityReadOnly"},"customValidations":[{}],"view":"list","disabled":"true","key":"community115"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!communityReadOnly]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!communityReadOnly]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[PageMultiple]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[pageMultiple]]></mapped-to>
+                          <value><![CDATA[=pv!startForm_portalPage]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"validationMessages":[],"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","typeName":"page","id":"page97","parentId":"grid93","saveAs":{"name":"pageMultiple"},"customValidations":[{}],"view":"list","disabled":"true","key":"page97"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_portalPage]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_portalPage]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Users&GrpsMultiple]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[usersNGpsMultiple]]></mapped-to>
+                          <value><![CDATA[=pv!startForm_people]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"validationMessages":[],"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","typeName":"people","id":"people79","parentId":"grid76","saveAs":{"name":"usersNGpsMultiple"},"customValidations":[{}],"subType":"people","view":"list","disabled":"true","key":"people79"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_people]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_people]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Docs&FoldersMultiple]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[docsNFoldersMultiple]]></mapped-to>
+                          <value><![CDATA[=pv!startForm_docsNFolders]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"validationMessages":[],"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","typeName":"content","id":"content72","parentId":"grid60","saveAs":{"name":"docsNFoldersMultiple"},"customValidations":[{}],"subType":"content","view":"list","disabled":"true","key":"content72"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_docsNFolders]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_docsNFolders]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Docs&FoldersRequired]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[docsNFoldersRequired]]></mapped-to>
+                          <value><![CDATA[=pv!docsNFoldersRequired]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"validationMessages":[],"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","typeName":"content","id":"content116","parentId":"grid60","saveAs":{"name":"docsNFoldersRequired"},"customValidations":[{}],"subType":"content","view":"list","disabled":"true","key":"content116"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!docsNFoldersRequired]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!docsNFoldersRequired]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Docs&FoldersReadOnly]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[DocsNFoldersReadOnly]]></mapped-to>
+                          <value><![CDATA[=pv!DocsNFoldersReadOnly]]></value>
+                          <extra><![CDATA[{"pickedItems":[{"id":"###EXPR1","display":"###EXPR0","type":29}],"validationMessages":[],"customEvents":[{}],"labelPosition":"right","displayExpField":"","namespace":"DESIGN","typeName":"content","id":"content117","parentId":"grid60","saveAs":{"name":"DocsNFoldersReadOnly"},"customValidations":[{}],"subType":"content","view":"list","disabled":"true","key":"content117"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!DocsNFoldersReadOnly]]></expression>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!DocsNFoldersReadOnly]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"button","id":"button1","customValidations":[],"buttonLabel":"Submit","buttonConfirm":"false","customEvents":[],"labelPosition":"right","view":"single","key":"button1","buttonValue":"Submit","confirmMessage":"Submit this form?","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label/>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"tree","children":[[{"children":[["community111"],["community114"],["community115"]],"key":"grid110"},{"children":[["content72"],["content116"],["content117"]],"key":"grid60"},{"children":[["people79"],["people118"],["people119"]],"key":"grid76"},{"children":[["page97"],["page120"],["page121"]],"key":"grid93"}]],"buttons":["button1"],"key":"form0"}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <jsp-form>
+                      <path><![CDATA[/process/forms]]></path>
+                    </jsp-form>
+                    <hiddenSections>6</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections>
+            <connection>
+              <guiId>2</guiId>
+              <to>1</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor/>
+              <toAnchor/>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>false</chained>
+              <overridesAssignment>false</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </connections>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>true</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>true</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+      </nodes>
+      <annotations/>
+      <lanes/>
+      <attachments/>
+      <notes/>
+      <priority id="1"/>
+      <form-map>
+        <pair>
+          <locale country="US" lang="en" variant=""/>
+          <form-config>
+            <form>
+              <type>0</type>
+              <enabled>true</enabled>
+              <dynamic-form>
+                <form-elements>
+                  <form-element>
+                    <label><![CDATA[Community]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>true</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[startForm_community]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"pickedItems":[],"typeName":"community","id":"community9","saveAs":{"name":"startForm_community"},"validationMessages":[],"customValidations":[{}],"customEvents":[{}],"labelPosition":"right","view":"single","key":"community9","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Documents & Folders]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>true</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[startForm_docsNFolders]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"pickedItems":[],"typeName":"content","id":"content10","saveAs":{"name":"startForm_docsNFolders"},"validationMessages":[],"customValidations":[{}],"subType":"content","customEvents":[{}],"labelPosition":"right","view":"single","key":"content10","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Portal Page]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>true</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[startForm_portalPage]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"pickedItems":[],"typeName":"page","id":"page7","saveAs":{"name":"startForm_portalPage"},"validationMessages":[],"customValidations":[{}],"customEvents":[{}],"labelPosition":"right","view":"single","key":"page7","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[People]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>true</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[startForm_people]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"pickedItems":[],"typeName":"people","id":"people8","saveAs":{"name":"startForm_people"},"validationMessages":[],"customValidations":[{}],"subType":"people","customEvents":[{}],"labelPosition":"right","view":"single","key":"people8","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Use this form to set initial values]]></label>
+                    <instructions><![CDATA[Please complete the form below.]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"form","id":"form0","elementCounter":24,"columns":1,"customEvents":[{}],"labelPosition":"right","view":"single","key":"form0","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Label]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"button","id":"button1","customValidations":[],"buttonLabel":"Start","buttonConfirm":"false","customEvents":[],"labelPosition":"right","view":"single","buttonValue":"Submit","key":"button1","confirmMessage":"Submit this form?","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label/>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"tree","children":[["page7","people8","community9","content10"]],"buttons":["button1"],"key":"form0"}]]></extra>
+                  </form-element>
+                </form-elements>
+              </dynamic-form>
+              <jsp-form>
+                <path><![CDATA[/process/forms]]></path>
+              </jsp-form>
+              <hiddenSections>0</hiddenSections>
+            </form>
+          </form-config>
+        </pair>
+      </form-map>
+      <emailAttachmentFolderUuid><![CDATA[SYSTEM_FOLDER_TEMPORARY_DOCS]]></emailAttachmentFolderUuid>
+      <isPublic>false</isPublic>
+    </pm>
+  </process_model_port>
+  <isPublished>true</isPublished>
+  <history>
+    <historyInfo versionUuid="0003e71b-96ec-8000-6fa7-014d98014d98"/>
+  </history>
+</processModelHaul>

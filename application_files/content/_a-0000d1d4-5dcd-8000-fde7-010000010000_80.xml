@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26266</versionUuid>
+    <constant>
+        <name>dynamicUrl</name>
+        <uuid>_a-0000d1d4-5dcd-8000-fde7-010000010000_80</uuid>
+        <description>http://ws.soatrader.com/easycfm.com/1.0/Captcha?WSDL &#xD;
+http://moss02/_vti_bin/Appian.SharePoint.Folders.asmx?wsdl&#xD;
+http://webservices.daehosting.com/services/isbnservice.wso?WSDL&#xD;
+http://qeservices1:8081/QAWebServices_Tests/services/MathOperations_wrapped?wsdl&#xD;
+http://webservices.codingtheweb.com/bin/qotd.wsdl&#xD;
+http://www.webservicex.net:85/LloydsRiskCodeService.asmx?wsdl&#xD;
+</description>
+        <parentUuid>_a-0000d1dc-9530-8000-91da-880000880000_759</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <typedValue>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value>http://www.webservicex.net:85/LloydsRiskCodeService.asmx?wsdl</value>
+        </typedValue>
+        <isEnvironmentSpecific>false</isEnvironmentSpecific>
+    </constant>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26266"/>
+    </history>
+</contentHaul>

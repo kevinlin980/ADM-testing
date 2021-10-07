@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24201</versionUuid>
+    <rule>
+        <name>MU_getMockupByMockupID</name>
+        <uuid>_a-0000d994-9bc2-8000-989b-010000010000_2063</uuid>
+        <description></description>
+        <parentUuid>_a-0000d994-9bc2-8000-989b-010000010000_2048</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>=todatasubset(choose(
+ri!mockupID,
+{mockupID:1,name:"Application Designer - Missing Dependencies",description:""},
+{mockupID:2,name:"Record Type Designer", description:""},
+{mockupID:3,name:"Client Certificate",description:""},
+{mockupID:4,name:"Data Integration",description:""},
+{mockupID:5,name:"Data Integration With Tabs",description:""},
+{mockupID:6,name:"International",description:"International Settings mockup"},
+{mockupID:7,name:"User Start Pages",description:"User landing page config"},
+{mockupID:8,name:"",description:""},
+{mockupID:9,name:"Web API",description:""},
+{mockupID:10,name:"Ryder",description:""},
+{mockupID:11,name:"Sites",description:""},
+{mockupID:12,name:"Sites:Modal",description:""},
+{mockupID:13,name:"Admin Console Rule Performance",description:""}
+))</definition>
+        <namedTypedValue>
+            <name>mockupID</name>
+            <type>
+                <name>int</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24201"/>
+    </history>
+</contentHaul>

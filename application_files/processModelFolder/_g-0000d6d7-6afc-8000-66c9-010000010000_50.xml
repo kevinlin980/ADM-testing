@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<processModelFolderHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_g-0000e71b-9358-8000-6ef5-014d98014d98_427</versionUuid>
+    <processModelFolder>
+        <name>Chart Reporting</name>
+        <uuid>_g-0000d6d7-6afc-8000-66c9-010000010000_50</uuid>
+        <description></description>
+    </processModelFolder>
+    <roleMap>
+        <role name="ADMIN_OWNER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="EDITOR">
+            <users/>
+            <groups/>
+        </role>
+        <role name="EXPLICIT_NONMEMBER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="VIEWER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="MANAGER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="INITIATOR">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_g-0000e71b-9358-8000-6ef5-014d98014d98_427"/>
+    </history>
+</processModelFolderHaul>

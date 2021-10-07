@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+  targetNamespace="https://gwt-grid-wl.appianci.net/suite/types/"
+  xmlns:tns="https://gwt-grid-wl.appianci.net/suite/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="gwtpgNestedCDT">
+    <xsd:annotation>
+      <xsd:appinfo source="http://www.appian.com/ae/types/2009">
+        <ns2:Metadata xmlns:ns2="http://www.appian.com/ae/types/2009">
+          <ns2:versionUuid>0050e71b-9284-8000-6ef1-014d98014d98</ns2:versionUuid>
+          <ns2:history>
+            <ns2:historyInfo versionUuid="0050e71b-9284-8000-6ef1-014d98014d98"/>
+          </ns2:history>
+        </ns2:Metadata>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="textSingle" nillable="true" type="xsd:string"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="textMulti"
+        nillable="true" type="xsd:string"/>
+      <xsd:element name="intSingle" nillable="true" type="xsd:int"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="intMulti"
+        nillable="true" type="xsd:int"/>
+      <xsd:element name="decSingle" nillable="true" type="xsd:double"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="decMulti"
+        nillable="true" type="xsd:double"/>
+      <xsd:element name="dateSingle" nillable="true" type="xsd:date"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="dateMulti"
+        nillable="true" type="xsd:date"/>
+      <xsd:element name="datetimeSingle" nillable="true" type="xsd:dateTime"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0"
+        name="datetimeMulti" nillable="true" type="xsd:dateTime"/>
+      <xsd:element name="timeSingle" nillable="true" type="xsd:time"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="timeMulti"
+        nillable="true" type="xsd:time"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

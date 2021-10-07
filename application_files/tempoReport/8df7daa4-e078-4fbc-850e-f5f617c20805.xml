@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>4a10d71e-d787-4a4e-b7ab-7dbe378d6690</versionUuid>
+    <tempoReport a:uuid="8df7daa4-e078-4fbc-850e-f5f617c20805" name="Impact Analysis JSON Demo">
+        <a:description></a:description>
+        <a:uiExpr>=#"_a-0000d8ce-12e2-8000-e07e-010000010000_1471"()</a:uiExpr>
+        <a:urlStub>ep9mXA</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>0001d065-e6ac-8000-e6ac-65075c65075c</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="4a10d71e-d787-4a4e-b7ab-7dbe378d6690"/>
+    </history>
+</tempoReportHaul>

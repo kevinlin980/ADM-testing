@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<portletHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <portlet>
+        <uuid>0000d1ea-f778-8000-f74f-d941d7d941d7</uuid>
+        <name>Web content with proc</name>
+        <portletType>portal.portlet.mini_proc</portletType>
+        <frame>portlet.titleonly</frame>
+        <shared>false</shared>
+        <public>true</public>
+        <inheritsSecurity>true</inheritsSecurity>
+        <parameters>
+            <item>
+                <key>miniUseModel</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">true</value>
+            </item>
+            <item>
+                <key>miniEvaluateSubprocessesVariables</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">false</value>
+            </item>
+            <item>
+                <key>miniUseDashboard</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">false</value>
+            </item>
+            <item>
+                <key>miniModelUuid</key>
+                <value xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">0002d1ea-b0ac-8000-57a7-d970dbd970db</value>
+            </item>
+        </parameters>
+    </portlet>
+    <roleMap>
+        <role name="editor">
+            <users/>
+            <groups/>
+        </role>
+        <role name="viewer">
+            <users/>
+            <groups/>
+        </role>
+        <role name="admin">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <extraData>
+        <entry>
+            <key>isApprovalRequired</key>
+            <value>false</value>
+        </entry>
+        <entry>
+            <key>template</key>
+            <value></value>
+        </entry>
+        <entry>
+            <key>isVersioned</key>
+            <value>false</value>
+        </entry>
+    </extraData>
+</portletHaul>

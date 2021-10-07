@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataStoreHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_7180</versionUuid>
+    <dataStore>
+        <uuid>_a-0000d499-93a3-8000-9087-010000010000_493</uuid>
+        <name>Paging Grid DS</name>
+        <description></description>
+        <dataSourceKey>jdbc/AppianAnywhere</dataSourceKey>
+        <adaptingExplicitSqlNames>false</adaptingExplicitSqlNames>
+        <autoUpdateSchema>false</autoUpdateSchema>
+        <entities>
+            <entity>
+                <uuid>979b5642-b04f-4042-9f66-191bce38c7e0</uuid>
+                <name>People</name>
+                <type>{https://gwt-grid.appianci.net/suite/types/}gwtpgPeople</type>
+            </entity>
+            <entity>
+                <uuid>837d49b8-eb7f-4705-9573-68fefc8cab8f</uuid>
+                <name>Employee</name>
+                <type>{https://gwt-grid.appianci.net/suite/types/}gwtpgEmployee</type>
+            </entity>
+            <entity>
+                <uuid>4eadcfc5-261e-4782-933a-748e468cc030</uuid>
+                <name>Variations</name>
+                <type>{https://gwt-grid.appianci.net/suite/types/}gwtpgTextVariations</type>
+            </entity>
+            <entity>
+                <uuid>849107dd-e9d1-489d-be74-82a31e7b9885</uuid>
+                <name>NestedCDT</name>
+                <type>{https://gwt-grid-wl.appianci.net/suite/types/}gwtpgNestedCDT</type>
+            </entity>
+            <entity>
+                <uuid>4453d911-d3cf-4a94-b57e-40727e03c715</uuid>
+                <name>CDT</name>
+                <type>{https://gwt-grid-wl.appianci.net/suite/types/}gwtpgCDT</type>
+            </entity>
+            <entity>
+                <uuid>88fcc7d1-69ce-4be1-b833-9c9e95839076</uuid>
+                <name>NoPK</name>
+                <type>{https://gwt-grid2.appianci.net/suite/types/}gwtpgNoPrimaryKey</type>
+            </entity>
+        </entities>
+    </dataStore>
+    <isPublished>true</isPublished>
+    <roleMap>
+        <role inherit="false" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_7180"/>
+    </history>
+</dataStoreHaul>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pageHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <page>
+        <name>formSavingDashboard</name>
+        <description></description>
+        <public>true</public>
+        <type>2</type>
+        <url></url>
+        <template>portal.template.home.1</template>
+        <zoneCount>1</zoneCount>
+        <approvalRequired>false</approvalRequired>
+        <uuid>_c-0000d3db-69a9-8000-66b9-820000820000_27</uuid>
+        <portlets>
+            <item index="0" zone="0">_d-0000d3db-69a9-8000-66b9-820000820000_36</item>
+            <item index="1" zone="0">_d-0000d3db-69a9-8000-66b9-820000820000_35</item>
+        </portlets>
+    </page>
+    <roleMap>
+        <role name="approver">
+            <users/>
+            <groups/>
+        </role>
+        <role name="editor">
+            <users/>
+            <groups/>
+        </role>
+        <role name="viewer">
+            <users/>
+            <groups/>
+        </role>
+        <role name="admin">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</pageHaul>

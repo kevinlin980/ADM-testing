@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.appian.com/tech/test"
+  xmlns:tns="http://www.appian.com/tech/test" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="wide-record">
+    <xsd:annotation>
+      <xsd:appinfo source="http://www.appian.com/ae/types/2009">
+        <ns2:Metadata xmlns:ns2="http://www.appian.com/ae/types/2009">
+          <ns2:versionUuid>0061e71b-9284-8000-6ef1-014d98014d98</ns2:versionUuid>
+          <ns2:history>
+            <ns2:historyInfo versionUuid="0061e71b-9284-8000-6ef1-014d98014d98"/>
+          </ns2:history>
+        </ns2:Metadata>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element form="qualified" minOccurs="0" name="id" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Id @GeneratedValue</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element form="qualified" minOccurs="0" name="field-001" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-002" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-003" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-004" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-005" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-006" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-007" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-008" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-009" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-010" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-011" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-012" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-013" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-014" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-015" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-016" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-017" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-018" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-019" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-020" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-021" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-022" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-023" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-024" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-025" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-026" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-027" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-028" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-029" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-030" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-031" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-032" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-033" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-034" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-035" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-036" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-037" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-038" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-039" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-040" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-041" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-042" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-043" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-044" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-045" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-046" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-047" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-048" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-049" type="xsd:int"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-050" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-051" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-052" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-053" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-054" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-055" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-056" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-057" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-058" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-059" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-060" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-061" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-062" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-063" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-064" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-065" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-066" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-067" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-068" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-069" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-070" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-071" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-072" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-073" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-074" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-075" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-076" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-077" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-078" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-079" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-080" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-081" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-082" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-083" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-084" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-085" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-086" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-087" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-088" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-089" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-090" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-091" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-092" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-093" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-094" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-095" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-096" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-097" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-098" type="xsd:string"/>
+      <xsd:element form="qualified" minOccurs="0" name="field-099" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

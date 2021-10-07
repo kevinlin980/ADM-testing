@@ -1,0 +1,2335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<processModelHaul>
+  <versionUuid>0005e71b-96e9-8000-6fa4-014d98014d98</versionUuid>
+  <folderUuid>_g-0000d307-ffa2-8000-349a-820000820000_29</folderUuid>
+  <roleMap>
+    <role name="ADMIN_OWNER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="EDITOR">
+      <users/>
+      <groups/>
+    </role>
+    <role name="EXPLICIT_NONMEMBER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="VIEWER">
+      <users/>
+      <groups>
+        <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+      </groups>
+    </role>
+    <role name="MANAGER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="INITIATOR">
+      <users/>
+      <groups/>
+    </role>
+  </roleMap>
+  <process_model_port schemaVersion="007.000.004"
+    xmlns="http://www.appian.com/ae/types/2009"
+    xmlns:a="http://www.appian.com/ae/types/2009"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <pm>
+      <meta>
+        <uuid><![CDATA[0004d4e5-2d02-8000-f71a-010000010000]]></uuid>
+        <name>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value><![CDATA[numberinput]]></value>
+            </pair>
+          </string-map>
+        </name>
+        <desc>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value/>
+            </pair>
+          </string-map>
+        </desc>
+        <versionStatus>2</versionStatus>
+        <process-name>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value><![CDATA[numberinput]]></value>
+            </pair>
+          </string-map>
+        </process-name>
+        <deadline>
+          <enabled>false</enabled>
+          <type>0</type>
+          <units>0</units>
+          <rex/>
+          <aex/>
+        </deadline>
+        <pm-notification-settings>
+          <custom-settings>false</custom-settings>
+          <notify-initiator>false</notify-initiator>
+          <notify-owner>false</notify-owner>
+          <usersandgroups/>
+          <recipients-exp/>
+        </pm-notification-settings>
+        <cleanup-action>3</cleanup-action>
+        <auto-archive-delay>30</auto-archive-delay>
+        <auto-delete-delay>0</auto-delete-delay>
+        <timeZoneId><![CDATA[GMT]]></timeZoneId>
+        <useProcessInitiatorTimeZone>true</useProcessInitiatorTimeZone>
+      </meta>
+      <pvs>
+        <pv name="defaultValue">
+          <a:value xmlns="" xsi:type="xsd:int">1</a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+      </pvs>
+      <nodes>
+        <node uuid="0000d4e5-2d02-8000-f71a-010000010000">
+          <guiId>0</guiId>
+          <owner/>
+          <icon id="50"/>
+          <picon id="0"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Start Event]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>112</x>
+          <y>224</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Start Event]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>true</overrideLaneAssignment>
+          <ac>
+            <local-id>core.0</local-id>
+            <name><![CDATA[Start Node]]></name>
+            <acps/>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map/>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections>
+            <connection>
+              <guiId>4</guiId>
+              <to>3</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor>1</fromAnchor>
+              <toAnchor>3</toAnchor>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>false</chained>
+              <overridesAssignment>true</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+            <connection>
+              <guiId>1</guiId>
+              <to>2</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor>1</fromAnchor>
+              <toAnchor>3</toAnchor>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>false</chained>
+              <overridesAssignment>true</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </connections>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0001d4e5-2d02-8000-f71a-010000010000">
+          <guiId>1</guiId>
+          <owner/>
+          <icon id="51"/>
+          <picon id="0"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[End Event]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>364</x>
+          <y>224</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[End Event]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>true</overrideLaneAssignment>
+          <ac>
+            <local-id>core.1</local-id>
+            <name><![CDATA[End Node]]></name>
+            <acps>
+              <acp name="pmID">
+                <a:value xsi:nil="true" xsi:type="a:ProcessModel"/>
+                <a:local-id>0</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>0</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="inMap">
+                <a:value xsi:nil="true" xsi:type="a:Bean?list"/>
+                <a:local-id>1</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="procInheritsPriority">
+                <a:value xmlns="" xsi:type="xsd:int">1</a:value>
+                <a:local-id>5</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>false</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="pmUUID">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id>6</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isAsynchronous">
+                <a:value xmlns="" xsi:type="xsd:boolean">true</a:value>
+                <a:local-id>7</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>0</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isTransparent">
+                <a:value xmlns="" xsi:type="xsd:boolean">true</a:value>
+                <a:local-id>14</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="inheritSecurity">
+                <a:value xmlns="" xsi:type="xsd:boolean">false</a:value>
+                <a:local-id>15</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </acps>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map/>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections/>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0003d4e5-2d02-8000-f71a-010000010000">
+          <guiId>3</guiId>
+          <owner/>
+          <icon id="21"/>
+          <picon id="1"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[UIT - Number Input]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>224</x>
+          <y>224</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[UIT - Number Input]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <assignments>
+            <assignee>
+              <type>28</type>
+              <privilege>3</privilege>
+              <value>
+                <ac>
+                  <local-id>assignee-pool.101</local-id>
+                  <name><![CDATA[Assign To Actor]]></name>
+                  <acps>
+                    <acp name="displayName">
+                      <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                      <a:local-id>0</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="expression">
+                      <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                      <a:local-id>1</a:local-id>
+                      <a:expr><![CDATA[pp!initiator]]></a:expr>
+                      <a:required>0</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outUsers">
+                      <a:value xsi:nil="true" xsi:type="a:User?list"/>
+                      <a:local-id>2</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outGroups">
+                      <a:value xsi:nil="true" xsi:type="a:Group?list"/>
+                      <a:local-id>3</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                  </acps>
+                  <custom-params/>
+                  <output-exprs/>
+                  <requires-user-interaction>true</requires-user-interaction>
+                  <run-as>
+                    <performer id="0"/>
+                  </run-as>
+                  <helper-class/>
+                </ac>
+              </value>
+            </assignee>
+            <assignment-function/>
+            <position>0</position>
+            <accept-mode>1</accept-mode>
+          </assignments>
+          <ac>
+            <local-id>internal.17</local-id>
+            <name><![CDATA[User Input Task]]></name>
+            <acps/>
+            <custom-params>
+              <acp name="defaultValue">
+                <a:value xmlns="" xsi:type="xsd:int">1</a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </custom-params>
+            <output-exprs/>
+            <requires-user-interaction>false</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[Read-only Number Input, One Line Default]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[11111111111]]></value>
+                          <extra><![CDATA[{"id":"number80","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number80","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input with Multiple Line Instructions]]></label>
+                          <instructions><![CDATA[Instructions that take up more than one line Instructions that take up more than one line Instructions that take up more than one line Instructions that take up more than one line Instructions that take up more than one line Instructions that take up more than one line]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number52","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number52","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input with Special Character Instructions]]></label>
+                          <instructions><![CDATA[Num&er_!npu+_!n$+ru(+!on$_wi+#_$pe(!@\_(h@r@(+er$]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number53","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number53","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input with Instructions from Expression]]></label>
+                          <instructions><![CDATA[=lower("Instructions From Expression")]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number50","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number50","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input with Really Long Instructions]]></label>
+                          <instructions><![CDATA[Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number51","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number51","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Only Show When Number Input]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>true</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number74","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"###EXPR0","key":"number74","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=hour(now()) > 12]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input Decimal Default Value]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[1.1]]></value>
+                          <extra><![CDATA[{"id":"number75","typeName":"number","customValidations":[{}],"subType":"decimal","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number75","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Show Always Number Input]]></label>
+                          <instructions><![CDATA[The Number input below this one is hidden always. The next number input below this one is only shown between noon and midnight.]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number72","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number72","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Hidden Number Input]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>true</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number73","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number73","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input Decimal Default Value from Expression]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[=2.2*3.3]]></value>
+                          <extra><![CDATA[{"id":"number79","typeName":"number","customValidations":[{}],"subType":"decimal","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number79","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input Default Value Not Saved to ACP]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"id":"number58","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number58","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input No Default Value]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number59","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number59","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Not Required Text Input]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number56","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number56","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input Default Value Saved to ACP]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[defaultValue]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"id":"number57","typeName":"number","saveAs":{"name":"defaultValue"},"validationMessages":[],"subType":"integer","customValidations":[{}],"customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number57","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input with Unicode Instructions]]></label>
+                          <instructions><![CDATA[ウェブ 画像 動画]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number54","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number54","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Required Number Input]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number55","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number55","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"button2","typeName":"button","customValidations":[],"buttonConfirm":"false","buttonLabel":"Submit","customEvents":[],"labelPosition":"right","view":"single","buttonValue":"Submit","key":"button2","namespace":"DESIGN","confirmMessage":"Submit this form?"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[User Input Task for Number Input]]></label>
+                          <instructions><![CDATA[This form is used to test Number Input for mobile-enabled forms.]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"form0","typeName":"form","elementCounter":81,"columns":1,"customEvents":[{}],"labelPosition":"right","view":"single","key":"form0","namespace":"DESIGN","mobile":"true"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input with Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number42","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number42","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input Default Value on User Input Task]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"id":"number62","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number62","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[ウェブ 画像 動画]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number47","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number47","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Read-only Number Input, Default Value]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"id":"number65","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number65","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Read-only Number Input, No Default Value]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number66","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number66","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input with Instructions]]></label>
+                          <instructions><![CDATA[Instructions]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number48","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number48","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input no Instructions]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number49","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number49","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Not Read-only, Not Disabled Number Input]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number67","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number67","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Disabled Number Input]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number68","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number68","disabled":"true","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Read-only, Disabled Number Input]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number69","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number69","disabled":"true","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label/>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number43","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number43","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[=lower("Number Input with Label from Expression")]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number44","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number44","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number45","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number45","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Num&er_!npu+_\@be\_wi+#_$pe(!@\_(h@r@(+er$]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number46","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number46","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label/>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"tree","children":[["number42","number43","number44","number45","number46","number47","number48","number49","number50","number51","number52","number53","number54","number55","number56","number57","number58","number59","number62","number75","number79","number65","number66","number80","number67","number68","number69","number72","number73","number74"]],"buttons":["button2"],"key":"form0"}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <jsp-form>
+                      <path><![CDATA[/process/forms]]></path>
+                    </jsp-form>
+                    <hiddenSections>16</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections>
+            <connection>
+              <guiId>5</guiId>
+              <to>1</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor>1</fromAnchor>
+              <toAnchor>3</toAnchor>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>false</chained>
+              <overridesAssignment>true</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </connections>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0002d4e5-2d02-8000-f71a-010000010000">
+          <guiId>2</guiId>
+          <owner/>
+          <icon id="60"/>
+          <picon id="61"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Attended Sub-Process - Number Input]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>224</x>
+          <y>308</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Attended Sub-Process - Number Input]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <assignments>
+            <assignee>
+              <type>28</type>
+              <privilege>3</privilege>
+              <value>
+                <ac>
+                  <local-id>assignee-pool.101</local-id>
+                  <name><![CDATA[Assign To Actor]]></name>
+                  <acps>
+                    <acp name="displayName">
+                      <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                      <a:local-id>0</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="expression">
+                      <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                      <a:local-id>1</a:local-id>
+                      <a:expr><![CDATA[pp!initiator]]></a:expr>
+                      <a:required>0</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outUsers">
+                      <a:value xsi:nil="true" xsi:type="a:User?list"/>
+                      <a:local-id>2</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outGroups">
+                      <a:value xsi:nil="true" xsi:type="a:Group?list"/>
+                      <a:local-id>3</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                  </acps>
+                  <custom-params/>
+                  <output-exprs/>
+                  <requires-user-interaction>true</requires-user-interaction>
+                  <run-as>
+                    <performer id="0"/>
+                  </run-as>
+                  <helper-class/>
+                </ac>
+              </value>
+            </assignee>
+            <assignment-function/>
+            <position>0</position>
+            <accept-mode>1</accept-mode>
+          </assignments>
+          <ac>
+            <local-id>internal.38</local-id>
+            <name><![CDATA[SUB_PROC]]></name>
+            <acps>
+              <acp name="Instructions">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id>0</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>0</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="pmID">
+                <a:value a:id="0002d4e5-0dbb-8000-f71a-010000010000"
+                  xmlns="" xsi:type="a:ProcessModel"/>
+                <a:local-id>1</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>0</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="inMap">
+                <a:value xsi:nil="true" xsi:type="a:Bean?list"/>
+                <a:local-id>2</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="outMap">
+                <a:value xsi:nil="true" xsi:type="a:Bean?list"/>
+                <a:local-id>6</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>0</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>false</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="subProcessID">
+                <a:value xsi:nil="true" xsi:type="xsd:int"/>
+                <a:local-id>10</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>0</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>false</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="procInheritsPriority">
+                <a:value xmlns="" xsi:type="xsd:int">1</a:value>
+                <a:local-id>11</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>false</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="pmUUID">
+                <a:value xmlns="" xsi:type="xsd:string">0002d4e5-0dbb-8000-f71a-010000010000</a:value>
+                <a:local-id>12</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isAsynchronous">
+                <a:value xmlns="" xsi:type="xsd:boolean">false</a:value>
+                <a:local-id>13</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isTransparent">
+                <a:value xmlns="" xsi:type="xsd:boolean">true</a:value>
+                <a:local-id>14</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="inheritSecurity">
+                <a:value xmlns="" xsi:type="xsd:boolean">false</a:value>
+                <a:local-id>15</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="chainsInto">
+                <a:value xmlns="" xsi:type="xsd:boolean">false</a:value>
+                <a:local-id>16</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </acps>
+            <custom-params>
+              <acp name="defaultValue">
+                <a:value xmlns="" xsi:type="xsd:string">"Default Value Saved to ACP"</a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="defaultValueNumberInput">
+                <a:value xmlns="" xsi:type="xsd:int">1</a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </custom-params>
+            <output-exprs/>
+            <requires-user-interaction>false</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[Number Input with Special Character Instructions]]></label>
+                          <instructions><![CDATA[Num&er_!npu+_!n$+ru(+!on$_wi+#_$pe(!@\_(h@r@(+er$]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number52","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number52","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Show Always Number Input]]></label>
+                          <instructions><![CDATA[The number input below this one is hidden always. The next number input below this one is only shown between noon and midnight.]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number71","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number71","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input with Unicode Instructions]]></label>
+                          <instructions><![CDATA[ウェブ 画像 動画]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number53","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number53","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input with Really Long Instructions]]></label>
+                          <instructions><![CDATA[Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number50","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number50","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input with Multiple Line Instructions]]></label>
+                          <instructions><![CDATA[Instructions that take up more than one line Instructions that take up more than one line Instructions that take up more than one line Instructions that take up more than one line Instructions that take up more than one line Instructions that take up more than one line]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number51","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number51","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input Decimal Default Value]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[1.1]]></value>
+                          <extra><![CDATA[{"id":"number74","typeName":"number","customValidations":[{}],"subType":"decimal","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number74","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input Decimal Default Value from Expression]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[=product(2.2,3.3)]]></value>
+                          <extra><![CDATA[{"id":"number75","typeName":"number","customValidations":[{}],"subType":"decimal","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number75","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Hidden Number Input]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>true</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number72","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number72","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Only Show When Number Input]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>true</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number73","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"###EXPR0","key":"number73","namespace":"DESIGN"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=hour(now()) > 12]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input Decimal Default Value Not Mapped to ACP]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[1.1]]></value>
+                          <extra><![CDATA[{"id":"number76","typeName":"number","customValidations":[{}],"subType":"decimal","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number76","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input No Default Value]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number58","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number58","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input Default Value Saved to ACP]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[defaultValueNumberInput]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"id":"number56","typeName":"number","saveAs":{"name":"defaultValueNumberInput"},"validationMessages":[],"customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number56","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input Default Value Not Saved to ACP]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"id":"number57","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number57","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"button1","typeName":"button","customValidations":[],"buttonConfirm":"false","buttonLabel":"Submit","customEvents":[],"labelPosition":"right","view":"single","buttonValue":"Submit","key":"button1","namespace":"DESIGN","confirmMessage":"Submit this form?"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Required Number Input]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number54","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number54","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Not Required Number Input]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number55","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number55","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Attended Sub-Process Node for Number Input]]></label>
+                          <instructions><![CDATA[This form is used to test Number Input for mobile-enabled forms.]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"form0","typeName":"form","elementCounter":79,"columns":1,"customEvents":[{}],"labelPosition":"right","view":"single","key":"form0","namespace":"DESIGN","mobile":"true"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input with Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number41","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number41","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label/>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number42","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number42","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input Default Value on Attended Sub-process Node]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"id":"number61","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number61","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input Default Value " "]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[=" "]]></value>
+                          <extra><![CDATA[{"id":"number62","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number62","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Read-only Number Input, Default value]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"id":"number64","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number64","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Read-only Number Input, No Default Value]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number65","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number65","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input with Instructions]]></label>
+                          <instructions><![CDATA[Instructions]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number47","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number47","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input no Instructions]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number48","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number48","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Not Read-only, Not Disabled Number Input]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number66","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number66","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Number Input with Instructions from Expression]]></label>
+                          <instructions><![CDATA[=lower("Instructions From Expression")]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number49","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number49","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Disabled Number Input]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number67","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","disabled":"true","key":"number67","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Read-only, Disabled Number Input]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number68","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","disabled":"true","key":"number68","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Read-only Number Input, One Line]]></label>
+                          <instructions/>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[1111111111]]></value>
+                          <extra><![CDATA[{"id":"number69","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number69","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[=lower("Number Input with Label from Expression")]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number43","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number43","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number44","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number44","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Num%er_!npu+_\@be\_wi+#_$pe(!@\_(h@r@(+er$]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number45","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number45","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[ウェブ 画像 動画]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"number46","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number46","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label/>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"tree","children":[["number41","number42","number43","number44","number45","number46","number47","number48","number49","number50","number51","number52","number53","number54","number55","number56","number57","number58","number61","number62","number74","number75","number76","number64","number65","number66","number67","number68","number69","number71","number72","number73"]],"buttons":["button1"],"key":"form0"}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <jsp-form>
+                      <path><![CDATA[/process/forms]]></path>
+                    </jsp-form>
+                    <hiddenSections>16</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections>
+            <connection>
+              <guiId>3</guiId>
+              <to>1</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor>1</fromAnchor>
+              <toAnchor>2</toAnchor>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>false</chained>
+              <overridesAssignment>true</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </connections>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+      </nodes>
+      <annotations/>
+      <lanes/>
+      <attachments/>
+      <notes/>
+      <priority id="1"/>
+      <form-map>
+        <pair>
+          <locale country="US" lang="en" variant=""/>
+          <form-config>
+            <form>
+              <type>0</type>
+              <enabled>true</enabled>
+              <dynamic-form>
+                <form-elements>
+                  <form-element>
+                    <label><![CDATA[Integer Input with Instructions]]></label>
+                    <instructions><![CDATA[Instructions]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number52","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number52","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Integer Input with No Instructions]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number53","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number53","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Num&er_!npu+_\@be\_wi+#_$pe(!@\_(h@r@(+er$]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number50","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number50","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[ウェブ 画像 動画]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number51","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number51","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Integer Input with Special Character Instructions]]></label>
+                    <instructions><![CDATA[+ex+_!npu+_!n$+ru(+!on$_wi+#_$pe(!@\_(h@r@(+er$]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number14","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number14","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Read-only, Disabled Number Input]]></label>
+                    <instructions/>
+                    <editable>false</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number74","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number74","disabled":"true","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Read-only Number Input, One Line]]></label>
+                    <instructions/>
+                    <editable>false</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value><![CDATA[111111]]></value>
+                    <extra><![CDATA[{"id":"number75","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number75","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Read-only Integer Input, Default Value]]></label>
+                    <instructions/>
+                    <editable>false</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value><![CDATA[1]]></value>
+                    <extra><![CDATA[{"id":"number72","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number72","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Not Read-only, Not Disabled Number Input]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number73","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number73","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Only Show When Number Input]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>true</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number78","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"###EXPR0","key":"number78","namespace":"DESIGN"}]]></extra>
+                    <expression xsi:type="xsd:string"><![CDATA[=hour(now()) > 12]]></expression>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Show Always Number Input]]></label>
+                    <instructions><![CDATA[The number input below this one is hidden always. The next number input below this one is only shown between noon and midnight.]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number76","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number76","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Integer Input with Unicode Instructions]]></label>
+                    <instructions><![CDATA[ウェブ 画像 動画]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number58","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number58","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Required Integer Input]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>true</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number59","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number59","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Hidden Number Input]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>true</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number77","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number77","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Integer Input with Multiple Line Instructions]]></label>
+                    <instructions><![CDATA[Instructions that take up more than one line Instructions that take up more than one line Instructions that take up more than one line Instructions that take up more than one line Instructions that take up more than one line Instructions that take up more than one line]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number56","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number56","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Integer Input with Special Character Instructions]]></label>
+                    <instructions><![CDATA[Num&er_!npu+_!n$+ru(+!on$_wi+#_$pe(!@\_(h@r@(+er$]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number57","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number57","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Integer Input with Instructions from Expression]]></label>
+                    <instructions><![CDATA[=lower("Instructions From Expression")]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number54","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number54","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Label]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"button1","typeName":"button","customValidations":[],"buttonConfirm":"false","buttonLabel":"Start","customEvents":[],"labelPosition":"right","view":"single","buttonValue":"Submit","key":"button1","namespace":"DESIGN","confirmMessage":"Submit this form?"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Integer Input with Really Long Instructions]]></label>
+                    <instructions><![CDATA[Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions Really Long Number Input Instructions]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number55","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number55","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Start Form with Number Inputs]]></label>
+                    <instructions><![CDATA[This form is used to test Number Input for mobile-enabled forms]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"form0","typeName":"form","elementCounter":84,"columns":1,"customEvents":[{}],"labelPosition":"right","view":"single","key":"form0","namespace":"DESIGN","mobile":"true"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Not Required Integer Input]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number60","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number60","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Integer Input Default Value Saved to ACP]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[defaultValue]]></mapped-to>
+                    <value><![CDATA[1]]></value>
+                    <extra><![CDATA[{"id":"number61","typeName":"number","saveAs":{"name":"defaultValue"},"validationMessages":[],"customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number61","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Integer Input No Default Value]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number62","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number62","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label/>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number47","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number47","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Integer Input Default Value on a Start Form]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value><![CDATA[1]]></value>
+                    <extra><![CDATA[{"id":"number65","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number65","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Decimal Default Value]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value><![CDATA[1.1]]></value>
+                    <extra><![CDATA[{"id":"number66","typeName":"number","customValidations":[{}],"subType":"decimal","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number66","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[=lower("Number Input with Label from Expression")]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number48","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number48","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Decimal Default Value from Expression]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value><![CDATA[=2.2*3.3]]></value>
+                    <extra><![CDATA[{"id":"number67","typeName":"number","customValidations":[{}],"subType":"decimal","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number67","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label Really Long Number Input Label]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number49","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number49","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[ Decimal, Blank Default Value]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value><![CDATA[=""]]></value>
+                    <extra><![CDATA[{"id":"number68","typeName":"number","customValidations":[{}],"subType":"decimal","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number68","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[ Decimal Default Value Not Saved to ACP]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number69","typeName":"number","customValidations":[{}],"subType":"decimal","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number69","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Integer Input with Label]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"number46","typeName":"number","customValidations":[{}],"subType":"integer","customEvents":[{}],"labelPosition":"right","view":"single","displayExpField":"","key":"number46","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label/>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"tree","children":[["number46","number47","number48","number49","number50","number51","number52","number53","number54","number55","number56","number14","number57","number58","number59","number60","number61","number62","number65","number66","number67","number68","number69","number72","number73","number74","number75","number76","number77","number78"]],"buttons":["button1"],"key":"form0"}]]></extra>
+                  </form-element>
+                </form-elements>
+              </dynamic-form>
+              <jsp-form>
+                <path><![CDATA[/process/forms]]></path>
+              </jsp-form>
+              <hiddenSections>16</hiddenSections>
+            </form>
+          </form-config>
+        </pair>
+      </form-map>
+      <emailAttachmentFolderUuid><![CDATA[SYSTEM_FOLDER_TEMPORARY_DOCS]]></emailAttachmentFolderUuid>
+      <isPublic>false</isPublic>
+    </pm>
+  </process_model_port>
+  <isPublished>true</isPublished>
+  <history>
+    <historyInfo versionUuid="0005e71b-96e9-8000-6fa4-014d98014d98"/>
+  </history>
+</processModelHaul>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>df6ff653-02fe-4666-978d-70e7904cd9a3</versionUuid>
+    <tempoReport a:uuid="c8e7939e-be9d-4072-9928-d6b1d449a795" name="Closed Opportunities">
+        <a:description>Shows opportunities that have been won</a:description>
+        <a:uiExpr>=#"_a-0000d6fd-7cb9-8000-7886-010000010000_953"()</a:uiExpr>
+        <a:urlStub>closedOpportunities</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>0002d0bf-9218-8000-9218-0f2a550f2a55</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="df6ff653-02fe-4666-978d-70e7904cd9a3"/>
+    </history>
+</tempoReportHaul>

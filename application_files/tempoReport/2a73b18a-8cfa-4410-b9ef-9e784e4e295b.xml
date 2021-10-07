@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>db68a99f-5428-4d57-b878-6847306ec2b6</versionUuid>
+    <tempoReport a:uuid="2a73b18a-8cfa-4410-b9ef-9e784e4e295b" name="Appian Software and Documentation">
+        <a:description>Summary of release status and links to online documentation</a:description>
+        <a:uiExpr>=#"_a-0000d6fd-7cb9-8000-7886-010000010000_952"()</a:uiExpr>
+        <a:urlStub>releases</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>0002d0bf-9218-8000-9218-0f2a550f2a55</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="db68a99f-5428-4d57-b878-6847306ec2b6"/>
+    </history>
+</tempoReportHaul>

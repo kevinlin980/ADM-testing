@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recordTypeHaul xmlns:a="http://www.appian.com/ae/types/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <versionUuid>d2c369ee-5fa2-4b73-93ca-ba7596eb018a</versionUuid>
+  <recordType a:uuid="378b80f1-92ed-4729-bd63-a2315e88e488" name="Record Icons">
+    <a:pluralName>Record Icons</a:pluralName>
+    <a:description>Various icons for records</a:description>
+    <a:urlStub>icon</a:urlStub>
+    <a:source a:uuid="0002d72b-9455-8000-4140-010000010000" xsi:type="a:ProcessModel"/>
+    <a:listViewTemplateExpr>#"SYSTEM_SYSRULES_listViewItem"(&#xd;
+  image:rf!icon, &#xd;
+  title:rf!name, &#xd;
+  details:rf!description&#xd;
+)</a:listViewTemplateExpr>
+    <a:detailViewCfg>
+      <a:nameExpr>="Summary"</a:nameExpr>
+      <a:uiExpr>=#"_a-0000d72b-460c-8000-413f-010000010000_1200"()</a:uiExpr>
+      <a:visibilityExpr>=true()</a:visibilityExpr>
+      <a:urlStub>summary</a:urlStub>
+      <a:recordActionLaunchType>SAME_TAB</a:recordActionLaunchType>
+    </a:detailViewCfg>
+    <a:defaultSortInfo>
+      <field>name</field>
+      <ascending>true</ascending>
+    </a:defaultSortInfo>
+    <a:isSystem>false</a:isSystem>
+    <a:layoutType>FEED</a:layoutType>
+    <a:security>16383</a:security>
+    <a:hideLatestNews>false</a:hideLatestNews>
+    <a:hideNewsView>false</a:hideNewsView>
+    <a:hideRelatedActionsView>false</a:hideRelatedActionsView>
+    <a:isExportable>true</a:isExportable>
+    <a:listAutoRefreshInterval>0.0</a:listAutoRefreshInterval>
+    <a:enabledFeatures>0</a:enabledFeatures>
+    <a:isVisibleInRecordTypeList>true</a:isVisibleInRecordTypeList>
+    <a:recordActionLaunchType>SAME_TAB</a:recordActionLaunchType>
+  </recordType>
+  <roleMap/>
+  <history>
+    <historyInfo versionUuid="d2c369ee-5fa2-4b73-93ca-ba7596eb018a"/>
+  </history>
+  <migrationVersion>1</migrationVersion>
+</recordTypeHaul>

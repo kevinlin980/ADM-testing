@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24374</versionUuid>
+    <rule>
+        <name>reportLocalState</name>
+        <uuid>_a-0000d86d-ef71-8000-e630-010000010000_2956</uuid>
+        <description></description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load(
+  local!state,
+  local!list: { 11, 22, 33 },
+  local!list2: { 11, 22, 33 },
+  local!swap: lambda_appian_internal(
+    ri!array, ri!a, ri!b,
+    with(
+      local!temp: ri!array[ri!a],
+      updatearray(updatearray(ri!array, ri!a, ri!array[ri!b]), ri!b, local!temp)
+    )
+  ),
+  local!renderItemFn: lambda_appian_internal(
+    ri!index,
+    #"SYSTEM_SYSRULES_integerField"(label: "Input " &amp; ri!index, value: local!list[ri!index], saveInto: local!list[ri!index])
+  ),
+  local!renderItemFn2: lambda_appian_internal(
+    ri!index,
+    #"SYSTEM_SYSRULES_integerField"(label: "Input " &amp; ri!index, value: local!list2[ri!index], saveInto: local!list2[ri!index])
+  ),
+  #"SYSTEM_SYSRULES_dashboardLayout"(firstColumnContents: {
+    #"SYSTEM_SYSRULES_sectionLayout"(label: "Without Preservation", firstColumnContents: {
+      #"SYSTEM_SYSRULES_applyComponents"(function: local!renderItemFn(_), array: 1 + enumerate(count(local!list))),
+      #"SYSTEM_SYSRULES_ButtonArrayLayout"(buttons: {
+        #"SYSTEM_SYSRULES_ButtonWidget"(label: "Add Row", value: " ", saveInto: local!list &lt;&lt; append(local!list, _)),
+        #"SYSTEM_SYSRULES_ButtonWidget"(
+          label: "Swap Rows 2 and 3",
+          value: 2,
+          saveInto: {
+            local!list &lt;&lt; local!swap(local!list, _, 3)
+          }
+        )
+      })
+    }),
+    #"SYSTEM_SYSRULES_sectionLayout"(label: "With Preservation", firstColumnContents: {
+      #"SYSTEM_SYSRULES_applyComponents"(function: local!renderItemFn2(_), array: 1 + enumerate(count(local!list2)), arrayVariable: local!state),
+      #"SYSTEM_SYSRULES_textField"(instructions: typename(typeof(local!state)) &amp; " (" &amp; typename(runtimetypeof(local!state)) &amp; ")", readOnly: true, value: local!state),
+      #"SYSTEM_SYSRULES_ButtonArrayLayout"(buttons: {
+        #"SYSTEM_SYSRULES_ButtonWidget"(label: "Add Row", value: " ", saveInto: local!list2 &lt;&lt; append(local!list2, _)),
+        #"SYSTEM_SYSRULES_ButtonWidget"(
+          label: "Swap Rows 2 and 3",
+          value: 2,
+          saveInto: {
+            local!list2 &lt;&lt; local!swap(local!list2, _, 3),
+            local!state &lt;&lt; local!swap(local!state, _, 3)
+          }
+        )
+      })
+    })
+  })
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24374"/>
+    </history>
+</contentHaul>

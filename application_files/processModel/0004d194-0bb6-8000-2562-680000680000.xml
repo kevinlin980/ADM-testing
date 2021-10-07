@@ -1,0 +1,1920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<processModelHaul>
+  <versionUuid>0009e71b-96f2-8000-6fac-014d98014d98</versionUuid>
+  <folderUuid>_g-0000d193-f622-8000-2562-680000680000_35</folderUuid>
+  <roleMap>
+    <role name="ADMIN_OWNER">
+      <users>
+        <userUuid>Administrator</userUuid>
+      </users>
+      <groups>
+        <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+      </groups>
+    </role>
+    <role name="EDITOR">
+      <users/>
+      <groups/>
+    </role>
+    <role name="EXPLICIT_NONMEMBER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="VIEWER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="MANAGER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="INITIATOR">
+      <users/>
+      <groups/>
+    </role>
+  </roleMap>
+  <process_model_port schemaVersion="007.000.004"
+    xmlns="http://www.appian.com/ae/types/2009"
+    xmlns:a="http://www.appian.com/ae/types/2009"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <pm>
+      <meta>
+        <uuid><![CDATA[0004d194-0bb6-8000-2562-680000680000]]></uuid>
+        <name>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value><![CDATA[Grids - Boolean]]></value>
+            </pair>
+          </string-map>
+        </name>
+        <desc>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value/>
+            </pair>
+          </string-map>
+        </desc>
+        <versionStatus>2</versionStatus>
+        <process-name>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value><![CDATA[Grids - Email Address]]></value>
+            </pair>
+          </string-map>
+        </process-name>
+        <deadline>
+          <enabled>false</enabled>
+          <type>0</type>
+          <units>0</units>
+          <rex/>
+          <aex/>
+        </deadline>
+        <pm-notification-settings>
+          <custom-settings>false</custom-settings>
+          <notify-initiator>false</notify-initiator>
+          <notify-owner>false</notify-owner>
+          <usersandgroups/>
+          <recipients-exp/>
+        </pm-notification-settings>
+        <cleanup-action>3</cleanup-action>
+        <auto-archive-delay>30</auto-archive-delay>
+        <auto-delete-delay>0</auto-delete-delay>
+        <timeZoneId><![CDATA[GMT]]></timeZoneId>
+        <useProcessInitiatorTimeZone>true</useProcessInitiatorTimeZone>
+      </meta>
+      <pvs>
+        <pv name="checkbox">
+          <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="checked_default">
+          <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="checked_disabled">
+          <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="checked_required">
+          <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="dropdown">
+          <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="no_default">
+          <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="no_disabled">
+          <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="no_required">
+          <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="radio">
+          <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="startForm_checkbox">
+          <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+          <parameter>true</parameter>
+          <required>true</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="startForm_dropdown">
+          <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+          <parameter>true</parameter>
+          <required>true</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="startForm_radio">
+          <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+          <parameter>true</parameter>
+          <required>true</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="yes_default">
+          <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="yes_disabled">
+          <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="yes_required">
+          <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+      </pvs>
+      <nodes>
+        <node uuid="0000d194-0bb6-8000-2562-680000680000">
+          <guiId>0</guiId>
+          <owner/>
+          <icon id="50"/>
+          <picon id="0"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Start Event]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>112</x>
+          <y>392</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Start Event]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>true</overrideLaneAssignment>
+          <ac>
+            <local-id>core.0</local-id>
+            <name><![CDATA[Start Node]]></name>
+            <acps/>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map/>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections>
+            <connection>
+              <guiId>0</guiId>
+              <to>3</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor/>
+              <toAnchor/>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>true</chained>
+              <overridesAssignment>true</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </connections>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0001d194-0bb6-8000-2562-680000680000">
+          <guiId>1</guiId>
+          <owner/>
+          <icon id="51"/>
+          <picon id="0"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[End Event]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>504</x>
+          <y>392</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[End Event]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>true</overrideLaneAssignment>
+          <ac>
+            <local-id>core.1</local-id>
+            <name><![CDATA[End Node]]></name>
+            <acps>
+              <acp name="pmID">
+                <a:value xsi:nil="true" xsi:type="a:ProcessModel"/>
+                <a:local-id>0</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>0</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="inMap">
+                <a:value xsi:nil="true" xsi:type="a:Bean?list"/>
+                <a:local-id>1</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="procInheritsPriority">
+                <a:value xmlns="" xsi:type="xsd:int">1</a:value>
+                <a:local-id>5</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>false</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="pmUUID">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id>6</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isAsynchronous">
+                <a:value xmlns="" xsi:type="xsd:boolean">true</a:value>
+                <a:local-id>7</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>0</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isTransparent">
+                <a:value xmlns="" xsi:type="xsd:boolean">true</a:value>
+                <a:local-id>14</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="inheritSecurity">
+                <a:value xmlns="" xsi:type="xsd:boolean">false</a:value>
+                <a:local-id>15</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </acps>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map/>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections/>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0002d194-0bb6-8000-2562-680000680000">
+          <guiId>3</guiId>
+          <owner/>
+          <icon id="21"/>
+          <picon id="1"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Start Form inputs in a grid]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>224</x>
+          <y>392</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Start Form inputs in a grid]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <assignments>
+            <assignee>
+              <type>28</type>
+              <privilege>3</privilege>
+              <value>
+                <ac>
+                  <local-id>assignee-pool.101</local-id>
+                  <name><![CDATA[Assign To Actor]]></name>
+                  <acps>
+                    <acp name="displayName">
+                      <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                      <a:local-id>0</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="expression">
+                      <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                      <a:local-id>1</a:local-id>
+                      <a:expr><![CDATA[pp!initiator]]></a:expr>
+                      <a:required>0</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outUsers">
+                      <a:value xsi:nil="true" xsi:type="a:User?list"/>
+                      <a:local-id>2</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outGroups">
+                      <a:value xsi:nil="true" xsi:type="a:Group?list"/>
+                      <a:local-id>3</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                  </acps>
+                  <custom-params/>
+                  <output-exprs/>
+                  <requires-user-interaction>true</requires-user-interaction>
+                  <run-as>
+                    <performer id="0"/>
+                  </run-as>
+                  <helper-class/>
+                </ac>
+              </value>
+            </assignee>
+            <assignment-function/>
+            <position>0</position>
+            <accept-mode>1</accept-mode>
+          </assignments>
+          <ac>
+            <local-id>internal.17</local-id>
+            <name><![CDATA[User Input Task]]></name>
+            <acps/>
+            <custom-params>
+              <acp name="yes_default">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>true</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[yes_default]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="yes_required">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>true</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[yes_required]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="yes_disabled">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>true</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[yes_disabled]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="no_default">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>false</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[no_default]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="no_required">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>false</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[no_required]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="no_disabled">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>false</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[no_disabled]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="checked_default">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>true</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[checked_default]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="checked_required">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>true</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[checked_required]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="checked_disabled">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>true</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[checked_disabled]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="radio">
+                <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[radio]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="dropdown">
+                <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[dropdown]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="checkbox">
+                <a:value xsi:nil="true" xsi:type="a:Boolean?list"/>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[checkbox]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </custom-params>
+            <output-exprs/>
+            <requires-user-interaction>false</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[Yes (Default)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[yes_default]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse5","parentId":"grid2","saveAs":{"name":"yes_default"},"displayType":"radio","customValidations":[{}],"isExpression":"false","view":"list","key":"truefalse5"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Yes (Required)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[yes_required]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse7","parentId":"grid2","saveAs":{"name":"yes_required"},"displayType":"radio","customValidations":[{}],"isExpression":"false","view":"list","key":"truefalse7"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Values from start form (fixed)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid20","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid20","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Dropdown grid]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid12","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid12","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Values from start form]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid24","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid24","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Checkbox grid]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid13","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid13","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Show booleans in the grid]]></label>
+                          <instructions><![CDATA[Values previously written in the start form will be shown in the following grid]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"form","id":"form0","elementCounter":29,"columns":1,"customEvents":[{}],"labelPosition":"right","view":"single","key":"form0","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Radio Buttons grid]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid2","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid2","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Radio]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse21","parentId":"grid20","customValidations":[{}],"displayType":"radio","isExpression":true,"view":"list","disabled":"true","key":"truefalse21"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_radio]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Yes (Disabled)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[yes_disabled]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse10","parentId":"grid2","saveAs":{"name":"yes_disabled"},"displayType":"radio","customValidations":[{}],"isExpression":"false","view":"list","disabled":"true","key":"truefalse10"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Dropdown]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse22","parentId":"grid20","customValidations":[{}],"displayType":"dropdown","isExpression":true,"view":"list","disabled":"true","key":"truefalse22"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_dropdown]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Checkbox]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse23","parentId":"grid20","customValidations":[{}],"displayType":"checkbox","isExpression":true,"view":"list","checkboxLabel":"Super checkbox","disabled":"true","key":"truefalse23"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_checkbox]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Radio]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[radio]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse25","parentId":"grid24","saveAs":{"name":"radio"},"customValidations":[{}],"displayType":"radio","isExpression":true,"view":"list","key":"truefalse25"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_radio]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[No (Default)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[no_default]]></mapped-to>
+                          <value><![CDATA[0]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse14","parentId":"grid12","saveAs":{"name":"no_default"},"displayType":"dropdown","customValidations":[{}],"isExpression":"false","view":"list","key":"truefalse14"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Dropdown]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[dropdown]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse26","parentId":"grid24","saveAs":{"name":"dropdown"},"customValidations":[{}],"displayType":"dropdown","isExpression":true,"view":"list","key":"truefalse26"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_dropdown]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[No (Required)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[no_required]]></mapped-to>
+                          <value><![CDATA[0]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse15","parentId":"grid12","saveAs":{"name":"no_required"},"displayType":"dropdown","customValidations":[{}],"isExpression":"false","view":"list","key":"truefalse15"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Checkbox]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[checkbox]]></mapped-to>
+                          <value/>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse27","parentId":"grid24","saveAs":{"name":"checkbox"},"customValidations":[{}],"displayType":"checkbox","isExpression":true,"view":"list","checkboxLabel":"Super checkbox","key":"truefalse27"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!startForm_checkbox]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[No (Disabled)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[no_disabled]]></mapped-to>
+                          <value><![CDATA[0]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse16","parentId":"grid12","saveAs":{"name":"no_disabled"},"displayType":"dropdown","customValidations":[{}],"isExpression":"false","view":"list","disabled":"true","key":"truefalse16"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Checked (Default)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[checked_default]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse17","parentId":"grid13","saveAs":{"name":"checked_default"},"customValidations":[{}],"displayType":"checkbox","isExpression":"false","view":"list","checkboxLabel":"FirstColumn","key":"truefalse17"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Checked (Required)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[checked_required]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse18","parentId":"grid13","saveAs":{"name":"checked_required"},"customValidations":[{}],"displayType":"checkbox","isExpression":"false","view":"list","checkboxLabel":"SecondColumn","key":"truefalse18"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Checked (Disabled)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[checked_disabled]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse19","parentId":"grid13","saveAs":{"name":"checked_disabled"},"customValidations":[{}],"displayType":"checkbox","isExpression":"false","view":"list","checkboxLabel":"ThirdColumn","disabled":"true","key":"truefalse19"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"button","id":"button1","customValidations":[],"buttonLabel":"Submit","buttonConfirm":"false","customEvents":[],"labelPosition":"right","view":"single","buttonValue":"Submit","key":"button1","confirmMessage":"Submit this form?","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label/>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"tree","children":[[{"children":[["truefalse5"],["truefalse7"],["truefalse10"]],"key":"grid2"},{"children":[["truefalse14"],["truefalse15"],["truefalse16"]],"key":"grid12"},{"children":[["truefalse17"],["truefalse18"],["truefalse19"]],"key":"grid13"},{"children":[["truefalse21"],["truefalse22"],["truefalse23"]],"key":"grid20"},{"children":[["truefalse25"],["truefalse26"],["truefalse27"]],"key":"grid24"}]],"buttons":["button1"],"key":"form0"}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <jsp-form>
+                      <path><![CDATA[/process/forms]]></path>
+                    </jsp-form>
+                    <hiddenSections>6</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections>
+            <connection>
+              <guiId>1</guiId>
+              <to>2</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor/>
+              <toAnchor/>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>true</chained>
+              <overridesAssignment>true</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </connections>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>true</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>true</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0003d194-0bb6-8000-2562-680000680000">
+          <guiId>2</guiId>
+          <owner/>
+          <icon id="21"/>
+          <picon id="1"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Show last boolean values]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>364</x>
+          <y>392</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Show last boolean values]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>false</overrideLaneAssignment>
+          <assignments>
+            <assignee>
+              <type>28</type>
+              <privilege>3</privilege>
+              <value>
+                <ac>
+                  <local-id>assignee-pool.101</local-id>
+                  <name><![CDATA[Assign To Actor]]></name>
+                  <acps>
+                    <acp name="displayName">
+                      <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                      <a:local-id>0</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="expression">
+                      <a:value xsi:nil="true" xsi:type="a:UserOrGroup?list"/>
+                      <a:local-id>1</a:local-id>
+                      <a:expr><![CDATA[pp!initiator]]></a:expr>
+                      <a:required>0</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>true</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outUsers">
+                      <a:value xsi:nil="true" xsi:type="a:User?list"/>
+                      <a:local-id>2</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                    <acp name="outGroups">
+                      <a:value xsi:nil="true" xsi:type="a:Group?list"/>
+                      <a:local-id>3</a:local-id>
+                      <a:expr/>
+                      <a:required>1</a:required>
+                      <a:editable>2</a:editable>
+                      <a:assign-to-pv/>
+                      <a:input-to-activity-class>false</a:input-to-activity-class>
+                      <a:hidden-from-designer>false</a:hidden-from-designer>
+                      <a:generated>false</a:generated>
+                      <a:enumeration/>
+                      <a:customDisplayReference/>
+                    </acp>
+                  </acps>
+                  <custom-params/>
+                  <output-exprs/>
+                  <requires-user-interaction>true</requires-user-interaction>
+                  <run-as>
+                    <performer id="0"/>
+                  </run-as>
+                  <helper-class/>
+                </ac>
+              </value>
+            </assignee>
+            <assignment-function/>
+            <position>0</position>
+            <accept-mode>1</accept-mode>
+          </assignments>
+          <ac>
+            <local-id>internal.17</local-id>
+            <name><![CDATA[User Input Task]]></name>
+            <acps/>
+            <custom-params>
+              <acp name="dropdown">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>true</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[dropdown]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="checkbox">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>false</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[checkbox]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="no_default">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>true</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[no_default]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="checked_disabled">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>false</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[checked_disabled]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="yes_disabled">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>true</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[yes_disabled]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="checked_required">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>false</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[checked_required]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="yes_required">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>true</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[yes_required]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="checked_default">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>false</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[checked_default]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="yes_default">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>true</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[yes_default]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="no_disabled">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>true</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[no_disabled]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="radio">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>true</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[radio]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="no_required">
+                <a:value xmlns="" xsi:type="a:Boolean?list">
+                  <item>true</item>
+                </a:value>
+                <a:local-id/>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv><![CDATA[no_required]]></a:assign-to-pv>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </custom-params>
+            <output-exprs/>
+            <requires-user-interaction>false</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <form-config>
+                  <form>
+                    <type>0</type>
+                    <enabled>true</enabled>
+                    <dynamic-form>
+                      <form-elements>
+                        <form-element>
+                          <label><![CDATA[Yes (Default)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[yes_default]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse5","parentId":"grid2","saveAs":{"name":"yes_default"},"customValidations":[{}],"displayType":"radio","isExpression":true,"view":"list","key":"truefalse5"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!yes_default]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Yes (Required)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[yes_required]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse7","parentId":"grid2","saveAs":{"name":"yes_required"},"customValidations":[{}],"displayType":"radio","isExpression":true,"view":"list","key":"truefalse7"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!yes_required]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Dropdown grid]]></label>
+                          <instructions><![CDATA[read-only grid and disabled rows]]></instructions>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid12","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid12","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Values from start form]]></label>
+                          <instructions><![CDATA[read-only]]></instructions>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid24","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid24","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Checkbox grid]]></label>
+                          <instructions><![CDATA[read-only grid and disabled rows]]></instructions>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid13","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid13","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Show booleans in the grid]]></label>
+                          <instructions><![CDATA[Values previously written in the start form will be shown in the following grid]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"form","id":"form0","elementCounter":28,"columns":1,"customEvents":[{}],"labelPosition":"right","view":"single","key":"form0","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Radio Buttons grid]]></label>
+                          <instructions><![CDATA[read-only grid]]></instructions>
+                          <editable>false</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"id":"grid2","typeName":"grid","height":-1,"customValidations":[],"labelPosition":"right","customEvents":[],"view":"single","deleteItemLabel":"Delete row","allowAddDelete":true,"addItemLabel":"Add an item","displayExpField":"","key":"grid2","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Yes (Disabled)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[yes_disabled]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse10","parentId":"grid2","saveAs":{"name":"yes_disabled"},"customValidations":[{}],"displayType":"radio","isExpression":true,"view":"list","disabled":"true","key":"truefalse10"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!yes_disabled]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[No (Default)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[no_default]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse14","parentId":"grid12","saveAs":{"name":"no_default"},"customValidations":[{}],"displayType":"dropdown","isExpression":true,"view":"list","disabled":"true","key":"truefalse14"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!no_default]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Radio]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[radio]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse25","parentId":"grid24","saveAs":{"name":"radio"},"customValidations":[{}],"displayType":"radio","isExpression":true,"view":"list","key":"truefalse25"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!radio]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[No (Required)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[no_required]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse15","parentId":"grid12","saveAs":{"name":"no_required"},"customValidations":[{}],"displayType":"dropdown","isExpression":true,"view":"list","disabled":"true","key":"truefalse15"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!no_required]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Dropdown]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[dropdown]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse26","parentId":"grid24","saveAs":{"name":"dropdown"},"customValidations":[{}],"displayType":"dropdown","isExpression":true,"view":"list","key":"truefalse26"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!dropdown]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Checkbox]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[checkbox]]></mapped-to>
+                          <value><![CDATA[0]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse27","parentId":"grid24","saveAs":{"name":"checkbox"},"customValidations":[{}],"displayType":"checkbox","isExpression":true,"view":"list","checkboxLabel":"Super checkbox","key":"truefalse27"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!checkbox]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[No (Disabled)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[no_disabled]]></mapped-to>
+                          <value><![CDATA[1]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse16","parentId":"grid12","saveAs":{"name":"no_disabled"},"customValidations":[{}],"displayType":"dropdown","isExpression":true,"view":"list","disabled":"true","key":"truefalse16"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!no_disabled]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Checked (Default)]]></label>
+                          <instructions><![CDATA[read-only]]></instructions>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[checked_default]]></mapped-to>
+                          <value><![CDATA[0]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse17","parentId":"grid13","saveAs":{"name":"checked_default"},"customValidations":[{}],"displayType":"checkbox","isExpression":true,"view":"list","checkboxLabel":"FirstColumn","disabled":"true","key":"truefalse17"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!checked_default]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Checked (Required)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>true</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[checked_required]]></mapped-to>
+                          <value><![CDATA[0]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse18","parentId":"grid13","saveAs":{"name":"checked_required"},"customValidations":[{}],"displayType":"checkbox","isExpression":true,"view":"list","checkboxLabel":"SecondColumn","disabled":"true","key":"truefalse18"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!checked_required]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Checked (Disabled)]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>true</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <mapped-to><![CDATA[checked_disabled]]></mapped-to>
+                          <value><![CDATA[0]]></value>
+                          <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","expressionValue":"###EXPR0","noLabel":"No","labelPosition":"right","customEvents":[{}],"displayExpField":"","namespace":"DESIGN","typeName":"truefalse","id":"truefalse19","parentId":"grid13","saveAs":{"name":"checked_disabled"},"customValidations":[{}],"displayType":"checkbox","isExpression":true,"view":"list","checkboxLabel":"ThirdColumn","disabled":"true","key":"truefalse19"}]]></extra>
+                          <expression xsi:type="xsd:string"><![CDATA[=pv!checked_disabled]]></expression>
+                        </form-element>
+                        <form-element>
+                          <label><![CDATA[Label]]></label>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"button","id":"button1","customValidations":[],"buttonLabel":"Submit","buttonConfirm":"false","customEvents":[],"labelPosition":"right","view":"single","key":"button1","buttonValue":"Submit","confirmMessage":"Submit this form?","namespace":"DESIGN"}]]></extra>
+                        </form-element>
+                        <form-element>
+                          <label/>
+                          <instructions/>
+                          <editable>true</editable>
+                          <hidden>false</hidden>
+                          <multiple>false</multiple>
+                          <required>false</required>
+                          <type>2</type>
+                          <options/>
+                          <name/>
+                          <value/>
+                          <extra><![CDATA[{"typeName":"tree","children":[[{"children":[["truefalse5"],["truefalse7"],["truefalse10"]],"key":"grid2"},{"children":[["truefalse14"],["truefalse15"],["truefalse16"]],"key":"grid12"},{"children":[["truefalse17"],["truefalse18"],["truefalse19"]],"key":"grid13"},{"children":[["truefalse25"],["truefalse26"],["truefalse27"]],"key":"grid24"}]],"buttons":["button1"],"key":"form0"}]]></extra>
+                        </form-element>
+                      </form-elements>
+                    </dynamic-form>
+                    <jsp-form>
+                      <path><![CDATA[/process/forms]]></path>
+                    </jsp-form>
+                    <hiddenSections>6</hiddenSections>
+                  </form>
+                </form-config>
+              </pair>
+            </form-map>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections>
+            <connection>
+              <guiId>2</guiId>
+              <to>1</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor/>
+              <toAnchor/>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>false</chained>
+              <overridesAssignment>false</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </connections>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>true</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>true</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+      </nodes>
+      <annotations/>
+      <lanes/>
+      <attachments/>
+      <notes/>
+      <priority id="1"/>
+      <form-map>
+        <pair>
+          <locale country="US" lang="en" variant=""/>
+          <form-config>
+            <form>
+              <type>0</type>
+              <enabled>true</enabled>
+              <dynamic-form>
+                <form-elements>
+                  <form-element>
+                    <label><![CDATA[Checkbox]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>true</multiple>
+                    <required>true</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[startForm_checkbox]]></mapped-to>
+                    <value><![CDATA[1]]></value>
+                    <extra><![CDATA[{"validationMessages":[],"yesLabel":"Yes","noLabel":"No","labelPosition":"right","customEvents":[{}],"namespace":"DESIGN","typeName":"truefalse","id":"truefalse5","saveAs":{"name":"startForm_checkbox"},"customValidations":[{}],"displayType":"checkbox","isExpression":"false","view":"single","checkboxLabel":"Super checkbox","key":"truefalse5"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Use this form to set initial values]]></label>
+                    <instructions><![CDATA[Please complete the form below.]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"form","id":"form0","elementCounter":6,"columns":1,"customEvents":[{}],"labelPosition":"right","view":"single","key":"form0","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Radio Button]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>true</multiple>
+                    <required>true</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[startForm_radio]]></mapped-to>
+                    <value><![CDATA[1]]></value>
+                    <extra><![CDATA[{"id":"truefalse3","typeName":"truefalse","saveAs":{"name":"startForm_radio"},"yesLabel":"Yes","validationMessages":[],"displayType":"radio","customValidations":[{}],"noLabel":"No","isExpression":"false","labelPosition":"right","customEvents":[{}],"view":"single","key":"truefalse3","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Dropdown]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>true</multiple>
+                    <required>true</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[startForm_dropdown]]></mapped-to>
+                    <value><![CDATA[1]]></value>
+                    <extra><![CDATA[{"id":"truefalse4","typeName":"truefalse","saveAs":{"name":"startForm_dropdown"},"yesLabel":"Yes","validationMessages":[],"displayType":"dropdown","customValidations":[{}],"noLabel":"No","isExpression":"false","labelPosition":"right","customEvents":[{}],"view":"single","key":"truefalse4","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Label]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"button","id":"button1","customValidations":[],"buttonLabel":"Start","buttonConfirm":"false","customEvents":[],"labelPosition":"right","view":"single","buttonValue":"Submit","key":"button1","confirmMessage":"Submit this form?","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label/>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"tree","children":[["truefalse3","truefalse4","truefalse5"]],"buttons":["button1"],"key":"form0"}]]></extra>
+                  </form-element>
+                </form-elements>
+              </dynamic-form>
+              <jsp-form>
+                <path><![CDATA[/process/forms]]></path>
+              </jsp-form>
+              <hiddenSections>0</hiddenSections>
+            </form>
+          </form-config>
+        </pair>
+      </form-map>
+      <emailAttachmentFolderUuid><![CDATA[SYSTEM_FOLDER_TEMPORARY_DOCS]]></emailAttachmentFolderUuid>
+      <isPublic>false</isPublic>
+    </pm>
+  </process_model_port>
+  <isPublished>true</isPublished>
+  <history>
+    <historyInfo versionUuid="0009e71b-96f2-8000-6fac-014d98014d98"/>
+  </history>
+</processModelHaul>

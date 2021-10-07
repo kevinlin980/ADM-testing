@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>91b07d8e-0dd5-423b-a6df-e044e0a383fe</versionUuid>
+    <tempoReport a:uuid="2a5fc95a-3f1d-4e29-9008-c33991fe528a" name="Collapsible Sections">
+        <a:description></a:description>
+        <a:uiExpr>=#"_a-0000d9aa-7744-8000-7520-010000010000_2094"()</a:uiExpr>
+        <a:urlStub>57pPNg</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_APPLICATION_USERS</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="91b07d8e-0dd5-423b-a6df-e044e0a383fe"/>
+    </history>
+</tempoReportHaul>

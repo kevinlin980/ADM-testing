@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26353</versionUuid>
+    <rule>
+        <name>CollapsibleSection</name>
+        <uuid>_a-0000d9aa-7744-8000-7520-010000010000_2094</uuid>
+        <description></description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load(
+  local!textValue1,
+  local!textValue2,
+  #"SYSTEM_SYSRULES_dashboardLayout"(
+    firstColumnContents: {
+      #"SYSTEM_SYSRULES_sectionLayout"(
+        isCollapsible: true,
+        label: "Collapsible Section",
+        firstColumnContents: {
+          #"SYSTEM_SYSRULES_textField"(
+            label: "Read only field",
+            value: "Can't edit me!",
+            readOnly: true
+          ),
+          #"SYSTEM_SYSRULES_textField"(
+            label: "I must be blank",
+            value: local!textValue1,
+            saveInto: local!textValue1,
+            validations: {
+              "This text field should be empty"
+            }
+          )
+        },
+        secondColumnContents: {
+          #"SYSTEM_SYSRULES_imageField"(
+            label: "Icon Image Gallery",
+            size: "ICON",
+            images: {
+              #"SYSTEM_SYSRULES_documentImage"(
+                document: #"SYSTEM_SYSRULES_iconIndicator"(icon: "STATUS_OK")
+              ),
+              #"SYSTEM_SYSRULES_documentImage"(
+                document: #"SYSTEM_SYSRULES_iconIndicator"(icon: "STATUS_OK")
+              ),
+              #"SYSTEM_SYSRULES_documentImage"(
+                document: #"SYSTEM_SYSRULES_iconIndicator"(icon: "STATUS_WARN")
+              )
+            }
+          )
+        },
+        validations: {
+          local!textValue2
+        }
+      ),
+      #"SYSTEM_SYSRULES_sectionLayout"(
+        isCollapsible: true,
+        label: "Collapsible Section -- this time with a really really really long title",
+        firstColumnContents: {
+          #"SYSTEM_SYSRULES_textField"(
+            label: "Set Component Validation",
+            instructions: "Sets the validation error for Text Field Two above",
+            value: local!textValue1,
+            saveInto: local!textValue1
+          ),
+          #"SYSTEM_SYSRULES_textField"(
+            label: "Set Section Validation",
+            instructions: "Sets the validation error for Section One above",
+            value: local!textValue2,
+            saveInto: local!textValue2
+          ),
+          #"SYSTEM_SYSRULES_gridField"(
+            label: "Grid Field",
+            totalCount: 3,
+            columns: {
+              #"SYSTEM_SYSRULES_gridTextColumn"(
+                label: "Text",
+                data: {
+                  "Problem",
+                  "In Progress",
+                  "Done"
+                }
+              ),
+              #"SYSTEM_SYSRULES_gridImageColumn"(
+                label: "Images",
+                data: {
+                  #"SYSTEM_SYSRULES_documentImage"(
+                    document: #"SYSTEM_SYSRULES_iconIndicator"(icon: "STATUS_OK")
+                  ),
+                  #"SYSTEM_SYSRULES_documentImage"(
+                    document: #"SYSTEM_SYSRULES_iconIndicator"(icon: "STATUS_OK")
+                  ),
+                  #"SYSTEM_SYSRULES_documentImage"(
+                    document: #"SYSTEM_SYSRULES_iconIndicator"(icon: "STATUS_WARN")
+                  )
+                },
+                size: "ICON"
+              )
+            },
+            value: #"SYSTEM_SYSRULES_pagingInfo"(
+              startIndex: 1,
+              batchSize: - 1
+            )
+          )
+        }
+      ),
+      #"SYSTEM_SYSRULES_sectionLayout"(
+        isCollapsible: true,
+        label: "",
+        firstColumnContents: {
+          #"SYSTEM_SYSRULES_textField"(
+            label: "A Collapsible Section with no label",
+            readOnly: true
+          ),
+          #"SYSTEM_SYSRULES_textField"(
+            label: "This field must be blank",
+            value: local!textValue1,
+            saveInto: local!textValue1,
+            validations: {
+              "This text field should be empty"
+            }
+          )
+        }
+      )
+    },
+    secondColumnContents: {
+      #"SYSTEM_SYSRULES_sectionLayout"(
+        isCollapsible: true,
+        label: "A Plain Collapsible Section",
+        firstColumnContents: {
+          #"SYSTEM_SYSRULES_imageField"(
+            label: "Image Gallery",
+            images: {
+              #"SYSTEM_SYSRULES_webImage"(
+                source: "https://dl.dropboxusercontent.com/s/obky8lv5srjn1pr/engineering_71_release_lg.jpg"
+              ),
+              #"SYSTEM_SYSRULES_webImage"(
+                source: "https://dl.dropboxusercontent.com/s/obky8lv5srjn1pr/engineering_71_release_lg.jpg"
+              )
+            }
+          ),
+          #"SYSTEM_SYSRULES_imageField"(
+            label: "Image Gallery",
+            images: {
+              #"SYSTEM_SYSRULES_webImage"(
+                source: "https://dl.dropboxusercontent.com/s/obky8lv5srjn1pr/engineering_71_release_lg.jpg"
+              )
+            }
+          )
+        }
+      ),
+      #"SYSTEM_SYSRULES_sectionLayout"(
+        label: "Non-Collapsible Section",
+        firstColumnContents: {
+          #"SYSTEM_SYSRULES_textField"(
+            label: "Read only field",
+            value: "Can't edit me either!",
+            readOnly: true
+          ),
+          #"SYSTEM_SYSRULES_textField"(
+            label: "This field must be blank",
+            value: local!textValue1,
+            saveInto: local!textValue1,
+            validations: {
+              "This text field should be empty"
+            }
+          )
+        }
+      )
+    }
+  )
+)</definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26353"/>
+    </history>
+</contentHaul>

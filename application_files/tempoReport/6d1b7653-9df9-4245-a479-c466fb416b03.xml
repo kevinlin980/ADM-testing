@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>6df58b48-0428-497f-afec-57c8f253b031</versionUuid>
+    <tempoReport a:uuid="6d1b7653-9df9-4245-a479-c466fb416b03" name="Group Browser">
+        <a:description>Illustrates use of Group Browser component</a:description>
+        <a:uiExpr>=#"_a-0000db21-51d8-8000-05f3-010000010000_3705"()</a:uiExpr>
+        <a:urlStub>EQbPhA</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_DESIGNERS</groupUuid>
+            </groups>
+        </role>
+        <role name="report_viewer">
+            <users/>
+            <groups>
+                <groupUuid>_e-0000d615-4c23-8000-da6f-010000010000_7</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="6df58b48-0428-497f-afec-57c8f253b031"/>
+    </history>
+</tempoReportHaul>

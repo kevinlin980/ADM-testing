@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<processModelHaul>
+  <versionUuid>0005e71b-96ef-8000-6fa9-014d98014d98</versionUuid>
+  <folderUuid>_g-0000d1d8-767e-8000-7be3-680000680000_22</folderUuid>
+  <roleMap>
+    <role name="ADMIN_OWNER">
+      <users>
+        <userUuid>Administrator</userUuid>
+      </users>
+      <groups>
+        <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+      </groups>
+    </role>
+    <role name="EDITOR">
+      <users/>
+      <groups/>
+    </role>
+    <role name="EXPLICIT_NONMEMBER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="VIEWER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="MANAGER">
+      <users/>
+      <groups/>
+    </role>
+    <role name="INITIATOR">
+      <users/>
+      <groups/>
+    </role>
+  </roleMap>
+  <process_model_port schemaVersion="007.000.004"
+    xmlns="http://www.appian.com/ae/types/2009"
+    xmlns:a="http://www.appian.com/ae/types/2009"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <pm>
+      <meta>
+        <uuid><![CDATA[0002d194-0d09-8000-2562-680000680000]]></uuid>
+        <name>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value><![CDATA[IX - Start Form with References]]></value>
+            </pair>
+          </string-map>
+        </name>
+        <desc>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value/>
+            </pair>
+          </string-map>
+        </desc>
+        <versionStatus>2</versionStatus>
+        <process-name>
+          <string-map>
+            <pair>
+              <locale country="US" lang="en" variant=""/>
+              <value><![CDATA[IX - Start Form with References]]></value>
+            </pair>
+          </string-map>
+        </process-name>
+        <deadline>
+          <enabled>false</enabled>
+          <type>0</type>
+          <units>0</units>
+          <rex/>
+          <aex/>
+        </deadline>
+        <pm-notification-settings>
+          <custom-settings>false</custom-settings>
+          <notify-initiator>false</notify-initiator>
+          <notify-owner>false</notify-owner>
+          <usersandgroups/>
+          <recipients-exp/>
+        </pm-notification-settings>
+        <cleanup-action>3</cleanup-action>
+        <auto-archive-delay>30</auto-archive-delay>
+        <auto-delete-delay>0</auto-delete-delay>
+        <timeZoneId><![CDATA[GMT]]></timeZoneId>
+        <useProcessInitiatorTimeZone>true</useProcessInitiatorTimeZone>
+      </meta>
+      <pvs>
+        <pv name="checkboxPV">
+          <a:value xmlns="" xsi:type="a:CollaborationDocument?list"/>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="communityPV">
+          <a:value a:id="0001d0b7-ca65-8000-ca65-4efb514efb51" xmlns="" xsi:type="a:CollaborationCommunity"/>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="contentPV">
+          <a:value
+            a:id="_636f6e74656e74-0000d16d-c4b6-8000-c132-01000001000000000000856"
+            xmlns="" xsi:type="a:CollaborationDocument"/>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="defaultValueHome">
+          <a:value
+            a:id="_7067-0000d16e-95e3-8000-1d1c-01000001000000000000029"
+            xmlns="" xsi:type="a:Page"/>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="discussionForumPV">
+          <a:value a:id="0001d0b7-ca78-8000-ca78-4e9d494e9d49" xmlns="" xsi:type="a:Forum"/>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="dropdownPV">
+          <a:value xsi:nil="true" xsi:type="a:CollaborationDocument"/>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="emailRecipientPV">
+          <a:value xmlns="" xsi:type="a:EmailRecipient">
+            <a:value a:id="0001d0b7-c973-8000-c973-4e2a554e2a55" xsi:type="a:Group"/>
+          </a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="kcPV">
+          <a:value a:id="0000d0b7-ca6d-8000-ca65-4efb514efb51" xmlns="" xsi:type="a:CollaborationKnowledgeCenter"/>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="paragraphPV">
+          <a:value xmlns="" xsi:type="xsd:string">&lt;A href="http://c4bhkh1.appiancorp.com:8080/suite/doc/73"&gt;Document&lt;/A&gt;</a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="peoplePV">
+          <a:value xmlns="" xsi:type="a:UserOrGroup">
+            <a:value a:id="0001d0b7-c973-8000-c973-4e2a554e2a55" xsi:type="a:Group"/>
+          </a:value>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+        <pv name="radioPV">
+          <a:value xsi:nil="true" xsi:type="a:CollaborationDocument"/>
+          <parameter>true</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
+      </pvs>
+      <nodes>
+        <node uuid="0000d194-0d09-8000-2562-680000680000">
+          <guiId>0</guiId>
+          <owner/>
+          <icon id="50"/>
+          <picon id="0"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Start Event]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>112</x>
+          <y>392</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[Start Event]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>true</overrideLaneAssignment>
+          <ac>
+            <local-id>core.0</local-id>
+            <name><![CDATA[Start Node]]></name>
+            <acps/>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map/>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections>
+            <connection>
+              <guiId>0</guiId>
+              <to>1</to>
+              <toObjectType>ap.gui.Node</toObjectType>
+              <fromAnchor/>
+              <toAnchor/>
+              <showArrowhead>true</showArrowhead>
+              <flowLabel/>
+              <label>
+                <fontColor>#000000</fontColor>
+                <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+                <fontSize>12</fontSize>
+                <bold>false</bold>
+                <italics>false</italics>
+                <underline>false</underline>
+              </label>
+              <associations/>
+              <chained>false</chained>
+              <overridesAssignment>false</overridesAssignment>
+              <synchronizeData>false</synchronizeData>
+            </connection>
+          </connections>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+        <node uuid="0001d194-0d09-8000-2562-680000680000">
+          <guiId>1</guiId>
+          <owner/>
+          <icon id="51"/>
+          <picon id="0"/>
+          <fname>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[End Event]]></value>
+              </pair>
+            </string-map>
+          </fname>
+          <x>896</x>
+          <y>392</y>
+          <display>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value><![CDATA[End Event]]></value>
+              </pair>
+            </string-map>
+          </display>
+          <desc>
+            <string-map>
+              <pair>
+                <locale country="US" lang="en" variant=""/>
+                <value/>
+              </pair>
+            </string-map>
+          </desc>
+          <notify>false</notify>
+          <confirmation-url/>
+          <lane/>
+          <overrideLaneAssignment>true</overrideLaneAssignment>
+          <ac>
+            <local-id>core.1</local-id>
+            <name><![CDATA[End Node]]></name>
+            <acps>
+              <acp name="pmID">
+                <a:value xsi:nil="true" xsi:type="a:ProcessModel"/>
+                <a:local-id>0</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>0</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="inMap">
+                <a:value xsi:nil="true" xsi:type="a:Bean?list"/>
+                <a:local-id>1</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="procInheritsPriority">
+                <a:value xmlns="" xsi:type="xsd:int">1</a:value>
+                <a:local-id>5</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>false</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="pmUUID">
+                <a:value xsi:nil="true" xsi:type="xsd:string"/>
+                <a:local-id>6</a:local-id>
+                <a:expr/>
+                <a:required>0</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>false</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isAsynchronous">
+                <a:value xmlns="" xsi:type="xsd:boolean">true</a:value>
+                <a:local-id>7</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>0</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="isTransparent">
+                <a:value xmlns="" xsi:type="xsd:boolean">true</a:value>
+                <a:local-id>14</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+              <acp name="inheritSecurity">
+                <a:value xmlns="" xsi:type="xsd:boolean">false</a:value>
+                <a:local-id>15</a:local-id>
+                <a:expr/>
+                <a:required>1</a:required>
+                <a:editable>1</a:editable>
+                <a:assign-to-pv/>
+                <a:input-to-activity-class>true</a:input-to-activity-class>
+                <a:hidden-from-designer>true</a:hidden-from-designer>
+                <a:generated>false</a:generated>
+                <a:enumeration/>
+                <a:customDisplayReference/>
+              </acp>
+            </acps>
+            <custom-params/>
+            <output-exprs/>
+            <requires-user-interaction>true</requires-user-interaction>
+            <run-as>
+              <performer id="0"/>
+            </run-as>
+            <form-map/>
+            <helper-class/>
+          </ac>
+          <multiple-instance/>
+          <escalations/>
+          <connections/>
+          <associations/>
+          <target-completion>5.0</target-completion>
+          <target-lag>1.0</target-lag>
+          <attachments/>
+          <notes/>
+          <lingering>false</lingering>
+          <on-create-ignore-if-active>false</on-create-ignore-if-active>
+          <on-create-delete-previous-active>false</on-create-delete-previous-active>
+          <on-complete-delete-previous-completed>false</on-complete-delete-previous-completed>
+          <pre-triggers/>
+          <post-triggers/>
+          <event-producers/>
+          <exception-flow/>
+          <label>
+            <fontColor>#000000</fontColor>
+            <fontFamily>Arial, Helvetica, Sans-Serif</fontFamily>
+            <fontSize>12</fontSize>
+            <bold>false</bold>
+            <italics>false</italics>
+            <underline>false</underline>
+          </label>
+          <deadline>
+            <enabled>false</enabled>
+            <type>0</type>
+            <units>0</units>
+            <rex/>
+            <aex/>
+          </deadline>
+          <allowsBack>false</allowsBack>
+          <refreshDefaultValues>false</refreshDefaultValues>
+          <on-complete-keep-form-data>false</on-complete-keep-form-data>
+          <skipNotification>false</skipNotification>
+        </node>
+      </nodes>
+      <annotations/>
+      <lanes/>
+      <attachments/>
+      <notes/>
+      <priority id="1"/>
+      <form-map>
+        <pair>
+          <locale country="US" lang="en" variant=""/>
+          <form-config>
+            <form>
+              <type>0</type>
+              <enabled>true</enabled>
+              <dynamic-form>
+                <form-elements>
+                  <form-element>
+                    <label><![CDATA[Standard Inputs]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"tab","id":"tab7","showLabel":"yes","customValidations":[],"columns":1,"customEvents":[],"labelPosition":"right","view":"single","key":"tab7","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Discussion Forum]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[discussionForumPV]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"pickedItems":[{"id":"0001d0b7-ca78-8000-ca78-4e9d494e9d49","display":"Test Forum","type":16}],"typeName":"discussion","id":"discussion13","saveAs":{"name":"discussionForumPV"},"validationMessages":[],"customValidations":[{}],"subType":"forum","customEvents":[{}],"labelPosition":"right","view":"single","key":"discussion13","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Layout & Info]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"tab","id":"tab8","showLabel":"yes","customValidations":[],"columns":1,"customEvents":[],"labelPosition":"right","view":"single","key":"tab8","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Label]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"message","id":"message34","allowRichText":"true","customValidations":[],"customEvents":[],"labelPosition":"right","view":"single","richText":"<P>Verify the following scenarios:</P>\r\n<P>1. Edit Form mode must show all references to constants/expressions</P>\r\n<P>2. Debug mode and Process Details must show the values of the expressions assigned<BR></P>","key":"message34","plainText":"Verify the following scenarios:\r\n\r\n1. Edit Form mode must show all references to constants/expressions\r\n\r\n2. Debug mode and Task Form must show the values of the expressions assigned\r\n","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Dropdown]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[dropdownPV]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"id":"dropdown18","typeName":"dropdown","saveAs":{"name":"dropdownPV"},"importChoices":"literal","validationMessages":[],"subType":"document","customValidations":[{}],"choices":{"entries":[{"id":"SYSTEM_DOC_EMAIL_HEADER","display":"emailHeader","label":"Choice 1","type":13}]},"labelPosition":"right","customEvents":[{}],"view":"single","key":"dropdown18","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Radio]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[radioPV]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"id":"radio17","typeName":"radio","saveAs":{"name":"radioPV"},"importChoices":"literal","validationMessages":[],"subType":"document","customValidations":[{}],"choices":{"entries":[{"id":"SYSTEM_DOC_PRIORITY_HIGH","display":"priorityhigh","label":"Choice 1","type":13}]},"labelPosition":"right","customEvents":[{}],"view":"single","key":"radio17","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Email recipient]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[emailRecipientPV]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"pickedItems":[{"id":"0001d0b7-c973-8000-c973-4e2a554e2a55","display":"Everyone","type":5}],"typeName":"email_recipient","id":"email_recipient15","saveAs":{"name":"emailRecipientPV"},"validationMessages":[],"customValidations":[{}],"customEvents":[{}],"labelPosition":"right","view":"single","key":"email_recipient15","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Label]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"message","id":"message32","allowRichText":"true","customValidations":[],"customEvents":[],"labelPosition":"right","view":"single","richText":"<P><STRONG>Message</STRONG></P>\r\n<P>&nbsp;</P>\r\n<P><A href=\"http://c4bhkh1.appiancorp.com:8080/suite/doc/73\">Document</A></P>","key":"message32","plainText":"Message","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Knowledge Center]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[kcPV]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"pickedItems":[{"id":"0000d0b7-ca6d-8000-ca65-4efb514efb51","display":"Custom Security KC","type":19}],"typeName":"knowledge_center","id":"knowledge_center9","saveAs":{"name":"kcPV"},"validationMessages":[],"customValidations":[{}],"customEvents":[{}],"labelPosition":"right","view":"single","key":"knowledge_center9","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Start Form with Object References]]></label>
+                    <instructions><![CDATA[Verify that all data type references are maintained on Import/Export. Each form input must have a default value that corresponds to an existent object.]]></instructions>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"form0","typeName":"form","jsDocs":{"id":"_a-0000d178-4458-8000-3787-680000680000_323","type":13},"isCSSExpression":false,"elementCounter":35,"columns":1,"styleDocs":{"id":"_a-0000d178-4458-8000-3787-680000680000_322","type":13},"labelPosition":"right","customEvents":[{}],"view":"single","isJSExpression":false,"key":"form0","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Report]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"isContextExpression":false,"showAdvancedControls":false,"width":"500","labelPosition":"above","customEvents":[],"contextPickerType":"process_models","contextItems":[{"id":"0002d194-0936-8000-2562-680000680000","name":"Start-End","display":"Start-End","type":23,"objectType":"com.appiancorp.suiteapi.process.ProcessModel$Descriptor"}],"namespace":"DESIGN","typeName":"report","contextType":1,"isReportExpression":false,"showToolbar":false,"id":"report30","height":"200","customValidations":[],"context":"20480/0002d194-0936-8000-2562-680000680000","reportItem":{"id":"SYSTEM_REPORT_VERSIONS_PER_PROCESS_MODEL","type":13},"view":"single","key":"report30"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Checkbox]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>true</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[checkboxPV]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"id":"checkbox19","typeName":"checkbox","saveAs":{"name":"checkboxPV"},"importChoices":"literal","validationMessages":[],"subType":"document","customValidations":[{}],"choices":{"entries":[{"id":"SYSTEM_DOC_EMAIL_FOOTER","display":"emailFooter","label":"Choice 1","type":13}]},"labelPosition":"right","customEvents":[{}],"view":"single","key":"checkbox19","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Image]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"id":"image29","typeName":"image","srcFile":"[{\"id\":\"SYSTEM_DOC_PRIORITY_LOW\",\"extension\":\"gif\",\"description\":\"\",\"name\":\"prioritylow\",\"display\":\"prioritylow\",\"type\":13,\"objectType\":\"com.appiancorp.suiteapi.knowledge.Document\"}]","preserveImgSize":"true","source":"chooseFile","expressionSrcFile":false,"customValidations":[],"align":"imageLeft","expressionSrcURL":false,"labelPosition":"right","customEvents":[{}],"view":"single","key":"image29","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Content - Documents and folders]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[contentPV]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"pickedItems":[{"id":"_636f6e74656e74-0000d16d-c4b6-8000-c132-01000001000000000000856","display":"BigEyes_Creature _128x128","type":13}],"typeName":"content","id":"content10","saveAs":{"name":"contentPV"},"validationMessages":[],"customValidations":[{}],"subType":"document","customEvents":[{}],"labelPosition":"right","view":"single","key":"content10","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Community]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[communityPV]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"pickedItems":[{"id":"0001d0b7-ca65-8000-ca65-4efb514efb51","display":"Test Community","type":20}],"typeName":"community","id":"community11","saveAs":{"name":"communityPV"},"validationMessages":[],"customValidations":[{}],"customEvents":[{}],"labelPosition":"right","view":"single","key":"community11","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[People]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[peoplePV]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"pickedItems":[{"id":"0001d0b7-c973-8000-c973-4e2a554e2a55","display":"Everyone","type":5}],"typeName":"people","id":"people12","saveAs":{"name":"peoplePV"},"validationMessages":[],"customValidations":[{}],"subType":"people","customEvents":[{}],"labelPosition":"right","view":"single","key":"people12","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Paragraph]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[paragraphPV]]></mapped-to>
+                    <value><![CDATA[<A href="http://c4bhkh1.appiancorp.com:8080/suite/doc/73">Document</A>]]></value>
+                    <extra><![CDATA[{"validationMessages":[],"expressionValue":"###EXPR0","labelPosition":"right","customEvents":[{}],"richText":"<A href=\"http://c4bhkh1.appiancorp.com:8080/suite/doc/73\">Document</A>","namespace":"DESIGN","typeName":"paragraph","id":"paragraph33","saveAs":{"name":"paragraphPV"},"height":5,"allowRichText":"true","customValidations":[{}],"view":"single","key":"paragraph33","plainText":"<A href=\"http://c4bhkh1.appiancorp.com:8080/suite/doc/73\">Document</A>"}]]></extra>
+                    <expression xsi:type="xsd:string"><![CDATA[=concatenate("<A href=""http://c4bhkh1.appiancorp.com:8080/suite/doc/73"">Document</A>")]]></expression>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Label]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"tabs_container","id":"tabs_container2","customValidations":[],"customEvents":[],"labelPosition":"right","view":"single","key":"tabs_container2","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Special Inputs]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"tab","id":"tab3","showLabel":"yes","customValidations":[],"columns":1,"customEvents":[],"labelPosition":"right","view":"single","key":"tab3","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Label]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"button","id":"button1","customValidations":[],"buttonLabel":"Start","buttonConfirm":"false","customEvents":[],"labelPosition":"right","view":"single","key":"button1","buttonValue":"Submit","confirmMessage":"Submit this form?","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label><![CDATA[Portal page]]></label>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>true</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <mapped-to><![CDATA[defaultValueHome]]></mapped-to>
+                    <value/>
+                    <extra><![CDATA[{"pickedItems":[{"id":"_7067-0000d16e-95e3-8000-1d1c-01000001000000000000029","display":"All Channels","type":15}],"typeName":"page","id":"page16","saveAs":{"name":"defaultValueHome"},"validationMessages":[],"customValidations":[{}],"customEvents":[{}],"labelPosition":"right","view":"single","key":"page16","namespace":"DESIGN"}]]></extra>
+                  </form-element>
+                  <form-element>
+                    <label/>
+                    <instructions/>
+                    <editable>true</editable>
+                    <hidden>false</hidden>
+                    <multiple>false</multiple>
+                    <required>false</required>
+                    <type>2</type>
+                    <options/>
+                    <name/>
+                    <value/>
+                    <extra><![CDATA[{"typeName":"tree","children":[["message34",{"children":[{"children":[["checkbox19","dropdown18","radio17","paragraph33"]],"key":"tab7"},{"children":[["knowledge_center9","community11","people12","content10","page16","discussion13","email_recipient15"]],"key":"tab3"},{"children":[["message32","image29","report30"]],"key":"tab8"}],"key":"tabs_container2"}]],"buttons":["button1"],"key":"form0"}]]></extra>
+                  </form-element>
+                </form-elements>
+              </dynamic-form>
+              <jsp-form>
+                <path><![CDATA[/process/forms]]></path>
+              </jsp-form>
+              <hiddenSections>0</hiddenSections>
+            </form>
+          </form-config>
+        </pair>
+      </form-map>
+      <emailAttachmentFolderUuid><![CDATA[SYSTEM_FOLDER_TEMPORARY_DOCS]]></emailAttachmentFolderUuid>
+      <isPublic>false</isPublic>
+    </pm>
+  </process_model_port>
+  <isPublished>true</isPublished>
+  <history>
+    <historyInfo versionUuid="0005e71b-96ef-8000-6fa9-014d98014d98"/>
+  </history>
+</processModelHaul>

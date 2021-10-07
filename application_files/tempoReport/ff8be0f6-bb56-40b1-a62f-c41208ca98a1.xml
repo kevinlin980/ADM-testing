@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>3409e337-1829-47e2-8d78-c16676d65874</versionUuid>
+    <tempoReport a:uuid="ff8be0f6-bb56-40b1-a62f-c41208ca98a1" name="Interactivity Tests">
+        <a:description>Interface for testing interactive choice components.</a:description>
+        <a:uiExpr>=#"_a-0000d7aa-d1a7-8000-cddf-010000010000_1204"()</a:uiExpr>
+        <a:urlStub>interactivity</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_viewer">
+            <users/>
+            <groups>
+                <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="3409e337-1829-47e2-8d78-c16676d65874"/>
+    </history>
+</tempoReportHaul>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24386</versionUuid>
+    <rule>
+        <name>MU_createSiteModal</name>
+        <uuid>982ae290-c360-499b-88c5-54a834c1262b</uuid>
+        <description></description>
+        <parentUuid>_a-0000da4e-7553-8000-f5a4-010000010000_2483</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>=&#xD;
+load(&#xD;
+  local!formID:1,&#xD;
+  local!initializeModal:fn!lambda_appian_internal(&#xD;
+    ri!buttonValue,&#xD;
+    ri!buttonSaveInto,&#xD;
+    #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+      firstColumnContents:{&#xD;
+        #"SYSTEM_SYSRULES_ButtonLayout"(&#xD;
+          secondaryButtons:#"SYSTEM_SYSRULES_ButtonWidget"(&#xD;
+            label:"Initialize Modal",&#xD;
+            value:ri!buttonValue,&#xD;
+            saveInto:ri!buttonSaveInto&#xD;
+          )&#xD;
+        )&#xD;
+      }&#xD;
+    )&#xD;
+  ),&#xD;
+  local!createSiteModal: fn!lambda_appian_internal(&#xD;
+    ri!name,&#xD;
+    ri!desc,&#xD;
+    ri!url,&#xD;
+    ri!sail,&#xD;
+    #"SYSTEM_SYSRULES_tag"(&#xD;
+      tags: {renderingMode: "MODAL"},&#xD;
+      target:&#xD;
+      #"SYSTEM_SYSRULES_formLayout"(&#xD;
+        label: "Create Site",&#xD;
+        instructions: "",&#xD;
+        firstColumnContents: {&#xD;
+          #"SYSTEM_SYSRULES_textField"(&#xD;
+            label: "Name",&#xD;
+            labelPosition: "ABOVE",&#xD;
+            saveInto: {},&#xD;
+            refreshAfter: "UNFOCUS",&#xD;
+            required: true,&#xD;
+            validations: {},&#xD;
+            align: "LEFT"&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_paragraphField"(&#xD;
+            label: "Description",&#xD;
+            labelPosition: "ABOVE",&#xD;
+            saveInto: {},&#xD;
+            refreshAfter: "UNFOCUS",&#xD;
+            validations: {}&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_textField"(&#xD;
+            label: "URL Stub",&#xD;
+            labelPosition: "ABOVE",&#xD;
+            instructions: "Used to form a unique URL for the site. If left blank, a random alphanumeric string will be generated.",&#xD;
+            saveInto: {},&#xD;
+            refreshAfter: "UNFOCUS",&#xD;
+            validations: {},&#xD;
+            align: "LEFT"&#xD;
+          ),&#xD;
+          #"SYSTEM_SYSRULES_paragraphField"(&#xD;
+            label: "Interface",&#xD;
+            labelPosition: "ABOVE",&#xD;
+            instructions: "Enter an expression to define the interface",&#xD;
+            saveInto: {},&#xD;
+            refreshAfter: "UNFOCUS",&#xD;
+            validations: {}&#xD;
+          )&#xD;
+        },&#xD;
+        secondColumnContents: {&#xD;
+          /* Add components here for a two-column form */&#xD;
+        },&#xD;
+        buttons: #"SYSTEM_SYSRULES_ButtonLayout"(&#xD;
+          primaryButtons: {&#xD;
+            #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(&#xD;
+              label: "Create Site",&#xD;
+              style: "PRIMARY",&#xD;
+              saveInto: {}&#xD;
+            )&#xD;
+          },&#xD;
+          secondaryButtons: {&#xD;
+            #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(&#xD;
+              label: "Cancel",&#xD;
+              style: "NORMAL",&#xD;
+              value: true,&#xD;
+              skipValidation: true&#xD;
+            )&#xD;
+          }&#xD;
+        ),&#xD;
+        validations: {}&#xD;
+      )&#xD;
+    )&#xD;
+  ),&#xD;
+  choose(local!formID,&#xD;
+    local!initializeModal(2,local!formID),&#xD;
+    local!createSiteModal("","","","")  &#xD;
+  )&#xD;
+)</definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24386"/>
+    </history>
+</contentHaul>

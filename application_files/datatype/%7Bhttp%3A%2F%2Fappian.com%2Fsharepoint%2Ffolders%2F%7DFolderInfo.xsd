@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://appian.com/sharepoint/folders/"
+  xmlns:tns="http://appian.com/sharepoint/folders/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="FolderInfo">
+    <xsd:annotation>
+      <xsd:appinfo source="http://www.appian.com/ae/types/2009">
+        <ns2:Metadata xmlns:ns2="http://www.appian.com/ae/types/2009">
+          <ns2:Flags>HIDDEN</ns2:Flags>
+          <ns2:versionUuid>0029e71b-9284-8000-6ef1-014d98014d98</ns2:versionUuid>
+          <ns2:history>
+            <ns2:historyInfo versionUuid="0029e71b-9284-8000-6ef1-014d98014d98"/>
+          </ns2:history>
+        </ns2:Metadata>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element form="qualified" name="Name" type="xsd:string"/>
+      <xsd:element form="qualified" name="Parent" type="xsd:string"/>
+      <xsd:element form="qualified" name="ServerRelativeUrl" type="xsd:string"/>
+      <xsd:element form="qualified" name="Url" type="xsd:string"/>
+      <xsd:element form="qualified" name="Created" type="xsd:dateTime"/>
+      <xsd:element form="qualified" name="Modified" type="xsd:dateTime"/>
+      <xsd:element form="qualified" name="WelcomePage" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

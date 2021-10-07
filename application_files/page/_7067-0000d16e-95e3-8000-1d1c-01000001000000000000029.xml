@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pageHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <page>
+        <name>All Channels</name>
+        <description>Page with All Channels included</description>
+        <public>true</public>
+        <type>0</type>
+        <url></url>
+        <template>portal.template.home.2</template>
+        <zoneCount>2</zoneCount>
+        <approvalRequired>false</approvalRequired>
+        <uuid>_7067-0000d16e-95e3-8000-1d1c-01000001000000000000029</uuid>
+        <portlets>
+            <item index="0" zone="0">_d-0000d18e-168a-8000-12e8-010000010000_27</item>
+            <item index="1" zone="0">_7074-0000d16e-95e3-8000-1d1c-01000001000000000000024</item>
+            <item index="2" zone="0">_7074-0000d16e-95e3-8000-1d1c-01000001000000000000023</item>
+            <item index="3" zone="0">_7074-0000d16e-95e3-8000-1d1c-01000001000000000000025</item>
+            <item index="4" zone="0">_7074-0000d16e-95e3-8000-1d1c-01000001000000000000028</item>
+            <item index="5" zone="0">_7074-0000d16e-95e3-8000-1d1c-01000001000000000000029</item>
+            <item index="6" zone="0">_7074-0000d16e-95e3-8000-1d1c-01000001000000000000030</item>
+            <item index="7" zone="0">_7074-0000d16e-95e3-8000-1d1c-01000001000000000000031</item>
+            <item index="8" zone="0">_7074-0000d16e-95e3-8000-1d1c-01000001000000000000032</item>
+            <item index="9" zone="0">_7074-0000d16e-95e3-8000-1d1c-01000001000000000000033</item>
+            <item index="10" zone="0">_7074-0000d16e-95e3-8000-1d1c-01000001000000000000035</item>
+            <item index="0" zone="1">_d-0000d18e-168a-8000-12e8-010000010000_28</item>
+            <item index="1" zone="1">_7074-0000d16e-95e3-8000-1d1c-01000001000000000000019</item>
+            <item index="2" zone="1">_7074-0000d16e-95e3-8000-1d1c-01000001000000000000020</item>
+            <item index="3" zone="1">_7074-0000d16e-95e3-8000-1d1c-01000001000000000000022</item>
+            <item index="4" zone="1">_7074-0000d16e-95e3-8000-1d1c-01000001000000000000026</item>
+            <item index="5" zone="1">_7074-0000d16e-95e3-8000-1d1c-01000001000000000000027</item>
+            <item index="6" zone="1">_7074-0000d16e-95e3-8000-1d1c-01000001000000000000021</item>
+        </portlets>
+    </page>
+    <roleMap>
+        <role name="approver">
+            <users/>
+            <groups/>
+        </role>
+        <role name="editor">
+            <users/>
+            <groups/>
+        </role>
+        <role name="viewer">
+            <users/>
+            <groups/>
+        </role>
+        <role name="admin">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups>
+                <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+</pageHaul>

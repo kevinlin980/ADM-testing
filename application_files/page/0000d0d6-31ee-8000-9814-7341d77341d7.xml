@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pageHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <page>
+        <name>Data Generator Main</name>
+        <description></description>
+        <public>true</public>
+        <type>0</type>
+        <url></url>
+        <template>portal.template.home.1</template>
+        <zoneCount>1</zoneCount>
+        <approvalRequired>false</approvalRequired>
+        <uuid>0000d0d6-31ee-8000-9814-7341d77341d7</uuid>
+        <portlets>
+            <item index="0" zone="0">0000d0d6-3343-8000-9814-7341d77341d7</item>
+            <item index="1" zone="0">0001d0d6-3343-8000-9814-7341d77341d7</item>
+        </portlets>
+    </page>
+    <roleMap>
+        <role name="approver">
+            <users/>
+            <groups/>
+        </role>
+        <role name="editor">
+            <users/>
+            <groups/>
+        </role>
+        <role name="viewer">
+            <users/>
+            <groups/>
+        </role>
+        <role name="admin">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+    </roleMap>
+</pageHaul>

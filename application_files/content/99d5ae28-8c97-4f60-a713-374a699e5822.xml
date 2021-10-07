@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24725</versionUuid>
+    <rule>
+        <name>clientCertificateMockupUploadField</name>
+        <uuid>99d5ae28-8c97-4f60-a713-374a699e5822</uuid>
+        <description></description>
+        <parentUuid>_a-0000d971-e283-8000-db05-010000010000_2196</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>=#"SYSTEM_SYSRULES_formLayout"(&#xD;
+  label: "Create Third-Party Credentials",&#xD;
+  firstColumnContents: {&#xD;
+    #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+      label:"Identity",&#xD;
+      firstColumnContents: {&#xD;
+        #"SYSTEM_SYSRULES_textField"(&#xD;
+          label: "Name",&#xD;
+          labelPosition:"ABOVE",&#xD;
+          required: true,&#xD;
+          value: ""&#xD;
+          /* The saveInto parameter must be configured in order to save a value */&#xD;
+        ),&#xD;
+        &#xD;
+        #"SYSTEM_SYSRULES_textField"(&#xD;
+          label: "Key",&#xD;
+          labelPosition:"ABOVE",&#xD;
+          instructions:"The auto-generated unique identifier of this external system",&#xD;
+          readOnly:true(),&#xD;
+          required: false,&#xD;
+          value:"Not yet generated"&#xD;
+        ),&#xD;
+        #"SYSTEM_SYSRULES_paragraphField"(&#xD;
+          label: "Description",&#xD;
+          labelPosition:"ABOVE",&#xD;
+          instructions:"",&#xD;
+          required: false,&#xD;
+          value:""&#xD;
+        )&#xD;
+      }&#xD;
+    ),&#xD;
+     #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+      label:"Plug-ins List",&#xD;
+      firstColumnContents: {&#xD;
+        #"SYSTEM_SYSRULES_textField"(&#xD;
+          label: "",&#xD;
+          labelPosition:"COLLAPSED",&#xD;
+          readOnly:true(),&#xD;
+          required: true,&#xD;
+          value: "Choose which plug-ins are allowed to access the site-wide and individual credentials for this external system"&#xD;
+          /* The saveInto parameter must be configured in order to save a value */&#xD;
+        ),&#xD;
+        &#xD;
+        #"SYSTEM_SYSRULES_pickerFieldCustom"(&#xD;
+          /*label: "Plug-ins",*/&#xD;
+          labelPosition:"COLLAPSED",/*"ABOVE",*/&#xD;
+          instructions:"Type to search for the plug-in name or key",&#xD;
+          required: false,&#xD;
+          value:""&#xD;
+        )&#xD;
+      }&#xD;
+    )&#xD;
+  },&#xD;
+  secondColumnContents: {&#xD;
+    #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+      label:"Credentials",&#xD;
+      firstColumnContents: {&#xD;
+        #"SYSTEM_SYSRULES_linkField"(&#xD;
+          labelPosition: "COLLAPSED",&#xD;
+          links: {&#xD;
+            #"SYSTEM_SYSRULES_dynamicLink"(label: "+ Add Field")&#xD;
+          }&#xD;
+        ),&#xD;
+        /*a!linkField(&#xD;
+          labelPosition: "COLLAPSED",&#xD;
+          links: {&#xD;
+            a!dynamicLink(label: "- Remove Certificate")&#xD;
+          }&#xD;
+        ),*/&#xD;
+        &#xD;
+       #"SYSTEM_SYSRULES_fileUploadField"(&#xD;
+          label: "Certificate",&#xD;
+          labelPosition:"ABOVE",&#xD;
+          instructions:"Please upload your certificate here",&#xD;
+          required: false,&#xD;
+          value:""&#xD;
+        ),&#xD;
+        /*button shown only when certificate exists*/&#xD;
+        #"SYSTEM_SYSRULES_ButtonLayout"(&#xD;
+         secondaryButtons: {&#xD;
+           #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(&#xD;
+             label: "Remove Certificate",&#xD;
+             style: "NORMAL",&#xD;
+             disabled:true()&#xD;
+           )&#xD;
+         }&#xD;
+        ),&#xD;
+        #"SYSTEM_SYSRULES_checkboxField"(&#xD;
+          label:"",&#xD;
+          labelPosition:"COLLAPSED",&#xD;
+          choiceLabels:{"Allow individual users to set credentials for this external system from the Third-Party Credentials settings page"},&#xD;
+          choiceValues:{true()},&#xD;
+          value:null&#xD;
+        )&#xD;
+      }&#xD;
+    ),&#xD;
+    #"SYSTEM_SYSRULES_sectionLayout"(&#xD;
+      label:"Test Connection",&#xD;
+      firstColumnContents: {&#xD;
+        #"SYSTEM_SYSRULES_textField"(&#xD;
+          label: "",&#xD;
+          labelPosition:"COLLAPSED",&#xD;
+          readOnly:true(),&#xD;
+          required: true,&#xD;
+          value: "Provide an expression that returns true if the connection was successful and false otherwise"&#xD;
+          /* The saveInto parameter must be configured in order to save a value */&#xD;
+        ),&#xD;
+       #"SYSTEM_SYSRULES_paragraphField"(&#xD;
+          label: "",&#xD;
+          labelPosition:"COLLAPSED",&#xD;
+          instructions:"",&#xD;
+          required: false,&#xD;
+          value:""&#xD;
+        ),&#xD;
+        #"SYSTEM_SYSRULES_ButtonLayout"(&#xD;
+         primaryButtons: {&#xD;
+           #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(&#xD;
+             label: "Test",&#xD;
+             style: "NORMAL"&#xD;
+           )&#xD;
+         }&#xD;
+        )&#xD;
+      }&#xD;
+    )&#xD;
+ },&#xD;
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(&#xD;
+    primaryButtons: {&#xD;
+      #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(&#xD;
+        label: "Save",&#xD;
+        style: "PRIMARY",&#xD;
+        skipValidation: true&#xD;
+      )&#xD;
+    },&#xD;
+    secondaryButtons: {&#xD;
+      #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(&#xD;
+        label: "Cancel",&#xD;
+        skipValidation: true,&#xD;
+        value: true&#xD;
+      )&#xD;
+    }&#xD;
+  )&#xD;
+)</definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24725"/>
+    </history>
+</contentHaul>

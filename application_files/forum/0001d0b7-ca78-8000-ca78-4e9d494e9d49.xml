@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<forumHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <forum>
+        <uuid>0001d0b7-ca78-8000-ca78-4e9d494e9d49</uuid>
+        <name>Test Forum</name>
+        <allowAnonymousPosting>true</allowAnonymousPosting>
+        <publicForum>true</publicForum>
+    </forum>
+    <roleMap>
+        <role name="admin">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups>
+                <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+            </groups>
+        </role>
+        <role name="participant">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</forumHaul>

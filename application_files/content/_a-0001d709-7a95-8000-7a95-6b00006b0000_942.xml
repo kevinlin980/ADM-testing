@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24404</versionUuid>
+    <rule>
+        <name>reportLinkField</name>
+        <uuid>_a-0001d709-7a95-8000-7a95-6b00006b0000_942</uuid>
+        <description></description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>'type!{http://www.appian.com/ae/types/2009}FormLayout'(
+  content: 'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns: {
+    'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+      'type!{http://www.appian.com/ae/types/2009}SectionLayout' (content:
+        'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+          columns: {
+            'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+              contents: {
+                'type!{http://www.appian.com/ae/types/2009}LinkField'(
+                  label: "Links",
+                  instructions: "Instructions field to describe this group of links",
+                  links: {
+                	  #"SYSTEM_SYSRULES_safeLink"(uri: "http://www.appian.com", label: "Company web site"),
+                	  #"SYSTEM_SYSRULES_safeLink"(uri: "https://s1.securecorp.net/assets/generatewidget/uuid/9d49d290-869b-11e2-9e96-0800200c9a66", label: "Web Link With Really Long URL")
+                  }
+                )
+              }
+            ),
+            'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+              contents: {
+                'type!{http://www.appian.com/ae/types/2009}LinkField'(
+                  label: "A Link",
+                  links: {
+                	  #"SYSTEM_SYSRULES_safeLink"(uri: "https://s1.securecorp.net/assets/generatewidget/uuid/9d49d290-869b-11e2-9e96-0800200c9a66", label: "Web Link With Really Long Title and Really Long URL")
+                  }
+                )
+              }
+            )
+          }
+        )
+      ),
+      'type!{http://www.appian.com/ae/types/2009}SectionLayout' (content:
+        'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+          columns: {
+            'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+              contents: {
+                'type!{http://www.appian.com/ae/types/2009}LinkField'(
+                  label: "One-Column Link",
+                  links: {
+                	  #"SYSTEM_SYSRULES_safeLink"(uri: "https://s1.securecorp.net/assets/generatewidget/uuid/9d49d290-869b-11e2-9e96-0800200c9a66", label: "Web Link With Really Long Title and Really Long URL")
+                  }
+                )
+              }
+            )
+          }
+        )
+      ),
+      'type!{http://www.appian.com/ae/types/2009}LinkField'(
+        label: "No Links",
+        instructions: "This is a link component with a label and instructions but no links! ",
+        links: { }
+      )
+    })
+  })
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24404"/>
+    </history>
+</contentHaul>

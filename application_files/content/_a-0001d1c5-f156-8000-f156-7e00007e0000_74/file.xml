@@ -1,0 +1,17 @@
+<ed:catalog xmlns:ed="http://www.edankert.com/examples/">
+  <ed:cd>
+    <ed:artist>Sufjan Stevens</ed:artist>
+    <ed:title>Illinois</ed:title>
+    <ed:src>http://www.sufjan.com/</ed:src>
+  </ed:cd>
+  <ed:cd>
+    <ed:artist>Stoat</ed:artist>
+    <ed:title>Future come and get me</ed:title>
+    <ed:src>http://www.stoatmusic.com/</ed:src>
+  </ed:cd>
+  <ed:cd>
+    <ed:artist>The White Stripes</ed:artist>
+    <ed:title>Get behind me satan</ed:title>
+    <ed:src>http://www.whitestripes.com/</ed:src>
+  </ed:cd>
+</ed:catalog>

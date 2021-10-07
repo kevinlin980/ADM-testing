@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24356</versionUuid>
+    <rule>
+        <name>colChartDemo</name>
+        <uuid>_a-0000d7ac-cebf-8000-cab9-010000010000_1236</uuid>
+        <description></description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>='type!{http://www.appian.com/ae/types/2009}FormLayout'(content:{
+	'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns:{
+		'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents:{
+			'type!{http://www.appian.com/ae/types/2009}SectionLayout'(content:{
+				'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns:{
+					'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents:{
+#"SYSTEM_SYSRULES_columnChartField"(
+  label: "Code 9x",
+  categories: {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"},
+  series: {
+    #"SYSTEM_SYSRULES_chartSeries"(label: "Code 99", data: {3, 1, 2, 2, 2, 1, 0, 1, 0, 1, 0, 1}),
+    #"SYSTEM_SYSRULES_chartSeries"(label: "Code 98", data: {4, 3, 3, 2, 4, 2, 1, 2, 0, 0, 1, 2})
+  },
+  yAxisTitle: "Code 9x Count",
+  stacking: "NORMAL",
+  showLegend: true,
+  showDataLabels: true,
+  showTooltips: false
+)
+})
+				})
+			}), 
+			
+			
+			'type!{http://www.appian.com/ae/types/2009}SectionLayout'(content:{
+				'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns:{
+					'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents:{
+#"SYSTEM_SYSRULES_columnChartField"(
+  label: "Extra Series Data",
+  instructions: "Each series has an extra value. An extra bar is rendered for that virtual category and it is shown with no label.",
+  categories: {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"},
+  series: {
+    #"SYSTEM_SYSRULES_chartSeries"(label: "Code 99", data: {3, 1, 2, 2, 2, 1, 0, 1, 0, 1, 0, 1, 2}),
+    #"SYSTEM_SYSRULES_chartSeries"(label: "Code 98", data: {4, 3, 3, 2, 4, 2, 1, 2, 0, 0, 1, 2, 3})
+  },
+  yAxisTitle: "Code 9x Count",
+  stacking: "NORMAL",
+  showLegend: true,
+  showDataLabels: true,
+  showTooltips: false
+)
+					}),
+					'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents:{
+
+					#"SYSTEM_SYSRULES_columnChartField"(
+  label: "Hide Axis Titles and Inline Labels, Tooltips Enabled, Negative Values",
+  categories: {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"},
+  series: {
+    #"SYSTEM_SYSRULES_chartSeries"(label: "Code 99", data: {3, 1, 2, 2, 2, 1, 0, -1, 0, 1, 0, 1}),
+    #"SYSTEM_SYSRULES_chartSeries"(label: "Code 98", data: {4, 3, 3, 2, -4, 2, 1, 2, 0, 0, 1, 2})
+  },
+  stacking: "NORMAL",
+  showLegend: true,
+  showDataLabels: false,
+  showTooltips: true
+)
+
+					})
+				})
+			}),
+			
+			'type!{http://www.appian.com/ae/types/2009}SectionLayout'(content:{
+				'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns:{
+					'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents:{
+#"SYSTEM_SYSRULES_columnChartField"(
+  label: "Code 9x",
+  categories: {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"},
+  series: {
+    #"SYSTEM_SYSRULES_chartSeries"(label: "Code 99", data: {3, 1, 2, 2, 2, 1, 0, 1, 0, 1, 0, 1}),
+    #"SYSTEM_SYSRULES_chartSeries"(label: "Code 98", data: {4, 3, 3, 2, 4, 2, 1, 2, 0, 0, 1, 2})
+  },
+  yAxisTitle: "Code 9x Count",
+  stacking: "NONE",
+  showLegend: true,
+  showDataLabels: true,
+  showTooltips: false
+)
+})
+				})
+			}),
+
+			'type!{http://www.appian.com/ae/types/2009}SectionLayout'(content:{
+				'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns:{
+					'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents:{
+#"SYSTEM_SYSRULES_columnChartField"(
+  label: "Extra Series Data",
+  instructions: "Each series has an extra value. An extra bar is rendered for that virtual category and it is shown with no label.",
+  categories: {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"},
+  series: {
+    #"SYSTEM_SYSRULES_chartSeries"(label: "Code 99", data: {3, 1, 2, 2, 2, 1, 0, 1, 0, 1, 0, 1, 2}),
+    #"SYSTEM_SYSRULES_chartSeries"(label: "Code 98", data: {4, 3, 3, 2, 4, 2, 1, 2, 0, 0, 1, 2, 3})
+  },
+  yAxisTitle: "Code 9x Count",
+  stacking: "NONE",
+  showLegend: true,
+  showDataLabels: true,
+  showTooltips: false
+)
+					}),
+					'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents:{
+#"SYSTEM_SYSRULES_columnChartField"(
+  label: "Hide Axis Titles and Inline Labels, Tooltips Enabled, Negative Values",
+  categories: {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"},
+  series: {
+    #"SYSTEM_SYSRULES_chartSeries"(label: "Code 99", data: {3, 1, 2, 2, 2, 1, 0, -1, 0, 1, 0, 1}),
+    #"SYSTEM_SYSRULES_chartSeries"(label: "Code 98", data: {4, 3, 3, 2, -4, 2, 1, 2, 0, 0, 1, 2})
+  },
+  stacking: "NONE",
+  showLegend: true,
+  showDataLabels: false,
+  showTooltips: true
+)
+					})
+				})
+			})
+		})
+	})
+})</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24356"/>
+    </history>
+</contentHaul>

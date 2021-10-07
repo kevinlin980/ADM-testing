@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_19477</versionUuid>
+    <communityKnowledgeCenter>
+        <name>Image Component KC</name>
+        <uuid>_a-0000d373-e761-8000-e49b-010000010000_568</uuid>
+        <description>Image Component KC</description>
+        <parentUuid>_a-0000d307-ffa1-8000-3496-820000820000_360</parentUuid>
+        <visibility>
+            <advertise>true</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <expirationDays>0</expirationDays>
+    </communityKnowledgeCenter>
+    <roleMap public="true">
+        <role inherit="false" allowForAll="true" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_19477"/>
+    </history>
+</contentHaul>

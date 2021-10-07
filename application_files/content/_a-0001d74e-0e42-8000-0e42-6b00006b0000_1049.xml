@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25719</versionUuid>
+    <rule>
+        <name>reportOptionalInputs</name>
+        <uuid>_a-0001d74e-0e42-8000-0e42-6b00006b0000_1049</uuid>
+        <description>Runtime equivalent to the mockups repository's component_optional.html</description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns: {
+  'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+    'type!{http://www.appian.com/ae/types/2009}SectionLayout'(
+      label: "Editable Inputs",
+      content: 'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns: {
+        'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+          'type!{http://www.appian.com/ae/types/2009}TextField'(label: "Text Component"),
+          'type!{http://www.appian.com/ae/types/2009}FloatingPointField'(label: "Floating Point Component"),
+          'type!{http://www.appian.com/ae/types/2009}ParagraphField'(label: "Paragraph Component"),
+          'type!{http://www.appian.com/ae/types/2009}DateField'(label: "Date Component")
+        }),
+        'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+          #"SYSTEM_SYSRULES_checkboxField"(
+            label: "Checkbox Group",
+            value: 1,
+            choiceLabels: {"Billable", "Tax-Exempt"},
+            choiceValues: {1,2},
+            instructions: "Requiredness may be confusing for checkbox groups; ""required"" means that at least one checkbox must be checked. But not checking any checkboxes is also providing data. Decision: we do *not* show the ""Optional"" message for non-required checkbox groups."
+          ),
+          #"SYSTEM_SYSRULES_radioButtonField"(
+            label: "Radio Button Group",
+            choiceLabels: {"Apple", "Banana", "Orange"},
+            choiceValues: {1,2,3},
+            instructions: """Optional"" is of limited use for radio button groups. The only way to not submit a value is for the group to have no default-selected radio and for the user not to pick anything (because he can't subsequently deselect all choices). Decision: we do *not* show the ""Optional"" message for non-required radio button groups."
+          ),
+          #"SYSTEM_SYSRULES_dropdownField"(
+            label: "Dropdown Component",
+            value: 1,
+            choiceLabels: {"Select Make", "Acura", "Alfa",
+             "American Motors", "Aston Martin", "Audi"},
+            choiceValues: {1,2,3,4,5,6},
+            instructions: """Required"" for a dropdown means that a non-null value (usually, this means anything other than the placeholder instructions, i.e. ""Select Make"") must be picked. This is how Appian dropdowns have always worked."
+          ),
+          'type!{http://www.appian.com/ae/types/2009}TextField'(
+            label: "Dependent Dropdown Component",
+            value: "Select Model",
+            disabled: true(),
+            choices: {"Select Model"},
+            instructions: "The ""Optional"" message is shown for disabled inputs because requiredness will be applicable to the field once its state is toggled to enabled."
+          )
+        })
+      })
+    ),
+    'type!{http://www.appian.com/ae/types/2009}SectionLayout'(
+      label: "Read-Only Inputs--None Show Optional Message",
+      content: 'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(columns: {
+        'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+          'type!{http://www.appian.com/ae/types/2009}TextField'(
+            label: "Paragraph Component (Read-Only)",
+            readOnly: true(),
+            value: "Bacon ipsum dolor sit amet kielbasa boudin spare ribs tri-tip. Venison chuck kielbasa, meatloaf tongue shankle prosciutto beef fatback salami shoulder jowl. Drumstick jowl beef ribs, swine leberkase beef short loin biltong brisket pork ball tip. T-bone turducken bacon brisket, spare ribs pastrami shoulder bresaola capicola. Tongue pork loin prosciutto tail sirloin andouille, turkey shankle shank pastrami swine. Shank leberkase short loin, pork belly drumstick ham hock ham turducken tri-tip pork loin t-bone corned beef bacon. Prosciutto pork drumstick hamburger, short loin kielbasa short ribs."
+          ),
+          'type!{http://www.appian.com/ae/types/2009}ImageField'(
+                  label: "Image Component",
+                  source: "https://www.dropbox.com/s/obky8lv5srjn1pr/engineering_71_release_lg.jpg?dl=1"
+          )
+        }),
+        'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(contents: {
+          'type!{http://www.appian.com/ae/types/2009}LinkField'(
+            label: "Link Group",
+            links: {
+              #"SYSTEM_SYSRULES_safeLink"(uri: "http://www.appian.com", label: "Company web site"),
+              #"SYSTEM_SYSRULES_safeLink"(uri: "http://www.appian.com", label: "Feature Specifications for Tempo"),
+              #"SYSTEM_SYSRULES_safeLink"(uri: "http://www.appian.com", label: "A Photograph of a Cat with a Hat"),
+              #"SYSTEM_SYSRULES_safeLink"(uri: "https://s1.securecorp.net/assets/generatewidget/uuid/9d49d290-869b-11e2-9e96-0800200c9a66", label: "Web Link With Really Long URL")
+            }
+          ),
+          #"SYSTEM_SYSRULES_barChartField"(
+            stacking: fn!true(),
+            label: "Chart Component",
+            xAxisTitle: "Active opportunities",
+            showLegend: true,
+            showDataLabels: true,
+            categories: {
+              "Americas",
+              "EMEA",
+              "APAC"
+            },
+            series: {
+              #"SYSTEM_SYSRULES_chartSeries"(label: "Maintenance", data: {19, 8, 0}),
+              #"SYSTEM_SYSRULES_chartSeries"(label: "Professional Services", data: {15, 9, 6}),
+              #"SYSTEM_SYSRULES_chartSeries"(label: "Software (Cloud)", data: {11, 16, 10}),
+              #"SYSTEM_SYSRULES_chartSeries"(label: "Software (Perpetual)", data: {14, 12, 7})
+            }
+          )
+        })
+      })
+    ),
+    #"SYSTEM_SYSRULES_gridField"(
+      label: "Grid Component",
+      instructions: "No requiredness indicator is shown because grids are not editable. Even when we have editable grids, we wouldn't show a requiredness message as its meaning would often not be clear.",
+      totalCount: 3,
+      value: 'type!{http://www.appian.com/ae/types/2009}PagingInfo'(startIndex: 1, batchSize: 10, totalCount: 3),
+      columns: {
+        #"SYSTEM_SYSRULES_gridTextColumn"(
+          label: "Task",
+          data: {
+            "Implement SSI Setup",
+            "Interaction",
+            "Service - Agency Visit"
+          }
+        ),
+        #"SYSTEM_SYSRULES_gridTextColumn"(
+          label: "Planned",
+          data: {
+            "6/14/2011",
+            "6/7/2011",
+            "6/6/2011"
+          }
+        ),
+        #"SYSTEM_SYSRULES_gridTextColumn"(
+          label: "Assigned To",
+          data: {
+            "Anne Coble",
+            "Anne Coble",
+            "Anne Coble"
+          }
+        ),
+        #"SYSTEM_SYSRULES_gridTextColumn"(
+          label: "Duration",
+          data: {
+            "35",
+            "45",
+            "1,200"
+          }
+        ),
+        #"SYSTEM_SYSRULES_gridTextColumn"(
+          label: "Comments",
+          data: {
+            "Lots of special instructions for this account",
+            "Welcomed client to account services",
+            "Visited client offices"
+          }
+        )
+      }
+    )
+  })
+})</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25719"/>
+    </history>
+</contentHaul>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataStoreHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_7176</versionUuid>
+    <dataStore>
+        <uuid>_a-0000d20d-6445-8000-f376-010000010000_66</uuid>
+        <name>MySqlDS_Wide</name>
+        <description>Data Store for a wide record (100 columns) in Oracle rdbms</description>
+        <dataSourceKey>jdbc/AppianAnywhere</dataSourceKey>
+        <adaptingExplicitSqlNames>false</adaptingExplicitSqlNames>
+        <autoUpdateSchema>false</autoUpdateSchema>
+        <entities>
+            <entity>
+                <uuid>e6b080cb-1d21-44d1-aa91-ca71594754bd</uuid>
+                <name>wide-record</name>
+                <type>{http://www.appian.com/tech/test}wide-record</type>
+            </entity>
+        </entities>
+    </dataStore>
+    <isPublished>true</isPublished>
+    <roleMap>
+        <role inherit="false" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_7176"/>
+    </history>
+</dataStoreHaul>

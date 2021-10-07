@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_23303</versionUuid>
+    <rule>
+        <name>CHART_formatDataWithoutCategories</name>
+        <uuid>_a-0000d6fe-9a4c-8000-95e6-010000010000_962</uuid>
+        <description>Formats the CDT array into the following format: {series, total}</description>
+        <parentUuid>_a-0000d6d7-6af8-8000-66c6-010000010000_997</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>={
+label: index(ri!data, ri!label, {}),
+data: index(ri!data, ri!dataPoints, {})
+   }</definition>
+        <namedTypedValue>
+            <name>data</name>
+            <type>
+                <name>Variant</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>label</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>dataPoints</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_23303"/>
+    </history>
+</contentHaul>

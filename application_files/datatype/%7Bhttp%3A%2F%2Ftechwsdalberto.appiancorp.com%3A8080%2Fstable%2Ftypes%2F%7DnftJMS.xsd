@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+  targetNamespace="http://techwsdalberto.appiancorp.com:8080/stable/types/"
+  xmlns:tns="http://techwsdalberto.appiancorp.com:8080/stable/types/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="nftJMS">
+    <xsd:annotation>
+      <xsd:appinfo source="http://www.appian.com/ae/types/2009">
+        <ns2:Metadata xmlns:ns2="http://www.appian.com/ae/types/2009">
+          <ns2:versionUuid>009ce71b-9284-8000-6ef1-014d98014d98</ns2:versionUuid>
+          <ns2:history>
+            <ns2:historyInfo versionUuid="009ce71b-9284-8000-6ef1-014d98014d98"/>
+          </ns2:history>
+        </ns2:Metadata>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="MAX_NODE_INSTANCES" nillable="true" type="xsd:int"/>
+      <xsd:element name="emailRecipients" nillable="true" type="xsd:string"/>
+      <xsd:element name="endDate" nillable="true" type="xsd:dateTime"/>
+      <xsd:element name="numOfMessages" nillable="true" type="xsd:int"/>
+      <xsd:element name="pollingFrequency" nillable="true" type="xsd:int"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26192</versionUuid>
+    <rule>
+        <name>createCaseForm</name>
+        <uuid>_a-0000d825-eb59-8000-e787-010000010000_1268</uuid>
+        <description></description>
+        <parentUuid>_a-0000d825-eb59-8000-e787-010000010000_1262</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_formLayout"(
+  label: "Create a Case",
+  firstColumnContents: {
+    #"SYSTEM_SYSRULES_textField"(label: "Title", required: true, value: ri!title, saveInto: ri!title),
+    #"SYSTEM_SYSRULES_paragraphField"(
+      label: "Description",
+      instructions: "Please include detailed information about the environment type (e.g., production, UAT, development, etc.), OS, system resources, etc.",
+      required: true,
+      value: ri!description,
+      saveInto: ri!description
+    ),
+    apply(#"_a-0000d825-eb59-8000-e787-010000010000_1267"(ri!files, _), 1+fn!enumerate(count(ri!files))),
+    #"SYSTEM_SYSRULES_dropdownFieldByIndex"(
+      label: "Category",
+      choiceLabels: {
+        "General",
+        "home.appian.com",
+        "Hardware",
+        "Software",
+        "Email",
+        "HQ ID Cards",
+        "VPN",
+        "Phone",
+        "Network",
+        "Peoplesoft",
+        "Postini",
+        "Smartphones",
+        "Web Conferencing"
+      },
+      value: ri!category,
+      saveInto: ri!category
+    ),
+    #"SYSTEM_SYSRULES_dropdownFieldByIndex"(
+      label: "Priority",
+      instructions: "CRITICAL: Revenue-impacting enterprise issues that affect the entire company. HIGH: issues that may potentially become revenue impacting but do not affect the entire company. MEDIUM: issues affecting a single user or for enhancement requests that need to be completed to avoid impending revenue loss. LOW: issues that have known workarounds, issues that do not affect revenue, or enhancement suggestions.",
+      choiceLabels: {
+        "1 - Critical",
+        "2 - High",
+        "3 - Medium",
+        "4 - Low"
+      },
+      value: ri!priority,
+      saveInto: ri!priority
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonArrayLayout"(buttons: {
+    #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(label: "Submit", style: "PRIMARY")
+  })
+)</definition>
+        <namedTypedValue>
+            <name>title</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>description</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>files</name>
+            <type>
+                <name>CollaborationDocument?list</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>category</name>
+            <type>
+                <name>int</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>priority</name>
+            <type>
+                <name>int</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26192"/>
+    </history>
+</contentHaul>

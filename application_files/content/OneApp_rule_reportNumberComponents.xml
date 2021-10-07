@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25701</versionUuid>
+    <rule>
+        <name>reportNumberComponents</name>
+        <uuid>OneApp_rule_reportNumberComponents</uuid>
+        <description></description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>
+load(
+  local!intA,
+  local!intB: 17,
+  local!intConfigLabel: "Configurable Label",
+  local!intConfigInstr: "Configurable Instructions",
+  local!intConfigReq: 1,
+  local!intConfigRO: 1,
+  local!intConfigDisabled: 1,
+  local!intConfigValue,
+  local!intConfigValidation: "",
+  local!floatA,
+  local!floatB: 17,
+  local!floatConfigLabel: "Configurable Label",
+  local!floatConfigInstr: "Configurable Instructions",
+  local!floatConfigReq: 1,
+  local!floatConfigRO: 1,
+  local!floatConfigDisabled: 1,
+  local!floatConfigValue,
+  local!floatConfigValidation: "",
+  #"SYSTEM_SYSRULES_dashboardLayout"(
+    firstColumnContents: {
+      #"SYSTEM_SYSRULES_sectionLayout"(label: "Integer Field Examples", firstColumnContents: {
+        #"SYSTEM_SYSRULES_integerField"(label: "Value A", value: local!intA, saveInto: local!intA),
+        #"SYSTEM_SYSRULES_integerField"(label: "Also Value A", instructions: "This one has instructions and is required.", required: true, value: local!intA, saveInto: local!intA),
+        #"SYSTEM_SYSRULES_integerField"(label: "Read Only A", readOnly: true, value: local!intA),
+        #"SYSTEM_SYSRULES_integerField"(label: "Disabled A", disabled: true, value: local!intA),
+        #"SYSTEM_SYSRULES_integerField"(label: "Validate A", instructions: "Validates that it's less than 500", value: local!intA, validations: if(cast('type!{http://www.appian.com/ae/types/2009}Integer', local!intA) &gt; 500, "Value A is too big!", ""), saveInto: local!intA),
+        #"SYSTEM_SYSRULES_textField"(label: "Debug A", instructions: "Type: " &amp; typeof(local!intA) &amp; " (" &amp; typename(typeof(local!intA)) &amp; "), isnull: " &amp; isnull(local!intA), value: local!intA),
+        #"SYSTEM_SYSRULES_integerField"(label: "Value B", instructions: "This has a default value of 17.", value: local!intB, saveInto: local!intB),
+        #"SYSTEM_SYSRULES_integerField"(label: "Also Value B", instructions: "This one has instructions and is required.", required: true, value: local!intB, saveInto: local!intB),
+        #"SYSTEM_SYSRULES_integerField"(label: "Read Only B", readOnly: true, value: local!intB),
+        #"SYSTEM_SYSRULES_integerField"(label: "Disabled B", disabled: true, value: local!intB),
+        #"SYSTEM_SYSRULES_integerField"(label: "Validate B", instructions: "Validates that it's more than -500", value: local!intB, validations: if(local!intB &lt; -500, "Value B is too small!", ""), saveInto: local!intB),
+        #"SYSTEM_SYSRULES_integerField"(label: "Value B But No SaveInto", value: local!intB),
+        #"SYSTEM_SYSRULES_textField"(label: "Debug B", instructions: "Type: " &amp; typeof(local!intB) &amp; " (" &amp; typename(typeof(local!intB)) &amp; "), isnull: " &amp; isnull(local!intB), value: local!intB),
+        #"SYSTEM_SYSRULES_integerField"(label: "No Value, No SaveInto")
+      }),
+      #"SYSTEM_SYSRULES_sectionLayout"(label: "Configurable Integer Field", firstColumnContents: {
+        #"SYSTEM_SYSRULES_integerField"(
+          label:        local!intConfigLabel,
+          instructions: local!intConfigInstr,
+          required:     toboolean(local!intConfigReq - 1),
+          readOnly:     toboolean(local!intConfigRO - 1),
+          disabled:     toboolean(local!intConfigDisabled - 1),
+          value:        local!intConfigValue,
+          validations:  local!intConfigValidation,
+          saveInto:     local!intConfigValue
+        ),
+        #"SYSTEM_SYSRULES_textField"(label: "Label", value: local!intConfigLabel, saveInto: local!intConfigLabel),
+        #"SYSTEM_SYSRULES_textField"(label: "Instructions", value: local!intConfigInstr, saveInto: local!intConfigInstr),
+        #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(label: "Required",  choiceLabels: { "False", "True" }, value: local!intConfigReq,      saveInto: local!intConfigReq),
+        #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(label: "Read Only", choiceLabels: { "False", "True" }, value: local!intConfigRO,       saveInto: local!intConfigRO),
+        #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(label: "Disabled",  choiceLabels: { "False", "True" }, value: local!intConfigDisabled, saveInto: local!intConfigDisabled),
+        #"SYSTEM_SYSRULES_integerField"(label: "Value", value: local!intConfigValue, saveInto: local!intConfigValue),
+        #"SYSTEM_SYSRULES_textField"(label: "Validation Message", value: local!intConfigValidation, saveInto: local!intConfigValidation)
+      })
+    },
+    secondColumnContents: {
+      #"SYSTEM_SYSRULES_sectionLayout"(label: "Floating Point Field Examples", firstColumnContents: {
+        #"SYSTEM_SYSRULES_floatingPointField"(label: "Value A", value: local!floatA, saveInto: local!floatA),
+        #"SYSTEM_SYSRULES_floatingPointField"(label: "Also Value A", instructions: "This one has instructions and is required.", required: true, value: local!floatA, saveInto: local!floatA),
+        #"SYSTEM_SYSRULES_floatingPointField"(label: "Read Only A", readOnly: true, value: local!floatA),
+        #"SYSTEM_SYSRULES_floatingPointField"(label: "Disabled A", disabled: true, value: local!floatA),
+        #"SYSTEM_SYSRULES_floatingPointField"(label: "Validate A", instructions: "Validates that it's less than 500", value: local!floatA, validations: if(cast('type!{http://www.appian.com/ae/types/2009}Integer', local!floatA) &gt; 500, "Value A is too big!", ""), saveInto: local!floatA),
+        #"SYSTEM_SYSRULES_textField"(label: "Debug A", instructions: "Type: " &amp; typeof(local!floatA) &amp; " (" &amp; typename(typeof(local!floatA)) &amp; "), isnull: " &amp; isnull(local!floatA), value: local!floatA),
+        #"SYSTEM_SYSRULES_floatingPointField"(label: "Value B", instructions: "This has a default value of 17.", value: local!floatB, saveInto: local!floatB),
+        #"SYSTEM_SYSRULES_floatingPointField"(label: "Also Value B", instructions: "This one has instructions and is required.", required: true, value: local!floatB, saveInto: local!floatB),
+        #"SYSTEM_SYSRULES_floatingPointField"(label: "Read Only B", readOnly: true, value: local!floatB),
+        #"SYSTEM_SYSRULES_floatingPointField"(label: "Disabled B", disabled: true, value: local!floatB),
+        #"SYSTEM_SYSRULES_floatingPointField"(label: "Validate B", instructions: "Validates that it's more than -500", value: local!floatB, validations: if(local!floatB &lt; -500, "Value B is too small!", ""), saveInto: local!floatB),
+        #"SYSTEM_SYSRULES_floatingPointField"(label: "Value B But No SaveInto", value: local!floatB),
+        #"SYSTEM_SYSRULES_textField"(label: "Debug B", instructions: "Type: " &amp; typeof(local!floatB) &amp; " (" &amp; typename(typeof(local!floatB)) &amp; "), isnull: " &amp; isnull(local!floatB), value: local!floatB),
+        #"SYSTEM_SYSRULES_floatingPointField"(label: "No Value, No SaveInto")
+      }),
+      #"SYSTEM_SYSRULES_sectionLayout"(label: "Configurable Floating Point Field", firstColumnContents: {
+        #"SYSTEM_SYSRULES_floatingPointField"(
+          label:        local!floatConfigLabel,
+          instructions: local!floatConfigInstr,
+          required:     toboolean(local!floatConfigReq - 1),
+          readOnly:     toboolean(local!floatConfigRO - 1),
+          disabled:     toboolean(local!floatConfigDisabled - 1),
+          value:        local!floatConfigValue,
+          validations:  local!floatConfigValidation,
+          saveInto:     local!floatConfigValue
+        ),
+        #"SYSTEM_SYSRULES_textField"(label: "Label", value: local!floatConfigLabel, saveInto: local!floatConfigLabel),
+        #"SYSTEM_SYSRULES_textField"(label: "Instructions", value: local!floatConfigInstr, saveInto: local!floatConfigInstr),
+        #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(label: "Required",  choiceLabels: { "False", "True" }, value: local!floatConfigReq,      saveInto: local!floatConfigReq),
+        #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(label: "Read Only", choiceLabels: { "False", "True" }, value: local!floatConfigRO,       saveInto: local!floatConfigRO),
+        #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(label: "Disabled",  choiceLabels: { "False", "True" }, value: local!floatConfigDisabled, saveInto: local!floatConfigDisabled),
+        #"SYSTEM_SYSRULES_floatingPointField"(label: "Value", value: local!floatConfigValue, saveInto: local!floatConfigValue),
+        #"SYSTEM_SYSRULES_textField"(label: "Validation Message", value: local!floatConfigValidation, saveInto: local!floatConfigValidation)
+      })
+    }
+  )
+)
+</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25701"/>
+    </history>
+</contentHaul>

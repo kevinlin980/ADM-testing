@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>bc924f60-ad14-4927-a15f-c77d9eb92614</versionUuid>
+    <tempoReport a:uuid="59e5cd51-0dc1-40c2-bae5-bcce67b31529" name="Charts: Bar Chart">
+        <a:description>Bar chart demo</a:description>
+        <a:uiExpr>=#"_a-0000d791-6737-8000-636f-010000010000_1069"()</a:uiExpr>
+        <a:urlStub>IiXyoQ</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>_e-0000d615-4c23-8000-da6f-010000010000_7</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="bc924f60-ad14-4927-a15f-c77d9eb92614"/>
+    </history>
+</tempoReportHaul>

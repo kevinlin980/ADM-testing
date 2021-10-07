@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>b2462695-7ad3-46ba-a6f9-55c9de5c4320</versionUuid>
+    <tempoReport a:uuid="2906bdc3-b841-4b7c-a1d1-004b6ae97241" name="Radio Component">
+        <a:description>Runtime equivalent to the mockups repository's component_radio.html</a:description>
+        <a:uiExpr>=#"_a-0000d724-ee0d-8000-e7b0-010000010000_1080"()</a:uiExpr>
+        <a:urlStub>radioButtonField</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_viewer">
+            <users/>
+            <groups>
+                <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="b2462695-7ad3-46ba-a6f9-55c9de5c4320"/>
+    </history>
+</tempoReportHaul>

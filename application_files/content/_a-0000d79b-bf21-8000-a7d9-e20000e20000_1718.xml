@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25846</versionUuid>
+    <rule>
+        <name>reportLineChart</name>
+        <uuid>_a-0000d79b-bf21-8000-a7d9-e20000e20000_1718</uuid>
+        <description>Runtime equivalent to the mockups repository's component_line_chart.html</description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>'type!{http://www.appian.com/ae/types/2009}FormLayout'(
+	instructions: "Current scope and behavior of the line chart component",
+	content: 
+		{
+			'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+				columns:
+					{
+						'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+							contents:
+								{
+									'type!{http://www.appian.com/ae/types/2009}SectionLayout'(
+										label: "Default",
+										content:
+											{
+												'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+													columns:
+														{
+															'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+																contents:
+																	{
+																		#"SYSTEM_SYSRULES_lineChartField"(
+																		  label: "Tempo Usage Trends",
+																		  instructions: "Legend enabled, tooltips enabled",
+																		  categories: {"Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"},
+																		  series: {
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "Technology", data: {92, 94, 93, 95, 96, 99, 98, 100, 99, 91, 98, 99}),
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "Professional Services", data: {84, 83, 85, 86, 87, 89, 91, 90, 89, 83, 93, 95}),
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "Sales", data: {70, 63, 90, 72, 74, 74, 76, 89, 72, 65, 100, 85}),
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "Marketing", data: {80, 80, 80, 90, 90, 90, 90, 90, 90, 70, 90, 90})
+																		  },
+																		  xAxisTitle: "Month",
+																		  yAxisTitle: "% Active",
+																		  showLegend: true,
+																		  showTooltips: true
+																		)
+																	}
+															)
+														}
+												)
+											}
+									),
+									'type!{http://www.appian.com/ae/types/2009}SectionLayout'(
+										label: "Configurations",
+										content:
+											{
+												'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+													columns:
+														{
+															'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+															contents:
+																{
+																	#"SYSTEM_SYSRULES_lineChartField"(
+																	  label: "Single Series",
+																	  categories: {"Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"},
+																	  series: {
+																			#"SYSTEM_SYSRULES_chartSeries"(label: "Sales", data: {72, 91, 93, 95, 92, 99, 98, 99, 79, 83, 90, 99})
+																	  },
+																	  showTooltips: false,
+																	  showDataLabels: false
+																	),
+																	#"SYSTEM_SYSRULES_lineChartField"(
+																	  label: "No Axis Titles, Tooltips Enabled",
+																	  categories: {"Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"},
+																	  series: {
+																			#"SYSTEM_SYSRULES_chartSeries"(label: "Technology", data: {92, 94, 93, 95, 96, 99, 98, 100, 99, 91, 98, 99}),
+																			#"SYSTEM_SYSRULES_chartSeries"(label: "Professional Services", data: {84, 83, 85, 86, 87, 89, 91, 90, 89, 83, 93, 95}),
+																			#"SYSTEM_SYSRULES_chartSeries"(label: "Sales", data: {70, 63, 90, 72, 74, 74, 76, 89, 72, 65, 100, 85}),
+																			#"SYSTEM_SYSRULES_chartSeries"(label: "Marketing", data: {80, 80, 80, 90, 90, 90, 90, 90, 90, 70, 90, 90})
+																	  },
+																	  showLegend: true,
+																	  showTooltips: true
+																	)
+																}
+															),
+															'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+																contents:
+																	{
+																		#"SYSTEM_SYSRULES_lineChartField"(
+																		  label: "Single Series, Tooltips Enabled",
+																		  categories: {"Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"},
+																		  series: {
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "Sales", data: {72, 91, 93, 95, 92, 99, 98, 99, 79, 83, 90, 99})
+																		  },
+																		  showTooltips: true
+																		),
+																		#"SYSTEM_SYSRULES_lineChartField"(
+																		  label: "No Legend, Explicit Max",
+																		  instructions: "Legend turned off. Also, a max of 100 is set for the % axis.",
+																		  categories: {"Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"},
+																		  series: {
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "Technology", data: {92, 94, 93, 95, 96, 99, 98, 100, 99, 91, 98, 99}),
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "Professional Services", data: {84, 83, 85, 86, 87, 89, 91, 90, 89, 83, 93, 95}),
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "Sales", data: {70, 63, 90, 72, 74, 74, 76, 89, 72, 65, 100, 85}),
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "Marketing", data: {80, 80, 80, 90, 90, 90, 90, 90, 90, 70, 90, 90})
+																		  },
+																		  xAxisTitle: "Month",
+																		  yAxisTitle: "% Active",
+																		  yAxisMax: 100,
+																		  showLegend: false
+																		)
+																	}
+															)
+														}
+												)
+											}
+									),
+									'type!{http://www.appian.com/ae/types/2009}SectionLayout'(
+										label: "Edge Cases",
+										content:
+											{
+												'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+													columns:
+														{
+															'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+																contents:
+																	{
+																		#"SYSTEM_SYSRULES_lineChartField"(
+																		  label: "High Density and Long Labels",
+																		  categories: {"March 2012", "April 2012", "May 2012", "June 2012","July 2012", "August 2012", "September 2012", "October 2012", "November 2012", "December 2012", "January 2013", "February 2013", "March 2013", "April 2013", "May 2013", "June 2013"},
+																		  series: {
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "The Technology Department", data: {92, 94, 93, 95, 96, 99, 98, 100, 99, 91, 98, 99}),
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "The Professional Services Department", data: {84, 83, 85, 86, 87, 89, 91, 90, 89, 83, 93, 95}),
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "The Sales Department", data: {70, 63, 90, 72, 74, 74, 76, 89, 72, 65, 100, 85}),
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "The Marketing Department", data: {80, 80, 80, 90, 90, 90, 90, 90, 90, 70, 90, 90})
+																		  },
+																		  xAxisTitle: "The Month of The Year Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in consequat dui. Fusce mi nunc, feugiat sed pharetra sed, luctus eget erat",
+																		  yAxisTitle: "% Employees That Were Active on Tempo",
+																		  showLegend: true,
+																		  showTooltips: false
+																		),
+																		#"SYSTEM_SYSRULES_lineChartField"(
+																		  label: "Null/Empty Series Data",
+																		  categories: {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"},
+																		  series: {
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "High", data: {76,82,91,92,87,79,80}),
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "Low", data: {})
+																		  },
+																		  xAxisTitle: "Day",
+																		  yAxisTitle: "Temperature (°F)",
+																		  showLegend: true
+																		)
+																	}
+															),
+															'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+																contents:
+																	{
+																		#"SYSTEM_SYSRULES_lineChartField"(
+																		  label: "Wide Data Range and Negative Values",
+																		  categories: {"Monday", "Tuesday", "Wednesday", "Apocalypse", "Day After"},
+																		  series: {
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "Springfield", data: {65,67,66,678901,-459})
+																		  },
+																		  yAxisTitle: "High Temperature (°F)",
+																		  xAxisTitle: "Day",
+																		  showTooltips: true
+																		),
+																		#"SYSTEM_SYSRULES_lineChartField"(
+																		  label: "Disconnect (Missing Data)",
+																		  categories: {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"},
+																		  series: {
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "High", data: {76, 82, null, 92, 87, 79, 80}),
+																				#"SYSTEM_SYSRULES_chartSeries"(label: "Low", data: {64, 70, 82, 81, 75, 67, null})
+																		  },
+																		  xAxisTitle: "Day",
+																		  yAxisTitle: "Temperature (F)",
+																		  showLegend: true,
+																		  showDataLabels: true
+																		)
+																	}
+															)
+														}
+												)
+											}
+									),
+									'type!{http://www.appian.com/ae/types/2009}SectionLayout'(
+										label: "Variable Width, Scrollable",
+										content:
+											{
+												'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+													columns:
+														{
+															'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+																contents:
+																	{
+																		'type!{http://www.appian.com/ae/types/2009}LineChart'(
+																		  categories: {"March 2012", "April 2012", "May 2012", "June 2012","July 2012", "August 2012", "September 2012", "October 2012", "November 2012", "December 2012", "January 2013", "February 2013", "March 2013", "April 2013", "May 2013", "June 2013"},
+																		  series: {
+																			'type!{http://www.appian.com/ae/types/2009}LineChartSeries'(label: "Technology", data: {92, 94, 93, 95, 96, 99, 98, 100, 99, 91, 98, 99}),
+																			'type!{http://www.appian.com/ae/types/2009}LineChartSeries'(label: "Professional Services", data: {84, 83, 85, 86, 87, 89, 91, 90, 89, 83, 93, 95}),
+																			'type!{http://www.appian.com/ae/types/2009}LineChartSeries'(label: "Sales", data: {70, 63, 90, 72, 74, 74, 76, 89, 72, 65, 100, 85}),
+																			'type!{http://www.appian.com/ae/types/2009}LineChartSeries'(label: "Marketing", data: {80, 80, 80, 90, 90, 90, 90, 90, 90, 70, 90, 90})
+																		  },
+																		  xAxisTitle: "Month",
+																		  yAxisTitle: "% Active",
+																		  showLegend: true,
+																		  showTooltips: false
+																		)
+																	}
+															),
+															'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+																contents:
+																	{
+																	}
+															)
+														}
+												)
+											}
+									)
+								}
+						)
+					}
+			)
+		}
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_25846"/>
+    </history>
+</contentHaul>

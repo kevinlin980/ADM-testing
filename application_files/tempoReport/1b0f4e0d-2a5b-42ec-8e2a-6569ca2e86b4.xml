@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>6b0a7668-1ac5-4510-9677-383a2d517c0e</versionUuid>
+    <tempoReport a:uuid="1b0f4e0d-2a5b-42ec-8e2a-6569ca2e86b4" name="Two-Column UI">
+        <a:description>Two column cases based on layout_two_column.html in the mockups repo</a:description>
+        <a:uiExpr>=#"_a-0000d71d-822e-8000-7e17-010000010000_1456"()</a:uiExpr>
+        <a:urlStub>twoColumn</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_viewer">
+            <users/>
+            <groups>
+                <groupUuid>0001d0b7-c973-8000-c973-4e2a554e2a55</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="6b0a7668-1ac5-4510-9677-383a2d517c0e"/>
+    </history>
+</tempoReportHaul>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>fea8188f-7b6d-4271-be42-15521dc27b1e</versionUuid>
+    <tempoReport a:uuid="c8e7939e-be9d-4052-9a28-d6b1d4439a45" name="Image Component">
+        <a:description>Various uses of the ImageField to match the mockups</a:description>
+        <a:uiExpr>=#"_a-0001d70d-8778-8000-8778-6b00006b0000_943"()</a:uiExpr>
+        <a:urlStub>imageField</a:urlStub>
+    </tempoReport>
+    <roleMap/>
+    <history>
+        <historyInfo versionUuid="fea8188f-7b6d-4271-be42-15521dc27b1e"/>
+    </history>
+</tempoReportHaul>

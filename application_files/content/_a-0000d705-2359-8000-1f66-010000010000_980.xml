@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24275</versionUuid>
+    <rule>
+        <name>CHART_findDataPoints2</name>
+        <uuid>_a-0000d705-2359-8000-1f66-010000010000_980</uuid>
+        <description></description>
+        <parentUuid>_a-0000d6d7-6af8-8000-66c6-010000010000_997</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>=with(
+local!intersection: 
+    intersection(
+        where(
+            index(ri!data, ri!categoryField, {})=cast(typeof(index(ri!data, ri!categoryField, {})), ri!category),
+            0
+        ),
+        where(
+            index(ri!data, ri!labelField, {})=cast(typeof(index(ri!data, ri!labelField, {})), ri!label),
+            0
+        )
+    ),
+index(
+    index(ri!data, ri!datapointField, {}),
+    if(length(local!intersection)=0, 0, local!intersection),
+    0
+)
+)</definition>
+        <namedTypedValue>
+            <name>data</name>
+            <type>
+                <name>Variant</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>categoryField</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>labelField</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>datapointField</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>category</name>
+            <type>
+                <name>Variant</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>label</name>
+            <type>
+                <name>Variant</name>
+                <namespace>http://www.appian.com/ae/types/2009</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_24275"/>
+    </history>
+</contentHaul>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>9a67b5b3-a27a-4e90-8696-d742fb3cf764</versionUuid>
+    <tempoReport a:uuid="21e6c01a-c5b3-47de-9d34-2da3ee53cd4e" name="Charts: Designer Configured Colors">
+        <a:description></a:description>
+        <a:uiExpr>=#"_a-0000d86d-2151-8000-796a-010000010000_1371"()</a:uiExpr>
+        <a:urlStub>fncuiw</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_DESIGNERS</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="9a67b5b3-a27a-4e90-8696-d742fb3cf764"/>
+    </history>
+</tempoReportHaul>

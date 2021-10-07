@@ -1,0 +1,178 @@
+/*
+ *
+  1 - Form Style Modifications
+  Automatically applied to the whole form immediately 
+ *
+ */
+
+ /* The form title - this style adds the default portal logo to the form 
+.form H1{
+	background-color:white;
+	background-image:url('/suite/portal/img/skins/default/logo.gif');
+	background-repeat: no-repeat;
+	background-position: top right;
+	color:#002654;
+	height:36px;
+	font-size:24px;
+	font-weight: bold;
+}
+.formInstructions{
+	font-weight: bold;
+}
+.formSection{
+	background-color:#EFEFFF !important;
+	border-right:1px solid #666 !important;
+}*/
+
+/* The title bar for form sections 
+.form h2{
+	background-color:#002654 !important; 
+	border-right:1px solid #666 !important;
+	color:#FFFFFF !important;
+}
+
+.submitButton{
+	background-color:#002654 !important;
+	color:#FFFFFF !important;
+}
+
+.tabbed-container li {
+	background-color:#7baedd !important;
+	color:#FFFFFF !important;
+}
+
+.tabbed-container li.tabs-selected{
+	background-color:#c2d6e8 !important;
+	color:#FFFFFF !important;
+}*/
+
+/*
+ *
+  2 - Generic Field Highlights
+  Manually apply to any field within an Appian form 
+ *
+ */
+
+.highlight1{
+	border:2px dashed #b5d20a;
+	background-color:#e4fab8;
+	color:#333333;
+	font-weight:bold;
+}
+.highlight2{
+	border:2px solid #9a5f96;
+	background-color:#9a5f96;
+	color:#FFFFFF;
+	font-weight:bold;
+}
+
+/*
+ *
+  3 - Standardised Message Box Types
+  Manually apply to message fields within Appian forms only
+ *
+ */
+
+/*  These are shared message box properties to place the image and pad the box */
+.info div.messageContainer , .success div.messageContainer , .warning div.messageContainer , .error div.messageContainer , .validation div.messageContainer  {
+background-position: 4px center;
+background-repeat: no-repeat;
+font-weight:bold;
+border: 1px solid;	
+margin: 4px 4px;
+padding:15px 10px 10px 44px;
+}
+
+/*  Use the 'info' class to turn the message field into a blue info box */
+.info div.messageContainer {
+background-color: #BDE5F8 !important;
+background-image: url('/suite/images/msg_info.png') !important;
+color: #00529B !important;
+}
+
+/*  Use the 'success' class to turn the message field into a green success notification box */
+.success div.messageContainer {
+background-color: #DFF2BF !important;
+background-image:url('/suite/images/msg_success.png') !important;
+color: #4F8A10 !important;
+}
+
+
+/*  Use the 'warning' class to turn the message field into a yellow warning box */
+.warning div.messageContainer {
+background-color: #FEEFB3 !important;
+background-image: url('/suite/images/msg_warning.png') !important;
+color: #9F6000 !important;
+}
+
+/*  Use the 'error' class to turn the message field into a red error box */
+.error div.messageContainer {
+background-color: #FFBABA !important;
+background-image: url('/suite/images/msg_error.png') !important;
+color: #D8000C !important;
+}
+
+/*
+ *
+  4 - Task Info Message Types
+  Manually apply to message fields within Appian forms only
+ *
+ */
+
+/*  These are shared info styles place the image and pad the box */
+.secure div.messageContainer , .deadline div.messageContainer , .attachment div.messageContainer, .assignment div.messageContainer , .escalation div.messageContainer, .note div.messageContainer, .process div.messageContainer{
+background-position: 1px center;
+background-repeat: no-repeat;
+color: #333 !important;
+font-weight:bold;
+border: 0px solid;	
+margin: 0px 0px;
+padding:1px 1px 1px 18px;
+}
+/*  Use the 'assignment' class for a consistent way to display task assignment information */
+.assignment div.messageContainer {
+background-image: url('/suite/images/msg_assignment.png') !important;
+}
+/*  Use the 'attachment' class for a consistent way to display task attachment information */
+.attachment div.messageContainer {
+background-image: url('/suite/images/msg_attachment.png') !important;
+}
+/*  Use the 'secure' class for a consistent way to display that information will not be exposed to reports*/
+.secure div.messageContainer {
+background-color: #DFF2BF !important;
+background-image: url('/suite/images/msg_secure.png') !important;
+}
+/*  Use the 'deadline' class for a consistent way to display task deadline information */
+.deadline div.messageContainer {
+background-image: url('/suite/images/msg_deadline.png') !important;
+}
+/*  Use the 'escalation' class for a consistent way to display task escalation information */
+.escalation div.messageContainer {
+background-image: url('/suite/images/msg_escalate.png') !important;
+}
+/*  Use the 'note' class for a consistent way to display task note information */
+.note div.messageContainer {
+background-image: url('/suite/images/msg_note.png') !important;
+}
+/*  Use the 'process' class for a consistent way to display that information is associated with the process */
+.process div.messageContainer {
+background-image: url('/suite/images/msg_process.png') !important;
+}
+
+/*
+ *
+  5 -  Div Header Bars
+  Manually apply to any block-level element within Appian forms only
+ *
+ */
+.construction {
+background-image: url('/suite/images/header_construction.png') !important;
+background-position: left top;
+background-repeat: repeat-x !important;
+border: 1px solid #333;
+color: #333 !important;
+font-weight:bold;
+margin: 0px 0px;
+padding:14px 1px 1px 1px !important;
+}
+

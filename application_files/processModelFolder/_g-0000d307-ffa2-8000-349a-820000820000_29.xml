@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<processModelFolderHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_g-0000e71b-9358-8000-6ef5-014d98014d98_315</versionUuid>
+    <processModelFolder>
+        <name>Form Input</name>
+        <uuid>_g-0000d307-ffa2-8000-349a-820000820000_29</uuid>
+        <description></description>
+        <parentFolderUuid>_g-0000d307-ffa2-8000-349a-820000820000_26</parentFolderUuid>
+    </processModelFolder>
+    <roleMap>
+        <role name="ADMIN_OWNER">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role name="EDITOR">
+            <users/>
+            <groups/>
+        </role>
+        <role name="EXPLICIT_NONMEMBER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="VIEWER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="MANAGER">
+            <users/>
+            <groups/>
+        </role>
+        <role name="INITIATOR">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_g-0000e71b-9358-8000-6ef5-014d98014d98_315"/>
+    </history>
+</processModelFolderHaul>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26211</versionUuid>
+    <queryRule>
+        <name>gwtpgGetSelectedPeople</name>
+        <uuid>98697b32-e465-4d07-acbf-cbfac12e461a</uuid>
+        <description></description>
+        <folderUuid>_a-0000d493-0756-8000-0428-010000010000_528</folderUuid>
+        <dataStoreEntityCompositeUuid>979b5642-b04f-4042-9f66-191bce38c7e0@_a-0000d499-93a3-8000-9087-010000010000_493</dataStoreEntityCompositeUuid>
+        <params>
+            <param>
+                <description>passed-in primary key by which to select and create a new array.  array/multiple value.</description>
+                <name>primKey</name>
+                <type>{http://www.appian.com/ae/types/2009}Text?list</type>
+            </param>
+        </params>
+        <filters>
+            <filter>
+                <field>
+                    <name>uName</name>
+                    <type>{http://www.w3.org/2001/XMLSchema}string</type>
+                </field>
+                <op>in</op>
+                <value>primKey</value>
+                <valueType>PARAMETER</valueType>
+            </filter>
+        </filters>
+        <orderings>
+            <ordering>
+                <ascending>true</ascending>
+                <field>
+                    <name>uName</name>
+                    <type>{http://www.w3.org/2001/XMLSchema}string</type>
+                </field>
+            </ordering>
+        </orderings>
+    </queryRule>
+    <roleMap public="false">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_26211"/>
+    </history>
+</contentHaul>

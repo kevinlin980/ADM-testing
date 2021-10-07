@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>e50493da-2dfe-419b-8e78-cf569cb75516</versionUuid>
+    <tempoReport a:uuid="41fde158-2945-4b65-a796-0f0455606c7f" name="Progress Bar Demo">
+        <a:description></a:description>
+        <a:uiExpr>=#"_a-0000d79a-a96f-8000-a568-010000010000_1070"()</a:uiExpr>
+        <a:urlStub>PN9org</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>_e-0000d615-4c23-8000-da6f-010000010000_7</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="e50493da-2dfe-419b-8e78-cf569cb75516"/>
+    </history>
+</tempoReportHaul>

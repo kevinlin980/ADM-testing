@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoFeedHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>1565e0a3-8aab-4c10-b1ad-feef2ea5bd75</versionUuid>
+    <tempoFeed>
+        <uuid>a84fc9e9-d5ff-4636-9523-781a520b0d46</uuid>
+        <name>Technology News</name>
+        <description>News about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about TechNews about Tech 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000&#xD;
+ali</description>
+        <showInCatalog>true</showInCatalog>
+        <systemFeed>false</systemFeed>
+    </tempoFeed>
+    <roleMap>
+        <role name="administrator">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="1565e0a3-8aab-4c10-b1ad-feef2ea5bd75"/>
+    </history>
+</tempoFeedHaul>

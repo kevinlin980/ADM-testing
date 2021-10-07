@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>38836e6e-e399-4dc3-9c59-83bb16273b92</versionUuid>
+    <tempoReport a:uuid="cd90fde2-3991-4971-b7a9-ef4287aa0594" name="Date Field">
+        <a:description></a:description>
+        <a:uiExpr>=#"_a-0000d82c-de95-8000-da73-010000010000_1432"()</a:uiExpr>
+        <a:urlStub>azgDRg</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>SYSTEM_GROUP_ROLE_DESIGNERS</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="38836e6e-e399-4dc3-9c59-83bb16273b92"/>
+    </history>
+</tempoReportHaul>

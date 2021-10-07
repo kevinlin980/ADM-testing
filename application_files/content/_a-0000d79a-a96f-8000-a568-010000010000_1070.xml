@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e71b-9358-8000-6ea4-01ef9001ef90_23634</versionUuid>
+    <rule>
+        <name>reportProgressBar</name>
+        <uuid>_a-0000d79a-a96f-8000-a568-010000010000_1070</uuid>
+        <description></description>
+        <parentUuid>_a-0000d6fd-7cb9-8000-7886-010000010000_951</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>'type!{http://www.appian.com/ae/types/2009}FormLayout'(
+label: "Progress Component",
+instructions: "Scope and behavior of the progress component",
+content: {
+  'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+    columns: {
+      'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+        contents: {
+          'type!{http://www.appian.com/ae/types/2009}SectionLayout'(
+            content: 'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+              columns: {
+                'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+                  contents: {
+                    #"SYSTEM_SYSRULES_progressBarField"(
+                      percentage: 65
+                    ),
+                    #"SYSTEM_SYSRULES_progressBarField"(
+                      percentage: 0
+                    ),
+                    #"SYSTEM_SYSRULES_progressBarField"(
+                      percentage: 100
+                    ),
+                    #"SYSTEM_SYSRULES_progressBarField"(
+                      percentage: 50
+                    )                    
+                  }
+                )
+              }
+            )
+          ),
+          'type!{http://www.appian.com/ae/types/2009}SectionLayout'(
+            content: 'type!{http://www.appian.com/ae/types/2009}ColumnArrayLayout'(
+              columns: {
+                'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+                  contents: {
+                    #"SYSTEM_SYSRULES_progressBarField"(
+                      label: "With Label",
+                      instructions: "...and instrucitons",
+                      percentage: 65
+                    )                 
+                  }
+                ),
+                'type!{http://www.appian.com/ae/types/2009}ColumnLayout'(
+                  contents: {
+                    #"SYSTEM_SYSRULES_progressBarField"(
+                      label: "Short",
+                      instructions: "Only whole percentages are allowed",
+                      percentage: 1
+                    ),    
+                    #"SYSTEM_SYSRULES_progressBarField"(
+                      label: "Long",
+                      percentage: 99
+                    )                     
+                  }
+                )
+              }
+            )
+          )
+        }
+      )
+    }
+  )
+})
+</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e71b-9358-8000-6ea4-01ef9001ef90_23634"/>
+    </history>
+</contentHaul>
