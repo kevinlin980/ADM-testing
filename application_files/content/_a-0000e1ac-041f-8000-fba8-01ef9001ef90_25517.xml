@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e1b8-ea36-8000-fba8-01ef9001ef90_21822</versionUuid>
+    <rule>
+        <name>richText_Rule_rtdf</name>
+        <uuid>_a-0000e1ac-041f-8000-fba8-01ef9001ef90_25517</uuid>
+        <description></description>
+        <parentUuid>_a-0000e1ab-7e88-8000-4d14-01ef9001ef90_44015</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_richTextDisplayField"(
+  label: "RichText " &amp; ri!input,
+  value: {
+    #"SYSTEM_SYSRULES_richTextHeader"(
+      text: "Header Large",
+      size: "LARGE"
+    ),
+    #"SYSTEM_SYSRULES_richTextHeader"(
+      text: "Header Medium",
+      size: "MEDIUM"
+    ),
+    #"SYSTEM_SYSRULES_richTextHeader"(
+      text: "Header Small",
+      size: "SMALL"
+    ),
+    #"SYSTEM_SYSRULES_richTextItem_v1"(
+      text: ri!value &amp; " ",
+      style: "EMPHASIS"
+    ),
+    #"SYSTEM_SYSRULES_richTextIcon"(
+      icon: "STAR"
+    ),
+    #"SYSTEM_SYSRULES_richTextBulletedList"(
+      items: {
+        #"SYSTEM_SYSRULES_richTextListItem"(
+          text: #"SYSTEM_SYSRULES_richTextItem_v1"(
+            text: "Item with Link",
+            link: #"SYSTEM_SYSRULES_safeLink"(
+              label: "link",
+              uri: "https://google.com"
+            )
+          )
+        ),
+        #"SYSTEM_SYSRULES_richTextListItem"(
+          text: "Nested List",
+          nestedList: #"SYSTEM_SYSRULES_richTextNumberedList"(
+            items: {
+              #"SYSTEM_SYSRULES_richTextItem_v1"(
+                text: "Item 1 ACCENT LARGE",
+                style: "STRONG",
+                color: "ACCENT",
+                size: "LARGE"
+              ),
+              #"SYSTEM_SYSRULES_richTextItem_v1"(
+                text: "Item 2 POSITIVE",
+                style: "EMPHASIS",
+                color: "POSITIVE"
+              ),
+              #"SYSTEM_SYSRULES_richTextItem_v1"(
+                text: "Item 3 NEGATIVE SMALL",
+                style: "UNDERLINE",
+                color: "NEGATIVE",
+                size: "SMALL"
+              ),
+              #"SYSTEM_SYSRULES_richTextItem_v1"(
+                text: "Item 4 #42f445",
+                color: "#42f445"
+              ),
+              #"SYSTEM_SYSRULES_richTextItem_v1"(
+                text: "Item 5 has bold italic and underline. SECONDARY",
+                style: {
+                  "EMPHASIS",
+                  "STRONG",
+                  "UNDERLINE"
+                },
+                color: "SECONDARY"
+              )
+            }
+          )
+        ),
+        #"SYSTEM_SYSRULES_richTextItem_v1"(
+          text: "Logged In User",
+          linkStyle: "STANDALONE",
+          link: #"SYSTEM_SYSRULES_userRecordLink"(
+            label: "Test User",
+            user: loggedInUser(),
+            view: "summary"
+          )
+        ),
+        #"SYSTEM_SYSRULES_richTextItem_v1"(
+          #"SYSTEM_SYSRULES_richTextImage"(
+            image: #"SYSTEM_SYSRULES_documentImage"(
+              document: #"_a-0000e1ac-041f-8000-fba8-01ef9001ef90_25574"
+            )
+          )
+        ),
+        #"SYSTEM_SYSRULES_richTextImage"(
+          image: #"SYSTEM_SYSRULES_documentImage"(
+            document: #"SYSTEM_SYSRULES_iconIndicator"(
+              icon: "FACE_HAPPY"
+            )
+          )
+        ),
+        
+      }
+    )
+  }
+)</definition>
+        <namedTypedValue>
+            <name>value</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>input</name>
+            <type>
+                <name>int</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e1ac-041f-8000-fba8-01ef9001ef90_26354"/>
+        <historyInfo versionUuid="_a-0000e1b8-ea36-8000-fba8-01ef9001ef90_21822"/>
+    </history>
+</contentHaul>

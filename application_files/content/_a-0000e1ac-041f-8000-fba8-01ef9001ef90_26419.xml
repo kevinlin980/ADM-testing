@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e1c3-a3aa-8000-4708-01ef9001ef90_21787</versionUuid>
+    <rule>
+        <name>RTDF_Performance</name>
+        <uuid>_a-0000e1ac-041f-8000-fba8-01ef9001ef90_26419</uuid>
+        <description>Interface to test RTDF Performance</description>
+        <parentUuid>_a-0000e1ab-7e88-8000-4d14-01ef9001ef90_44015</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>fn!load(
+  local!columns: false,
+  local!value: "RichText",
+        #"_a-0000e1ac-041f-8000-fba8-01ef9001ef90_25494"(
+        value: local!value,
+        count: 250
+      )
+      )
+</definition>
+        <metadataExpr></metadataExpr>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e1ac-041f-8000-fba8-01ef9001ef90_26423"/>
+        <historyInfo versionUuid="_a-0000e1c3-a3aa-8000-4708-01ef9001ef90_21787"/>
+    </history>
+</contentHaul>
