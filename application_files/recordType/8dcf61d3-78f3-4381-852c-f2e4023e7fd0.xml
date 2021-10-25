@@ -47,11 +47,14 @@
     <a:layoutType>GRID</a:layoutType>
     <a:security>32767</a:security>
     <a:hideLatestNews>false</a:hideLatestNews>
+    <a:hideNewsView>false</a:hideNewsView>
+    <a:hideRelatedActionsView>false</a:hideRelatedActionsView>
     <a:isExportable>false</a:isExportable>
     <a:listAutoRefreshInterval>0.0</a:listAutoRefreshInterval>
     <a:enabledFeatures>0</a:enabledFeatures>
     <a:isVisibleInRecordTypeList>true</a:isVisibleInRecordTypeList>
     <a:recordActionLaunchType>SAME_TAB</a:recordActionLaunchType>
+    <a:showSearchBox>true</a:showSearchBox>
   </recordType>
   <roleMap/>
   <history>

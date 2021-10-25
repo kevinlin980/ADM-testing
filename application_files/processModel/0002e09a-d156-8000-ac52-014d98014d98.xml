@@ -808,6 +808,7 @@
                 <expression><![CDATA[5]]></expression>
               </instances>
               <execute-in-parallel>true</execute-in-parallel>
+              <allow-mni-batching>false</allow-mni-batching>
               <parallel-merge-type>0</parallel-merge-type>
               <complexnode-merge-expression/>
             </spawning>
