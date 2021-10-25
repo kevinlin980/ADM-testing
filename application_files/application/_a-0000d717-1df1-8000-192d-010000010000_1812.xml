@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <applicationHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>071a955c-13f5-49b8-86c8-1a1cdbfaaf8d</versionUuid>
+    <versionUuid>a711fd53-d68b-42dd-b0c9-1aae7741fc7f</versionUuid>
     <application>
         <name>UI Expressions Record</name>
         <uuid>_a-0000d717-1df1-8000-192d-010000010000_1812</uuid>
@@ -87,6 +87,8 @@
                         <uuid>_a-0000e09a-c547-8000-ac56-01ef9001ef90_25615</uuid>
                         <uuid>_a-0000e09a-c547-8000-ac56-01ef9001ef90_25687</uuid>
                         <uuid>_a-0000e09a-c547-8000-ac56-01ef9001ef90_25605</uuid>
+                        <uuid>SYSTEM_CUSTOM_BRANDING_LOGO_IMAGE</uuid>
+                        <uuid>SYSTEM_CUSTOM_BRANDING_FAVICON_IMAGE</uuid>
                     </uuids>
                 </item>
                 <item>
@@ -168,7 +170,9 @@
                 </item>
                 <item>
                     <type>adminSetting</type>
-                    <uuids/>
+                    <uuids>
+                        <uuid>conf</uuid>
+                    </uuids>
                 </item>
                 <item>
                     <type>thirdPartyCredentials</type>
@@ -348,6 +352,7 @@
         <historyInfo versionUuid="02baffc2-d8cc-42c3-93d0-f220d18515d1"/>
         <historyInfo versionUuid="ebb0adfb-79f4-4548-bec5-8c36de9d8a96"/>
         <historyInfo versionUuid="071a955c-13f5-49b8-86c8-1a1cdbfaaf8d"/>
+        <historyInfo versionUuid="a711fd53-d68b-42dd-b0c9-1aae7741fc7f"/>
     </history>
     <postDeploymentProcessData/>
-</applicationHaul><!--updated on 2021-10-25T14:51:37.601-->
+</applicationHaul><!--updated on 2021-10-25T14:52:57.402-->
