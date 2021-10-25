@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>_a-0000e71b-9271-8000-1ec8-01ef9001ef90_23674</versionUuid>
+    <versionUuid>_a-0000e733-6b67-8000-279f-01ef9001ef90_25929</versionUuid>
     <rule>
         <name>dropDownFieldMultiple_example</name>
         <uuid>_a-0000d7a5-8c7d-8000-88a3-010000010000_1457</uuid>
@@ -61,6 +61,6 @@ defaultvalue: if(rf!defaultvalue=true, {2,3,4,6}, null),
         </role>
     </roleMap>
     <history>
-        <historyInfo versionUuid="_a-0000e71b-9271-8000-1ec8-01ef9001ef90_23674"/>
+        <historyInfo versionUuid="_a-0000e733-6b67-8000-279f-01ef9001ef90_25929"/>
     </history>
 </contentHaul>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>_a-0000e71b-9271-8000-1ec8-01ef9001ef90_23019</versionUuid>
+    <versionUuid>_a-0000e733-6b67-8000-279f-01ef9001ef90_25274</versionUuid>
     <rule>
         <name>peoplePickerField_example</name>
         <uuid>_a-0000d711-d7b0-8000-d332-010000010000_1224</uuid>
@@ -67,6 +67,6 @@ defaultvalue: if(rf!defaultvalue=true, touser("donald.aaron"), null()),
         </role>
     </roleMap>
     <history>
-        <historyInfo versionUuid="_a-0000e71b-9271-8000-1ec8-01ef9001ef90_23019"/>
+        <historyInfo versionUuid="_a-0000e733-6b67-8000-279f-01ef9001ef90_25274"/>
     </history>
 </contentHaul>

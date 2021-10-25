@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <applicationHaul xmlns:a="http://www.appian.com/ae/types/2009">
-    <versionUuid>_a-0000e71b-9271-8000-1ec8-01ef9001ef90_31348</versionUuid>
+    <versionUuid>e77111ae-5a85-4c4a-b964-0f78e15ce057</versionUuid>
     <application>
-        <name>UI_Expressions</name>
+        <name>UI Expressions Record</name>
         <uuid>_a-0000d717-1df1-8000-192d-010000010000_1812</uuid>
         <description>Test UI Expressions</description>
         <parentUuid>SYSTEM_APPLICATIONS_ROOT</parentUuid>
@@ -104,7 +104,9 @@
                 </item>
                 <item>
                     <type>application</type>
-                    <uuids/>
+                    <uuids>
+                        <uuid>_a-0000d717-1df1-8000-192d-010000010000_1812</uuid>
+                    </uuids>
                 </item>
                 <item>
                     <type>tempoFeed</type>
@@ -112,6 +114,14 @@
                 </item>
                 <item>
                     <type>recordType</type>
+                    <uuids/>
+                </item>
+                <item>
+                    <type>recordField</type>
+                    <uuids/>
+                </item>
+                <item>
+                    <type>recordRelationship</type>
                     <uuids/>
                 </item>
                 <item>
@@ -148,6 +158,14 @@
                 </item>
                 <item>
                     <type>connectedSystem</type>
+                    <uuids/>
+                </item>
+                <item>
+                    <type>pluginInfo</type>
+                    <uuids/>
+                </item>
+                <item>
+                    <type>featureFlag</type>
                     <uuids/>
                 </item>
             </globalIdMap>
@@ -213,6 +231,14 @@
                     <uuids/>
                 </item>
                 <item>
+                    <type>recordField</type>
+                    <uuids/>
+                </item>
+                <item>
+                    <type>recordRelationship</type>
+                    <uuids/>
+                </item>
+                <item>
                     <type>tempoReport</type>
                     <uuids/>
                 </item>
@@ -248,6 +274,14 @@
                     <type>connectedSystem</type>
                     <uuids/>
                 </item>
+                <item>
+                    <type>pluginInfo</type>
+                    <uuids/>
+                </item>
+                <item>
+                    <type>featureFlag</type>
+                    <uuids/>
+                </item>
             </globalIdMap>
         </associatedApplications>
     </application>
@@ -281,7 +315,11 @@
             </role>
         </contentRoleMap>
     </roleMap>
+    <defaultApplicationObjects/>
+    <applicationDocumentation/>
     <history>
-        <historyInfo versionUuid="_a-0000e71b-9271-8000-1ec8-01ef9001ef90_31348"/>
+        <historyInfo versionUuid="_a-0000e733-6b67-8000-279f-01ef9001ef90_32243"/>
+        <historyInfo versionUuid="e77111ae-5a85-4c4a-b964-0f78e15ce057"/>
     </history>
-</applicationHaul><!--updated on 2021-10-25T14:13:48.542-->
+    <postDeploymentProcessData/>
+</applicationHaul><!--updated on 2021-10-25T14:41:51.942-->
