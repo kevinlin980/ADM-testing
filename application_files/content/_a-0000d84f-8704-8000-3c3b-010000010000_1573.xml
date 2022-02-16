@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26414</versionUuid>
+    <rule>
+        <name>dynamic_PieChart</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1573</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  local!pieChartField_label: "label",
+  local!pieChartField_instructions: "instructions",    
+  local!pieChartField_showDataLabels:{2},
+  local!pieChartField_showTooltips:{2},
+  local!pieChartField_showAsPercentage:{2},
+  local!pieChartField_numberOfSeries: 1,
+  local!pieChartField_series_label_1: "legend",
+  local!pieChartField_series_data_1:  "[50]",
+  local!pieChartField_series_color_1:  "ORANGE",
+  local!pieChartField_series_label_2: "legend",
+  local!pieChartField_series_data_2:  "[30]",
+  local!pieChartField_series_color_2:  "BLUEGRAY",
+  local!pieChartField_series_label_3: "legend",
+  local!pieChartField_series_data_3:  "[20]",
+  local!pieChartField_series_color_3:  "RED",
+  
+  with(
+    	
+	/*====== Chart Series ======*/	
+	
+	local!chartSeries1: {
+		
+		#"SYSTEM_SYSRULES_chartSeries"(
+						label: local!pieChartField_series_label_1, 
+						data: extract(local!pieChartField_series_data_1,"[","]"),
+						color: local!pieChartField_series_color_1
+		)					
+	},
+	local!chartSeries2: {
+		
+		#"SYSTEM_SYSRULES_chartSeries"(
+						label: local!pieChartField_series_label_2, 
+						data: extract(local!pieChartField_series_data_2,"[","]"),
+						color: local!pieChartField_series_color_2
+		)					
+	},
+	local!chartSeries3: {
+		
+		#"SYSTEM_SYSRULES_chartSeries"(
+						label: local!pieChartField_series_label_3, 
+						data: extract(local!pieChartField_series_data_3,"[","]"),
+						color: local!pieChartField_series_color_3
+		)					
+	},
+	
+	local!chartSeries_list: {
+		local!chartSeries1,
+		local!chartSeries2,
+		local!chartSeries3	
+	},
+	
+	/*===== Chart Series Properties =====*/
+	
+	local!chartSeries1_properties: {
+		#"SYSTEM_SYSRULES_textField"(
+		  label: "Series # 1 (legend)",
+		  instructions: "Enter text to generate the legend using: a!chartSeries function value 'label'",
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!pieChartField_series_label_1,
+		  saveInto: local!pieChartField_series_label_1
+		),			
+		#"SYSTEM_SYSRULES_textField"(
+		  label: "Series # 1 (data)",
+		  instructions: "Enter data in box [], eg. [50] to generate the legend using: a!chartSeries function value 'label'",
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!pieChartField_series_data_1,
+		  saveInto: local!pieChartField_series_data_1
+		),
+		#"SYSTEM_SYSRULES_textField"(
+		  label: "Series # 1 (color)",
+		  instructions: "Enter text to generate the color using: a!chartSeries function value 'color'",
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!pieChartField_series_color_1,
+		  saveInto: local!pieChartField_series_color_1
+		)
+	},
+	local!chartSeries2_properties: {
+		#"SYSTEM_SYSRULES_textField"(
+		  label: "Series # 2 (legend)",
+		  instructions: "Enter text to generate the legend using: a!chartSeries function value 'label'",
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!pieChartField_series_label_2,
+		  saveInto: local!pieChartField_series_label_2
+		),			
+		#"SYSTEM_SYSRULES_textField"(
+		  label: "Series # 2 (data)",
+		  instructions: "Enter data in box [], eg. [50] to generate the legend using: a!chartSeries function value 'label'",
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!pieChartField_series_data_2,
+		  saveInto: local!pieChartField_series_data_2
+		),
+		#"SYSTEM_SYSRULES_textField"(
+		  label: "Series # 2 (color)",
+		  instructions: "Enter text to generate the color using: a!chartSeries function value 'color'",
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!pieChartField_series_color_2,
+		  saveInto: local!pieChartField_series_color_2
+		)
+	},
+	local!chartSeries3_properties: {
+		#"SYSTEM_SYSRULES_textField"(
+		  label: "Series # 3 (legend)",
+		  instructions: "Enter text to generate the legend using: a!chartSeries function value 'label'",
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!pieChartField_series_label_3,
+		  saveInto: local!pieChartField_series_label_3
+		),			
+		#"SYSTEM_SYSRULES_textField"(
+		  label: "Series # 3 (data)",
+		  instructions: "Enter data in box [], eg. [50] to generate the legend using: a!chartSeries function value 'label'",
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!pieChartField_series_data_3,
+		  saveInto: local!pieChartField_series_data_3
+		),
+		#"SYSTEM_SYSRULES_textField"(
+		  label: "Series # 3 (color)",
+		  instructions: "Enter text to generate the color using: a!chartSeries function value 'color'",
+		  required: false,
+		  readOnly: false,
+		  disabled: false,
+		  value: local!pieChartField_series_color_3,
+		  saveInto: local!pieChartField_series_color_3
+		)
+	},
+	
+	
+	local!chartSeries_properties_list: {
+		local!chartSeries1_properties,
+		local!chartSeries2_properties,
+		local!chartSeries3_properties	
+	},
+	
+	
+	/*=============*/
+	
+	
+	local!pieChartField_series_shown: 	if(local!pieChartField_numberOfSeries=1,remove(local!chartSeries_list,{2,3}),
+										if(local!pieChartField_numberOfSeries=2,remove(local!chartSeries_list,{3})
+										,local!chartSeries_list)),
+	
+	
+	
+	local!chartSeries_properties_shown: if(local!pieChartField_numberOfSeries=1,remove(local!chartSeries_properties_list,{4,5,6,7,8,9}),
+										if(local!pieChartField_numberOfSeries=2,remove(local!chartSeries_properties_list,{7,8,9})
+										,local!chartSeries_properties_list)),	
+	
+	
+
+	
+    #"SYSTEM_SYSRULES_sectionLayoutColumns"(
+      label: "Dynamic Sail Component",
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Label",
+              instructions: "Enter text for the dynamic Label value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!pieChartField_label,
+              saveInto: local!pieChartField_label
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Instructions",
+              instructions: "Enter text for the dynamic Instructions value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!pieChartField_instructions,
+              saveInto: local!pieChartField_instructions
+            ),                      
+            #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+              label: "Show Data Labels",
+              instructions: "Checked=true, Unchecked=false",
+              required: false,
+              disabled: false,
+              choiceLabels: {
+                "True",
+                "False"
+              },
+              value: local!pieChartField_showDataLabels,
+              saveInto: local!pieChartField_showDataLabels
+            ),
+            #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+              label: "Show Tool Tips",
+              instructions: "Checked=true, Unchecked=false",
+              required: false,
+              disabled: false,
+              choiceLabels: {
+                "True",
+                "False"
+              },
+              value: local!pieChartField_showTooltips,
+              saveInto: local!pieChartField_showTooltips
+            ),
+            #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+              label: "Show As Percentage",
+              instructions: "Checked=true, Unchecked=false",
+              required: false,
+              disabled: false,
+              choiceLabels: {
+                "True",
+                "False"
+              },
+              value: local!pieChartField_showAsPercentage,
+              saveInto: local!pieChartField_showAsPercentage
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+			contents: {
+				#"SYSTEM_SYSRULES_pieChartField"(
+				  label: local!pieChartField_label,
+				  instructions: local!pieChartField_instructions,              
+				  series: local!pieChartField_series_shown,                     
+				  showDataLabels: if(
+					local!pieChartField_showDataLabels = 1,
+					"true",
+					"false"
+				  ),
+				  showTooltips: if(
+					local!pieChartField_showTooltips = 1,
+					"true",
+					"false"
+				  ),
+				  showAsPercentage: if(
+					local!pieChartField_showAsPercentage = 1,
+					"true",
+					"false"
+				  )
+				),
+				#"SYSTEM_SYSRULES_ButtonArrayLayout"(
+				  buttons: {
+					#"SYSTEM_SYSRULES_ButtonWidget"(
+					  label: "Add a Series",
+					  style: "PRIMARY",
+					  confirmMessage: "",
+					  disabled: false,
+					  value: if(
+						local!pieChartField_numberOfSeries &lt; 3,
+						local!pieChartField_numberOfSeries + 1,
+						3
+					  ),
+					  saveInto: local!pieChartField_numberOfSeries
+					),
+					#"SYSTEM_SYSRULES_ButtonWidget"(
+					  label: "Remove a Series",
+					  style: "DESTRUCTIVE",
+					  confirmMessage: "",
+					  disabled: false,
+					  value: if(
+						local!pieChartField_numberOfSeries &gt; 1,
+						local!pieChartField_numberOfSeries - 1,
+						1
+					  ),
+					  saveInto: local!pieChartField_numberOfSeries
+					)					
+				  }
+				),
+				local!chartSeries_properties_shown			
+		  }
+        )
+      }
+    )
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26414"/>
+    </history>
+</contentHaul>

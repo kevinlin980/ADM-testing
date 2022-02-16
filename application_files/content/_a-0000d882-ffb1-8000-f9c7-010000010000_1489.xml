@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26324</versionUuid>
+    <rule>
+        <name>dynamic_DateTimePickerField</name>
+        <uuid>_a-0000d882-ffb1-8000-f9c7-010000010000_1489</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  local!dateTimePickerField_label: "label",
+  local!dateTimePickerField_instructions: "instructions",
+  local!dateTimePickerField_required: {2},
+  local!dateTimePickerField_readOnly: {2},
+  local!dateTimePickerField_disabled: {2},
+  local!dateTimePickerField_value2, 
+  
+  
+  
+  local!dateTimePickerField_validationText_1: "Validation Text 1",
+  local!dateTimePickerField_validationText_2: "Validation Text 2",
+  local!dateTimePickerField_validationText_3: "Validation Text 3",
+  local!dateTimePickerField_validationsOff: "Turn OFF Validation",
+  local!dateTimePickerField_numberOfValidationChoices: 4,
+  local!dateTimePickerField_checkedValidations: {4}  ,
+  local!dateTimePickerField_ValidationList: {
+	local!dateTimePickerField_validationText_1,
+	local!dateTimePickerField_validationText_2,
+	local!dateTimePickerField_validationText_3,
+	local!dateTimePickerField_validationsOff  
+  },
+  
+  
+  
+  local!dateTimePickerField_month: 9,
+  local!dateTimePickerField_day: 5,
+  local!dateTimePickerField_year: 1986,
+  local!dateTimePickerField_hour: 13,
+  local!dateTimePickerField_minute: 59,
+  local!dateTimePickerField_second: 59,
+  local!dateTimePickerField_millisecond: 999,
+  local!dateTimePickerField_valueType: {1},
+  local!dateTimePickerField_valueText: "9/5/1986",
+  
+  with(	
+		local!dateTimePickerField_unCheckedValidations: if(isnull(local!dateTimePickerField_checkedValidations),null(),remove(enumerate(local!dateTimePickerField_numberOfValidationChoices)+1, local!dateTimePickerField_checkedValidations)),
+		local!dateTimePickerField_shown_Validations: if(isnull(local!dateTimePickerField_unCheckedValidations),null(),remove(local!dateTimePickerField_ValidationList, local!dateTimePickerField_unCheckedValidations)),
+		local!dateTimePickerField_validations: {			
+			local!dateTimePickerField_shown_Validations	
+		},		
+		local!dateTimePickerField_dateTime:	datetime( 	dateTimePickerField_year, 
+												dateTimePickerField_month, 
+												dateTimePickerField_day, 
+												dateTimePickerField_hour, 
+												dateTimePickerField_minute, 
+												dateTimePickerField_second, 
+												dateTimePickerField_millisecond 																
+		),
+		local!dateTimePickerField_value: if(dateTimePickerField_valueType=1,local!dateTimePickerField_valueText,local!dateTimePickerField_dateTime),		
+		#"SYSTEM_SYSRULES_sectionLayoutColumns"(
+          label: "Dynamic Sail Component",
+          columns: {
+            #"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "Temp",
+                  instructions: "Temp",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!dateTimePickerField_validations
+                  
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Label",
+                  instructions: "Enter text for the dynamic Label value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!dateTimePickerField_label,
+                  saveInto: local!dateTimePickerField_label
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Instructions",
+                  instructions: "Enter text for the dynamic Instructions value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!dateTimePickerField_instructions,
+                  saveInto: local!dateTimePickerField_instructions
+                ),
+                #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+                  label: "Required",
+                  instructions: "Checked=true, Unchecked=false",
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    "True",
+                    "False"
+                  },
+                  value: local!dateTimePickerField_required,
+                  saveInto: local!dateTimePickerField_required
+                ),
+				#"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+                  label: "ReadOnly",
+                  instructions: "Checked=true, Unchecked=false",
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    "True",
+                    "False"
+                  },
+                  value: local!dateTimePickerField_readOnly,
+                  saveInto: local!dateTimePickerField_readOnly
+                ),
+				#"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+                  label: "Disabled",
+                  instructions: "Checked=true, Unchecked=false",
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    "True",
+                    "False"
+                  },
+                  value: local!dateTimePickerField_disabled,
+                  saveInto: local!dateTimePickerField_disabled
+                ),
+				#"SYSTEM_SYSRULES_checkboxFieldByIndex"(
+				  label: "Validation",
+				  instructions: "Check a Validation message to force Validation on",
+				  required: false,
+				  disabled: false,
+				  choiceLabels: {
+						local!dateTimePickerField_validationText_1,
+						local!dateTimePickerField_validationText_2,
+						local!dateTimePickerField_validationText_3,
+						local!dateTimePickerField_validationsOff
+				  },
+				  value: local!dateTimePickerField_checkedValidations,
+				  saveInto: local!dateTimePickerField_checkedValidations
+				  
+				),
+				#"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+                  label: "Dynamic Value Type",
+                  instructions: "Use Month/Day/Year values or Value(Text) to populate dynamic value",
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    "Value (TextField)",
+                    "Month/Day/Year (date(integer,integer,integer))"
+                  },
+                  value: local!dateTimePickerField_valueType,
+                  saveInto: local!dateTimePickerField_valueType
+                ),                
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Value",
+                  instructions: "Enter text for the dynamic Value value",
+                  required: false,
+                  readOnly: false,
+                  disabled: if(dateTimePickerField_valueType=1,false,true),
+                  value: if(dateTimePickerField_valueType=1,local!dateTimePickerField_valueText,local!dateTimePickerField_dateTime),
+                  saveInto: local!dateTimePickerField_valueText
+                ),				
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "Month",
+                  instructions: "Enter integer for Month",
+                  required: false,
+                  readOnly: false,
+                  disabled: if(dateTimePickerField_valueType=2,false,true),
+                  value: local!dateTimePickerField_month,
+                  saveInto: local!dateTimePickerField_month
+				),
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "Year",
+                  instructions: "Enter integer for Year",
+                  required: false,
+                  readOnly: false,
+                  disabled: if(dateTimePickerField_valueType=2,false,true),
+                  value: local!dateTimePickerField_year,
+                  saveInto: local!dateTimePickerField_year
+                ),				
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "Month",
+                  instructions: "Enter integer for Month",
+                  required: false,
+                  readOnly: false,
+                  disabled: if(dateTimePickerField_valueType=2,false,true),
+                  value: local!dateTimePickerField_month,
+                  saveInto: local!dateTimePickerField_month
+				),
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "Day",
+                  instructions: "Enter integer for Day",
+                  required: false,
+                  readOnly: false,
+                  disabled: if(dateTimePickerField_valueType=2,false,true),
+                  value: local!dateTimePickerField_day,
+                  saveInto: local!dateTimePickerField_day
+				),
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "Hour",
+                  instructions: "Enter integer for Hour",
+                  required: false,
+                  readOnly: false,
+                  disabled: if(dateTimePickerField_valueType=2,false,true),
+                  value: local!dateTimePickerField_hour,
+                  saveInto: local!dateTimePickerField_hour
+				),
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "Minute",
+                  instructions: "Enter integer for Minute",
+                  required: false,
+                  readOnly: false,
+                  disabled: if(dateTimePickerField_valueType=2,false,true),
+                  value: local!dateTimePickerField_minute,
+                  saveInto: local!dateTimePickerField_minute
+				),
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "Second",
+                  instructions: "Enter integer for Second",
+                  required: false,
+                  readOnly: false,
+                  disabled: if(dateTimePickerField_valueType=2,false,true),
+                  value: local!dateTimePickerField_second,
+                  saveInto: local!dateTimePickerField_second
+				),
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "Millisecond",
+                  instructions: "Enter integer for Millisecond",
+                  required: false,
+                  readOnly: false,
+                  disabled: if(dateTimePickerField_valueType=2,false,true),
+                  value: local!dateTimePickerField_millisecond,
+                  saveInto: local!dateTimePickerField_millisecond
+				)				 
+              }
+            ),
+			#"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+			  
+				#"SYSTEM_SYSRULES_dateTimeField"(
+				  label: local!dateTimePickerField_label,
+				  instructions: local!dateTimePickerField_instructions,
+				  required: if(local!dateTimePickerField_required=1,"true","false"),
+                  readOnly: if(local!dateTimePickerField_readOnly=1,"true","false"),
+                  disabled: if(local!dateTimePickerField_disabled=1,"true","false"),				  
+				  validations: if(contains(local!dateTimePickerField_checkedValidations,4),null(),local!dateTimePickerField_validations),				  
+				  value: local!dateTimePickerField_value,
+				  saveInto: local!dateTimePickerField_value2
+				)			  
+
+			  }
+			)
+          }
+        )
+      
+    
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26324"/>
+    </history>
+</contentHaul>

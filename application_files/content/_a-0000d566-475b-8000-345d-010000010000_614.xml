@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_27057</versionUuid>
+    <rule>
+        <name>uiCommits</name>
+        <uuid>_a-0000d566-475b-8000-345d-010000010000_614</uuid>
+        <description>This is the default UI rule used by the 'Commits' Record.</description>
+        <parentUuid>_a-0001d554-e2d4-8000-e2d4-360000360000_75</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_dashboardLayout"(&#xD;
+  firstColumnContents: {&#xD;
+    #"SYSTEM_SYSRULES_textField"(&#xD;
+      label: "Sprint Id",&#xD;
+      value: rf!sprintId,&#xD;
+      readOnly: true&#xD;
+    ),&#xD;
+    #"SYSTEM_SYSRULES_textField"(&#xD;
+      label: "% Complete",&#xD;
+      value: rf!percentComplete,&#xD;
+      readOnly: true&#xD;
+    ),&#xD;
+    #"SYSTEM_SYSRULES_textField"(&#xD;
+      label: "Is Stretch",&#xD;
+      value: rf!isStretch,&#xD;
+      readOnly: true&#xD;
+    ),&#xD;
+    #"SYSTEM_SYSRULES_paragraphField"(&#xD;
+      label: "Notes",&#xD;
+      value: rf!notes,&#xD;
+      readOnly: true&#xD;
+    ),&#xD;
+    #"SYSTEM_SYSRULES_linkField"(&#xD;
+      label: "Jira Link",&#xD;
+      links: {&#xD;
+        #"SYSTEM_SYSRULES_safeLink"(&#xD;
+          label: rf!jiraLink,&#xD;
+          uri: rf!jiraLink&#xD;
+        )&#xD;
+      }&#xD;
+    ),&#xD;
+    #"SYSTEM_SYSRULES_integerField"(&#xD;
+      label: "Version",&#xD;
+      value: rf!version,&#xD;
+      readOnly: true&#xD;
+    )&#xD;
+  }&#xD;
+)&#xD;
+</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_27057"/>
+    </history>
+</contentHaul>

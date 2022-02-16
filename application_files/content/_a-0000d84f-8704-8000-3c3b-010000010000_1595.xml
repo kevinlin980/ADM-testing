@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_25399</versionUuid>
+    <rule>
+        <name>dynamic_ButtonWidget</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1595</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  local!buttonWidget_label: "label",
+  local!buttonWidget_style: "NORMAL",
+  local!buttonWidget_confirmMessage: "confirm message",
+  local!buttonWidget_disabled: {
+    2
+  },
+  local!buttonWidget_value: "value",
+  with(
+    #"SYSTEM_SYSRULES_sectionLayoutColumns"(
+      label: "Dynamic Sail Component",
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Label",
+              instructions: "Enter text for the dynamic Label value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!buttonWidget_label,
+              saveInto: local!buttonWidget_label
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Style",
+              instructions: "Enter 'NORMAL' , 'PRIMARY' , 'DESTRUCTIVE' for the dynamic Style value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!buttonWidget_style,
+              saveInto: local!buttonWidget_style
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Confirm Message",
+              instructions: "Enter text for the dynamic ConfirmMessage value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!buttonWidget_confirmMessage,
+              saveInto: local!buttonWidget_confirmMessage
+            ),
+            #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+              label: "Disabled",
+              instructions: "Checked=true, Unchecked=false",
+              required: false,
+              disabled: false,
+              choiceLabels: {
+                "True",
+                "False"
+              },
+              value: local!buttonWidget_disabled,
+              saveInto: local!buttonWidget_disabled
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Value",
+              instructions: "Enter text for the dynamic Value value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!buttonWidget_value,
+              saveInto: local!buttonWidget_value
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_ButtonArrayLayout"(
+              buttons: {
+                #"SYSTEM_SYSRULES_ButtonWidget"(
+                  label: local!buttonWidget_label,
+                  style: local!buttonWidget_style,
+                  confirmMessage: local!buttonWidget_confirmMessage,
+                  disabled: if(
+                    local!buttonWidget_disabled = 1,
+                    "true",
+                    "false"
+                  ),
+                  value: local!buttonWidget_value,
+                  saveInto: local!buttonWidget_value
+                )
+              }
+            )
+          }
+        )
+      }
+    )
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_25399"/>
+    </history>
+</contentHaul>

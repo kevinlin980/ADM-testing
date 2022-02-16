@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_24468</versionUuid>
+    <rule>
+        <name>dynamic_RecordLink</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1569</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+
+	local!recordLink_recordType: #"_a-0000d7c6-7676-8000-6fcc-010000010000_1309",
+	local!recordLink_identifier: 1,
+	local!recordLink_dashboard: "summary",
+	local!recordLink_label: "RecordLink",
+  	
+	with(		
+		#"SYSTEM_SYSRULES_sectionLayoutColumns"(
+          label: "Dynamic Sail Component",
+          columns: {
+				#"SYSTEM_SYSRULES_columnLayout"(
+				  contents: {                
+					#"SYSTEM_SYSRULES_textField"(
+					  label: "RecordLink RecordType",
+					  instructions: "Dynamic field TBD",
+					  required: false,
+					  readOnly: true,
+					  disabled: false,
+					  value: "cons!CompanyRecordType"              
+					),
+					#"SYSTEM_SYSRULES_textField"(
+					  label: "RecordLink Identifier",
+					  instructions: "Enter text for the dynamic RecordLink Identifier value",
+					  required: false,
+					  readOnly: false,
+					  disabled: false,
+					  value: local!recordLink_identifier,
+					  saveInto: local!recordLink_identifier
+					),
+					#"SYSTEM_SYSRULES_textField"(
+					  label: "RecordLink Dashboard",
+					  instructions: "Enter text for the dynamic RecordLink Dashboard value",
+					  required: false,
+					  readOnly: false,
+					  disabled: false,
+					  value: local!recordLink_dashboard,
+					  saveInto: local!recordLink_dashboard
+					),
+					#"SYSTEM_SYSRULES_textField"(
+					  label: "RecordLink Label",
+					  instructions: "Enter text for the dynamic RecordLink Label value",
+					  required: false,
+					  readOnly: false,
+					  disabled: false,
+					  value: local!recordLink_label,
+					  saveInto: local!recordLink_label
+					) 			
+			  }
+            ),
+			#"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+				#"SYSTEM_SYSRULES_linkField"(
+					label: "",
+					instructions: "",
+					links: {					
+						#"SYSTEM_SYSRULES_recordLink"(
+							recordType: local!recordLink_recordType,
+							identifier: local!recordLink_identifier,
+							dashboard: local!recordLink_dashboard,
+							label: local!recordLink_label
+						)  				
+					},
+					labelPosition: "ADJACENT"							
+					)				
+				}
+			)
+          }
+        )
+      
+    
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_24468"/>
+    </history>
+</contentHaul>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_24504</versionUuid>
+    <rule>
+        <name>dynamic_SafeLink</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1568</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(    
+  local!safeLink_uri: "http://www.appian.com",
+  local!safeLink_label: "label",
+  with(		
+		#"SYSTEM_SYSRULES_sectionLayoutColumns"(
+          label: "Dynamic Sail Component",
+          columns: {
+            #"SYSTEM_SYSRULES_columnLayout"(
+              contents: {                
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "Label",
+                  instructions: "Enter text for the dynamic Label value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!safeLink_label,
+                  saveInto: local!safeLink_label
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Uri",
+                  instructions: "Enter text for the dynamic Uri value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!safeLink_uri,
+                  saveInto: local!safeLink_uri
+                )
+			  }
+            ),
+			#"SYSTEM_SYSRULES_columnLayout"(
+        contents: {
+  				"SYSTEM_SYSRULES_linkField"(
+  					label: "",
+  					instructions: "",
+  					links: {					
+  						#"SYSTEM_SYSRULES_safeLink"(							
+  							label: local!safeLink_label,
+  							uri: local!safeLink_uri
+  						)	 				
+  					},
+  					labelPosition: "ADJACENT"							
+  					)				
+  				}
+  			)
+      }
+    )
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_24504"/>
+    </history>
+</contentHaul>

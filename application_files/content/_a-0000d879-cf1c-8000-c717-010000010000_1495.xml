@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_25018</versionUuid>
+    <rule>
+        <name>dynamic_FileUploadField</name>
+        <uuid>_a-0000d879-cf1c-8000-c717-010000010000_1495</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  
+  local!fileUploadField_value: null(),
+  local!fileUploadField_label: "Label",
+  local!fileUploadField_instructions: "Instructions",
+  local!fileUploadField_required: {2},
+  local!fileUploadField_disabled: {2},
+  local!fileUploadField_target_ItemType: {1},
+  local!fileUploadField_target_ItemToSearchFor: "Temporary Documents",
+  local!fileUploadField_documentName: "Document Name",  
+  local!fileUploadField_validationText: "Validation Text (No target folder enter)",
+  local!fileUploadField_validationTrigger: {2},
+  local!fileUploadField_validations: { 					  
+		local!fileUploadField_validationText				
+  },  
+  local!submitButton: true,  
+  with(
+		local!fileUploadField_target_item: if(	local!fileUploadField_target_ItemType=1,
+												findfoldersbyname(true, local!fileUploadField_target_ItemToSearchFor),
+												finddocumentsbyname(true, local!fileUploadField_target_ItemToSearchFor)
+											),
+		#"SYSTEM_SYSRULES_sectionLayoutColumns"(
+          label: "Dynamic Sail Component",
+          columns: {
+            #"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Label",
+                  instructions: "Enter text for the dynamic Label value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!fileUploadField_label,
+                  saveInto: local!fileUploadField_label
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Instructions",
+                  instructions: "Enter text for the dynamic Instructions value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!fileUploadField_instructions,
+                  saveInto: local!fileUploadField_instructions
+                ),
+                #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+                  label: "Required",
+                  instructions: "Select the value",
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    "True",
+                    "False",
+					"Null"
+                  },
+                  value: local!fileUploadField_required,
+                  saveInto: local!fileUploadField_required
+                ),				
+				#"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+                  label: "Disabled",
+                  instructions: "Select the value",
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    "True",
+                    "False",
+					"Null"
+                  },
+                  value: local!fileUploadField_disabled,
+                  saveInto: local!fileUploadField_disabled
+                ),
+				#"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+                  label: "Target Search Type",
+                  instructions: "Select the type of Target to search for",
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    "Search for Folders",
+                    "Search for Documents"					
+                  },
+                  value: local!fileUploadField_target_ItemType,
+                  saveInto: local!fileUploadField_target_ItemType
+                ),
+				#"SYSTEM_SYSRULES_textField"(
+				  label: if(local!fileUploadField_target_ItemType=1,"Folder Name", "Document Name"),
+				  instructions: if(local!fileUploadField_target_ItemType=1,
+								"Enter name of folder, logic will return first folder matching name",
+								"Enter name of Document, logic will return first Document matching name"),
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!fileUploadField_target_ItemToSearchFor,
+				  saveInto: local!fileUploadField_target_ItemToSearchFor
+				),
+				#"SYSTEM_SYSRULES_textField"(
+				  label: if(local!fileUploadField_target_ItemType=1,"SaveInto Folder","Version: Name of Document "),
+				  instructions: if(local!fileUploadField_target_ItemType=1,"Folder to be saved into","Document to be updated"),
+				  required: false,
+				  readOnly: true,
+				  disabled: false,
+				  value: local!fileUploadField_target_item				  
+				),
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "Document Name",
+                  instructions: "Enter text for the dynamic Document Name value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!fileUploadField_documentName,
+                  saveInto: local!fileUploadField_documentName
+                ),
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "Value",
+                  instructions: "The Value value",
+                  required: false,
+                  readOnly: true,
+                  disabled: false,
+                  value: local!fileUploadField_value,
+                  saveInto: local!fileUploadField_value
+				
+				),
+				#"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+                  label: "Validation",
+                  instructions: "Set generic Validation to trigger when uploading File",
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    "Trigger Validation",
+                    "Don't Trigger Validation"					
+                  },
+                  value: local!fileUploadField_validationTrigger,
+                  saveInto: local!fileUploadField_validationTrigger
+                ),
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "Validation Text",
+                  instructions: "Enter text displayed by the Validation",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!fileUploadField_validationText,
+                  saveInto: local!fileUploadField_validationText
+				
+				)
+				 
+              }
+            ),
+			#"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+			  
+				#"SYSTEM_SYSRULES_fileUploadField"(
+				
+					  label: local!fileUploadField_label,
+					  instructions: local!fileUploadField_instructions,
+					  required: if(local!fileUploadField_required=1,"true",if(local!fileUploadField_required=2,"false",null())),
+					  disabled: if(local!fileUploadField_disabled=1,"true",if(local!fileUploadField_required=2,"false",null())),
+					  target: index(local!fileUploadField_target_item,1,null()),	
+					  documentName: local!fileUploadField_documentName,
+					  validations: if(local!fileUploadField_validationTrigger=1,local!fileUploadField_validations,null()),	 
+					  value: local!fileUploadField_value,
+					  saveInto: local!fileUploadField_value
+				),
+				#"SYSTEM_SYSRULES_ButtonArrayLayout"(
+				  buttons: {
+					#"SYSTEM_SYSRULES_ButtonWidget"(
+					  label: "Submit",
+					  style: "PRIMARY",
+					  confirmMessage: "Submit?",
+					  disabled: true,
+					  skipValidation: false,
+					  value: local!submitButton,
+					  saveInto: local!submitButton
+					)
+				  }
+				)
+			  }
+			)
+          }
+        )
+      
+    
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_25018"/>
+    </history>
+</contentHaul>

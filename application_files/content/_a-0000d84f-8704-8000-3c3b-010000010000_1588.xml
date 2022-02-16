@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26330</versionUuid>
+    <rule>
+        <name>dynamic_DropdownField</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1588</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  local!dropDownField_label: "label",
+  local!dropDownField_instructions: "instructions",
+  local!dropDownField_required: {2},
+  local!dropDownField_disabled: {2},
+  local!dropDownField_choiceLabels: "[Choice 1][Choice 2][Choice 3][Choice 4]",
+  local!dropDownField_placeHolderLabel: "place holder text",
+  local!dropDownField_value: {1},
+  with(
+    #"SYSTEM_SYSRULES_sectionLayoutColumns"(
+      label: "Dynamic Sail Component",
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Label",
+              instructions: "Enter text for the dynamic Label value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!dropDownField_label,
+              saveInto: local!dropDownField_label
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Instructions",
+              instructions: "Enter text for the dynamic Instructions value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!dropDownField_instructions,
+              saveInto: local!dropDownField_instructions
+            ),
+            #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+              label: "Required",
+              instructions: "Checked=true, Unchecked=false",
+              required: false,
+              disabled: false,
+              choiceLabels: {
+                "True",
+                "False"
+              },
+              value: local!dropDownField_required,
+              saveInto: local!dropDownField_required
+            ),
+            #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+              label: "Disabled",
+              instructions: "Checked=true, Unchecked=false",
+              required: false,
+              disabled: false,
+              choiceLabels: {
+                "True",
+                "False"
+              },
+              value: local!dropDownField_disabled,
+              saveInto: local!dropDownField_disabled
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Choice Labels",
+              instructions: "Enter choices in boxes [], eg. [choice5][choice6][etc..]",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!dropDownField_choiceLabels,
+              saveInto: local!dropDownField_choiceLabels
+            ),
+			#"SYSTEM_SYSRULES_textField"(
+              label: "Place Holder Label",
+              instructions: "Enter the text for the place holder label",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!dropDownField_placeHolderLabel,
+              saveInto: local!dropDownField_placeHolderLabel
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Value",
+              instructions: "Enter number of pre-selected choice for the dynamic Value value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!dropDownField_value,
+              saveInto: local!dropDownField_value
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_dropdownFieldByIndex"(
+              label: local!dropDownField_label,
+              instructions: local!dropDownField_instructions,
+              required: if(
+                local!dropDownField_required = 1,
+                "true",
+                "false"
+              ),
+              disabled: if(
+                local!dropDownField_disabled = 1,
+                "true",
+                "false"
+              ),
+              choiceLabels: extract(local!dropDownField_choiceLabels,"[","]"),
+			  placeholderLabel: local!dropDownField_placeHolderLabel,
+              value: local!dropDownField_value,
+              saveInto: local!dropDownField_value
+            )
+          }
+        )
+      }
+    )
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26330"/>
+    </history>
+</contentHaul>

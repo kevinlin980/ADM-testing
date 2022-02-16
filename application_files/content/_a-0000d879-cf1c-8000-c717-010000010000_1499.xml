@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26372</versionUuid>
+    <rule>
+        <name>dynamic_ImageGalleryField</name>
+        <uuid>_a-0000d879-cf1c-8000-c717-010000010000_1499</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  local!imageGalleryField_label: "label",
+  local!imageGalleryField_size: {1},
+  local!imageGalleryField_instructions: "instructions",  
+  local!imageGalleryField_SafeLink1_source: "http://foxpudding.files.wordpress.com/2011/03/fuji_off_kanagawa.jpg",
+  local!imageGalleryField_SafeLink1_altText: "",
+  local!imageGalleryField_SafeLink1_caption: "",
+  local!imageGalleryField_SafeLink2_source: "http://nuwildroots.files.wordpress.com/2010/06/bachelor-button.jpg",
+  local!imageGalleryField_SafeLink2_altText: "",
+  local!imageGalleryField_SafeLink2_caption: "",
+  local!imageGalleryField_SafeLink3_source: "http://icons.iconarchive.com/icons/femfoyou/angry-birds/256/angry-bird-yellow-icon.png",
+  local!imageGalleryField_SafeLink3_altText: "",
+  local!imageGalleryField_SafeLink3_caption: "",
+ 
+  with(	
+		#"SYSTEM_SYSRULES_sectionLayoutColumns"(
+          label: "Dynamic Sail Component",
+          columns: {
+            #"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Label",
+                  instructions: "Enter text for the dynamic Label value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!imageGalleryField_label,
+                  saveInto: local!imageGalleryField_label
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Instructions",
+                  instructions: "Enter text for the dynamic Instructions value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!imageGalleryField_instructions,
+                  saveInto: local!imageGalleryField_instructions
+                ),
+                #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+                  label: "Size",
+                  instructions: "Select type for the dynamic Size value",
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    "STANDARD",
+                    "THUMBNAIL",					
+                    "null",
+					"(an invalid value)"
+                  },
+                  value: local!imageGalleryField_size,
+                  saveInto: local!imageGalleryField_size
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "SafeLink1_source",
+                  instructions: "Enter text for the dynamic Source value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!imageGalleryField_SafeLink1_source,
+                  saveInto: local!imageGalleryField_SafeLink1_source
+                ),
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "SafeLink1_altText",
+                  instructions: "Enter text for the dynamic altText value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!imageGalleryField_SafeLink1_altText,
+                  saveInto: local!imageGalleryField_SafeLink1_altText
+                ),
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "SafeLink1_caption",
+                  instructions: "Enter text for the dynamic Caption value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!imageGalleryField_SafeLink1_caption,
+                  saveInto: local!imageGalleryField_SafeLink1_caption
+                ),
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "SafeLink2_source",
+                  instructions: "Enter text for the dynamic Source value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!imageGalleryField_SafeLink2_source,
+                  saveInto: local!imageGalleryField_SafeLink2_source
+                ),
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "SafeLink2_altText",
+                  instructions: "Enter text for the dynamic altText value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!imageGalleryField_SafeLink2_altText,
+                  saveInto: local!imageGalleryField_SafeLink2_altText
+                ),
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "SafeLink2_caption",
+                  instructions: "Enter text for the dynamic Caption value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!imageGalleryField_SafeLink2_caption,
+                  saveInto: local!imageGalleryField_SafeLink2_caption
+                ),
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "SafeLink3_source",
+                  instructions: "Enter text for the dynamic Source value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!imageGalleryField_SafeLink3_source,
+                  saveInto: local!imageGalleryField_SafeLink3_source
+                ),
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "SafeLink3_altText",
+                  instructions: "Enter text for the dynamic altText value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!imageGalleryField_SafeLink3_altText,
+                  saveInto: local!imageGalleryField_SafeLink3_altText
+                ),
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "SafeLink3_caption",
+                  instructions: "Enter text for the dynamic Caption value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!imageGalleryField_SafeLink3_caption,
+                  saveInto: local!imageGalleryField_SafeLink3_caption
+                )				 
+              }
+            ),
+			#"SYSTEM_SYSRULES_columnLayout"(
+				contents: {			  
+					#"SYSTEM_SYSRULES_imageField"(
+					  label: imageGalleryField_label,
+					  size: if(local!imageGalleryField_size=1,"STANDARD",
+							if(local!imageGalleryField_size=2,"THUMBNAIL",
+							if(local!imageGalleryField_size=3,null(),
+							"Invalid Value :-)"))),
+					  instructions: local!imageGalleryField_instructions,
+					  images:{
+						#"SYSTEM_SYSRULES_webImage"(
+						  source: local!imageGalleryField_SafeLink1_source,
+						  altText: local!imageGalleryField_SafeLink1_altText,
+						  caption: local!imageGalleryField_SafeLink1_caption
+						),
+						#"SYSTEM_SYSRULES_webImage"(
+						  source: local!imageGalleryField_SafeLink2_source,
+						  altText: local!imageGalleryField_SafeLink2_altText,
+						  caption: local!imageGalleryField_SafeLink2_caption
+						),
+						#"SYSTEM_SYSRULES_webImage"(
+						  source: local!imageGalleryField_SafeLink3_source,
+						  altText: local!imageGalleryField_SafeLink3_altText,
+						  caption: local!imageGalleryField_SafeLink3_caption
+						)
+					  }
+					)
+				}
+			)
+          }
+        )
+      
+    
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26372"/>
+    </history>
+</contentHaul>

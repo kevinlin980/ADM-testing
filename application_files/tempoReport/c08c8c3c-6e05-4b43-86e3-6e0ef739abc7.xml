@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>b0eca92b-8acb-4067-91be-6f429c27dd75</versionUuid>
+    <tempoReport a:uuid="c08c8c3c-6e05-4b43-86e3-6e0ef739abc7" name="Dynamic Sail Components">
+        <a:uiExpr>=#"_a-0000d87d-aca3-8000-2678-010000010000_1538"()</a:uiExpr>
+        <a:urlStub>POXLXA</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>0001d065-e6ac-8000-e6ac-65075c65075c</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="b0eca92b-8acb-4067-91be-6f429c27dd75"/>
+    </history>
+</tempoReportHaul>

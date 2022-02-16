@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recordTypeHaul xmlns:a="http://www.appian.com/ae/types/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <versionUuid>71a46796-924d-4103-8c11-305ddc6095f2</versionUuid>
+  <recordType a:uuid="74fda519-09b6-4192-bafd-3e4bd90a42ee" name="Commit">
+    <a:pluralName>Commits</a:pluralName>
+    <a:description>All commits that have been created on Sprints. Source from Entity</a:description>
+    <a:urlStub>commit</a:urlStub>
+    <a:source
+      a:uuid="b285c4ed-eac8-49c5-8507-cdeb75366164@_a-0000d570-2b75-8000-2728-820000820000_2081" xsi:type="a:DataStoreEntity"/>
+    <a:listViewTemplateExpr>#"SYSTEM_SYSRULES_listViewItem"(&#xd;
+  image:#"_a-0000d552-52d7-8000-4b9d-010000010000_615", &#xd;
+  title:rf!desc, &#xd;
+  details:rf!jiraLink, &#xd;
+  timestamp:now()&#xd;
+)</a:listViewTemplateExpr>
+    <a:fieldCfg name="Title">
+      <a:sourceRef>desc</a:sourceRef>
+      <a:isSortable>false</a:isSortable>
+      <a:isSearchable>false</a:isSearchable>
+      <a:isFacet>true</a:isFacet>
+      <a:facetType>CUSTOM_BUCKETS_CLOSED</a:facetType>
+      <a:isExclusiveFacet>true</a:isExclusiveFacet>
+      <a:facetLabelExpr>="Commit Title"</a:facetLabelExpr>
+      <a:facetOption>
+        <a:labelExpr>="A"</a:labelExpr>
+        <a:facetOperator>BETWEEN</a:facetOperator>
+        <a:lowerLimitExpr>="A"</a:lowerLimitExpr>
+        <a:upperLimitExpr>="B"</a:upperLimitExpr>
+      </a:facetOption>
+      <a:facetOption>
+        <a:labelExpr>="B - C"</a:labelExpr>
+        <a:facetOperator>BETWEEN</a:facetOperator>
+        <a:lowerLimitExpr>="B"</a:lowerLimitExpr>
+        <a:upperLimitExpr>="D"</a:upperLimitExpr>
+      </a:facetOption>
+      <a:facetOption>
+        <a:labelExpr>="D - H"</a:labelExpr>
+        <a:facetOperator>BETWEEN</a:facetOperator>
+        <a:lowerLimitExpr>="D"</a:lowerLimitExpr>
+        <a:upperLimitExpr>="I"</a:upperLimitExpr>
+      </a:facetOption>
+      <a:sortOrderIndex>0</a:sortOrderIndex>
+      <a:facetOrderIndex>0</a:facetOrderIndex>
+      <a:allowMultipleSelections>false</a:allowMultipleSelections>
+    </a:fieldCfg>
+    <a:fieldCfg name="Sprint ID">
+      <a:sourceRef>sprintId</a:sourceRef>
+      <a:isSortable>false</a:isSortable>
+      <a:isSearchable>false</a:isSearchable>
+      <a:isFacet>true</a:isFacet>
+      <a:facetType>CUSTOM_BUCKETS_CLOSED</a:facetType>
+      <a:isExclusiveFacet>true</a:isExclusiveFacet>
+      <a:facetLabelExpr>="Sprint ID"</a:facetLabelExpr>
+      <a:facetOption>
+        <a:labelExpr>="Mobility"</a:labelExpr>
+        <a:facetOperator>IN</a:facetOperator>
+        <a:values>1</a:values>
+      </a:facetOption>
+      <a:facetOption>
+        <a:labelExpr>="Tempo UI"</a:labelExpr>
+        <a:facetOperator>IN</a:facetOperator>
+        <a:values>2</a:values>
+      </a:facetOption>
+      <a:facetOption>
+        <a:labelExpr>="Records"</a:labelExpr>
+        <a:facetOperator>IN</a:facetOperator>
+        <a:values>4</a:values>
+      </a:facetOption>
+      <a:sortOrderIndex>1</a:sortOrderIndex>
+      <a:facetOrderIndex>1</a:facetOrderIndex>
+      <a:allowMultipleSelections>false</a:allowMultipleSelections>
+    </a:fieldCfg>
+    <a:detailViewCfg>
+      <a:nameExpr>="Summary"</a:nameExpr>
+      <a:uiExpr>=#"_a-0000d566-475b-8000-345d-010000010000_614"()</a:uiExpr>
+      <a:visibilityExpr>=true()</a:visibilityExpr>
+      <a:urlStub>summary</a:urlStub>
+      <a:recordActionLaunchType>SAME_TAB</a:recordActionLaunchType>
+    </a:detailViewCfg>
+    <a:defaultSortInfo>
+      <field>desc</field>
+      <ascending>true</ascending>
+    </a:defaultSortInfo>
+    <a:isSystem>false</a:isSystem>
+    <a:layoutType>FEED</a:layoutType>
+    <a:security>16383</a:security>
+    <a:hideLatestNews>false</a:hideLatestNews>
+    <a:hideNewsView>false</a:hideNewsView>
+    <a:hideRelatedActionsView>false</a:hideRelatedActionsView>
+    <a:isExportable>true</a:isExportable>
+    <a:listAutoRefreshInterval>0.0</a:listAutoRefreshInterval>
+    <a:enabledFeatures>0</a:enabledFeatures>
+    <a:isVisibleInRecordTypeList>true</a:isVisibleInRecordTypeList>
+    <a:recordActionLaunchType>SAME_TAB</a:recordActionLaunchType>
+    <a:showSearchBox>true</a:showSearchBox>
+  </recordType>
+  <roleMap>
+    <role name="record_type_viewer">
+      <users/>
+      <groups>
+        <groupUuid>SYSTEM_GROUP_ROLE_APPLICATION_USERS</groupUuid>
+      </groups>
+    </role>
+  </roleMap>
+  <history>
+    <historyInfo versionUuid="71a46796-924d-4103-8c11-305ddc6095f2"/>
+  </history>
+  <migrationVersion>1</migrationVersion>
+</recordTypeHaul>

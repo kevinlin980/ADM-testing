@@ -1,0 +1,4 @@
+com.appiancorp.cloud.plugins.contentfunctions
+Content Expressions
+1.0.0
+

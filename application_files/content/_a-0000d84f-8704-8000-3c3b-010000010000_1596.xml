@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_25547</versionUuid>
+    <rule>
+        <name>dynamic_ButtonLayout</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1596</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+
+  local!buttonLayout_type: {1},
+
+  /*---- Button 1 ----*/
+  local!buttonLayout_buttonWidgetlabel_1: "primary Button",
+  local!buttonLayout_buttonWidgetstyle_1: "NORMAL",
+  local!buttonLayout_buttonWidgetconfirmMessage_1: "confirm message",
+  local!buttonLayout_buttonWidgetdisabled_1: {
+    2
+  },
+  local!buttonLayout_buttonWidgetvalue_1: "value",
+  
+  /*---- Button 2 ----*/
+  local!buttonLayout_buttonWidgetlabel_2: "secondary Button",
+  local!buttonLayout_buttonWidgetstyle_2: "NORMAL",
+  local!buttonLayout_buttonWidgetconfirmMessage_2: "confirm message",
+  local!buttonLayout_buttonWidgetdisabled_2: {
+    2
+  },  
+  local!buttonLayout_buttonWidgetvalue_2: "value",
+  with(
+	
+	/*---ButtonLayout---*/
+	
+	local!type_buttonArrayLayout: {
+	
+				#"SYSTEM_SYSRULES_ButtonArrayLayout"(
+					  buttons: {
+						#"SYSTEM_SYSRULES_ButtonWidget"(
+						  label: local!buttonLayout_buttonWidgetlabel_1,
+						  style: local!buttonLayout_buttonWidgetstyle_1,
+						  confirmMessage: local!buttonLayout_buttonWidgetconfirmMessage_1,
+						  disabled: if(
+							local!buttonLayout_buttonWidgetdisabled_1 = 1,
+							"true",
+							"false"
+						  ),
+						  value: local!buttonLayout_buttonWidgetvalue_1,
+						  saveInto: local!buttonLayout_buttonWidgetvalue_1
+						),
+						#"SYSTEM_SYSRULES_ButtonWidget"(
+						  label: local!buttonLayout_buttonWidgetlabel_2,
+						  style: local!buttonLayout_buttonWidgetstyle_2,
+						  confirmMessage: local!buttonLayout_buttonWidgetconfirmMessage_2,
+						  disabled: if(
+							local!buttonLayout_buttonWidgetdisabled_2 = 1,
+							"true",
+							"false"
+						  ),
+						  value: local!buttonLayout_buttonWidgetvalue_2,
+						  saveInto: local!buttonLayout_buttonWidgetvalue_2
+						)
+					  }
+				)
+	},
+	
+	/*---ButtonArrayLayout---*/
+	
+	local!type_buttonLayout: {
+					#"SYSTEM_SYSRULES_ButtonLayout"(
+						primaryButtons:{
+							#"SYSTEM_SYSRULES_ButtonWidget"(
+							  label: local!buttonLayout_buttonWidgetlabel_1,
+							  style: local!buttonLayout_buttonWidgetstyle_1,
+							  confirmMessage: local!buttonLayout_buttonWidgetconfirmMessage_1,
+							  disabled: if(
+								local!buttonLayout_buttonWidgetdisabled_1 = 1,
+								"true",
+								"false"
+							  ),
+							  value: local!buttonLayout_buttonWidgetvalue_1,
+							  saveInto: local!buttonLayout_buttonWidgetvalue_1
+							)
+						},
+						secondaryButtons:{
+							#"SYSTEM_SYSRULES_ButtonWidget"(
+							  label: local!buttonLayout_buttonWidgetlabel_2,
+							  style: local!buttonLayout_buttonWidgetstyle_2,
+							  confirmMessage: local!buttonLayout_buttonWidgetconfirmMessage_2,
+							  disabled: if(
+								local!buttonLayout_buttonWidgetdisabled_2 = 1,
+								"true",
+								"false"
+							  ),
+							  value: local!buttonLayout_buttonWidgetvalue_2,
+							  saveInto: local!buttonLayout_buttonWidgetvalue_2
+							)						
+						}
+						
+					)
+	},   
+	
+    #"SYSTEM_SYSRULES_sectionLayoutColumns"(
+      label: "Dynamic Sail Component",
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {	  
+			#"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+              label: "ButtonLayout",
+              instructions: "Select the type of Layout displayed",
+              required: false,
+              disabled: false,
+              choiceLabels: {
+                "buttonLayout",
+                "buttonArrayLayout"
+              },
+              value: local!buttonLayout_type,
+              saveInto: local!buttonLayout_type
+            ),		  
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Button 1 Label ",
+              instructions: "Enter text for the dynamic Label value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!buttonLayout_buttonWidgetlabel_1,
+              saveInto: local!buttonLayout_buttonWidgetlabel_1
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Button 1: Style ",
+              instructions: "Enter 'NORMAL' , 'PRIMARY' , 'DESTRUCTIVE' for the dynamic Style value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!buttonLayout_buttonWidgetstyle_1,
+              saveInto: local!buttonLayout_buttonWidgetstyle_1
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Button 1: Confirm Message",
+              instructions: "Enter text for the dynamic ConfirmMessage value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!buttonLayout_buttonWidgetconfirmMessage_1,
+              saveInto: local!buttonLayout_buttonWidgetconfirmMessage_1
+            ),
+            #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+              label: "Button 1: Disabled",
+              instructions: "Checked=true, Unchecked=false",
+              required: false,
+              disabled: false,
+              choiceLabels: {
+                "True",
+                "False"
+              },
+              value: local!buttonLayout_buttonWidgetdisabled_1,
+              saveInto: local!buttonLayout_buttonWidgetdisabled_1
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Button 1: Value",
+              instructions: "Enter text for the dynamic Value value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!buttonLayout_buttonWidgetvalue_1,
+              saveInto: local!buttonLayout_buttonWidgetvalue_1
+            ),
+			#"SYSTEM_SYSRULES_textField"(
+              label: "Button 2 Label ",
+              instructions: "Enter text for the dynamic Label value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!buttonLayout_buttonWidgetlabel_2,
+              saveInto: local!buttonLayout_buttonWidgetlabel_2
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Button 2: Style ",
+              instructions: "Enter 'NORMAL' , 'PRIMARY' , 'DESTRUCTIVE' for the dynamic Style value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!buttonLayout_buttonWidgetstyle_2,
+              saveInto: local!buttonLayout_buttonWidgetstyle_2
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Button 2: Confirm Message",
+              instructions: "Enter text for the dynamic ConfirmMessage value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!buttonLayout_buttonWidgetconfirmMessage_2,
+              saveInto: local!buttonLayout_buttonWidgetconfirmMessage_2
+            ),
+            #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+              label: "Button 2: Disabled",
+              instructions: "Checked=true, Unchecked=false",
+              required: false,
+              disabled: false,
+              choiceLabels: {
+                "True",
+                "False"
+              },
+              value: local!buttonLayout_buttonWidgetdisabled_2,
+              saveInto: local!buttonLayout_buttonWidgetdisabled_2
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Button 2: Value",
+              instructions: "Enter text for the dynamic Value value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!buttonLayout_buttonWidgetvalue_2,
+              saveInto: local!buttonLayout_buttonWidgetvalue_2
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+		  
+			 
+			if(local!buttonLayout_type=1,local!type_buttonArrayLayout,local!type_buttonLayout)
+			
+					
+					
+          }
+        )
+      }
+    )
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_25547"/>
+    </history>
+</contentHaul>

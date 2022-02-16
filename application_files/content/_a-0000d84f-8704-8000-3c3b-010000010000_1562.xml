@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_25645</versionUuid>
+    <rule>
+        <name>dynamic_TimeField</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1562</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  local!TimeField_label: "label",
+  local!TimeField_instructions: "instructions",  
+  local!TimeField_value: "value",
+  with(
+		
+		#"SYSTEM_SYSRULES_sectionLayoutColumns"(
+          label: "Dynamic Sail Component",
+          columns: {
+            #"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Label",
+                  instructions: "Enter text for the dynamic Label value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!TimeField_label,
+                  saveInto: local!TimeField_label
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Instructions",
+                  instructions: "Enter text for the dynamic Instructions value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!TimeField_instructions,
+                  saveInto: local!TimeField_instructions
+                ),                
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Value",
+                  instructions: "Enter text for the dynamic Value value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!TimeField_value,
+                  saveInto: local!TimeField_value
+                )
+				 
+              }
+            ),
+			#"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+			  
+			  #"SYSTEM_SYSRULES_timeDisplayField"(
+                  label: local!TimeField_label,
+                  instructions: local!TimeField_instructions,                  
+                  value: local!TimeField_value,
+                  saveInto: local!TimeField_value
+                )
+			  
+
+			  }
+			)
+          }
+        )
+      
+    
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_25645"/>
+    </history>
+</contentHaul>

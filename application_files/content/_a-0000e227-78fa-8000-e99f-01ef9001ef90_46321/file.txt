@@ -1,0 +1,103 @@
+Appian Documentation Logo
+Designers  Administrators  Developers  Release Information  Community
+
+
+  SEARCH
+Interface Components
+Display
+Image
+Link
+Milestone
+Progress Bar
+Rich Text
+Time Display
+Video
+Web Content Field [Preview]
+Web Video
+IMAGE TYPES
+Document Image
+User Image
+Web Image
+LINK TYPES
+Authorization Link
+Document Download Link
+Dynamic Link
+News Entry Link
+Process Task Link
+Record Link
+Report Link
+Start Process Link
+Submit Link
+User Record Link
+Web Link
+RICH TEXT TYPES
+Bulleted List
+Inline Image
+List Item
+Numbered List
+Styled Icon
+Styled Text
+Submit Link
+A new version of Appian is available! Update now to take advantage of the latest features in Appian 18.4.
+SUBMIT LINK
+SAIL Function: a!submitLink()
+
+Defines a link to trigger form submission. Links can be used in charts, grids, hierarchy browsers, images, link fields, milestones, pickers, and rich text.
+
+See also: Submit Button, Link, Images
+
+Parameters
+
+Name	Keyword	Type	Description
+Label	label	Text	Text associated with this link.
+Confirmation Message	confirmMessage	Text	Text to display in an optional confirmation dialog box where a null argument disables the confirmation dialog box and a text argument enables it with the text entered as the confirmation message.
+Confirmation Button Style	confirmButtonStyle	Text	Determines the style of the primary button in the confirmation dialog. Valid values: "PRIMARY" (default), "DESTRUCTIVE".
+Value	value	Any Type	Value to be saved when the link is clicked.
+Save Value To	saveInto	List of Save	One or more variables that are updated with the link value when the user clicks it. Use a!save() to save a modified or alternative value to a variable.
+Skip Validation	skipValidation	Boolean	When true, submit without performing validation. Default: false.
+Validation Group	validationGroup	Text	When present, this field is only validated when a button in the same validation group is clicked.
+Confirmation Header	confirmHeader	Text	Text to display at the top of the confirmation dialog.
+Confirm Button Label	confirmButtonLabel	Text	Text to display on the confirm button. Default: "Yes".
+Cancel Button Label	cancelButtonLabel	Text	Text to display on the cancel button. Default: "No".
+Visibility	showWhen	Boolean	Determines whether the component is displayed on the interface. When set to false, the component is hidden and is not evaluated. Default: true.
+Notes
+
+In the confirmation dialog there are two buttons. The confirm button is in the primary position and the cancel button is in the secondary position.
+If Confirmation Header and Confirmation Message are null, the SAIL interface refreshes and the Save Value To state change occurs once the user clicks the link. If either is not null, the confirmation dialog box displays. The SAIL interface only refreshes and the Save Value To state change only occurs if the user clicks the confirm button.
+The cancel button is always "SECONDARY" style.
+Examples
+
+Copy and paste an example to the expression view of the interface designer to see it displayed.
+
+Confirmation Dialog
+
+=a!linkField(
+  links: {
+    a!submitLink(
+      label: "Delete Request",
+      confirmHeader: "Warning!",
+      confirmMessage: "This request will be permanently deleted. Do you want to continue?",
+      confirmButtonLabel: "Delete Request",
+      confirmButtonStyle: "DESTRUCTIVE",
+      cancelButtonLabel: "Cancel"
+    )
+  }
+)
+Displays the following when clicked:
+
+
+
+Appian Training
+Appian Community
+About BPM
+Customer Support
+Disclaimer
+Privacy Policy
+
+© 2018 Appian Corporation
+18.1
+ON THIS PAGE
+
+Submit Link
+ FEEDBACK
+ 

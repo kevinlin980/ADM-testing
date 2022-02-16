@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26408</versionUuid>
+    <rule>
+        <name>dynamic_MilestoneField</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1576</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  local!milestoneField_label: "label",
+  local!milestoneField_instructions: "instructions",  
+  local!milestoneField_steps: "[Step 1][Step 2][Step 3][Step 4]",  
+  local!milestoneField_active: 1,
+  with(
+    #"SYSTEM_SYSRULES_sectionLayoutColumns"(
+      label: "Dynamic Sail Component",
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Label",
+              instructions: "Enter text for the dynamic Label value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!milestoneField_label,
+              saveInto: local!milestoneField_label
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Instructions",
+              instructions: "Enter text for the dynamic Instructions value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!milestoneField_instructions,
+              saveInto: local!milestoneField_instructions
+            ),           
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Steps",
+              instructions: "Enter Steps in boxes [], eg. [step5][step6][etc..]",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!milestoneField_steps,
+              saveInto: local!milestoneField_steps
+            ),			
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Active",
+              instructions: "Enter number of pre-selected choice for the dynamic Active value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!milestoneField_active,
+              saveInto: local!milestoneField_active
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_milestoneField"(
+              label: local!milestoneField_label,
+              instructions: local!milestoneField_instructions,              
+              steps: extract(local!milestoneField_steps,"[","]"),			  
+              active: tointeger(local!milestoneField_active)             
+            )
+          }
+        )
+      }
+    )
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26408"/>
+    </history>
+</contentHaul>

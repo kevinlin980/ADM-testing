@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e29a-1e4f-8000-1905-01ef9001ef90_49492</versionUuid>
+    <rule>
+        <name>simpleOfflineTask_1</name>
+        <uuid>_a-0000e21e-7cdd-8000-1047-01ef9001ef90_46242</uuid>
+        <description></description>
+        <parentUuid>_a-0000e186-8908-8000-4f48-01ef9001ef90_49455</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load(
+
+#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Task Name 1",
+  contents: {
+    {
+      #"SYSTEM_SYSRULES_sectionLayout_v1"(
+        contents: {
+          #"SYSTEM_SYSRULES_textField"(
+            label: "Task Name",
+            labelPosition: "ADJACENT",
+            value: ri!taskName,
+            saveInto: ri!taskName,
+            refreshAfter: "UNFOCUS",
+            instructions: "Add only 'a' to trigger validations",
+            readOnly:false,
+            required: "true",
+            validations: {
+              if(
+                ri!taskName = "a",
+                "Add more values",
+                ""
+              )
+            }
+          ),
+        }
+      )
+    },
+
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Submit",
+        submit: true,
+        style: "PRIMARY"
+      )
+    },
+    secondaryButtons: {}
+  )
+)
+)</definition>
+        <namedTypedValue>
+            <name>taskName</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>true</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e21e-7cdd-8000-1047-01ef9001ef90_46253"/>
+        <historyInfo versionUuid="_a-0000e255-8ff6-8000-ffe9-01ef9001ef90_46288"/>
+        <historyInfo versionUuid="_a-0000e29a-1e4f-8000-1905-01ef9001ef90_49492"/>
+    </history>
+</contentHaul>

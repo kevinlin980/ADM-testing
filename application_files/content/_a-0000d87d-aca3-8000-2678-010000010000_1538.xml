@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26432</versionUuid>
+    <rule>
+        <name>dynamic_sail_expressions_ui</name>
+        <uuid>_a-0000d87d-aca3-8000-2678-010000010000_1538</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1554</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= 
+load(
+  local!submitButton: true,
+  local!sailComponentIndex: 1,
+  with(
+    local!sailComponentText: index(
+      #"_a-0000d84f-8704-8000-3c3b-010000010000_1555",
+      local!sailComponentIndex,
+      ""
+    ),	
+    #"SYSTEM_SYSRULES_columnLayout"(
+      contents: {
+        #"SYSTEM_SYSRULES_sectionLayoutColumns"(
+          label: "Sail Component selection",
+          columns: {
+            #"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_dropdownFieldByIndex"(
+                  label: "Sail Component",
+                  instructions: "Select a sail component",
+                  required: true,
+                  disabled: false,
+                  choiceLabels: {
+                    #"_a-0000d84f-8704-8000-3c3b-010000010000_1555"
+                  },
+                  placeholderLabel: "-select a sail component-",
+                  value: local!sailComponentIndex,
+                  saveInto: local!sailComponentIndex
+                ),
+				#"SYSTEM_SYSRULES_ButtonArrayLayout"(
+				  buttons: {
+					#"SYSTEM_SYSRULES_ButtonWidgetSubmit"(
+					  label: "Submit",
+					  style: "PRIMARY",
+					  confirmMessage: "Submit?",
+					  disabled: false,
+					  skipValidation: true,
+					  value: true,
+					  saveInto: local!submitButton
+					)
+				  }
+				)
+              }
+            )
+          }
+        ),
+		if(
+		  local!sailComponentText = "DateTimePickerField",
+		  #"_a-0000d882-ffb1-8000-f9c7-010000010000_1489"(),
+		if(
+		  local!sailComponentText = "DocumentDownloadLink",
+		  #"_a-0000d882-ffb1-8000-f9c7-010000010000_1875"(),	
+		if(
+		  local!sailComponentText = "z-Testing Sandbox",
+		  #"_a-0000d879-cf1c-8000-c717-010000010000_1516"(),
+		if(
+		  local!sailComponentText = "ImageGalleryField",
+		  #"_a-0000d879-cf1c-8000-c717-010000010000_1499"(),
+		if(
+		  local!sailComponentText = "FileUploadField",
+		  #"_a-0000d879-cf1c-8000-c717-010000010000_1495"(),
+		if(
+		  local!sailComponentText = "PickerField",
+		  #"_a-0000d879-cf1c-8000-c717-010000010000_1505"(),			
+		if(
+		  local!sailComponentText = "AnyLinkField",
+		  #"_a-0000d879-cf1c-8000-c717-010000010000_1483"(),
+		if(
+          local!sailComponentText = "BarChart",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1597"(),
+		if(
+          local!sailComponentText = "ButtonLayout",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1596"(),
+        if(
+          local!sailComponentText = "ButtonWidget",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1595"(),
+		if(
+          local!sailComponentText = "CheckboxField",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1688"(),
+		if(
+          local!sailComponentText = "ColumnChart",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1593"(),
+		if(
+          local!sailComponentText = "ColumnLayout",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1592"(),
+        if(
+          local!sailComponentText = "DashboardLayout",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1591"(),
+		if(
+          local!sailComponentText = "DateField",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1590"(),
+		if(
+          local!sailComponentText = "DateTimeField",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1589"(),
+		if(
+          local!sailComponentText = "DropdownField",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1588"(),               
+		if(
+          local!sailComponentText = "DynamicLink",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1587"(),
+		if(
+          local!sailComponentText = "FloatingPointField (Decimal)",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1586"(),
+		if(
+          local!sailComponentText = "FormLayout",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1585"(),
+        if(
+          local!sailComponentText = "GridField",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1584"(),
+		if(
+          local!sailComponentText = "GridLinkColumn",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1583"(),
+		if(
+          local!sailComponentText = "GridTextColumn",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1582"(),
+		if(
+          local!sailComponentText = "ImageField",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1580"(),
+        if(
+          local!sailComponentText = "IntegerField",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1579"(),		  
+		if(
+          local!sailComponentText = "LineChart",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1578"(),
+		if(
+          local!sailComponentText = "LinkField",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1577"(),
+		if(
+          local!sailComponentText = "MilestoneField",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1576"(),
+        if(
+          local!sailComponentText = "MultipleDropdownField",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1575"(),
+		if(
+          local!sailComponentText = "ParagraphField",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1574"(),
+		if(
+          local!sailComponentText = "PieChart",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1573"(),
+		if(
+          local!sailComponentText = "ProcessTaskLink",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1572"(),
+        if(
+          local!sailComponentText = "ProgressBarField",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1571"(),		  
+		if(
+          local!sailComponentText = "RadioButtonField",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1570"(),
+		if(
+          local!sailComponentText = "RecordLink",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1569"(),
+		if(
+          local!sailComponentText = "SafeLink",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1568"(),
+        if(
+          local!sailComponentText = "SafeURI",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1567"(),
+		if(
+          local!sailComponentText = "SectionLayout",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1566"(),
+		if(
+          local!sailComponentText = "Simple Grid",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1565"(),		  
+		if(
+          local!sailComponentText = "StackedBarChart",
+          rule!dynamic_StackedBarChart(),
+		if(
+          local!sailComponentText = "TextField",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1563"(),		  
+		if(
+          local!sailComponentText = "TimeField",
+          #"_a-0000d84f-8704-8000-3c3b-010000010000_1562"(),			
+		  #"_a-0000d84f-8704-8000-3c3b-010000010000_1556"()		  
+        ))))))))))))))))))))))))))))))))))))))))))
+      }
+    )
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26432"/>
+    </history>
+</contentHaul>

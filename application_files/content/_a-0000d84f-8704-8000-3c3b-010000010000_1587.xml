@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26022</versionUuid>
+    <rule>
+        <name>dynamic_DynamicLink</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1587</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>
+= load(
+  local!dynamicLink_label: "label",
+  local!dynamicLink_value: true,
+  with(
+    #"SYSTEM_SYSRULES_sectionLayoutColumns"(
+      label: "Dynamic Sail Component",
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Label",
+              instructions: "Enter text for the dynamic Label value",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!dynamicLink_label,
+              saveInto: local!dynamicLink_label
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Value",
+              instructions: "Enter text for the dynamic Value value. (Appended to label)",
+              required: false,
+              readOnly: false,
+              disabled: false,
+              value: local!dynamicLink_value,
+              saveInto: local!dynamicLink_value
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_linkField"(
+              label: "",
+              instructions: "",
+              links: {
+                #"SYSTEM_SYSRULES_dynamicLink"(
+                  value: if(
+                    local!dynamicLink_value = "null",
+                    null(),
+                    not(
+                      local!dynamicLink_value
+                    )
+                  ),
+                  label: if(
+                    local!dynamicLink_label = "null",
+                    null(),
+                    local!dynamicLink_label &amp; " [Value = " &amp; local!dynamicLink_value &amp; "]"
+                  ),
+                  saveInto: local!dynamicLink_value
+                )
+              },
+              labelPosition: "ADJACENT"
+            )
+          }
+        )
+      }
+    )
+  )
+)          
+        
+        </definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26022"/>
+    </history>
+</contentHaul>

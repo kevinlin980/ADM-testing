@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26426</versionUuid>
+    <rule>
+        <name>dynamic_PickerField</name>
+        <uuid>_a-0000d879-cf1c-8000-c717-010000010000_1505</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+  local!pickerField_label: "label",
+  local!pickerField_instructions: "instructions",
+  local!pickerField_required: {2},
+  local!pickerField_readOnly: {2},
+  local!pickerField_disabled: {2},
+  local!pickerField_removeOnly: {2},
+  local!pickerField_validations,
+  local!pickerField_maxSelections: 5,
+  
+  /*TODO edit dynamically*/ 
+  local!pickerField_bookTitles: { "The Lord of the Rings", "The Hitchhiker's Guide to the Galaxy", "Ender's Game", "Dune", "A Game of Thrones", "1984", "Fahrenheit 451", "Foundation trilogy", "Brave New World", "American Gods", "The Princess Bride", "The Wheel of Time", "Animal Farm", "Neuromancer", "Watchmen", "I, Robot", "Stranger in a Strange Land", "The Name of the Wind (Kingkiller Chronicles)", "Slaughterhouse-Five", "Frankenstein", "Do Androids Dream of Electric Sheep?", "The Handmaid's Tale", "The Dark Tower", "2001: A Space Odyssey", "The Stand", "Snow Crash", "The Martian Chronicles", "Cat’s Cradle", "The Sandman series", "A Clockwork Orange", "Starship Troopers", "Watership Down", "Dragonflight (Pern)", "The Moon is a Harsh Mistress", "A Canticle for Leibowitz", "The Time Machine", "Twenty Thousand Leagues Under the Sea", "Flowers for Algernon", "The War of the Worlds", "Amber Chronicles", "The Belgariad", "The Mists of Avalon", "Mistborn trilogy", "Ringworld", "The Left Hand of Darkness", "The Silmarillion", "The Once and Future King", "Neverwhere", "Childhood's End", "Contact", "Hyperion", "Stardust", "Cryptonomicon", "World War Z: An Oral History of the Zombie War", "The Last Unicorn", "The Forever War", "Small Gods", "The Chronicles of Thomas Covenant, the Unbeliever", "The Vorkosigan Saga", "Going Postal", "The Mote in God's Eye", "The Sword of Truth", "The Road", "Jonathan Strange and Mr Norrell", "I Am Legend", "The Riftwar Saga", "The Sword of Shannara Trilogy", "Conan the Barbarian", "The Farseer trilogy", "The Time Traveler's Wife", "The Way of Kings", "A Journey To The Center Of The Earth", "The Legend of Drizzt series", "Old Man's War series", "The Diamond Age", "Rendezvous With Rama", "Kushiel's Dart trilogy", "The Dispossessed", "Something Wicked This Way Comes", "Wicked: The Life and Times of the Wicked Witch of the West", "The Malazan Book Of The Fallen series", "The Eyre Affair", "The Culture series", "The Crystal Cave", "Anathem", "The Codex Alera", "The Book of the New Sun", "The Thrawn trilogy", "Outlander series", "The Elric saga", "The Illustrated Man", "Sunshine", "A Fire Upon the Deep", "The Caves of Steel", "The Mars trilogy", "Lucifer's Hammer", "Doomsday Book", "Perdido Street Station", "The Xanth series", "The Space trilogy" },
+  
+  with(
+		/*TODO using released lamba expression*/ 
+		local!pickerField_searchBookTitles: lambda_appian_internal(
+		  ri!filter,
+		  with(
+			local!results: local!filterArray(ri!filter, local!pickerField_bookTitles),
+			'type!{http://www.appian.com/ae/types/2009}DataSubset'(data: local!results, identifiers: local!results)
+		  )
+		),
+		#"SYSTEM_SYSRULES_sectionLayoutColumns"(
+          label: "Dynamic Sail Component",
+          columns: {
+            #"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Label",
+                  instructions: "Enter text for the dynamic Label value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!pickerField_label,
+                  saveInto: local!pickerField_label
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Instructions",
+                  instructions: "Enter text for the dynamic Instructions value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!pickerField_instructions,
+                  saveInto: local!pickerField_instructions
+                ),
+                #"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+                  label: "Required",
+                  instructions: "Checked=true, Unchecked=false",
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    "True",
+                    "False"
+                  },
+                  value: local!pickerField_required,
+                  saveInto: local!pickerField_required
+                ),
+				#"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+                  label: "ReadOnly",
+                  instructions: "Checked=true, Unchecked=false",
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    "True",
+                    "False"
+                  },
+                  value: local!pickerField_readOnly,
+                  saveInto: local!pickerField_readOnly
+                ),
+				#"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+                  label: "Disabled",
+                  instructions: "Checked=true, Unchecked=false",
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    "True",
+                    "False"
+                  },
+                  value: local!pickerField_disabled,
+                  saveInto: local!pickerField_disabled
+                ),
+				#"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+                  label: "Remove Only",
+                  instructions: "Checked=true, Unchecked=false",
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    "True",
+                    "False"
+                  },
+                  value: local!pickerField_removeOnly,
+                  saveInto: local!pickerField_removeOnly
+                ),					
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Value",
+                  instructions: "Enter text for the dynamic Value value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!pickerField_validations,
+                  saveInto: local!pickerField_validations
+                ),
+				#"SYSTEM_SYSRULES_textField"(
+                  label: "Max Selections",
+                  instructions: "Enter integer for the dynamic Max Selections value",
+                  required: false,
+                  readOnly: false,
+                  disabled: false,
+                  value: local!pickerField_maxSelections,
+                  saveInto: tointeger(local!pickerField_maxSelections)
+                )
+				 
+              }
+            ),
+			#"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+			  
+				#"SYSTEM_SYSRULES_pickerFieldCustom"(
+				  label: local!pickerField_label,
+				  instructions: local!pickerField_instructions,
+				  required: if(local!pickerField_required=1,"true","false"),
+                  readOnly: if(local!pickerField_readOnly=1,"true","false"),
+                  disabled: if(local!pickerField_disabled=1,"true","false"),
+				  suggestFunction: local!pickerField_searchBookTitles,
+				  selectedLabels: local!pickerField_validations,				  
+				  value: local!pickerField_validations,
+				  saveInto: local!pickerField_validations
+				)			  
+
+			  }
+			)
+          }
+        )
+      
+    
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26426"/>
+    </history>
+</contentHaul>

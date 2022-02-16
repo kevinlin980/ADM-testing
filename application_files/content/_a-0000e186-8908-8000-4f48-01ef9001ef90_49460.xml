@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e21e-7cdd-8000-1047-01ef9001ef90_46234</versionUuid>
+    <rule>
+        <name>simpleOfflineAction</name>
+        <uuid>_a-0000e186-8908-8000-4f48-01ef9001ef90_49460</uuid>
+        <description></description>
+        <parentUuid>_a-0000e186-8908-8000-4f48-01ef9001ef90_49455</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load(
+  local!file1,
+  local!file2,
+
+#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Offline Action ",
+  contents: {
+    {
+      #"SYSTEM_SYSRULES_sectionLayout_v1"(
+        label: "",
+        contents: {
+          #"SYSTEM_SYSRULES_textField"(
+            label: "Task Name",
+            labelPosition: "ADJACENT",
+            value: ri!taskName,
+            saveInto: ri!taskName,
+            refreshAfter: "UNFOCUS",
+            required: true,
+            validations: {}
+          )
+        }
+      ),
+      #"SYSTEM_SYSRULES_radioButtonField"(
+        label: "Assign to initiator or group?",
+        labelPosition: "ADJACENT",
+        choiceLabels: {"Initiator", "Group"},
+        choiceValues: {"initiator", "group"},
+        value: ri!assignType,
+        saveInto: ri!assignType,
+        required: true,
+        choiceLayout: "STACKED",
+        validations: {}
+      )
+    },
+    #"SYSTEM_SYSRULES_textField"(
+      label: "Other test value",
+      labelPosition: "ADJACENT",
+      value: ri!otherFieldValue,
+      saveInto: ri!otherFieldValue,
+      instructions: "Add only 'a' to trigger validations",
+      refreshAfter: "UNFOCUS",
+      validations: {
+        if(
+          ri!otherFieldValue = "a",
+          "Add more values",
+          ""
+        )
+      }
+    ),
+    #"SYSTEM_SYSRULES_integerField"(
+      label: "Number of Tasks",
+      labelPosition: "ADJACENT",
+      value: ri!numberOfTasks,
+      saveInto: ri!numberOfTasks,
+      refreshAfter: "UNFOCUS",
+      validations: {}
+    ),
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Submit",
+        submit: true,
+        style: "PRIMARY"
+      )
+    },
+    secondaryButtons: {}
+  )
+)
+)</definition>
+        <namedTypedValue>
+            <name>taskName</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>assignType</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>otherFieldValue</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>numberOfTasks</name>
+            <type>
+                <name>int</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>true</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e186-8908-8000-4f48-01ef9001ef90_49515"/>
+        <historyInfo versionUuid="_a-0000e1f2-b641-8000-2797-01ef9001ef90_46452"/>
+        <historyInfo versionUuid="_a-0000e216-55f6-8000-1047-01ef9001ef90_46404"/>
+        <historyInfo versionUuid="_a-0000e21e-7cdd-8000-1047-01ef9001ef90_46234"/>
+    </history>
+</contentHaul>

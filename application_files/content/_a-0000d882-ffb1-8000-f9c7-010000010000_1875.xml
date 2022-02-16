@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26378</versionUuid>
+    <rule>
+        <name>dynamic_DocumentDownloadLink</name>
+        <uuid>_a-0000d882-ffb1-8000-f9c7-010000010000_1875</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(
+
+	local!anyLinkField_DocumentDownloadLink_documentToSearchFor: "mp3File",  
+    local!anyLinkField_DocumentDownloadLink_label: "DocumentDownLoadLink",  
+  	
+	with(	
+		
+		local!anyLinkField_DocumentDownloadLink_document: finddocumentsbyname(true, local!anyLinkField_DocumentDownloadLink_documentToSearchFor),
+		
+		#"SYSTEM_SYSRULES_sectionLayoutColumns"(
+          label: "Dynamic Sail Component",
+          columns: {
+				#"SYSTEM_SYSRULES_columnLayout"(
+				  contents: {                
+					#"SYSTEM_SYSRULES_textField"(
+					  label: "DocumentDownloadLink Document",
+					  instructions: "Enter name of document, logic will return first document matching name",
+					  required: false,
+					  readOnly: false,
+					  disabled: false,
+					  value: local!anyLinkField_DocumentDownloadLink_documentToSearchFor,
+					  saveInto: local!anyLinkField_DocumentDownloadLink_documentToSearchFor
+					),
+					#"SYSTEM_SYSRULES_textField"(
+					  label: "DocumentDownloadLink Label",
+					  instructions: "Enter text for the dynamic DocumentDownloadLink Label value",
+					  required: false,
+					  readOnly: false,
+					  disabled: false,
+					  value: local!anyLinkField_DocumentDownloadLink_label,
+					  saveInto: local!anyLinkField_DocumentDownloadLink_label
+					) 
+			  }
+            ),
+			#"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+
+				#"SYSTEM_SYSRULES_linkField"(
+					label: "",
+					instructions: "",
+					links: {	
+					
+						/*-TODO- need to change to a!type */ #"SYSTEM_SYSRULES_documentDownloadLink"( 
+							document: local!anyLinkField_DocumentDownloadLink_document, 
+							label: local!anyLinkField_DocumentDownloadLink_label
+						
+						)  			
+					},
+					labelPosition: "ADJACENT"							
+					)				
+				}
+			)
+          }
+        )
+      
+    
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_26378"/>
+    </history>
+</contentHaul>

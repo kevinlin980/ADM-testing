@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_25917</versionUuid>
+    <rule>
+        <name>dynamic_GridField</name>
+        <uuid>_a-0000d84f-8704-8000-3c3b-010000010000_1584</uuid>
+        <description></description>
+        <parentUuid>_a-0000d84f-8704-8000-3c3b-010000010000_1561</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>= load(   
+ 
+    /*====== GridField Variables ======*/ 
+	local!gridField_label: "Label",
+	local!gridField_instructions: "Instructions",
+	local!gridField_totalCount: 5,		
+	local!gridField_value: {},
+	local!gridField_checkedLinks: {1,2,3,4,5},
+	local!gridField_numberOfLinks: 5,
+	
+	/*====== SortInfo Variables =====*/   
+	local!gridField_sortInfo_field: "name",
+    local!gridField_sortInfo_ascending: true,
+	
+	/*====== PagingInfo Variables =====*/ 
+    local!gridField_pagingInfo_startIndex: 1,
+    local!gridField_pagingInfo_batchSize: 5,  
+	
+	/*====== GridTextColumn Variables ======*/  
+	local!gridField_GridTextColumn_label: "Label",
+    local!gridField_GridTextColumn_field: "LinkTypes",
+	local!gridField_GridTextColumn_data: {},
+	local!gridField_GridTextColumn_alignment: "LEFT",
+	local!gridField_GridTextColumn_links: {},
+	
+	/*====== SafeLink Variables ======*/
+	local!gridField_SafeLink_uri: "http://www.appian.com",
+	local!gridField_SafeLink_label: "SafeLink",
+  
+	/*====== ProcessTaskLink Variables ======*/
+	local!gridField_ProcessTaskLink_task: 1,
+	local!gridField_ProcessTaskLink_label: "ProcessTaskLink",
+  
+	/*====== DynamicLink Variables ======*/
+	local!gridField_DynamicLink_value: true,
+	local!gridField_DynamicLink_label: "DynamicLink", 
+  
+	/*====== RecordLink Variables ======*/
+	local!gridField_RecordLink_recordType: #"_a-0000d7c6-7676-8000-6fcc-010000010000_1309",
+	local!gridField_RecordLink_identifier: 1,
+	local!gridField_RecordLink_dashboard: "summary",
+	local!gridField_RecordLink_label: "RecordLink",
+  
+	/*====== DocumentLink Variables ======*/
+	local!gridField_DocumentDownloadLink_documentToSearchFor: "mp3File",  
+	local!gridField_DocumentDownloadLink_label: "DocumentDownLoadLink",  
+	
+  
+	with(
+	
+		local!gridField_DocumentDownloadLink_document: finddocumentsbyname(true, local!gridField_DocumentDownloadLink_documentToSearchFor),
+			
+
+		/*====== Links Type ======*/
+		local!gridField_SafeLink: {
+			#"SYSTEM_SYSRULES_safeLink"(
+				uri: if(local!gridField_SafeLink_uri="null",null(),local!gridField_SafeLink_uri),
+				label: if(local!gridField_SafeLink_label="null",null(),local!gridField_SafeLink_label)
+			  )  
+		}, 
+		local!gridField_ProcessTaskLink: {
+			#"SYSTEM_SYSRULES_processTaskLink"(
+				task: if(local!gridField_ProcessTaskLink_task="null",null(),toInteger(local!gridField_ProcessTaskLink_task)),
+				label: if(local!gridField_ProcessTaskLink_label="null",null(),local!gridField_ProcessTaskLink_label)
+			)  
+		},
+		local!gridField_DynamicLink: {  
+			#"SYSTEM_SYSRULES_dynamicLink"(
+				value: if(local!gridField_DynamicLink_value="null",null(),not(local!gridField_DynamicLink_value)),
+				label: if(local!gridField_DynamicLink_label="null",null(),local!gridField_DynamicLink_label &amp; " [Value = " &amp;local!gridField_DynamicLink_value&amp;"]"),
+				saveInto: local!gridField_DynamicLink_value
+			)  
+		},
+		local!gridField_RecordLink: {  
+			#"SYSTEM_SYSRULES_recordLink"(
+				recordType: local!gridField_RecordLink_recordType,
+				identifier: local!gridField_RecordLink_identifier,
+				dashboard: local!gridField_RecordLink_dashboard,
+				label: local!gridField_RecordLink_label
+			  )  
+		},	
+		local!gridField_DocumentDownloadLink: { 
+			#"SYSTEM_SYSRULES_documentDownloadLink"(
+				document: local!gridField_DocumentDownloadLink_document, 
+				label: local!gridField_DocumentDownloadLink_label			
+			)  
+		},
+		local!gridField_LinkList: {    
+			local!gridField_SafeLink,
+			local!gridField_ProcessTaskLink,
+			local!gridField_DynamicLink,
+			local!gridField_RecordLink,
+			local!gridField_DocumentDownloadLink   
+		},
+		local!gridField_Link_NamesList: {
+			"SafeLink",
+			"ProcessTaskLink",
+			"DynamicLink",
+			"RecordLink",
+			"DocumentDownloadLink"	
+		},
+		
+		/*====== Link Type Properties ======*/
+		
+		/*------ SafeLink ------*/	
+		local!gridField_SafeLink_dynamic_properties:{			
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "SafeLink URI",
+				  instructions: "Enter text for the dynamic SafeLink URI value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_SafeLink_uri,
+				  saveInto: local!gridField_SafeLink_uri
+				),
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "SafeLink Label",
+				  instructions: "Enter text for the dynamic SafeLink Label value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_SafeLink_label,
+				  saveInto: local!gridField_SafeLink_label
+				)            
+		},
+		/*------ ProcessTaskLink ------*/	
+		local!gridField_ProcessTaskLink_dynamic_properties:{			
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "ProcessTaskLink Task id",
+				  instructions: "Enter text for the dynamic ProcessTaskLink Task id value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_ProcessTaskLink_task,
+				  saveInto: local!gridField_ProcessTaskLink_task
+				),
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "ProcessTaskLink Label",
+				  instructions: "Enter text for the dynamic ProcessTaskLink Label value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_ProcessTaskLink_label,
+				  saveInto: local!gridField_ProcessTaskLink_label
+				)  			
+		},
+		/*------ DynamicLink ------*/	
+		local!gridField_DynamicLink_dynamic_properties:{			
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "DynamicLink Value",
+				  instructions: "Enter text for the dynamic DynamicLink Value value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_DynamicLink_value,
+				  saveInto: local!gridField_DynamicLink_value
+				),
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "DynamicLink Label",
+				  instructions: "Enter text for the dynamic DynamicLink Label value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_DynamicLink_label,
+				  saveInto: local!gridField_DynamicLink_label
+				)            
+		},
+		/*------ RecordLink ------*/
+		local!gridField_RecordLink_dynamic_properties:{
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "RecordLink RecordType",
+				  instructions: "Dynamic field TBD",
+				  required: false,
+				  readOnly: true,
+				  disabled: false,
+				  value: "cons!CompanyRecordType"              
+				),
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "RecordLink Identifier",
+				  instructions: "Enter text for the dynamic RecordLink Identifier value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_RecordLink_identifier,
+				  saveInto: local!gridField_RecordLink_identifier
+				),
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "RecordLink Dashboard",
+				  instructions: "Enter text for the dynamic RecordLink Dashboard value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_RecordLink_dashboard,
+				  saveInto: local!gridField_RecordLink_dashboard
+				),
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "RecordLink Label",
+				  instructions: "Enter text for the dynamic RecordLink Label value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_RecordLink_label,
+				  saveInto: local!gridField_RecordLink_label
+				) 			
+		},
+		/*------ DocumentDownloadLink ------*/	
+		local!gridField_DocumentDownloadLink_dynamic_properties:{			
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "DocumentDownloadLink Document",
+				  instructions: "Enter name of document, logic will return first document matching name",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_DocumentDownloadLink_documentToSearchFor,
+				  saveInto: local!gridField_DocumentDownloadLink_documentToSearchFor
+				),
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "DocumentDownloadLink Label",
+				  instructions: "Enter text for the dynamic DocumentDownloadLink Label value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_DocumentDownloadLink_label,
+				  saveInto: local!gridField_DocumentDownloadLink_label
+				) 
+		},
+		local!gridField_dynamicPropertiesList: {
+			local!gridField_SafeLink_dynamic_properties,
+			local!gridField_ProcessTaskLink_dynamic_properties,
+			local!gridField_DynamicLink_dynamic_properties,
+			local!gridField_RecordLink_dynamic_properties,
+			local!gridField_DocumentDownloadLink_dynamic_properties
+		},
+		
+			
+		local!gridField_unCheckedLinks: if(isnull(local!gridField_checkedLinks),null(),remove(enumerate(local!gridField_numberOfLinks)+1, local!gridField_checkedLinks)),  
+		local!gridField_shown_links: if(isnull(local!gridField_unCheckedLinks),null(),remove(local!gridField_LinkList, local!gridField_unCheckedLinks)),
+		local!gridField_shown_names: if(isnull(local!gridField_unCheckedLinks),null(),remove(local!gridField_Link_NamesList, local!gridField_unCheckedLinks)),	
+		/*TODO- make properties not show up when not checked */
+		local!gridField_shown_dynamicProperties: local!gridField_dynamicPropertiesList,  
+
+		
+		/*====== GridTextColumn Properties ======*/ 
+		local!gridField_GridTextColumn_dynamic_properties: {
+		 
+			#"SYSTEM_SYSRULES_textField"(
+				  label: "GridTextColumn Label",
+				  instructions: "GridTextColumn: Enter text for the dynamic Label value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_GridTextColumn_label,
+				  saveInto: local!gridField_GridTextColumn_label
+			),
+			#"SYSTEM_SYSRULES_textField"(
+				  label: "GridTextColumn Field",
+				  instructions: "GridTextColumn: Enter text for the dynamic Field value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_GridTextColumn_field,
+				  saveInto: local!gridField_GridTextColumn_field
+			),
+			#"SYSTEM_SYSRULES_textField"(
+				  label: "GridTextColumn Alignment",
+				  instructions: "GridTextColumn: Enter text for the dynamic Alignment value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_GridTextColumn_alignment,
+				  saveInto: local!gridField_GridTextColumn_alignment
+			)           
+		},		
+		/*====== GridTextColumn ======*/ 
+		local!gridField_GridTextColumn: {
+		 
+			#"SYSTEM_SYSRULES_gridTextColumn"(
+				label: local!gridField_GridTextColumn_label,
+				field: local!gridField_GridTextColumn_field,
+				data: local!gridField_shown_names,
+				alignment: local!gridField_GridTextColumn_alignment,
+				links: local!gridField_shown_links
+			)
+
+		},
+		/*====== SortInfo Propertites =====*/		
+		local!gridField_SortInfo_dynamic_properties:{
+		
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "SortInfo Field",
+				  instructions: "SortInfo: Enter text for the dynamic Field value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_sortInfo_field,
+				  saveInto: local!gridField_sortInfo_field
+				),
+				#"SYSTEM_SYSRULES_radioButtonFieldByIndex"(
+                  label: "SortInfo Ascending",
+                  instructions: "SortInfo: Select the dynamic ascending value",
+                  required: false,
+                  disabled: false,
+                  choiceLabels: {
+                    "True",
+                    "False",
+					"Null"
+                  },
+                  value: local!gridField_sortInfo_ascending,
+                  saveInto: local!gridField_sortInfo_ascending
+                )	
+		},		
+		/*====== PagingInfo Propertites =====*/		
+		local!gridField_PagingInfo_dynamic_properties:{
+		
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "PagingInfo startIndex",
+				  instructions: "PagingInfo: Enter integer for the dynamic startIndex value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_pagingInfo_startIndex,
+				  saveInto: local!gridField_pagingInfo_startIndex
+				),
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "PagingInfo batchSize",
+				  instructions: "PagingInfo: Enter integer for the dynamic batchSize value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_pagingInfo_batchSize,
+				  saveInto: local!gridField_pagingInfo_batchSize
+				)
+		},		
+		/*===== The Section Layout =====*/
+		#"SYSTEM_SYSRULES_sectionLayoutColumns"(
+		  label: "Dynamic Sail Component",
+		  columns: {
+			#"SYSTEM_SYSRULES_columnLayout"(
+			  contents: {			
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "Label",
+				  instructions: "Enter text for the dynamic Label value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_label,
+				  saveInto: local!gridField_label
+				),
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "Instructions",
+				  instructions: "Enter text for the dynamic Instructions value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_instructions,
+				  saveInto: local!gridField_instructions
+				),
+				#"SYSTEM_SYSRULES_textField"(
+				  label: "Total Count",
+				  instructions: "Enter Integer for the dynamic Total Count value",
+				  required: false,
+				  readOnly: false,
+				  disabled: false,
+				  value: local!gridField_totalCount,
+				  saveInto: local!gridField_totalCount 
+				),				
+				#"SYSTEM_SYSRULES_checkboxFieldByIndex"(
+				  label: "Links",
+				  instructions: "Check a Link type to add it to the dynamic Links value",
+				  required: false,
+				  disabled: false,
+				  choiceLabels: {
+					"SafeLink",
+					"ProcessTaskLink",
+					"DynamicLink",
+					"RecordLink",
+					"DocumentDownloadLink"   
+				  },
+				  value: local!gridField_checkedLinks,
+				  saveInto: local!gridField_checkedLinks				  
+				),				
+				local!gridField_shown_dynamicProperties,
+				local!gridField_GridTextColumn_dynamic_properties,
+				local!gridField_PagingInfo_dynamic_properties,
+				local!gridField_SortInfo_dynamic_properties
+			  }
+			),
+	
+			
+			/*===== THE DYNAMIC VARIABLE =====*/
+			#"SYSTEM_SYSRULES_columnLayout"(
+				contents: {
+				
+				
+				#"SYSTEM_SYSRULES_gridField"(				
+					label: local!gridField_label, 
+					instructions: local!gridField_instructions,
+					totalCount: local!gridField_totalCount,
+					columns: local!gridField_GridTextColumn,					
+					value: #"SYSTEM_SYSRULES_pagingInfo"(
+						startIndex: tointeger(local!gridField_pagingInfo_startIndex),
+						batchSize: tointeger(local!gridField_pagingInfo_batchSize),
+						sort: #"SYSTEM_SYSRULES_sortInfo"(
+							field: local!gridField_sortInfo_field,    
+							ascending: if(local!gridField_sortInfo_ascending=1,true,if(local!gridField_sortInfo_ascending=2,false,null()))		
+						)
+					  )
+										
+				)				
+			  										
+				
+			  
+				
+			  }
+			)
+		  }
+		)
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users>
+                <userUuid>Administrator</userUuid>
+            </users>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e736-0e2a-8000-c8d9-01ef9001ef90_25917"/>
+    </history>
+</contentHaul>

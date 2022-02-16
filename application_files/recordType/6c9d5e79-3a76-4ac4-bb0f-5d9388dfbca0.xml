@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recordTypeHaul xmlns:a="http://www.appian.com/ae/types/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <versionUuid>e6b0d330-f522-4c94-b055-97acfbf9ec3d</versionUuid>
+  <recordType a:uuid="6c9d5e79-3a76-4ac4-bb0f-5d9388dfbca0" name="Offline Task">
+    <a:pluralName>Offline Tasks</a:pluralName>
+    <a:description/>
+    <a:urlStub>ICfK8w</a:urlStub>
+    <a:source a:uuid="0002e187-12d8-8000-4f48-014d98014d98" xsi:type="a:ProcessModel"/>
+    <a:listViewTemplateExpr>#"SYSTEM_SYSRULES_recordGridLayoutColumns"(
+  columns: {
+    #"SYSTEM_SYSRULES_gridLayoutColumn"(
+      label: "Task Name",
+      width: "DISTRIBUTE",
+      component: #"SYSTEM_SYSRULES_recordGrid_linkField"(
+        links: #"SYSTEM_SYSRULES_recordLink"(
+          label: "Task Name: " &amp; rf!taskName,
+          recordType: rp!type,
+          identifier: rp!id
+        )
+      )
+    ),
+    #"SYSTEM_SYSRULES_gridLayoutColumn"(
+      label: "Task Name",
+      field: "taskName",
+      component: #"SYSTEM_SYSRULES_recordGrid_textField"(
+        displayValue: "Task Name: " &amp; rf!taskName,
+        align: null
+      )
+    ),
+    #"SYSTEM_SYSRULES_gridLayoutColumn"(
+      label: "Assign Type",
+      field: "assignType",
+      component: #"SYSTEM_SYSRULES_recordGrid_textField"(
+        displayvalue: rf!assignType
+      )
+    ),
+    #"SYSTEM_SYSRULES_gridLayoutColumn"(
+      label: "Other Field Value",
+      field: "otherFieldValue",
+      component: #"SYSTEM_SYSRULES_recordGrid_textField"(
+        displayValue: rf!otherFieldValue,
+        align: null
+      )
+    )
+  },
+  pageSize: 50,
+  defaultSort: #"SYSTEM_SYSRULES_sortInfo"(
+    ascending: fn!true()
+  ),
+  shadeAlternateRows: true
+)</a:listViewTemplateExpr>
+    <a:detailViewCfg>
+      <a:nameExpr>="Summary"</a:nameExpr>
+      <a:uiExpr>#"_a-0000e186-8908-8000-4f48-01ef9001ef90_49502"(
+  rf!taskName,
+  rf!assignType,
+  rf!otherFieldValue,
+  rf!SFU,
+  rf!MFU
+)</a:uiExpr>
+      <a:visibilityExpr>=true()</a:visibilityExpr>
+      <a:urlStub>summary</a:urlStub>
+      <a:headerExpr/>
+      <a:recordActionLaunchType>SAME_TAB</a:recordActionLaunchType>
+    </a:detailViewCfg>
+    <a:isSystem>false</a:isSystem>
+    <a:dataSrcExpr/>
+    <a:facetsListExpr/>
+    <a:titleExpr/>
+    <a:defaultFiltersExpr/>
+    <a:layoutType>GRID</a:layoutType>
+    <a:security>32767</a:security>
+    <a:hideLatestNews>false</a:hideLatestNews>
+    <a:hideNewsView>false</a:hideNewsView>
+    <a:hideRelatedActionsView>false</a:hideRelatedActionsView>
+    <a:isExportable>false</a:isExportable>
+    <a:listViewSrcExpr/>
+    <a:recordViewSrcExpr/>
+    <a:iconId/>
+    <a:listAutoRefreshInterval>0.0</a:listAutoRefreshInterval>
+    <a:enabledFeatures>0</a:enabledFeatures>
+    <a:isVisibleInRecordTypeList>true</a:isVisibleInRecordTypeList>
+    <a:recordActionLaunchType>SAME_TAB</a:recordActionLaunchType>
+    <a:showSearchBox>true</a:showSearchBox>
+  </recordType>
+  <roleMap/>
+  <history>
+    <historyInfo versionUuid="d808cb92-a24d-4f5d-a073-4d2be1acb3ec"/>
+    <historyInfo versionUuid="e6b0d330-f522-4c94-b055-97acfbf9ec3d"/>
+  </history>
+  <migrationVersion>1</migrationVersion>
+</recordTypeHaul>
