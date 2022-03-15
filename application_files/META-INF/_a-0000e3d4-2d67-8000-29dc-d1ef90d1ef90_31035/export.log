@@ -1,214 +1,24 @@
-Success (21):
-application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 "feedObjects"
-tempoFeed 27 452c303b-3cf5-4a1b-ba96-c8bd9fc7af06 "feed1"
-tempoFeed 28 14c804c4-2245-4770-9283-2054cbba308c "feed2"
-tempoFeed 29 65cfc1dd-c584-4d34-a692-ba87e705fe9e "feed3"
-tempoFeed 30 d7d4f135-739a-4285-85d2-2c36b8bdfa22 "feed4"
-tempoFeed 31 c105d88d-2694-40be-8f49-b7ca7c1dbcfb "feed5"
-tempoFeed 32 6e5bbda0-78d6-4833-8a9c-4457bd4e55f8 "feed6"
-tempoFeed 33 93fd2bd5-95fe-4ac9-aec3-f298e029767d "feed7"
-tempoFeed 34 d12e6f5a-e129-4dd2-bcd7-809914a9a1b7 "feed8"
-tempoFeed 35 66bd3693-b89b-4984-9c61-9229468ffff4 "feed9"
-tempoFeed 36 ffaf68b6-9e3b-4507-a274-fc1f2a058d30 "feed10"
-tempoFeed 37 88a08fc6-85d8-4b19-a0e9-0a2beb3dd67b "feed11"
-tempoFeed 38 677a2fa2-fe9f-4d27-aa9e-93890e67d6cb "feed12"
-tempoFeed 39 dc1a3030-6a52-40ac-810f-070f43df73eb "feed13"
-tempoFeed 40 3c79b732-03a5-4dd0-b0ca-e6098da5c962 "feed14"
-tempoFeed 41 db22fb2a-8fc8-4d1e-bd13-9d4ec4248387 "feed15"
-tempoFeed 42 439c2fd6-54fb-49b5-b32c-6c7d2ab1e81d "feed16"
-tempoFeed 43 421f2a61-a32f-444b-97df-21916221faeb "feed17"
-tempoFeed 44 bc8549d6-2716-4700-8a52-4af904f68cca "feed18"
-tempoFeed 45 c8964f18-471b-460f-8b44-5002202a94eb "feed19"
-tempoFeed 46 d9c6e233-ade4-4022-962f-f9d3eb36f613 "feed20"
+Success (2):
+tempoFeed 20 c8964f18-471b-460f-8b44-5002202a94eb "feed19"
+tempoFeed 21 d9c6e233-ade4-4022-962f-f9d3eb36f613 "feed20"
 
 Referenced precedents that were not exported (1):
 user kevin.lin.d kevin.lin.d
 
 Trace:
-2020-01-14 14:32:07.594 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Begin transport.
-2020-01-14 14:32:07.594 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Retrieving object data.
-2020-01-14 14:32:07.606 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 App associated objects: [tempoFeed=[452c303b-3cf5-4a1b-ba96-c8bd9fc7af06, 14c804c4-2245-4770-9283-2054cbba308c, 65cfc1dd-c584-4d34-a692-ba87e705fe9e, d7d4f135-739a-4285-85d2-2c36b8bdfa22, c105d88d-2694-40be-8f49-b7ca7c1dbcfb, 6e5bbda0-78d6-4833-8a9c-4457bd4e55f8, 93fd2bd5-95fe-4ac9-aec3-f298e029767d, d12e6f5a-e129-4dd2-bcd7-809914a9a1b7, 66bd3693-b89b-4984-9c61-9229468ffff4, ffaf68b6-9e3b-4507-a274-fc1f2a058d30, 88a08fc6-85d8-4b19-a0e9-0a2beb3dd67b, 677a2fa2-fe9f-4d27-aa9e-93890e67d6cb, dc1a3030-6a52-40ac-810f-070f43df73eb, 3c79b732-03a5-4dd0-b0ca-e6098da5c962, db22fb2a-8fc8-4d1e-bd13-9d4ec4248387, 439c2fd6-54fb-49b5-b32c-6c7d2ab1e81d, 421f2a61-a32f-444b-97df-21916221faeb, bc8549d6-2716-4700-8a52-4af904f68cca, c8964f18-471b-460f-8b44-5002202a94eb, d9c6e233-ade4-4022-962f-f9d3eb36f613]]
-2020-01-14 14:32:07.609 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Invalid associated objects: []
-2020-01-14 14:32:07.609 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Adding valid associated objects to be exported: GlobalBindingMap[tempoFeed={452c303b-3cf5-4a1b-ba96-c8bd9fc7af06=27, 14c804c4-2245-4770-9283-2054cbba308c=28, 65cfc1dd-c584-4d34-a692-ba87e705fe9e=29, d7d4f135-739a-4285-85d2-2c36b8bdfa22=30, c105d88d-2694-40be-8f49-b7ca7c1dbcfb=31, 6e5bbda0-78d6-4833-8a9c-4457bd4e55f8=32, 93fd2bd5-95fe-4ac9-aec3-f298e029767d=33, d12e6f5a-e129-4dd2-bcd7-809914a9a1b7=34, 66bd3693-b89b-4984-9c61-9229468ffff4=35, ffaf68b6-9e3b-4507-a274-fc1f2a058d30=36, 88a08fc6-85d8-4b19-a0e9-0a2beb3dd67b=37, 677a2fa2-fe9f-4d27-aa9e-93890e67d6cb=38, dc1a3030-6a52-40ac-810f-070f43df73eb=39, 3c79b732-03a5-4dd0-b0ca-e6098da5c962=40, db22fb2a-8fc8-4d1e-bd13-9d4ec4248387=41, 439c2fd6-54fb-49b5-b32c-6c7d2ab1e81d=42, 421f2a61-a32f-444b-97df-21916221faeb=43, bc8549d6-2716-4700-8a52-4af904f68cca=44, c8964f18-471b-460f-8b44-5002202a94eb=45, d9c6e233-ade4-4022-962f-f9d3eb36f613=46}]
-2020-01-14 14:32:07.609 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Setting uuids of object references.
-2020-01-14 14:32:07.609 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Processing reference: Application.forum
-2020-01-14 14:32:07.61 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Processing reference: Application.parent
-2020-01-14 14:32:07.615 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Processing reference: com.appiancorp.suiteapi.content.ContentRoleMap@3fa61233[
-  ContentRole[name=readers,inherit=false,allowForAll=false]
-  ContentRole[name=authors,inherit=false,allowForAll=false]
-  ContentRole[name=administrators,usernames=[kevin.lin.d],inherit=false,allowForAll=false]
-  ContentRole[name=denyReaders,inherit=false,allowForAll=false]
-  ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
-  ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
-  securityVector=129:SEC_PUBLIC=true,SEC_CREATOR_ADMIN=true,SEC_INH_ADMIN=false,SEC_INH_EDITOR=false,SEC_INH_VIEWER=false,SEC_ALL_ADMIN=false,SEC_ALL_EDITOR=false,SEC_ALL_VIEWER=false
-]
-2020-01-14 14:32:07.615 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Processing reference: ContentRole[name=readers,inherit=false,allowForAll=false]
-2020-01-14 14:32:07.615 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Processing reference: ContentRole[name=authors,inherit=false,allowForAll=false]
-2020-01-14 14:32:07.615 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Processing reference: ContentRole[name=administrators,usernames=[kevin.lin.d],inherit=false,allowForAll=false]
-2020-01-14 14:32:07.619 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Processing reference: ContentRole[name=denyReaders,inherit=false,allowForAll=false]
-2020-01-14 14:32:07.619 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Processing reference: ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
-2020-01-14 14:32:07.619 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Processing reference: ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
-2020-01-14 14:32:07.622 DEBUG tempoFeed 27 452c303b-3cf5-4a1b-ba96-c8bd9fc7af06 Begin transport.
-2020-01-14 14:32:07.622 DEBUG tempoFeed 27 452c303b-3cf5-4a1b-ba96-c8bd9fc7af06 Retrieving object data.
-2020-01-14 14:32:07.641 DEBUG tempoFeed 27 452c303b-3cf5-4a1b-ba96-c8bd9fc7af06 Setting uuids of object references.
-2020-01-14 14:32:07.641 DEBUG tempoFeed 27 452c303b-3cf5-4a1b-ba96-c8bd9fc7af06 Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:07.643 DEBUG tempoFeed 27 452c303b-3cf5-4a1b-ba96-c8bd9fc7af06 Completing produce.
-2020-01-14 14:32:07.643 DEBUG tempoFeed 27 452c303b-3cf5-4a1b-ba96-c8bd9fc7af06 Exporting binary resources.
-2020-01-14 14:32:07.643 DEBUG tempoFeed 27 452c303b-3cf5-4a1b-ba96-c8bd9fc7af06 Serializing object to XML.
-2020-01-14 14:32:07.655 DEBUG tempoFeed 27 452c303b-3cf5-4a1b-ba96-c8bd9fc7af06 Object transported.
-2020-01-14 14:32:07.655 DEBUG tempoFeed 28 14c804c4-2245-4770-9283-2054cbba308c Begin transport.
-2020-01-14 14:32:07.655 DEBUG tempoFeed 28 14c804c4-2245-4770-9283-2054cbba308c Retrieving object data.
-2020-01-14 14:32:07.671 DEBUG tempoFeed 28 14c804c4-2245-4770-9283-2054cbba308c Setting uuids of object references.
-2020-01-14 14:32:07.671 DEBUG tempoFeed 28 14c804c4-2245-4770-9283-2054cbba308c Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:07.675 DEBUG tempoFeed 28 14c804c4-2245-4770-9283-2054cbba308c Completing produce.
-2020-01-14 14:32:07.675 DEBUG tempoFeed 28 14c804c4-2245-4770-9283-2054cbba308c Exporting binary resources.
-2020-01-14 14:32:07.675 DEBUG tempoFeed 28 14c804c4-2245-4770-9283-2054cbba308c Serializing object to XML.
-2020-01-14 14:32:07.683 DEBUG tempoFeed 28 14c804c4-2245-4770-9283-2054cbba308c Object transported.
-2020-01-14 14:32:07.683 DEBUG tempoFeed 29 65cfc1dd-c584-4d34-a692-ba87e705fe9e Begin transport.
-2020-01-14 14:32:07.683 DEBUG tempoFeed 29 65cfc1dd-c584-4d34-a692-ba87e705fe9e Retrieving object data.
-2020-01-14 14:32:07.698 DEBUG tempoFeed 29 65cfc1dd-c584-4d34-a692-ba87e705fe9e Setting uuids of object references.
-2020-01-14 14:32:07.698 DEBUG tempoFeed 29 65cfc1dd-c584-4d34-a692-ba87e705fe9e Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:07.7 DEBUG tempoFeed 29 65cfc1dd-c584-4d34-a692-ba87e705fe9e Completing produce.
-2020-01-14 14:32:07.7 DEBUG tempoFeed 29 65cfc1dd-c584-4d34-a692-ba87e705fe9e Exporting binary resources.
-2020-01-14 14:32:07.7 DEBUG tempoFeed 29 65cfc1dd-c584-4d34-a692-ba87e705fe9e Serializing object to XML.
-2020-01-14 14:32:07.71 DEBUG tempoFeed 29 65cfc1dd-c584-4d34-a692-ba87e705fe9e Object transported.
-2020-01-14 14:32:07.71 DEBUG tempoFeed 30 d7d4f135-739a-4285-85d2-2c36b8bdfa22 Begin transport.
-2020-01-14 14:32:07.71 DEBUG tempoFeed 30 d7d4f135-739a-4285-85d2-2c36b8bdfa22 Retrieving object data.
-2020-01-14 14:32:07.731 DEBUG tempoFeed 30 d7d4f135-739a-4285-85d2-2c36b8bdfa22 Setting uuids of object references.
-2020-01-14 14:32:07.731 DEBUG tempoFeed 30 d7d4f135-739a-4285-85d2-2c36b8bdfa22 Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:07.733 DEBUG tempoFeed 30 d7d4f135-739a-4285-85d2-2c36b8bdfa22 Completing produce.
-2020-01-14 14:32:07.733 DEBUG tempoFeed 30 d7d4f135-739a-4285-85d2-2c36b8bdfa22 Exporting binary resources.
-2020-01-14 14:32:07.733 DEBUG tempoFeed 30 d7d4f135-739a-4285-85d2-2c36b8bdfa22 Serializing object to XML.
-2020-01-14 14:32:07.742 DEBUG tempoFeed 30 d7d4f135-739a-4285-85d2-2c36b8bdfa22 Object transported.
-2020-01-14 14:32:07.742 DEBUG tempoFeed 31 c105d88d-2694-40be-8f49-b7ca7c1dbcfb Begin transport.
-2020-01-14 14:32:07.742 DEBUG tempoFeed 31 c105d88d-2694-40be-8f49-b7ca7c1dbcfb Retrieving object data.
-2020-01-14 14:32:07.756 DEBUG tempoFeed 31 c105d88d-2694-40be-8f49-b7ca7c1dbcfb Setting uuids of object references.
-2020-01-14 14:32:07.756 DEBUG tempoFeed 31 c105d88d-2694-40be-8f49-b7ca7c1dbcfb Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:07.758 DEBUG tempoFeed 31 c105d88d-2694-40be-8f49-b7ca7c1dbcfb Completing produce.
-2020-01-14 14:32:07.758 DEBUG tempoFeed 31 c105d88d-2694-40be-8f49-b7ca7c1dbcfb Exporting binary resources.
-2020-01-14 14:32:07.758 DEBUG tempoFeed 31 c105d88d-2694-40be-8f49-b7ca7c1dbcfb Serializing object to XML.
-2020-01-14 14:32:07.763 DEBUG tempoFeed 31 c105d88d-2694-40be-8f49-b7ca7c1dbcfb Object transported.
-2020-01-14 14:32:07.763 DEBUG tempoFeed 32 6e5bbda0-78d6-4833-8a9c-4457bd4e55f8 Begin transport.
-2020-01-14 14:32:07.763 DEBUG tempoFeed 32 6e5bbda0-78d6-4833-8a9c-4457bd4e55f8 Retrieving object data.
-2020-01-14 14:32:07.78 DEBUG tempoFeed 32 6e5bbda0-78d6-4833-8a9c-4457bd4e55f8 Setting uuids of object references.
-2020-01-14 14:32:07.78 DEBUG tempoFeed 32 6e5bbda0-78d6-4833-8a9c-4457bd4e55f8 Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:07.783 DEBUG tempoFeed 32 6e5bbda0-78d6-4833-8a9c-4457bd4e55f8 Completing produce.
-2020-01-14 14:32:07.783 DEBUG tempoFeed 32 6e5bbda0-78d6-4833-8a9c-4457bd4e55f8 Exporting binary resources.
-2020-01-14 14:32:07.783 DEBUG tempoFeed 32 6e5bbda0-78d6-4833-8a9c-4457bd4e55f8 Serializing object to XML.
-2020-01-14 14:32:07.794 DEBUG tempoFeed 32 6e5bbda0-78d6-4833-8a9c-4457bd4e55f8 Object transported.
-2020-01-14 14:32:07.794 DEBUG tempoFeed 33 93fd2bd5-95fe-4ac9-aec3-f298e029767d Begin transport.
-2020-01-14 14:32:07.794 DEBUG tempoFeed 33 93fd2bd5-95fe-4ac9-aec3-f298e029767d Retrieving object data.
-2020-01-14 14:32:07.814 DEBUG tempoFeed 33 93fd2bd5-95fe-4ac9-aec3-f298e029767d Setting uuids of object references.
-2020-01-14 14:32:07.814 DEBUG tempoFeed 33 93fd2bd5-95fe-4ac9-aec3-f298e029767d Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:07.816 DEBUG tempoFeed 33 93fd2bd5-95fe-4ac9-aec3-f298e029767d Completing produce.
-2020-01-14 14:32:07.816 DEBUG tempoFeed 33 93fd2bd5-95fe-4ac9-aec3-f298e029767d Exporting binary resources.
-2020-01-14 14:32:07.816 DEBUG tempoFeed 33 93fd2bd5-95fe-4ac9-aec3-f298e029767d Serializing object to XML.
-2020-01-14 14:32:07.84 DEBUG tempoFeed 33 93fd2bd5-95fe-4ac9-aec3-f298e029767d Object transported.
-2020-01-14 14:32:07.84 DEBUG tempoFeed 34 d12e6f5a-e129-4dd2-bcd7-809914a9a1b7 Begin transport.
-2020-01-14 14:32:07.84 DEBUG tempoFeed 34 d12e6f5a-e129-4dd2-bcd7-809914a9a1b7 Retrieving object data.
-2020-01-14 14:32:07.857 DEBUG tempoFeed 34 d12e6f5a-e129-4dd2-bcd7-809914a9a1b7 Setting uuids of object references.
-2020-01-14 14:32:07.857 DEBUG tempoFeed 34 d12e6f5a-e129-4dd2-bcd7-809914a9a1b7 Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:07.859 DEBUG tempoFeed 34 d12e6f5a-e129-4dd2-bcd7-809914a9a1b7 Completing produce.
-2020-01-14 14:32:07.859 DEBUG tempoFeed 34 d12e6f5a-e129-4dd2-bcd7-809914a9a1b7 Exporting binary resources.
-2020-01-14 14:32:07.859 DEBUG tempoFeed 34 d12e6f5a-e129-4dd2-bcd7-809914a9a1b7 Serializing object to XML.
-2020-01-14 14:32:07.864 DEBUG tempoFeed 34 d12e6f5a-e129-4dd2-bcd7-809914a9a1b7 Object transported.
-2020-01-14 14:32:07.864 DEBUG tempoFeed 35 66bd3693-b89b-4984-9c61-9229468ffff4 Begin transport.
-2020-01-14 14:32:07.864 DEBUG tempoFeed 35 66bd3693-b89b-4984-9c61-9229468ffff4 Retrieving object data.
-2020-01-14 14:32:07.876 DEBUG tempoFeed 35 66bd3693-b89b-4984-9c61-9229468ffff4 Setting uuids of object references.
-2020-01-14 14:32:07.876 DEBUG tempoFeed 35 66bd3693-b89b-4984-9c61-9229468ffff4 Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:07.878 DEBUG tempoFeed 35 66bd3693-b89b-4984-9c61-9229468ffff4 Completing produce.
-2020-01-14 14:32:07.878 DEBUG tempoFeed 35 66bd3693-b89b-4984-9c61-9229468ffff4 Exporting binary resources.
-2020-01-14 14:32:07.878 DEBUG tempoFeed 35 66bd3693-b89b-4984-9c61-9229468ffff4 Serializing object to XML.
-2020-01-14 14:32:07.884 DEBUG tempoFeed 35 66bd3693-b89b-4984-9c61-9229468ffff4 Object transported.
-2020-01-14 14:32:07.884 DEBUG tempoFeed 36 ffaf68b6-9e3b-4507-a274-fc1f2a058d30 Begin transport.
-2020-01-14 14:32:07.884 DEBUG tempoFeed 36 ffaf68b6-9e3b-4507-a274-fc1f2a058d30 Retrieving object data.
-2020-01-14 14:32:07.895 DEBUG tempoFeed 36 ffaf68b6-9e3b-4507-a274-fc1f2a058d30 Setting uuids of object references.
-2020-01-14 14:32:07.895 DEBUG tempoFeed 36 ffaf68b6-9e3b-4507-a274-fc1f2a058d30 Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:07.897 DEBUG tempoFeed 36 ffaf68b6-9e3b-4507-a274-fc1f2a058d30 Completing produce.
-2020-01-14 14:32:07.897 DEBUG tempoFeed 36 ffaf68b6-9e3b-4507-a274-fc1f2a058d30 Exporting binary resources.
-2020-01-14 14:32:07.897 DEBUG tempoFeed 36 ffaf68b6-9e3b-4507-a274-fc1f2a058d30 Serializing object to XML.
-2020-01-14 14:32:07.905 DEBUG tempoFeed 36 ffaf68b6-9e3b-4507-a274-fc1f2a058d30 Object transported.
-2020-01-14 14:32:07.905 DEBUG tempoFeed 37 88a08fc6-85d8-4b19-a0e9-0a2beb3dd67b Begin transport.
-2020-01-14 14:32:07.905 DEBUG tempoFeed 37 88a08fc6-85d8-4b19-a0e9-0a2beb3dd67b Retrieving object data.
-2020-01-14 14:32:07.916 DEBUG tempoFeed 37 88a08fc6-85d8-4b19-a0e9-0a2beb3dd67b Setting uuids of object references.
-2020-01-14 14:32:07.916 DEBUG tempoFeed 37 88a08fc6-85d8-4b19-a0e9-0a2beb3dd67b Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:07.918 DEBUG tempoFeed 37 88a08fc6-85d8-4b19-a0e9-0a2beb3dd67b Completing produce.
-2020-01-14 14:32:07.918 DEBUG tempoFeed 37 88a08fc6-85d8-4b19-a0e9-0a2beb3dd67b Exporting binary resources.
-2020-01-14 14:32:07.918 DEBUG tempoFeed 37 88a08fc6-85d8-4b19-a0e9-0a2beb3dd67b Serializing object to XML.
-2020-01-14 14:32:07.932 DEBUG tempoFeed 37 88a08fc6-85d8-4b19-a0e9-0a2beb3dd67b Object transported.
-2020-01-14 14:32:07.932 DEBUG tempoFeed 38 677a2fa2-fe9f-4d27-aa9e-93890e67d6cb Begin transport.
-2020-01-14 14:32:07.932 DEBUG tempoFeed 38 677a2fa2-fe9f-4d27-aa9e-93890e67d6cb Retrieving object data.
-2020-01-14 14:32:07.95 DEBUG tempoFeed 38 677a2fa2-fe9f-4d27-aa9e-93890e67d6cb Setting uuids of object references.
-2020-01-14 14:32:07.95 DEBUG tempoFeed 38 677a2fa2-fe9f-4d27-aa9e-93890e67d6cb Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:07.952 DEBUG tempoFeed 38 677a2fa2-fe9f-4d27-aa9e-93890e67d6cb Completing produce.
-2020-01-14 14:32:07.952 DEBUG tempoFeed 38 677a2fa2-fe9f-4d27-aa9e-93890e67d6cb Exporting binary resources.
-2020-01-14 14:32:07.952 DEBUG tempoFeed 38 677a2fa2-fe9f-4d27-aa9e-93890e67d6cb Serializing object to XML.
-2020-01-14 14:32:07.963 DEBUG tempoFeed 38 677a2fa2-fe9f-4d27-aa9e-93890e67d6cb Object transported.
-2020-01-14 14:32:07.963 DEBUG tempoFeed 39 dc1a3030-6a52-40ac-810f-070f43df73eb Begin transport.
-2020-01-14 14:32:07.963 DEBUG tempoFeed 39 dc1a3030-6a52-40ac-810f-070f43df73eb Retrieving object data.
-2020-01-14 14:32:07.978 DEBUG tempoFeed 39 dc1a3030-6a52-40ac-810f-070f43df73eb Setting uuids of object references.
-2020-01-14 14:32:07.978 DEBUG tempoFeed 39 dc1a3030-6a52-40ac-810f-070f43df73eb Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:07.979 DEBUG tempoFeed 39 dc1a3030-6a52-40ac-810f-070f43df73eb Completing produce.
-2020-01-14 14:32:07.979 DEBUG tempoFeed 39 dc1a3030-6a52-40ac-810f-070f43df73eb Exporting binary resources.
-2020-01-14 14:32:07.979 DEBUG tempoFeed 39 dc1a3030-6a52-40ac-810f-070f43df73eb Serializing object to XML.
-2020-01-14 14:32:07.987 DEBUG tempoFeed 39 dc1a3030-6a52-40ac-810f-070f43df73eb Object transported.
-2020-01-14 14:32:07.987 DEBUG tempoFeed 40 3c79b732-03a5-4dd0-b0ca-e6098da5c962 Begin transport.
-2020-01-14 14:32:07.987 DEBUG tempoFeed 40 3c79b732-03a5-4dd0-b0ca-e6098da5c962 Retrieving object data.
-2020-01-14 14:32:08.0 DEBUG tempoFeed 40 3c79b732-03a5-4dd0-b0ca-e6098da5c962 Setting uuids of object references.
-2020-01-14 14:32:08.0 DEBUG tempoFeed 40 3c79b732-03a5-4dd0-b0ca-e6098da5c962 Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:08.002 DEBUG tempoFeed 40 3c79b732-03a5-4dd0-b0ca-e6098da5c962 Completing produce.
-2020-01-14 14:32:08.002 DEBUG tempoFeed 40 3c79b732-03a5-4dd0-b0ca-e6098da5c962 Exporting binary resources.
-2020-01-14 14:32:08.002 DEBUG tempoFeed 40 3c79b732-03a5-4dd0-b0ca-e6098da5c962 Serializing object to XML.
-2020-01-14 14:32:08.008 DEBUG tempoFeed 40 3c79b732-03a5-4dd0-b0ca-e6098da5c962 Object transported.
-2020-01-14 14:32:08.008 DEBUG tempoFeed 41 db22fb2a-8fc8-4d1e-bd13-9d4ec4248387 Begin transport.
-2020-01-14 14:32:08.008 DEBUG tempoFeed 41 db22fb2a-8fc8-4d1e-bd13-9d4ec4248387 Retrieving object data.
-2020-01-14 14:32:08.022 DEBUG tempoFeed 41 db22fb2a-8fc8-4d1e-bd13-9d4ec4248387 Setting uuids of object references.
-2020-01-14 14:32:08.022 DEBUG tempoFeed 41 db22fb2a-8fc8-4d1e-bd13-9d4ec4248387 Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:08.023 DEBUG tempoFeed 41 db22fb2a-8fc8-4d1e-bd13-9d4ec4248387 Completing produce.
-2020-01-14 14:32:08.023 DEBUG tempoFeed 41 db22fb2a-8fc8-4d1e-bd13-9d4ec4248387 Exporting binary resources.
-2020-01-14 14:32:08.023 DEBUG tempoFeed 41 db22fb2a-8fc8-4d1e-bd13-9d4ec4248387 Serializing object to XML.
-2020-01-14 14:32:08.031 DEBUG tempoFeed 41 db22fb2a-8fc8-4d1e-bd13-9d4ec4248387 Object transported.
-2020-01-14 14:32:08.031 DEBUG tempoFeed 42 439c2fd6-54fb-49b5-b32c-6c7d2ab1e81d Begin transport.
-2020-01-14 14:32:08.031 DEBUG tempoFeed 42 439c2fd6-54fb-49b5-b32c-6c7d2ab1e81d Retrieving object data.
-2020-01-14 14:32:08.042 DEBUG tempoFeed 42 439c2fd6-54fb-49b5-b32c-6c7d2ab1e81d Setting uuids of object references.
-2020-01-14 14:32:08.042 DEBUG tempoFeed 42 439c2fd6-54fb-49b5-b32c-6c7d2ab1e81d Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:08.044 DEBUG tempoFeed 42 439c2fd6-54fb-49b5-b32c-6c7d2ab1e81d Completing produce.
-2020-01-14 14:32:08.044 DEBUG tempoFeed 42 439c2fd6-54fb-49b5-b32c-6c7d2ab1e81d Exporting binary resources.
-2020-01-14 14:32:08.044 DEBUG tempoFeed 42 439c2fd6-54fb-49b5-b32c-6c7d2ab1e81d Serializing object to XML.
-2020-01-14 14:32:08.055 DEBUG tempoFeed 42 439c2fd6-54fb-49b5-b32c-6c7d2ab1e81d Object transported.
-2020-01-14 14:32:08.055 DEBUG tempoFeed 43 421f2a61-a32f-444b-97df-21916221faeb Begin transport.
-2020-01-14 14:32:08.055 DEBUG tempoFeed 43 421f2a61-a32f-444b-97df-21916221faeb Retrieving object data.
-2020-01-14 14:32:08.071 DEBUG tempoFeed 43 421f2a61-a32f-444b-97df-21916221faeb Setting uuids of object references.
-2020-01-14 14:32:08.071 DEBUG tempoFeed 43 421f2a61-a32f-444b-97df-21916221faeb Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:08.072 DEBUG tempoFeed 43 421f2a61-a32f-444b-97df-21916221faeb Completing produce.
-2020-01-14 14:32:08.072 DEBUG tempoFeed 43 421f2a61-a32f-444b-97df-21916221faeb Exporting binary resources.
-2020-01-14 14:32:08.072 DEBUG tempoFeed 43 421f2a61-a32f-444b-97df-21916221faeb Serializing object to XML.
-2020-01-14 14:32:08.083 DEBUG tempoFeed 43 421f2a61-a32f-444b-97df-21916221faeb Object transported.
-2020-01-14 14:32:08.083 DEBUG tempoFeed 44 bc8549d6-2716-4700-8a52-4af904f68cca Begin transport.
-2020-01-14 14:32:08.083 DEBUG tempoFeed 44 bc8549d6-2716-4700-8a52-4af904f68cca Retrieving object data.
-2020-01-14 14:32:08.097 DEBUG tempoFeed 44 bc8549d6-2716-4700-8a52-4af904f68cca Setting uuids of object references.
-2020-01-14 14:32:08.097 DEBUG tempoFeed 44 bc8549d6-2716-4700-8a52-4af904f68cca Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:08.099 DEBUG tempoFeed 44 bc8549d6-2716-4700-8a52-4af904f68cca Completing produce.
-2020-01-14 14:32:08.099 DEBUG tempoFeed 44 bc8549d6-2716-4700-8a52-4af904f68cca Exporting binary resources.
-2020-01-14 14:32:08.099 DEBUG tempoFeed 44 bc8549d6-2716-4700-8a52-4af904f68cca Serializing object to XML.
-2020-01-14 14:32:08.106 DEBUG tempoFeed 44 bc8549d6-2716-4700-8a52-4af904f68cca Object transported.
-2020-01-14 14:32:08.106 DEBUG tempoFeed 45 c8964f18-471b-460f-8b44-5002202a94eb Begin transport.
-2020-01-14 14:32:08.106 DEBUG tempoFeed 45 c8964f18-471b-460f-8b44-5002202a94eb Retrieving object data.
-2020-01-14 14:32:08.128 DEBUG tempoFeed 45 c8964f18-471b-460f-8b44-5002202a94eb Setting uuids of object references.
-2020-01-14 14:32:08.128 DEBUG tempoFeed 45 c8964f18-471b-460f-8b44-5002202a94eb Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:08.13 DEBUG tempoFeed 45 c8964f18-471b-460f-8b44-5002202a94eb Completing produce.
-2020-01-14 14:32:08.13 DEBUG tempoFeed 45 c8964f18-471b-460f-8b44-5002202a94eb Exporting binary resources.
-2020-01-14 14:32:08.13 DEBUG tempoFeed 45 c8964f18-471b-460f-8b44-5002202a94eb Serializing object to XML.
-2020-01-14 14:32:08.151 DEBUG tempoFeed 45 c8964f18-471b-460f-8b44-5002202a94eb Object transported.
-2020-01-14 14:32:08.151 DEBUG tempoFeed 46 d9c6e233-ade4-4022-962f-f9d3eb36f613 Begin transport.
-2020-01-14 14:32:08.151 DEBUG tempoFeed 46 d9c6e233-ade4-4022-962f-f9d3eb36f613 Retrieving object data.
-2020-01-14 14:32:08.17 DEBUG tempoFeed 46 d9c6e233-ade4-4022-962f-f9d3eb36f613 Setting uuids of object references.
-2020-01-14 14:32:08.17 DEBUG tempoFeed 46 d9c6e233-ade4-4022-962f-f9d3eb36f613 Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
-2020-01-14 14:32:08.171 DEBUG tempoFeed 46 d9c6e233-ade4-4022-962f-f9d3eb36f613 Completing produce.
-2020-01-14 14:32:08.171 DEBUG tempoFeed 46 d9c6e233-ade4-4022-962f-f9d3eb36f613 Exporting binary resources.
-2020-01-14 14:32:08.171 DEBUG tempoFeed 46 d9c6e233-ade4-4022-962f-f9d3eb36f613 Serializing object to XML.
-2020-01-14 14:32:08.192 DEBUG tempoFeed 46 d9c6e233-ade4-4022-962f-f9d3eb36f613 Object transported.
-2020-01-14 14:32:08.192 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Completing produce.
-2020-01-14 14:32:08.192 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Exporting binary resources.
-2020-01-14 14:32:08.192 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Serializing object to XML.
-2020-01-14 14:32:08.218 DEBUG application 5125 _a-0000e3d4-2d67-8000-29dc-d1ef90d1ef90_31035 Object transported.
+2022-03-15 18:14:27.775 DEBUG tempoFeed 20 c8964f18-471b-460f-8b44-5002202a94eb Begin transport.
+2022-03-15 18:14:27.775 DEBUG tempoFeed 20 c8964f18-471b-460f-8b44-5002202a94eb Retrieving object data.
+2022-03-15 18:14:27.793 DEBUG tempoFeed 20 c8964f18-471b-460f-8b44-5002202a94eb Setting uuids of object references.
+2022-03-15 18:14:27.793 DEBUG tempoFeed 20 c8964f18-471b-460f-8b44-5002202a94eb Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
+2022-03-15 18:14:27.795 DEBUG tempoFeed 20 c8964f18-471b-460f-8b44-5002202a94eb Completing produce.
+2022-03-15 18:14:27.795 DEBUG tempoFeed 20 c8964f18-471b-460f-8b44-5002202a94eb Exporting binary resources.
+2022-03-15 18:14:27.795 DEBUG tempoFeed 20 c8964f18-471b-460f-8b44-5002202a94eb Serializing object to XML.
+2022-03-15 18:14:27.796 DEBUG tempoFeed 20 c8964f18-471b-460f-8b44-5002202a94eb Object transported.
+2022-03-15 18:14:27.796 DEBUG tempoFeed 21 d9c6e233-ade4-4022-962f-f9d3eb36f613 Begin transport.
+2022-03-15 18:14:27.796 DEBUG tempoFeed 21 d9c6e233-ade4-4022-962f-f9d3eb36f613 Retrieving object data.
+2022-03-15 18:14:27.805 DEBUG tempoFeed 21 d9c6e233-ade4-4022-962f-f9d3eb36f613 Setting uuids of object references.
+2022-03-15 18:14:27.805 DEBUG tempoFeed 21 d9c6e233-ade4-4022-962f-f9d3eb36f613 Processing reference: Role[name=administrator,usernames=[kevin.lin.d]]
+2022-03-15 18:14:27.814 DEBUG tempoFeed 21 d9c6e233-ade4-4022-962f-f9d3eb36f613 Completing produce.
+2022-03-15 18:14:27.814 DEBUG tempoFeed 21 d9c6e233-ade4-4022-962f-f9d3eb36f613 Exporting binary resources.
+2022-03-15 18:14:27.814 DEBUG tempoFeed 21 d9c6e233-ade4-4022-962f-f9d3eb36f613 Serializing object to XML.
+2022-03-15 18:14:27.814 DEBUG tempoFeed 21 d9c6e233-ade4-4022-962f-f9d3eb36f613 Object transported.
