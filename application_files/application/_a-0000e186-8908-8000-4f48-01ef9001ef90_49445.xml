@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<applicationHaul xmlns:a="http://www.appian.com/ae/types/2009">
+<?xml version="1.0" encoding="UTF-8"?><applicationHaul xmlns:a="http://www.appian.com/ae/types/2009">
     <versionUuid>_a-0000e2a2-06b7-8000-01fb-01ef9001ef90_48992</versionUuid>
     <application>
         <name>An Offline Action and Task</name>
@@ -176,13 +175,13 @@
         <applicationActions>
             <action>
                 <displayLabel>Offline Chaining</displayLabel>
-                <description></description>
+                <description/>
                 <processModelUuid>0002e21e-b038-8000-1047-014d98014d98</processModelUuid>
                 <actionUuid>099a5fb2-ed69-4e1a-99ed-c3e169eeeda0</actionUuid>
             </action>
             <action>
                 <displayLabel>Offline Action and Task</displayLabel>
-                <description></description>
+                <description/>
                 <processModelUuid>0002e187-12d8-8000-4f48-014d98014d98</processModelUuid>
                 <actionUuid>fceb6946-22e6-49a2-9ae5-90ca831d87b0</actionUuid>
             </action>
@@ -302,27 +301,27 @@
     </application>
     <roleMap>
         <contentRoleMap public="true">
-            <role inherit="false" allowForAll="true" name="readers">
+            <role allowForAll="true" inherit="false" name="readers">
                 <users/>
                 <groups/>
             </role>
-            <role inherit="false" allowForAll="true" name="authors">
+            <role allowForAll="true" inherit="false" name="authors">
                 <users/>
                 <groups/>
             </role>
-            <role inherit="false" allowForAll="false" name="administrators">
+            <role allowForAll="false" inherit="false" name="administrators">
                 <users/>
                 <groups/>
             </role>
-            <role inherit="false" allowForAll="false" name="denyReaders">
+            <role allowForAll="false" inherit="false" name="denyReaders">
                 <users/>
                 <groups/>
             </role>
-            <role inherit="false" allowForAll="false" name="denyAuthors">
+            <role allowForAll="false" inherit="false" name="denyAuthors">
                 <users/>
                 <groups/>
             </role>
-            <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <role allowForAll="false" inherit="false" name="denyAdministrators">
                 <users/>
                 <groups/>
             </role>
@@ -344,4 +343,4 @@
         <historyInfo versionUuid="_a-0000e2a2-06b7-8000-01fb-01ef9001ef90_48992"/>
     </history>
     <postDeploymentProcessData/>
-</applicationHaul>
+</applicationHaul><!--updated on 2022-03-15T14:10:25.683-->
