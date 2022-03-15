@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoFeedHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>18107390-35a5-4052-9bb8-f4bc7bcb44d3</versionUuid>
+    <tempoFeed>
+        <uuid>d7d4f135-739a-4285-85d2-2c36b8bdfa22</uuid>
+        <name>feed4</name>
+        <description>feed</description>
+        <showInCatalog>true</showInCatalog>
+        <systemFeed>false</systemFeed>
+    </tempoFeed>
+    <roleMap>
+        <role name="administrator">
+            <users>
+                <userUuid>kevin.lin.d</userUuid>
+            </users>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="18107390-35a5-4052-9bb8-f4bc7bcb44d3"/>
+    </history>
+</tempoFeedHaul>
